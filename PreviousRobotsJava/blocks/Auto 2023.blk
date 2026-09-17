@@ -1,0 +1,147 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="50" y="50">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="45" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="comment" id="Lc#BFtj*NTB48YL;eBl.">
+<field name="COMMENT">Put initialization blocks here.</field>
+<next>
+<block type="dcMotor_setProperty_Direction" id="25U]a2U-;T#2wdx!.8sI">
+<field name="IDENTIFIER">flAsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"fl"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="~2m7=;|+u_o.LEqw!8as">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="Q5o,0%A/?%+`LnDJ^H3-">
+<field name="IDENTIFIER">blAsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"bl"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id=")%jJ+#P9Z;e_hO@gJ6+d">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="dcMotor_setDualProperty_Number" id="v:sj:+$Xzc1SscC4vp@M">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">flAsDcMotor</field>
+<field name="IDENTIFIER2">frAsDcMotor</field>
+<data>{"IDENTIFIER1":"fl","IDENTIFIER2":"fr"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id=";I,ca{k$1?$Yj|Wn2$2b">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="ej8Sv7bJt=m*HS*%f{^0">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="^6K?-!Uw)0{NSsDl~Z/|">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="%2i;j4@X-s~sl15,MD{h">
+<field name="NUM">1500</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="$-9Gvz)9os6E~f:uy]Ca">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">flAsDcMotor</field>
+<field name="IDENTIFIER2">frAsDcMotor</field>
+<data>{"IDENTIFIER1":"fl","IDENTIFIER2":"fr"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="=xpZK5Pc:`;3@NC!/Jj/">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="x;xA40W#Lli]%2t$+rY=">
+<field name="NUM">-1</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="Yfh:Hv(2Afy_e1:oeGo^">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="jO`^]2B{i]f)~me[3$PB">
+<field name="NUM">1000</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="(!;Iy(qwq9$rq{Oy:}!l">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">flAsDcMotor</field>
+<field name="IDENTIFIER2">frAsDcMotor</field>
+<data>{"IDENTIFIER1":"fl","IDENTIFIER2":"fr"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="NX,|ZFU0Z0nUilJgPR5b">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="_$yw7rO[A_bo8w-Pxb}x">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="I`82l2%t`jmF^F.3b)H,">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="o=kZl!]}Zx:)xLUC3Z#B">
+<field name="NUM">900</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setDualProperty_Number" id="i}9w{vSvAD+!Apka9`aB">
+<field name="PROP">Power</field>
+<field name="IDENTIFIER1">flAsDcMotor</field>
+<field name="IDENTIFIER2">frAsDcMotor</field>
+<data>{"IDENTIFIER1":"fl","IDENTIFIER2":"fr"}</data>
+<value name="VALUE1">
+<shadow type="math_number" id="XPRIP$GHfh`oBnIF:c68">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="VALUE2">
+<shadow type="math_number" id="1agzE?{bx)2[T~At)YXK">
+<field name="NUM">-1</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="Eo~arsmvyLWcW.KYaAR?">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="+xFN6OF.FCGyh3;QAIQB">
+<field name="NUM">100</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="AUTONOMOUS" group="" /><Enabled value="false" /></Extra>
