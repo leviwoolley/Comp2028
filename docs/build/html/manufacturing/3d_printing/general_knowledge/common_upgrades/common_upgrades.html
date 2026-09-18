@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common 3D Printing Upgrades &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Hardware Tradeoffs" href="../hardware_tradeoffs/hardware_tradeoffs.html" />
+    <link rel="prev" title="Common 3D Printing Tools" href="../common_tools/common_tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Manufacturing Methods</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">3D Printing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3d_printing_intro/3d_printing_intro.html">3D Printing Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d_printed_parts/3d_printed_parts.html">Example 3D Printed Parts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../general_knowledge.html">General Knowledge</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../terminology/terminology.html">3D Printing Terminology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../common_tools/common_tools.html">Common 3D Printing Tools</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Common 3D Printing Upgrades</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#removable-flexible-beds">Removable/Flexible Beds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#glass-beds">Glass Beds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#hotend-upgrades">Hotend Upgrades</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#silent-stepper-boards">Silent Stepper Boards</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#raspberry-pi-network-functionality">Raspberry Pi/Network Functionality</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#dual-z-axis-support">Dual Z-Axis Support</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#part-cooling-upgrades">Part Cooling Upgrades</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#linear-rails">Linear Rails</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cable-drag-chain-and-wire-management">Cable Drag Chain and Wire Management</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#miscellaneous-printed-upgrades">Miscellaneous Printed Upgrades</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware_tradeoffs/hardware_tradeoffs.html">Hardware Tradeoffs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../printer_choice/printer_choice.html">Printer Choice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../filament_choice/filament_choice.html">Filament Choice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../designing_and_slicing/designing_and_slicing.html">Designing and Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../specific_skill_guides/specific_skill_guides.html">Specific Skill Guides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../troubleshooting/troubleshooting.html">Troubleshooting Common Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#volunteer-special-thanks">Volunteer Special Thanks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Manufacturing</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">3D Printing</a></li>
+          <li class="breadcrumb-item"><a href="../general_knowledge.html">General Knowledge</a></li>
+      <li class="breadcrumb-item active">Common 3D Printing Upgrades</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/manufacturing/3d_printing/general_knowledge/common_upgrades/common_upgrades.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common-3d-printing-upgrades">
+<h1>Common 3D Printing Upgrades<a class="headerlink" href="#common-3d-printing-upgrades" title="Link to this heading"></a></h1>
+<p>A pretty common thing to do with 3D Printers is upgrade them over time, here’s a few of the most
+common upgrades for any printer.</p>
+<section id="removable-flexible-beds">
+<h2>Removable/Flexible Beds<a class="headerlink" href="#removable-flexible-beds" title="Link to this heading"></a></h2>
+<p>A lot of printers come with cheap “BuildTak” (typical stickers) beds that work just fine, but some people
+desire more removable prints with better adhesion and more customizability, which is fulfilled by removable
+beds. WhamBam, Bambulabs, and generic Amazon sellers will typically carry these beds for various prices.
+You’ll see some terms which we’ll explain here. PEI is the “gold standard” nowadays, simply being a sheet
+of material that sticks well to 3D prints when heated. More advanced options include PEX, which expands when
+heated and holds onto 3D prints better, and then as it cools completely releases the parts. Powder-Coated PEI/Textured
+PEI are by far the most popular flexible beds now, being cheap, simple, more resistant to damage than PEI or PEX
+flexible beds, and having exceptional print adhesion.</p>
+<a class="reference internal image-reference" href="../../../../_images/flexiblebed.png"><img alt="Removing a print by bending a flexible bed." class="align-center" src="../../../../_images/flexiblebed.png" style="width: 55%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="glass-beds">
+<h2>Glass Beds<a class="headerlink" href="#glass-beds" title="Link to this heading"></a></h2>
+<p>Glass beds are also a great upgrade, they stay flat and last a long time. They also tend to be a lot cheaper than
+flex beds! A glass bed combined with something like glue stick or hairspray works really well to keep prints secure.
+Most glass beds found on Amazon will work, look for the keywords Carborundum or Borosilicate when looking for glass
+beds for your printer size.</p>
+<a class="reference internal image-reference" href="../../../../_images/carborundumglassbed.png"><img alt="A standard glass bed." class="align-center" src="../../../../_images/carborundumglassbed.png" style="width: 55%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hotend-upgrades">
+<h2>Hotend Upgrades<a class="headerlink" href="#hotend-upgrades" title="Link to this heading"></a></h2>
+<p>A hotend upgrade can be very beneficial for printing with different filaments, speeding up prints, and general reliability.
+Learning how to mount hotends often takes some <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-CAD"><span class="xref std std-term">CAD</span></a> skills or a quick Thingiverse search, but hotend upgrades are very
+worth it. Typically, you will need a hotend structure, heater wire, and thermistor to do a full upgrade (and some wiring
+tools to connect it to your board). Here are a few hotends from different price ranges that are well regarded and used.</p>
+<ul class="simple">
+<li><p><strong>Low End:</strong> E3D V6, All-Metal Microswiss Hotend.</p></li>
+<li><p><strong>Mid Range:</strong> Phaetus Dragonfly, Creality Spider.</p></li>
+<li><p><strong>High End:</strong> Phaetus Dragon HF, Slice Engineering Mosquito, E3D Revo.</p></li>
+<li><p><strong>Speed Printing/Engineering:</strong> These hotends are not for the faint of heart and typically require designing custom mounts. They
+are also typically in a very high price point. These include the Mosquito Magnum, Phaetus Dragon UHF, the Goliath, and the Nova.</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/hotendupgrades.png"><img alt="3 pictured hotends that are example upgrades." src="../../../../_images/hotendupgrades.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Left to Right: Slice Engineering Mosquito, E3D V6, Phaetus Dragon</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A quick way to increase your hotend’s flow rate without breaking the bank and buying a new hotend is by
+buying and utilizing something called a <strong>CHT Nozzle</strong>. These nozzles split filament flow into 3 parts,
+allowing each section to melt faster, and resulting in a considerably higher flow rate of plastic.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/chtnozzle.jpg"><img alt="An example CHT nozzle." src="../../../../_images/chtnozzle.jpg" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">This Bondtech CHT nozzle splits flow into three.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="silent-stepper-boards">
+<h2>Silent Stepper Boards<a class="headerlink" href="#silent-stepper-boards" title="Link to this heading"></a></h2>
+<p>Older printers or low end printers tend to be very loud stock, which is why silent stepper boards are a great
+upgrade. These boards use more advanced stepper drivers to smooth inputs, causing steppers to make less
+whining and whirring noises. For most printers you will have to do some research for the best replacement
+board for you, but for base model Ender 3 printers, the main compatible boards are the SKR Mini E3 and the
+SKR Mini Turbo, both of which are drop-in replacements and take no time at all. Luckily, most printers nowadays
+include this option stock, so it’s not a concern for many.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/skre3turbo.png"><img alt="An image of a silent stepper board." src="../../../../_images/skre3turbo.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An SKR e3 Turbo with TMC2209 Stepper Drivers, the current standard for silent printing.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>ABL or Auto-Bed Leveling uses either a mechanical or inductive sensor on your toolhead to probe your bed in
+different locations and uses software to improve your first layer quality and adhesion. While it requires learning
+a bit about <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Firmware"><span class="xref std std-term">firmware</span></a>, auto bed leveling is extremely worth it. More and more printers are coming with auto bed
+leveling stock, but if yours didn’t and you’d like to upgrade, these options are common:</p>
+<ul class="simple">
+<li><p>Mechanical Sensors: BLTouch, CRTouch</p></li>
+<li><p>Inductive Sensors: Omron TL-Q5MC2-Z, Pinda Inductive Probes</p></li>
+</ul>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/autoleveling.png"><img alt="An image depicting a printers reading of a bed." src="../../../../_images/autoleveling.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An example autoleveling reading, showing the imperfections in the bed that the printer will compensate for.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="raspberry-pi-network-functionality">
+<h2>Raspberry Pi/Network Functionality<a class="headerlink" href="#raspberry-pi-network-functionality" title="Link to this heading"></a></h2>
+<p>Network functionality is becoming frequent in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-3D-Printing"><span class="xref std std-term">3D printing</span></a>, with many interfaces allowing you to interact with your
+printer remotely, and stop/start/watch prints while you aren’t even there. Many companies have begun including
+this feature stock with newer printers, however, even if you have a printer without network functionality,
+using something such as a Raspberry Pi or old android phone, you can make quick work of this feature
+using various online guides. If you’re using a printer with <strong>Marlin</strong> firmware (you can read through
+your printer’s documentation or sale postings to check) you should research <strong>Octoprint</strong> setup guides.
+If you are using a printer with the <strong>Klipper</strong> firmware, you should research <strong>Fluidd</strong> and <strong>Mainsail</strong> setup guides.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/octoprint.png"><img alt="A picture of a prusa being controlled by an octoprint dash panel." src="../../../../_images/octoprint.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An Octoprint Control Panel for a Prusa</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="dual-z-axis-support">
+<h2>Dual Z-Axis Support<a class="headerlink" href="#dual-z-axis-support" title="Link to this heading"></a></h2>
+<p>A common issue people have with Ender 3’s and other budget printers is the droop of the Z gantry if it’s only
+driven by a lead screw on one side. This directly results in inconsistencies in prints due to a less stable frame.
+A fairly common solution to this is to add a lead screw on the other side, evening it out. This requires a board
+upgrade and an extra stepper. There are plenty of kits for this, or you could attempt to DIY it yourself.</p>
+<a class="reference internal image-reference" href="../../../../_images/belteddualzender3.png"><img alt="A picture of an Ender 3 with a dual z axis setup." class="align-center" src="../../../../_images/belteddualzender3.png" style="width: 55%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="part-cooling-upgrades">
+<h2>Part Cooling Upgrades<a class="headerlink" href="#part-cooling-upgrades" title="Link to this heading"></a></h2>
+<p>As talked about in Terminology, hotend and part cooling are vital to part quality and preventing jamming issues.
+If you want to print PLA at higher speeds, it’s recommended to upgrade your cooling fans to be larger and more
+efficient. 5015 and 4020 fans are a great upgrade from stock cooling, and can handle most of what’s thrown at them.
+There are plenty of mounts available for these fans if you search up your printer model and the desired fan size
+(fan sizes are given in width-depth, so a 5015 comes in a 50mm circle that is 15mm thick) If you want a cooling
+upgrade with a lot of science behind it, take a look at Voron Design’s <strong>AB-BN</strong> or <strong>Stealthburner</strong> projects,
+cooling systems that were completely engineered with air flow simulation.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/mantiscooling.png"><img alt="The mantis cooling fan design with 2 5015 fans." src="../../../../_images/mantiscooling.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An example cooling setup with dual 5015 fans (Mantis).</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../../_images/stealthburner.png"><img alt="Cooling simulations of the Voron Stealthburner project." src="../../../../_images/stealthburner.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Simulations of how air runs through a hotend cooling setup (Voron).</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="linear-rails">
+<h2>Linear Rails<a class="headerlink" href="#linear-rails" title="Link to this heading"></a></h2>
+<p>A lot of 3D Printers use V-wheels for linear motion out of the box, however these can degrade, flex, and lose
+dimensional accuracy fairly easily. Steel linear rails helps make your carriage a lot more stable and unlocks
+the ability to print much faster. While this upgrade can be very valuable, it’s important to keep in mind that
+this is one of the most expensive upgrades here, as good quality linear rails can cost upwards of 40$ apiece.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../../_images/ender3mgn12.png"><img alt="Hiwin MGN12 rails mounted on an Ender 3." src="../../../../_images/ender3mgn12.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">This is a MGN12 (12mm wide MGN style linear rail) being used for the x axis of a printer.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="cable-drag-chain-and-wire-management">
+<h2>Cable Drag Chain and Wire Management<a class="headerlink" href="#cable-drag-chain-and-wire-management" title="Link to this heading"></a></h2>
+<p>To avoid entanglement and fatigue of wires, a lot of people choose to add drag chain to their printers to guide their
+movement. These chains can either be printed or purchased from a vendor like IGUS/Digikey, so if you’re interested
+in wire management, either shop around or take a look around on Printables/Thingiverse and find a set for your printer model.</p>
+<a class="reference internal image-reference" href="../../../../_images/ender3dragchain.png"><img alt="Cable drag chain mounted on an Ender 3." class="align-center" src="../../../../_images/ender3dragchain.png" style="width: 55%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="miscellaneous-printed-upgrades">
+<h2>Miscellaneous Printed Upgrades<a class="headerlink" href="#miscellaneous-printed-upgrades" title="Link to this heading"></a></h2>
+<p>The 3D Printing community is heavily into modifying their printers…using their printers. There are a plethora of upgrades
+that you can just print yourself! Many are for aesthetics like V-Slot covers and LED lights, but others can improve
+functionality such as filament guides and belt tensioners. These upgrades are definitely worth exploring if you have some downtime!</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../../../_images/scottyuender3.png"><img alt="A heavily upgraded Ender 3 using 3D prints." src="../../../../_images/scottyuender3.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Scott Yu-Jan’s heavily upgraded Ender 3</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../common_tools/common_tools.html" class="btn btn-neutral float-left" title="Common 3D Printing Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hardware_tradeoffs/hardware_tradeoffs.html" class="btn btn-neutral float-right" title="Hardware Tradeoffs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

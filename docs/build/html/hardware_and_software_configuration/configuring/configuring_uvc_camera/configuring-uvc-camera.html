@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuring an External UVC Camera and a Powered USB Hub &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Adding an Expansion Hub" href="../configuring_dual_hubs/configuring-dual-hubs.html" />
+    <link rel="prev" title="Configuring an External Webcam with a Control Hub" href="../configuring_external_webcam/configuring-external-webcam.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../programming_resources/index.html#programming-tutorials">Programming Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../programming_resources/shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../programming_resources/blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../programming_resources/onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../programming_resources/onbot_java/intro/intro.html">Introduction <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../programming_resources/onbot_java/config/config.html">Configuring Your Hardware <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../../../programming_resources/shared/configuring_android/Configuring-Your-Android-Devices.html">Configuring your Android Devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../connecting_devices/index.html">Connecting Devices To a Control or Expansion Hub</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html">Configuring Your Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../programming_resources/onbot_java/connecting/connecting.html">Connecting to the Program &amp; Manage Server <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../programming_resources/onbot_java/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../programming_resources/onbot_java/reference/reference.html">Reference Documentation <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../programming_resources/android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Hardware and Software Configuration</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Configuring Your Hardware</a></li>
+      <li class="breadcrumb-item active">Configuring an External UVC Camera and a Powered USB Hub</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/hardware_and_software_configuration/configuring/configuring_uvc_camera/configuring-uvc-camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuring-an-external-uvc-camera-and-a-powered-usb-hub">
+<h1>Configuring an External UVC Camera and a Powered USB Hub<a class="headerlink" href="#configuring-an-external-uvc-camera-and-a-powered-usb-hub" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Competition-Manual"><span class="xref std std-term">Competition Manual</span></a> allows the use of USB Video Class (UVC) compatible
+cameras for computer vision-related tasks.
+Teams who are using a Control Hub as their ROBOT CONTROLLER use an externally
+connected camera for computer vision tasks, since the Control Hub has no
+built-in camera. Teams who are using an Android smartphone as their ROBOT
+CONTROLLER have the option of using an externally connected camera instead of
+the phone’s built-in camera.</p>
+<p>The advantage of using an external camera is that the camera can be
+mounted in a location that is convenient for vision-related tasks while
+the Android <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> can be mounted where it is convenient for
+Robot Controller-related tasks.</p>
+<p>The disadvantage of using an external camera is there is additional
+complexity introduced with the USB-connected camera. An external camera
+adds costs and weight to a robot and it needs to be wired correctly to
+run properly.</p>
+</section>
+<section id="what-type-of-external-camera-can-be-used">
+<h2>What type of External Camera can be Used?<a class="headerlink" href="#what-type-of-external-camera-can-be-used" title="Link to this heading"></a></h2>
+<p>The system supports UVC cameras.
+Theoretically, if a camera is UVC compliant, then it should work with
+the system. However, there are a couple of recommended web cameras that
+have been tested with the <em>FIRST</em> Tech Challenge software and have been
+calibrated to work accurately with this software:</p>
+<ul class="simple">
+<li><p>Logitech HD <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">Webcam</span></a> C310</p></li>
+<li><p>Logitech HD Pro Webcam C920</p></li>
+</ul>
+<p>There are notes on <a class="reference internal" href="../../../apriltag/vision_portal/visionportal_webcams/visionportal-webcams.html"><span class="doc">other UVC webcams</span></a>
+that teams can use.</p>
+<p>Note that calibrating a UVC camera is an advanced task. Details on how
+to create a calibration file can be found in the comments of the
+<em>teamwebcamcalibrations.xml</em> file that is available as part of the
+ftc_app project folder (visit this
+<a class="reference external" href="https://github.com/ftctechnh/ftc_app/blob/master/TeamCode/src/main/res/xml/teamwebcamcalibrations.xml">link</a>
+for an online copy of the file).</p>
+</section>
+<section id="rev-expansion-hub-and-phone">
+<h2>REV Expansion Hub and Phone<a class="headerlink" href="#rev-expansion-hub-and-phone" title="Link to this heading"></a></h2>
+<p>For teams using an Android phone and an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a> you are required to add a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-USB-Hub"><span class="xref std std-term">USB Hub</span></a> to use a webcam.</p>
+<img alt="A REV expansion hub connected to an Android phone and a webcam via a USB Hub." src="../../../_images/uvcdiagram.png" />
+<section id="usb-hub">
+<h3>USB Hub<a class="headerlink" href="#usb-hub" title="Link to this heading"></a></h3>
+<p>Teams who would like to use an external camera will need a USB hub to
+connect their Android Robot Controller to the external camera and the
+REV Robotics Expansion Hub. To work properly, the USB hub should meet
+the following requirements:</p>
+<ol class="arabic simple">
+<li><p>Compatible with USB 2.0. Note: a USB 3.0 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Hub"><span class="xref std std-term">hub</span></a> will still work, just not at the faster speed.</p></li>
+<li><p>Supports a data transfer rate of 480Mbps.</p></li>
+</ol>
+<p>Note that the Competition Manual permits the use of a powered USB
+hub to make this connection. If a
+team uses a powered USB hub, the power to operate the USB hub can only
+come from either of the following sources:</p>
+<ol class="arabic simple">
+<li><p>An externally connected commercially available off-the-shelf (COTS) USB Battery Pack in compliance with the
+Competition Manual.</p></li>
+<li><p>The 5V DC Aux power port of a REV Robotics Expansion Hub (note that
+this requires advanced skills to implement).</p></li>
+</ol>
+<p><em>FIRST</em> has tested a few USB 2.0 powered hubs and recommends one from
+Anker. At the time this document was written, this hub was available
+from <a class="reference external" href="https://www.anker.com/products/a7516">Anker.com</a>.</p>
+<img alt="Hub with charger and cable." src="../../../_images/ankerhub.jpg" />
+<p>The Anker 4-port powered hub is convenient because it has a Micro USB
+port that is used to connect the hub to a 5V power source (highlighted
+with orange circle in figure below).</p>
+<img alt="USB Hub with Micro USB port." src="../../../_images/ankerpowerport.jpg" />
+<p>This port allows a user to plug a standard USB type B Micro Cable into
+the hub, and then connect the other end of the cable (which has a USB
+Type A connector) into the output port of an external 5V USB battery
+pack. In the image below, the Anker 4 port hub is powered by a
+“limefuel” external 5V battery pack using a standard Type A to Type B
+USB Micro cable. Note the battery is highlighted by the yellow outline
+in the figure below.</p>
+<figure class="align-default" id="id1">
+<img alt="A complete setup for using a phone and webcam." src="../../../_images/limefuel.png" />
+<figcaption>
+<p><span class="caption-text">The USB hub is drawing power from a power bank.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The USB hub is connected via it’s Type A connector and cable to an OTG cable which connects to the phone.
+The power bank is connected to the USB type B Micro port on the USB hub.
+The webcam is connected to one of the USB type A ports on the USB hub.
+A USB Type A to USB Mini B cable connects the USB hub to the REV Expansion Hub.</p>
+<p>A USB hub can also draw power from the 5V auxiliary ports on the REV
+Robotics Expansion Hub. This configuration requires that the user have a
+special cable that on one end can be plugged into the 5V Auxiliary port
+and on the other end can be plugged into the power port of the USB hub.</p>
+<figure class="align-default" id="id2">
+<img alt=":alt: A complete setup for using a phone and webcam." src="../../../_images/5vauxcable.png" />
+<figcaption>
+<p><span class="caption-text">The USB hub is connected to the 5V Auxiliary port.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that teams can create this special cable using one end of a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servo</span></a>
+extension cable (to plug into the 5V aux port) and one end of a Micro
+USB cable (to plug into the Anker hub’s power port). <strong>Creating this
+cable is an advanced task and should only be attempted by teams who have
+guidance from an adult mentor who has expertise in electronics and
+wiring! It is extremely important that the polarity is correct for this
+special cable. If the polarity is reversed it could damage your
+electronic equipment.</strong></p>
+</section>
+<section id="sample-op-modes">
+<h3>Sample Op Modes<a class="headerlink" href="#sample-op-modes" title="Link to this heading"></a></h3>
+<p>There are sample <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> and Java <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">Op Modes</span></a> that demonstrate how to use
+the external UVC web camera for <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-VisionPortal"><span class="xref std std-term">VisionPortal</span></a> operations. Before
+a team can use the external UVC camera, a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Configuration-File"><span class="xref std std-term">configuration file</span></a> must be
+configured with the external camera defined as one of the USB-connected
+devices.</p>
+<p>Once a valid configuration file has been defined and activated, the
+programmer can use the external UVC camera, instead of the internal
+Android cameras, for vision-related tasks.</p>
+<img alt="Sample Blocks code" src="../../../_images/blockswebcam1.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../configuring_external_webcam/configuring-external-webcam.html" class="btn btn-neutral float-left" title="Configuring an External Webcam with a Control Hub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../configuring_dual_hubs/configuring-dual-hubs.html" class="btn btn-neutral float-right" title="Adding an Expansion Hub" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

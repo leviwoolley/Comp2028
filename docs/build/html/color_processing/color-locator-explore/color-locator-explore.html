@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Locator (Explore) &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Color Locator (Challenge)" href="../color-locator-challenge/color-locator-challenge.html" />
+    <link rel="prev" title="Color Locator (Discover)" href="../color-locator-discover/color-locator-discover.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Color Processing</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../color-sensor/color-sensor.html">Color Processing Color Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-blob-concepts/color-blob-concepts.html">Color Blob Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-discover/color-locator-discover.html">Color Locator (Discover)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Locator (Explore)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-the-visionportal">Building the VisionPortal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#target-color-range">Target Color Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#region-of-interest-roi">Region of Interest (ROI)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choice-of-contours">Choice of Contours</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-pre-processing">Image Pre-Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camera-resolution">Camera Resolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-filter-the-blob-results">Post-filter the Blob Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-sort-the-blob-results">Post-sort the Blob Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#more-documentation">More Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html">Color Locator (Challenge)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html">Color Locator (Round Blobs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-spaces/color-spaces.html">Color Spaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#compatibility">Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#two-processors">Two Processors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Color Processing Introduction</a></li>
+      <li class="breadcrumb-item active">Color Locator (Explore)</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/color_processing/color-locator-explore/color-locator-explore.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="color-locator-explore">
+<h1>Color Locator (Explore)<a class="headerlink" href="#color-locator-explore" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This <strong>Explore</strong> page shows how to modify the default settings of the
+<strong>ColorLocator</strong> <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpMode</span></a>.  It assumes you have already followed this
+tutorial’s previous <a class="reference internal" href="../color-locator-discover/color-locator-discover.html"><span class="doc">Discover</span></a> page, to open and test this
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a>.</p>
+<p>ColorLocator has only two required <strong>inputs</strong>:</p>
+<ul class="simple">
+<li><p>target color range</p></li>
+<li><p>Region of Interest (ROI)</p></li>
+</ul>
+<p>Both of these can be specified in multiple ways.</p>
+<p>This Explore page covers <strong>settings</strong> that are already in the Sample:</p>
+<ul class="simple">
+<li><p>which contour types to process</p></li>
+<li><p>whether to draw contours in the preview</p></li>
+<li><p>pre-processing of the image</p></li>
+<li><p>camera resolution</p></li>
+<li><p>post-filter the Blob results</p></li>
+<li><p>post-sort the Blob results</p></li>
+</ul>
+</section>
+<section id="building-the-visionportal">
+<h2>Building the VisionPortal<a class="headerlink" href="#building-the-visionportal" title="Link to this heading"></a></h2>
+<p>The Sample OpMode first creates a “Color Blob Locator” <strong>Processor</strong> using the
+Java <strong>Builder</strong> pattern.  This is the same Builder pattern used to create an
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTag</span></a> Processor.</p>
+<p>The Sample OpMode then creates a <strong>VisionPortal</strong>, again using a Builder
+pattern.  This includes adding the “Color Blob Locator” Processor to the
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-VisionPortal"><span class="xref std std-term">VisionPortal</span></a>.</p>
+<p>The FTC VisionPortal was introduced in 2023. More information is available
+on the <a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html#visionportal-overview"><span class="std std-ref">ftc-docs VisionPortal Page</span></a>.</p>
+</section>
+<section id="target-color-range">
+<h2>Target Color Range<a class="headerlink" href="#target-color-range" title="Link to this heading"></a></h2>
+<p>The “target color” is actually a <strong>range</strong> of numerical color values, for a
+better chance of finding the desired color.</p>
+<p>Each <strong>Swatch</strong> name (BLUE, RED, YELLOW, GREEN, ARTIFACT_PURPLE, ARTIFACT_GREEN) has been pre-programmed with a
+range of color values to detect most shades of that color, in most lighting
+conditions.</p>
+<p>The values for Red, Blue and Yellow were tuned for the plastic game pieces
+(called Samples) from INTO THE DEEP. The values for ARTIFACT_PURPLE and ARTIFACT_GREEN
+were tuned for the plastic game pieces from DECODE.</p>
+<p>Select and read the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<p>The sample OpMode uses this Builder Block to specify the target color Swatch:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/10-setColorRangeSwatch.png"><img alt="Setting the color swatch" src="../../_images/10-setColorRangeSwatch.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting the Color Range Swatch</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Use the drop-down list to select the Swatch of the desired target color
+range.</p>
+<p>As an alternate, this Block can be replaced with the following Block in
+the Vision/ColorBlobLocator/Processor.Builder toolbox:</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/20-setColorRangeCustom.png"><img alt="Setting custom color range" src="../../_images/20-setColorRangeCustom.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting a custom color range</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>First use the drop-down list (green arrow) to choose the <strong>Color Space</strong>
+: YCrCb, HSV or RGB.  Learn more about Color Spaces at the separate page
+in this tutorial.</p>
+<p>Then select the numerical values in that Color Space to define the range
+of the target color.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> fields relate to a corresponding pair of values,
+namely (v0, v0), (v1, v1) or (v2, v2).</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 70-75 to set
+the desired target color range at about line 110.</p>
+<p>Use a predefined Swatch, or set a custom range in a specified Color Space
+(YCrCb, HSV or RGB).  Learn more about Color Spaces at the separate page
+in this tutorial.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.opencv.core.Scalar</span><span class="p">;</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="c1">// use a predefined color match</span>
+<span class="p">.</span><span class="na">setTargetColorRange</span><span class="p">(</span><span class="n">ColorRange</span><span class="p">.</span><span class="na">BLUE</span><span class="p">)</span>
+<span class="c1">// Available predefined colors are: RED, BLUE, YELLOW, GREEN</span>
+<span class="p">.</span>
+<span class="c1">// or define your own color match</span>
+<span class="p">.</span><span class="na">setTargetColorRange</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ColorRange</span><span class="p">(</span><span class="n">ColorSpace</span><span class="p">.</span><span class="na">YCrCb</span><span class="p">,</span>
+<span class="w">                                    </span><span class="k">new</span><span class="w"> </span><span class="n">Scalar</span><span class="p">(</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w">  </span><span class="mi">0</span><span class="p">),</span>
+<span class="w">                                    </span><span class="k">new</span><span class="w"> </span><span class="n">Scalar</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="region-of-interest-roi">
+<h2>Region of Interest (ROI)<a class="headerlink" href="#region-of-interest-roi" title="Link to this heading"></a></h2>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p><em>Focus the color locator by defining a RegionOfInterest (ROI) which you want
+to search.  This can be the entire frame, or a sub-region defined using
+standard image coordinates or a normalized +/- 1.0 coordinate system.  Use
+one form of the ImageRegion class to define the ROI.</em></p>
+</div></blockquote>
+<p>Caution: changing the ROI size and/or changing the camera resolution may
+require an adjustment to filtering by Area.  Post-filtering is covered here at
+this tutorial’s <strong>Explore</strong> page, and pre-filtering is covered at the following
+<a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html"><span class="doc">Challenge</span></a>
+page.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/30-setROI.png"><img alt="Setting ROI" src="../../_images/30-setROI.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting the ROI</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 77-83 to set
+the desired ROI at about line 112.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="na">setRoi</span><span class="p">(</span><span class="n">ImageRegion</span><span class="p">.</span><span class="na">entireFrame</span><span class="p">())</span>
+<span class="p">.</span>
+<span class="c1">// 100x100 pixel square near the upper left corner</span>
+<span class="p">.</span><span class="na">setRoi</span><span class="p">(</span><span class="n">ImageRegion</span><span class="p">.</span><span class="na">asImageCoordinates</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">  </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">))</span>
+<span class="p">.</span>
+<span class="c1">// 50% width/height square centered on screen</span>
+<span class="p">.</span><span class="na">setRoi</span><span class="p">(</span><span class="n">ImageRegion</span><span class="p">.</span><span class="na">asUnityCenterCoordinates</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="choice-of-contours">
+<h2>Choice of Contours<a class="headerlink" href="#choice-of-contours" title="Link to this heading"></a></h2>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p><em>Define which contours are included.  You can get ALL the contours, or you
+can skip any contours that are completely inside another contour.  note:
+EXTERNAL_ONLY helps to avoid bright reflection spots from breaking up areas
+of solid color.</em></p>
+</div></blockquote>
+<p>Also, the display of contours (in the previews) can be turned ON or OFF:</p>
+<blockquote>
+<div><p>Turning this on helps debugging but takes up valuable CPU time.</p>
+</div></blockquote>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/40-contourChoices.png"><img alt="Contour Choices" src="../../_images/40-contourChoices.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Contour Choices</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 85-92 to set
+the desired contour mode and drawing setting at about lines 111 and 113,
+respectively.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// return all contours</span>
+<span class="p">.</span><span class="na">setContourMode</span><span class="p">(</span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">ContourMode</span><span class="p">.</span><span class="na">ALL_FLATTENED_HIERARCHY</span><span class="p">)</span>
+<span class="p">.</span>
+<span class="c1">// exclude contours inside other contours</span>
+<span class="p">.</span><span class="na">setContourMode</span><span class="p">(</span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">ContourMode</span><span class="p">.</span><span class="na">EXTERNAL_ONLY</span><span class="p">)</span>
+<span class="p">.</span>
+<span class="c1">// show contours in the DS and RC previews</span>
+<span class="p">.</span><span class="na">setDrawContours</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="image-pre-processing">
+<h2>Image Pre-Processing<a class="headerlink" href="#image-pre-processing" title="Link to this heading"></a></h2>
+<p>The default Sample OpMode purposely <strong>blurs</strong> the camera’s image.  This
+“pre-processing” happens <strong>before</strong> <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpenCV"><span class="xref std std-term">OpenCV</span></a> performs Blob formation, thus
+affecting the contours seen in DS and RC previews.</p>
+<p>The effect is very small (default kernel size of 5x5 pixels), but can
+significantly improve Blob formation, giving more useful results.</p>
+<p>Blurring is one of three available image adjustments to improve processing
+results.  You can experiment with these advanced tools, after studying their
+usage.  See links at the section below called <strong>More Documentation</strong>.</p>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p>Include any pre-processing of the image or mask before looking for Blobs.</p>
+<p>There is some extra processing you can include to improve the formation of
+blobs.  Using these features requires an understanding of how they may
+affect the final blobs.  The “pixels” argument sets the NxN kernel size.</p>
+<p><strong>Blurring</strong> an image helps to provide a smooth color transition between
+objects, and smoother contours. The higher the number of pixels, the more
+blurred the image becomes.  Note: Even “pixels” values will be incremented
+to satisfy the “odd number” requirement.  Blurring too much may hide smaller
+features.  A “pixels” size of 5 is good for a 320x240 image.</p>
+<p><strong>Erosion</strong> removes floating pixels and thin lines so that only substantive
+objects remain.  Erosion can grow holes inside regions, and also shrink
+objects.  A “pixels” value in the range of 2-4 is suitable for low res
+images.</p>
+<p><strong>Dilation</strong> makes objects more visible by filling in small holes, making
+lines appear thicker, and making filled shapes appear larger. Dilation is
+useful for joining broken parts of an object, such as when removing noise
+from an image.  A “pixels” value in the range of 2-4 is suitable for low res
+images.</p>
+</div></blockquote>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-6">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/50-pre-process.png"><img alt="Pre-processor options" src="../../_images/50-pre-process.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Pre-processor Options</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-7">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 94-107 to
+set the desired pre-processing at about line 114.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="na">setBlurSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pixels</span><span class="p">)</span>
+<span class="p">.</span><span class="na">setErodeSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pixels</span><span class="p">)</span>
+<span class="p">.</span><span class="na">setDilateSize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pixels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Any of these pre-processing settings can be <strong>disabled</strong> by setting their pixel
+value to zero, or by removing the command.</p>
+<p>In the FTC processor, any specified erosion is performed <strong>before</strong> dilation.
+This removes specular noise, then returns the remaining blobs to a size similar
+to their original size.  (This also will <strong>not</strong> be on the final.)</p>
+</section>
+<section id="camera-resolution">
+<h2>Camera Resolution<a class="headerlink" href="#camera-resolution" title="Link to this heading"></a></h2>
+<p>The Sample OpMode uses a default camera resolution of 320 x 240 pixels,
+supported by most <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcams</span></a> and Android phone cameras.  You may edit this
+resolution, subject to a trade-off between:</p>
+<ul class="simple">
+<li><p>computing performance, and</p></li>
+<li><p>image detail, possibly needed beyond ColorLocator.</p></li>
+</ul>
+<p>Caution: changing the camera resolution and/or changing the ROI size may
+require an adjustment to filtering by Area.  Post-filtering is covered here at
+this tutorial’s <strong>Explore</strong> page, and pre-filtering is covered at the following
+<a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html"><span class="doc">Challenge</span></a> page.</p>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p>Set the desired video resolution.  Since a high resolution will not improve
+this process, choose a lower resolution that is supported by your camera.
+This will improve overall performance and reduce latency.</p>
+</div></blockquote>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-8">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/60-camera-resolution.png"><img alt="Camera Resolution" src="../../_images/60-camera-resolution.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Camera Resolution</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-9">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 121-123 to
+set the desired camera resolution at about line 131.  This setting is
+made in the VisionPortal Builder, not the Processor Builder.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="na">setCameraResolution</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Size</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="post-filter-the-blob-results">
+<h2>Post-filter the Blob Results<a class="headerlink" href="#post-filter-the-blob-results" title="Link to this heading"></a></h2>
+<p>After OpenCV has formed Blobs and provided results with the <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code>
+command (in Blocks and Java), your OpMode can <strong>post-filter</strong> or reduce the
+list.</p>
+<p>Here the term “post-” means after Blob formation and <strong>after the DS and RC
+previews</strong>.  So, you will still see contours and boxFits for <strong>all Blobs</strong>.</p>
+<p>By default, the Sample OpMode uses a <strong>Contour Area</strong> filter of 50 pixels
+(minimum) to 20,000 pixels (maximum).  The lower limit eliminates very small
+Blobs, while the upper limit is approximately the size of the default Region of
+Interest (ROI).</p>
+<p>Caution: changing the ROI size and/or changing the camera resolution may
+require an adjustment to filtering by Area.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember that a Blob contour never extends beyond the ROI, although a boxFit
+may do so.</p>
+</div>
+<p>Why filter?  A smaller list means faster processing, with fewer boxFits for
+your OpMode to evaluate.</p>
+<p>You can experiment with increasing the lower limit, and observing the effect on
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">Telemetry</span></a>.  Also experiment with the other filters for <strong>Density</strong> and <strong>Aspect
+Ratio</strong>.</p>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p>The list of Blobs can be filtered to remove unwanted Blobs.  Note: All
+contours will be still displayed on the Stream Preview, but only those that
+satisfy the filter conditions will remain in the current list of “blobs”.
+Multiple filters may be used.  Use any of the following filters.</p>
+<p><strong>Util.filterByArea()</strong> A Blob’s area is the number of pixels contained
+within the contour.  Filter out any that are too big or small.  Start with a
+large range and then refine the range based on the likely size of the
+desired object in the viewfinder.</p>
+<p><strong>Util.filterByDensity()</strong> A blob’s density is an indication of how “full”
+the contour is.  If you put a rubber band around the contour you would get
+the “Convex Hull” of the contour.  The density is the ratio of Contour-area
+to Convex Hull-area.</p>
+<p><strong>Util.filterByAspectRatio()</strong> A blob’s aspect ratio is the ratio of
+<strong>boxFit</strong> long side to short side.  A perfect square has an aspect ratio of
+1.  All others are &gt; 1</p>
+</div></blockquote>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-10">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/70-post-filter.png"><img alt="post filter" src="../../_images/70-post-filter.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Post Filter</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-11">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 147-164 to
+set the desired post-filtering at about line 166.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">filterByArea</span><span class="p">(</span><span class="n">minArea</span><span class="p">,</span><span class="w"> </span><span class="n">maxArea</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span>
+<span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">filterByDensity</span><span class="p">(</span><span class="n">minDensity</span><span class="p">,</span><span class="w"> </span><span class="n">maxDensity</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span>
+<span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">filterByAspectRatio</span><span class="p">(</span><span class="n">minAspect</span><span class="p">,</span><span class="w"> </span><span class="n">maxAspect</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Post-filtering commands should be placed <strong>after</strong> calling <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code> and
+<strong>before</strong> your OpMode’s handling (or Telemetry) of the <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code> results.
+Remember this as you incorporate these tools into your team’s larger OpModes.</p>
+</section>
+<section id="post-sort-the-blob-results">
+<h2>Post-sort the Blob Results<a class="headerlink" href="#post-sort-the-blob-results" title="Link to this heading"></a></h2>
+<p>After OpenCV has formed Blobs and provided results with the <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code>
+command (in Blocks and Java), your OpMode can <strong>post-sort</strong> the list.</p>
+<p>By default, the Sample OpMode sorts by <strong>Contour Area</strong> in descending order
+(largest is first).  This is an internally programmed sort, not appearing in
+the Sample OpMode.  This default is overridden or replaced by any sort
+specified in the OpMode.</p>
+<p>Why sort?  A sorted list means your OpMode can process Blobs in a known order,
+perhaps allowing your code to quickly reach a “conclusion”.  Namely some logic
+condition (probably about boxFits) could be satisfied sooner, to exit the
+vision processing loop and move on to robot action.</p>
+<p>The Blocks and Java Sample OpModes give this description:</p>
+<blockquote>
+<div><p><em>The list of Blobs can be sorted using the same Blob attributes as listed
+above.  No more than one sort call should be made.  Sorting can use
+ascending or descending order.</em></p>
+</div></blockquote>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-12">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/80-post-sort.png"><img alt="Post Sort" src="../../_images/80-post-sort.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Post Sort</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-13">
+Java</label><div class="sd-tab-content docutils">
+<p>In the Sample OpMode, follow the instructions at about lines 169-173 to
+set the desired post-sorting immediately after those instructions.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">sortByArea</span><span class="p">(</span><span class="n">SortOrder</span><span class="p">.</span><span class="na">DESCENDING</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span><span class="w">  </span><span class="c1">// Default</span>
+<span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">sortByDensity</span><span class="p">(</span><span class="n">SortOrder</span><span class="p">.</span><span class="na">DESCENDING</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span>
+<span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Util</span><span class="p">.</span><span class="na">sortByAspectRatio</span><span class="p">(</span><span class="n">SortOrder</span><span class="p">.</span><span class="na">DESCENDING</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A post-sorting command should be placed <strong>after</strong> calling <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code> and
+any post-filtering, and <strong>before</strong> your OpMode’s handling (or Telemetry) of the
+<code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code> results.  Remember this as you incorporate these tools into your
+team’s larger OpModes.</p>
+</section>
+<section id="more-documentation">
+<h2>More Documentation<a class="headerlink" href="#more-documentation" title="Link to this heading"></a></h2>
+<p>How does OpenCV match colors here?  The upper and lower values of the target
+color range are used to <strong>threshold</strong> the image’s pixels and find those within
+the range.  Technical information on thresholding is available at the <a class="reference external" href="https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html">OpenCV
+website for thresholding</a>.</p>
+<p>Technical information on Blur, Erosion and Dilation can be found <a class="reference external" href="https://medium.com/&#64;sasaniperera/opencv-morphological-dilation-and-erosion-fab65c29efb3">here</a>
+and at the <a class="reference external" href="https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html">OpenCV website for morphology</a>.</p>
+<p>Here’s a conceptual note from co-developer <a class="reference external" href="https://github.com/Windwoes">&#64;Windwoes</a>:</p>
+<blockquote>
+<div><p>The command <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code> does not initiate or perform the processing (Blob
+formation). The processing is <strong>happening continuously</strong>; <code class="docutils literal notranslate"><span class="pre">getBlobs()</span></code>
+just obtains a reference to the latest results.</p>
+</div></blockquote>
+<p>Next, this tutorial’s <a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html"><span class="doc">Challenge</span></a> page shows how to
+<strong>access more OpenCV features</strong> not covered in the Sample OpMode.</p>
+<p>Then a page called <a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html"><span class="doc">Color Locator (Round Blobs)</span></a> covers detection of round objects.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../color-locator-discover/color-locator-discover.html" class="btn btn-neutral float-left" title="Color Locator (Discover)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../color-locator-challenge/color-locator-challenge.html" class="btn btn-neutral float-right" title="Color Locator (Challenge)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

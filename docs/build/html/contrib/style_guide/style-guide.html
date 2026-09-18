@@ -1,0 +1,962 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FTC Docs Style Guide &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FTC Docs Accessibility Guidelines" href="ftc-docs-accessibility-guidelines.html" />
+    <link rel="prev" title="Contribution Guidelines" href="../guidelines/guidelines.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Contributing to FTC Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../guidelines/guidelines.html">Contribution Guidelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FTC Docs Style Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#accessibility">Accessibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-web-accessibility">What is Web Accessibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web-content-accessibility-guidelines">Web Content Accessibility Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plain-language">Plain Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restructuredtext-documents">reStructuredText Documents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-document">Example Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#document-filenames">Document Filenames</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#titles-and-headings">Titles and Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#whitespace">Whitespace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#indentation">Indentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blank-lines">Blank Lines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interior-whitespace">Interior Whitespace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#admonitions">Admonitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#internal-links">Internal Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#external-links">External Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#glossary-terms">Glossary Terms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#links-to-files">Links to Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#images">Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-images">Simple Images</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#alt-text-guidelines">Alt Text Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#images-with-captions">Images With Captions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-images">Complex Images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-files">Image Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#more-information">More Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ftc-docs-accessibility-guidelines.html">FTC Docs Accessibility Guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="image-and-figure-details.html">Image and Figure Details</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/workflow.html">FTC Docs Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mission-statement">Mission Statement</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Contributing to FTC Docs</a></li>
+      <li class="breadcrumb-item active">FTC Docs Style Guide</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/contrib/style_guide/style-guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ftc-docs-style-guide">
+<h1>FTC Docs Style Guide<a class="headerlink" href="#ftc-docs-style-guide" title="Link to this heading"></a></h1>
+<p>This guide contains the various reStructuredText (RST) and Sphinx specific guidelines for the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-FTC-Docs"><span class="xref std std-term">FTC Docs</span></a> project.
+reStructuredText is the default plain text markup language used by Sphinx.</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#accessibility" id="id4">Accessibility</a></p></li>
+<li><p><a class="reference internal" href="#plain-language" id="id5">Plain Language</a></p></li>
+<li><p><a class="reference internal" href="#restructuredtext-documents" id="id6">reStructuredText Documents</a></p></li>
+<li><p><a class="reference internal" href="#titles-and-headings" id="id7">Titles and Headings</a></p></li>
+<li><p><a class="reference internal" href="#text" id="id8">Text</a></p></li>
+<li><p><a class="reference internal" href="#whitespace" id="id9">Whitespace</a></p></li>
+<li><p><a class="reference internal" href="#tables" id="id10">Tables</a></p></li>
+<li><p><a class="reference internal" href="#admonitions" id="id11">Admonitions</a></p></li>
+<li><p><a class="reference internal" href="#links" id="id12">Links</a></p></li>
+<li><p><a class="reference internal" href="#images" id="id13">Images</a></p></li>
+<li><p><a class="reference internal" href="#more-information" id="id14">More Information</a></p></li>
+</ul>
+</nav>
+<section id="accessibility">
+<h2>Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading"></a></h2>
+<p>A new emphasis in FTC Docs is to improve the accessibility of FTC Docs.
+The <a class="reference external" href="https://www.ada.gov/topics/intro-to-ada/">Americans with Disabilities Act (ADA)</a>
+is a federal civil rights law that prohibits discrimination against people with disabilities in everyday activities.</p>
+<section id="what-is-web-accessibility">
+<h3>What is Web Accessibility<a class="headerlink" href="#what-is-web-accessibility" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is copied from: <a class="reference external" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">https://www.w3.org/WAI/fundamentals/accessibility-intro/</a>.</p>
+</div>
+<p>Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. More specifically, people can:</p>
+<ul class="simple">
+<li><p>perceive, understand, navigate, and interact with the Web</p></li>
+<li><p>contribute to the Web</p></li>
+</ul>
+<p>Web accessibility encompasses all disabilities that affect access to the Web, including:</p>
+<ul class="simple">
+<li><p>auditory</p></li>
+<li><p>cognitive</p></li>
+<li><p>neurological</p></li>
+<li><p>physical</p></li>
+<li><p>speech</p></li>
+<li><p>visual</p></li>
+</ul>
+<p>Web accessibility also benefits people without disabilities, for example:</p>
+<ul class="simple">
+<li><p>people using mobile phones, smart watches, smart TVs, and other devices with small screens, different input modes, etc.</p></li>
+<li><p>older people with changing abilities due to aging</p></li>
+<li><p>people with “temporary disabilities” such as a broken arm or lost glasses</p></li>
+<li><p>people with “situational limitations” such as in bright sunlight or in an environment where they cannot listen to audio</p></li>
+<li><p>people using a slow Internet connection, or who have limited or expensive bandwidth</p></li>
+</ul>
+</section>
+<section id="web-content-accessibility-guidelines">
+<h3>Web Content Accessibility Guidelines<a class="headerlink" href="#web-content-accessibility-guidelines" title="Link to this heading"></a></h3>
+<p>Web Content Accessibility Guidelines (WCAG) are
+a set of recommendations for making Web content more accessible, primarily for people with disabilities.</p>
+<p>Please refer to the <a class="reference internal" href="ftc-docs-accessibility-guidelines.html"><span class="doc">FTC Docs Accessibility Guidelines</span></a> section of FTC Docs for how to
+improve the accessibility of content created for FTC Docs.</p>
+</section>
+</section>
+<section id="plain-language">
+<h2>Plain Language<a class="headerlink" href="#plain-language" title="Link to this heading"></a></h2>
+<p>Plain language means communicating in a way that’s clear, straightforward, and easy to understand. It helps audiences “get” what you’re saying immediately.</p>
+<p>Writing in plain language ensures that users can:</p>
+<ul class="simple">
+<li><p>Find the information they need</p></li>
+<li><p>Understand what they find</p></li>
+<li><p>Use the information to fulfill their needs</p></li>
+</ul>
+<p>This article talks about plain language and contains <a class="reference external" href="https://evolvingweb.com/blog/plain-language-guide-how-write-inclusive-digital-content-2024#how">tips with examples</a>.
+These are similar to the tips on <a class="reference external" href="https://www.w3.org/WAI/tips/writing/#keep-content-clear-and-concise">Writing for Web Accessibility</a>.
+Finally, you can explore the <a class="reference external" href="https://www.plainlanguage.gov/guidelines/">Federal plain language guidelines</a>.</p>
+</section>
+<section id="restructuredtext-documents">
+<h2>reStructuredText Documents<a class="headerlink" href="#restructuredtext-documents" title="Link to this heading"></a></h2>
+<p>reStructuredText (RST) is the default plaintext <a class="reference external" href="https://en.wikipedia.org/wiki/Markup_language">markup language</a> used by Sphinx.
+See the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText primer</a> for a short introduction.
+There is also a <a class="reference external" href="https://sphinx-tutorial.readthedocs.io/cheatsheet/">RST cheatsheet</a> that can be helpful to remind you of the basics.</p>
+<p>The following sections illustrate how to write RST for FTC Docs. They are not a tutorial or reference guide for RST.</p>
+<section id="example-document">
+<h3>Example Document<a class="headerlink" href="#example-document" title="Link to this heading"></a></h3>
+<p>The following example shows how content is mixed with RST markup.
+The RST markup indicates titles, paragraphs, code samples, images and document sections.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="gh">Article Title</span>
+<span class="gh">=============</span>
+
+This is an example article.
+A paragraph is a collection of lines. You can have multiple sentences per line.
+
+Leave a blank line to start a new paragraph.
+Here is some code:
+
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">java</span>
+
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
+
+This is how to include an image:
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/BlocksPicture1.jpg
+   <span class="nc">:alt:</span> Blocks Programming Tool showing a graphical Blocks program.
+
+This is how to include an image with caption:
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> images/examplemulticolorplates.png
+   <span class="nc">:alt:</span> 6 multicolor square 3D printed logos.
+
+   This FTC Team printed their sponsors logos in multiple colors to represent them!
+
+<span class="gh">Section</span>
+<span class="gh">-------</span>
+
+This is a section!
+
+<span class="gh">Sub-section</span>
+<span class="gh">^^^^^^^^^^^</span>
+
+This is a sub-section!
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are having issues editing files with the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension, the recommended text editor is VS Code with the
+<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext">reStructuredText</a> extension.</p>
+<p>However, a plain text editor works just fine. Though you would need to generate the HTML to see what the document will look like.</p>
+</div>
+</section>
+<section id="document-filenames">
+<h3>Document Filenames<a class="headerlink" href="#document-filenames" title="Link to this heading"></a></h3>
+<p>This is for the files that make up the pages of FTC Docs.
+Use only lowercase alphanumeric characters and - (minus) symbol in the file name. Example: <code class="docutils literal notranslate"><span class="pre">style-guide.rst</span></code></p>
+<p>For documents that will have an identical software/hardware name, append “-hardware” or “-software” to the end of the document name. example: <code class="docutils literal notranslate"><span class="pre">ultrasonics-hardware.rst</span></code></p>
+<p>Suffix filenames with the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension.</p>
+</section>
+</section>
+<section id="titles-and-headings">
+<h2>Titles and Headings<a class="headerlink" href="#titles-and-headings" title="Link to this heading"></a></h2>
+<p>Titles and Section Headers are both related, and are treated the exact same way.</p>
+<p>In order to create a new Section, SubSection, SubSubSection, and so on, we just
+use a special character that we will define for each level. FTC Docs uses the following:</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span>Titles
+====== (Equals)
+
+Sections
+-------- (Dash)
+
+SubSection
+^^^^^^^^^^ (Carrot)
+
+SubSubSection
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; (Double Quotes)
+
+SubSubSubSection
+++++++++++++++++ (Plus Sign)
+</pre></div>
+</div>
+<p>This is what should be used for different levels of sections.
+Please nest the sections in order. For example, use SubSection to add something to a Section (not a SubSubSection).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Titles, Sections, SubSections, etc. must all be uniquely named within the same document.</p>
+</div>
+</section>
+<section id="text">
+<h2>Text<a class="headerlink" href="#text" title="Link to this heading"></a></h2>
+<p>Use the ASCII character set for English text. For special characters (e.g. Greek symbols) use the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/definitions.html#character-entity-sets">standard character entity sets</a>.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">math::</span></code> for standalone equations and <code class="docutils literal notranslate"><span class="pre">:math:</span></code> for inline equations.
+The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">math::</span></code> directive uses Latex markup, see this <a class="reference external" href="https://www.reed.edu/academic_support/pdfs/qskills/latexcheatsheet.pdf">LaTeX equation cheat sheet (PDF)</a> for more information.</p>
+<p>The standard text formatting markup is quite simple - use:</p>
+<ul class="simple">
+<li><p>One Asterisk: *text* for emphasis (italics) - like <em>text</em></p></li>
+<li><p>Two Asterisks: **text** for strong emphasis (boldface) - like <strong>text</strong></p></li>
+<li><p>Two Backticks: ``text`` for literals - like <code class="docutils literal notranslate"><span class="pre">text</span></code></p></li>
+</ul>
+<p>Use literals for filenames, function, and variable names.</p>
+</section>
+<section id="whitespace">
+<h2>Whitespace<a class="headerlink" href="#whitespace" title="Link to this heading"></a></h2>
+<section id="indentation">
+<h3>Indentation<a class="headerlink" href="#indentation" title="Link to this heading"></a></h3>
+<p>Indentation should <em>always</em> match the previous level of indentation <em>unless</em> you are creating a new content block.</p>
+<p>Indentation of content directives as new line <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code>  should be <cite>3</cite> spaces.</p>
+</section>
+<section id="blank-lines">
+<h3>Blank Lines<a class="headerlink" href="#blank-lines" title="Link to this heading"></a></h3>
+<p>There should be one blank line separating basic text blocks and section titles. There should be one blank line separating text blocks and content directives.</p>
+</section>
+<section id="interior-whitespace">
+<h3>Interior Whitespace<a class="headerlink" href="#interior-whitespace" title="Link to this heading"></a></h3>
+<p>Use one space between sentences.</p>
+</section>
+</section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
+<p>There are many ways to create tables, FTC Docs prefers the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table">list</a>
+or <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table-1">CSV</a> style of RST table.
+Please avoid the ASCII art form of table.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> Frozen Delights!
+   <span class="nc">:header:</span> &quot;Treat&quot;, &quot;Quantity&quot;, &quot;Description&quot;
+   <span class="nc">:widths:</span> 15, 10, 30
+
+   &quot;Albatross&quot;, 2.99, &quot;On a stick!&quot;
+   &quot;Crunchy Frog&quot;, 1.49, &quot;If we took the bones out,
+   it wouldn&#39;t be crunchy, now would it?&quot;
+   &quot;Gannet Ripple&quot;, 1.99, &quot;On a stick!&quot;
+</pre></div>
+</div>
+<p>Which creates the following:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Frozen Delights!</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 27.3%" />
+<col style="width: 18.2%" />
+<col style="width: 54.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Treat</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Albatross</p></td>
+<td><p>2.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crunchy Frog</p></td>
+<td><p>1.49</p></td>
+<td><p>If we took the bones out,
+it wouldn’t be crunchy, now would it?</p></td>
+</tr>
+<tr class="row-even"><td><p>Gannet Ripple</p></td>
+<td><p>1.99</p></td>
+<td><p>On a stick!</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="admonitions">
+<h2>Admonitions<a class="headerlink" href="#admonitions" title="Link to this heading"></a></h2>
+<p>Admonitions are RST directives that provide special formatting to the admonition text.
+In FTC docs admonitions have a color heading, followed by a color shaded block with the admonition text.
+The list of admonitions is: “attention”, “caution”, “danger”, “error”, “hint”, “important”, “note”, “tip”, “warning”.
+FTC Docs has lots of “note” and “warning” admonitions.</p>
+<p>In RST an admonition looks like:</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is a note admonition.
+   This is the second line of the first paragraph.
+
+   <span class="m">-</span> The note contains all indented body elements
+     following.
+   <span class="m">-</span> It includes this bullet list.
+</pre></div>
+</div>
+<p>Which results in the following:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note admonition.
+This is the second line of the first paragraph.</p>
+<ul class="simple">
+<li><p>The note contains all indented body elements
+following.</p></li>
+<li><p>It includes this bullet list.</p></li>
+</ul>
+</div>
+<p>Please use admonitions to highlight important information.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Admonitions should usually should be short.</p>
+</div>
+</section>
+<section id="links">
+<h2>Links<a class="headerlink" href="#links" title="Link to this heading"></a></h2>
+<p>Effective link text:</p>
+<ul class="simple">
+<li><p>Avoid link text such as “click here” or “learn more.” These call to actions do not provide any relevant information.</p></li>
+<li><p>Links should be unique and describe where it takes you. If you have multiple links that look or sound similar (but point to different sections), use different words for each link.</p></li>
+<li><p>Links to files (e.g. Microsoft Word, PDF, etc.) should also indicate the file type or destination within the link text.</p></li>
+<li><p>Avoid using long URLs as link text. Longer, less intelligible URLs used as link text might be difficult to comprehend with assistive technology.</p></li>
+<li><p>Link text should be clear and concise. Avoid linking entire sentences or paragraphs.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See this guide on <a class="reference external" href="https://www.nngroup.com/articles/writing-links/">writing hyperlinks</a> for more information.</p>
+</div>
+<section id="internal-links">
+<h3>Internal Links<a class="headerlink" href="#internal-links" title="Link to this heading"></a></h3>
+<p>Internal Links will be automatically generated based on the ReStructuredText filename and section title.
+For example, here are several ways to link to sections and documents.</p>
+<ul class="simple">
+<li><p>Use this format to reference a section of the same document: <code class="docutils literal notranslate"><span class="pre">`Images`_</span></code> Note the single underscore. This renders to the link <a class="reference internal" href="#images">Images</a> which is a section further down in this document.</p></li>
+<li><p>Use this format to reference the top level of a document. You can use relative paths <code class="docutils literal notranslate"><span class="pre">:doc:`image-and-figure-details`</span></code> renders to <a class="reference internal" href="image-and-figure-details.html"><span class="doc">Image and Figure Details</span></a>. Or to use absolute paths, put a forward slash at the beginning of the path <code class="docutils literal notranslate"><span class="pre">:doc:`/apriltag/vision_portal/visionportal_webcams/visionportal-webcams`</span></code> renders to <a class="reference internal" href="../../apriltag/vision_portal/visionportal_webcams/visionportal-webcams.html"><span class="doc">Webcams for Vision Portal</span></a>. Note that the link text rendered is the main section title of the target page regardless of the target filename.</p></li>
+</ul>
+<p>The general way to reference a section in another document is to add a label in front of the section in that other document.
+Note the leading underscore and trailing colon that surround the label. The label must be unique across all of FTC Docs. You can also reference a Figure with the label method.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_imu axes def:</span>
+
+<span class="gh">Axes Definition</span>
+<span class="gh">---------------</span>
+</pre></div>
+</div>
+<p>Then you reference the label by using <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> and surrounding the label with back ticks as follows:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>partial sentence including <span class="na">:ref:</span><span class="nv">`imu axes def`</span>
+
+another reference to <span class="na">:ref:</span><span class="nv">`IMU or robot axes &lt;imu axes def&gt;`</span>
+</pre></div>
+</div>
+<p>The second <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> shows a format that lets you specify the link text, otherwise the section heading is used for the link text. This looks like the following:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>partial sentence including <a class="reference internal" href="../../programming_resources/imu/imu.html#imu-axes-def"><span class="std std-ref">Axes Definition</span></a></p></td>
+<td><p>This shows the section heading.</p></td>
+</tr>
+<tr class="row-even"><td><p>another reference to <a class="reference internal" href="../../programming_resources/imu/imu.html#imu-axes-def"><span class="std std-ref">IMU or robot axes</span></a></p></td>
+<td><p>This shows custom link text.</p></td>
+</tr>
+</tbody>
+</table>
+<p>When using <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> or <code class="docutils literal notranslate"><span class="pre">:doc:</span></code> you may customize the displayed text by surrounding the actual link with angle brackets <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> and adding the custom text between the first back tick <code class="docutils literal notranslate"><span class="pre">`</span></code> and the first angle bracket <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, leaving a space between the text and bracket.
+For example <code class="docutils literal notranslate"><span class="pre">:ref:`RC</span> <span class="pre">Overview</span> <span class="pre">&lt;control_hard_compon/rc_components/index:Robot</span> <span class="pre">Controller</span> <span class="pre">Overview&gt;`</span></code> renders to <a class="reference internal" href="../../control_hard_compon/rc_components/index.html#robot-controller-overview"><span class="std std-ref">RC Overview</span></a>.
+This is a link to the Robot Controller Overview section of the index in the rc_components folder.</p>
+</section>
+<section id="external-links">
+<h3>External Links<a class="headerlink" href="#external-links" title="Link to this heading"></a></h3>
+<p>Links to other websites and even to the main <em>FIRST</em> Inspires site are call <em>external links</em>.
+It’s possible to create a link by entering the URL in the text <a class="reference external" href="https://ftc-resources.firstinspires.org/ftc/game">https://ftc-resources.firstinspires.org/ftc/game</a>.
+Sphinx will build a link when it encounters a URL. But that is not the preferred approach.</p>
+<p>Use descriptive link text rather than just embedding a URL.
+Use the following RST syntax:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="s">`Game and Season Materials </span><span class="si">&lt;https://ftc-resources.firstinspires.org/ftc/game&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+<p>Which looks like: <a class="reference external" href="https://ftc-resources.firstinspires.org/ftc/game">Game and Season Materials</a></p>
+<p>FTC Docs has chosen to open links to external sites in new tabs. This is done with JavaScript.
+We mitigate this somewhat by adding an icon that indicates the link is to an external site and add screen reader only text.</p>
+</section>
+<section id="glossary-terms">
+<h3>Glossary Terms<a class="headerlink" href="#glossary-terms" title="Link to this heading"></a></h3>
+<p>The <a class="reference internal" href="../../glossary/glossary.html"><span class="doc">Glossary</span></a> defines the hardware, software, programming and
+competition terms used across the site.
+Link to it with the <code class="docutils literal notranslate"><span class="pre">:term:</span></code> role so a reader who does not recognize a term can check it
+without leaving the page — FTC Docs shows glossary definitions as a hover tooltip.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>An <span class="na">:term:</span><span class="nv">`OpMode`</span> runs on the <span class="na">:term:</span><span class="nv">`Robot Controller`</span>.
+</pre></div>
+</div>
+<p>When the word in your sentence does not match the glossary entry exactly — a plural, or a
+lowercase spelling — give the display text first and the entry in angle brackets:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Plug both <span class="na">:term:</span><span class="nv">`encoders &lt;Encoder&gt;`</span> into the <span class="na">:term:</span><span class="nv">`Control Hub`</span>.
+</pre></div>
+</div>
+<p><strong>Link the first mention of every glossary term on the page.</strong> This is a requirement, not a
+suggestion: a reader arriving on any page from a search engine should be able to look up any
+term it uses. Every page on the site currently satisfies this, so please keep it that way
+when you add or edit content.</p>
+<p>Link the <em>first</em> mention only — not every mention. A page where all eleven instances of
+“Control Hub” are links is harder to read, not easier.</p>
+<p>Some words are glossary terms in one sentence and ordinary English in the next. Link only the
+sense the glossary defines:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Link it</p></th>
+<th class="head"><p>Leave it alone</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>a wireless problem during a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Match"><span class="xref std std-term">Match</span></a></p></td>
+<td><p>“check for a match with the DS app version”</p></td>
+</tr>
+<tr class="row-odd"><td><p>the robot’s <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Heading"><span class="xref std std-term">Heading</span></a> from the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-IMU"><span class="xref std std-term">IMU</span></a></p></td>
+<td><p>“the items appear under the heading Downloaded”</p></td>
+</tr>
+<tr class="row-even"><td><p>the robot’s 12V <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Battery"><span class="xref std std-term">Battery</span></a></p></td>
+<td><p>“a USB battery pack”, “the phone has a low battery”</p></td>
+</tr>
+</tbody>
+</table>
+<p>A few places cannot take a role at all — code blocks and inline literals, text that is already
+a link, image <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> text, section titles, and the label of a <code class="docutils literal notranslate"><span class="pre">button-ref</span></code> or the header of
+a <code class="docutils literal notranslate"><span class="pre">grid-item-card</span></code> (a link nested inside a button does not render). Where a term’s only
+mention on a page falls in one of those, leave it unlinked.</p>
+<p>If a term is missing from the glossary, add it there rather than defining it inline in your
+page. Definitions that live in one place stay consistent. When you add an entry, also link its
+first mention on the pages that already use the word.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">glossarycheck</span></code> (also run, non-blocking, on every pull request) scans for glossary
+words that appear unlinked before any <code class="docutils literal notranslate"><span class="pre">:term:</span></code> role for them shows up on the page. It is a
+heuristic, not a verdict — it cannot tell “a wireless problem during a match” from “check for
+a match with the DS app version” — so treat its output as a checklist to verify by eye, not
+something to blindly wrap in <code class="docutils literal notranslate"><span class="pre">:term:</span></code>.</p>
+</section>
+<section id="links-to-files">
+<h3>Links to Files<a class="headerlink" href="#links-to-files" title="Link to this heading"></a></h3>
+<p>You can directly link to files such as a PDF, but that is an accessibility problem.
+The issue is the context switch from web browsing to suddenly having to deal with a PDF that has probably opened in a new tab/window without any warning.
+FTC Docs contains quite a few links to PDFs that should be make more accessible.</p>
+<p>The recommended approach to linking to files is to include in the link a warning that the link is actually a file, the file type, and if possible the file size.
+Ideally that information is in text and included in the link text portion of the link so that a screen reader would read that information and let the user decide if they want to follow the link.</p>
+<p>Simple example of a link to a PDF.</p>
+<p>RST Code:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="s">`Field Setup Guide (PDF) </span><span class="si">&lt;https://ftc-resources.firstinspires.org/ftc/field/eventfieldguide&gt;</span><span class="s">`__</span>
+</pre></div>
+</div>
+<p>Which looks like:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference external" href="https://ftc-resources.firstinspires.org/ftc/field/eventfieldguide">Field Setup Guide (PDF)</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Generally in FTC Docs we link to file to enable them to be downloaded for printing or offline viewing.
+In that case, the user is downloading the file, which is an action, so a button is appropriate.
+Buttons are appropriate user interface components for user actions.
+Using a button as a link will visually distinguish a file link from a regular link.</p>
+<p>The following RST example show a sentence that precedes the button to give context.
+We include the document name as screen readers and keyboard only users might tab to the link
+so we need to indicate in the link what file will be downloadable.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Use the following button link to download a PDF of the Field Setup Guide from the <span class="ge">*FIRST*</span> Website:
+
+<span class="p">..</span> <span class="ow">button-link</span><span class="p">::</span> https://ftc-resources.firstinspires.org/ftc/field/eventfieldguide
+   <span class="nc">:color:</span> primary
+
+   Download Field Setup Guide PDF, 4.5 MB
+</pre></div>
+</div>
+<p>This looks like:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Use the following button link to download a PDF of the Field Setup Guide from the <em>FIRST</em> Website:</p>
+<p><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary reference external" href="https://ftc-resources.firstinspires.org/ftc/field/eventfieldguide"><span>Download Field Setup Guide PDF, 4.5 MB</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The preferred approach when linking to files is to create what is called a gateway page.
+The gateway page would describes the file, perhaps giving a summary of the content.
+This lets the reader decide if it’s worth taking the trouble to view or download the file.
+Ideally, all references to the file elsewhere on the website link to the gateway page which then links to the file.</p>
+<p>External reference: <a class="reference external" href="https://www.nngroup.com/articles/gateway-pages-prevent-pdf-shock/">https://www.nngroup.com/articles/gateway-pages-prevent-pdf-shock/</a></p>
+<p>Here’s a gateway page example for the Field Setup Guide PDF.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>The Field Setup Guide has the official instructions for assembling and setting up a <em>FIRST</em> Tech Challenge field.
+Typically there are assembly instructions that build structures that then have setup instructions for placing on the field.
+There are also tear down instructions that indicate how to take apart the field for storage or transport.</p>
+<p>The guide typically has the following sections:</p>
+<ul class="simple">
+<li><p>A list of all tools required for assembly and setup, some tools are only for assembly or for setup.</p></li>
+<li><p>A list all the game elements and scoring elements with the quantity of each.</p></li>
+<li><p>Instructions for setup of the field perimeter and field tiles.</p></li>
+<li><p>Step by step instructions for assembling parts and setting them on the field.</p></li>
+<li><p>Most games have tape lines on the field to mark locations or areas of the game. There are also taped areas outside the field for the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Alliance"><span class="xref std std-term">Alliances</span></a>, and sometimes for game areas.</p></li>
+<li><p>Most games have <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTags</span></a> placed around the field that can be used for robot navigation.</p></li>
+<li><p>Finally, there are tear down instructions that indicate how to take the field down for storage or transport.</p></li>
+</ul>
+<p>Use the following button link to download a PDF of the Field Setup Guide from the <em>FIRST</em> Website:</p>
+<p><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary reference external" href="https://ftc-resources.firstinspires.org/ftc/field/eventfieldguide"><span>Download Field Setup Guide PDF, 4.5 MB</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="images">
+<h2>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h2>
+<p>Images usually support the text on a page. They provide visual reinforcement.
+Sometimes an image is the primary source of meaning for the content.
+It’s hard to talk about AprilTags without images of what an AprilTag looks like.</p>
+<p>For FTC Docs, please don’t add <a class="reference internal" href="image-and-figure-details.html#decorative-images-label"><span class="std std-ref">Decorative Images</span></a> that are just for visual presentation.
+Images should relate to the content of the page.</p>
+<p>See <a class="reference internal" href="#image-files">Image Files</a> for file formats, size, and where to place images the FTC Docs folders.</p>
+<section id="simple-images">
+<h3>Simple Images<a class="headerlink" href="#simple-images" title="Link to this heading"></a></h3>
+<p>Use the following <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image</span></code> directive when the image does not require a visible text caption.
+For accessibility, please add an <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> option to the image directive with a functional description of the image.
+This description will not be visible on a web page or PDF, but will be spoken out loud by
+screen reader software.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/BlocksPicture1.jpg
+   <span class="nc">:alt:</span> Blocks Programming Tool showing a graphical Blocks program.
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> line is indented three spaces.</p>
+<p>The description should be functional. Describe the image for someone who cannot see it.</p>
+<p>Here’s what the web page for an image looks like (but reduced in size for this example).
+The image is a screen shot of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> programming tool on a page that talks about the various programming tools available.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><img alt="Blocks Programming Tool showing a graphical Blocks program." class="no-scaled-link" src="../../_images/BlocksPicture1.jpg" style="width: 40%;" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>The alt text reads <em>Blocks Programming Tool showing a graphical Blocks program.</em>
+The alt text is not visible in HTML or PDF, but would be spoken aloud by screen reading software.
+Alt text is displayed in the browser if the image failed to load or the user had selected to not load images
+because they are on a low bandwidth internet connection.</p>
+<p>FTC Docs has many diagrams. Some are simple like this one for a control system diagram on a page that introduces the control system.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><img alt="Two gamepads are connected to a Rev Driver Hub, which is connected by WiFi to a Rev Control Hub on the robot." class="no-scaled-link" src="../../_images/PointToPointControl.jpg" style="width: 40%;" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>The alt text reads <em>Two gamepads are connected to a Rev Driver Hub, which is connected by WiFi to a Rev Control Hub on the robot.</em></p>
+<p>FTC Docs also has photographs. These also need alt text to describe the image.</p>
+<section id="alt-text-guidelines">
+<h4>Alt Text Guidelines<a class="headerlink" href="#alt-text-guidelines" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Keep it short. Alt text shouldn’t be much longer than around 150 characters.</p></li>
+<li><p>Do not include words like ‘image’ or ‘photo’ at the beginning.</p></li>
+<li><p>End alt text with a period, even if it isn’t a full sentence. The period ensures that the screen reader pauses after reading the alt text.</p></li>
+<li><p>Front load alt text with the most important words, to help users make a quick and informed decision about whether it’s worth listening to the rest of the alt text before moving on.</p></li>
+<li><p>Always include an alt attribute. Otherwise, screen readers might announce the image file name.</p></li>
+<li><p>Avoid technical jargon and abbreviations unless users are certain to understand them.</p></li>
+</ul>
+<p>If you need more than a sentence or two to describe the image, see <a class="reference internal" href="#complex-images">Complex Images</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For assistance with alt text descriptions, see <a class="reference internal" href="image-and-figure-details.html#alt-text-label"><span class="std std-ref">Alt Text</span></a>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you are editing an existing page that has an <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure</span></code> directive with no <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> option,
+please take a moment to add the <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> option with a functional description of the image.</p>
+</div>
+</section>
+</section>
+<section id="images-with-captions">
+<h3>Images With Captions<a class="headerlink" href="#images-with-captions" title="Link to this heading"></a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">..figure</span></code> directive when the image requires a visible text caption.
+Sphinx place the caption text below the image. The caption text is in italic font.</p>
+<p>Photo credits are an example of when you need a caption.
+You should also use a caption when you need editorial or illustrative text to highlight something
+about the image to the reader or to connect the image to the surrounding text content.
+This could include the who, what, when, where, and/or why of an image.
+You might draw the readers attention to some detail of the image, or what is important in the image.
+Captions can be longer than one line if needed, but should generally be kept short.</p>
+<p>Please create alt text even though there is a caption.
+The alt text and caption should be different because a screen reader will read both.
+One way to think about this is the alt text should be functional and the caption should editorial or illustrative.</p>
+<p>Do not add the word “Figure” to the caption, or “Figure 1”, etc.
+The PDF writer will automatically add “Fig.” and a number to all captions.</p>
+<p>If you need to reference the figure in the text of the page, use the leading text of the caption if possible, or
+some unique short identifier or description of the image.
+Try not to reference the figure by position (such as “see the image above”) as visually impaired persons cannot see the position.
+Also, the PDF writer might move the figure out of context with the surrounding text.</p>
+<p>The following example is on a page about 3D printed parts in a section about Robot Aesthetics.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> images/examplemulticolorplates.png
+   <span class="nc">:alt:</span> 6 multicolor square 3D printed logos.
+
+   This FTC Team printed their sponsors logos in multiple colors to represent them!
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> and caption are both indented 3 spaces.
+A blank line is required between <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> and the caption.</p>
+<p>Here’s what this looks like (with image reduced in size for this example).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id2">
+<img alt="6 multicolor square 3D printed logos." class="no-scaled-link" src="../../_images/examplemulticolorplates.png" style="width: 40%;" />
+<figcaption>
+<p><span class="caption-text">This FTC Team printed their sponsors logos in multiple colors to represent them!</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The alt text for the image reads <em>6 multicolor square 3D printed logos.</em></p>
+<p>This is a good example of a functional alt text description for a screen reader followed by
+an editorial caption that is visible.</p>
+</section>
+<section id="complex-images">
+<h3>Complex Images<a class="headerlink" href="#complex-images" title="Link to this heading"></a></h3>
+<p>To make images accessible for the visually impaired, we need to provide a text description of the image.
+For complex images, you might need a whole paragraph to describe the image.
+Alt text is not supposed to be more than a sentence or two, we need to provide something short in the alt text knowing that a long description follows.</p>
+<p>To include a complex image use the figure directive.
+Set the <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> text to a short functional description, perhaps a summary of the long description.
+Set the caption to be an editorial or illustrative comment on the image.
+See the guidance about alt text and captions in the preceding section.
+The long description is then added as a paragraph after the caption in the figure directive.</p>
+<p>Try to adjust the alt text, caption, and long description so that the text flows such
+that it would make sense if read aloud by a screen reader.</p>
+<p>In the following reStructuredText source example the figure directive has alt text, followed by a one line caption.
+A descriptive paragraph is added after the caption. It is indented the same as the caption.
+There is a blank line before and after the caption.</p>
+<div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> images/into-the-deep-field.png
+   <span class="nc">:alt:</span> A square field with X, Y and Z axes shown.
+
+   The Into The Deep game field
+
+   In a square field configuration the two Alliances face each other across the field.
+   The field is oriented such that the Red Wall is on the right as seen
+   from the audience, and the blue wall will be on the left.
+   The Y axis points across the field from the Red Wall to the blue wall.
+   The X axis points away from the audience to the rear of the field.
+</pre></div>
+</div>
+<p>Here’s what a complex image looks like (with image reduced in size for this example).</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id3">
+<img alt="A square field with X, Y and Z axes shown." class="no-scaled-link" src="../../_images/into-the-deep-field.png" style="width: 25%;" />
+<figcaption>
+<p><span class="caption-text">The Into The Deep game field</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<div class="legend">
+<p>In a square field configuration the two Alliances face each other across the field.
+The field is oriented such that the Red Wall is on the right as seen
+from the audience, and the blue wall will be on the left.
+The Y axis points across the field from the Red Wall to the blue wall.
+The X axis points away from the audience to the rear of the field.</p>
+</div>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The alt text for the example image reads <em>A square field with X, Y and Z axes shown.</em>
+This is a short functional description that a screen reader would say.</p>
+<p>The caption is an editorial comment that this field is from the Cascade Effect game.
+It is not the same as the alt text.</p>
+<p>The paragraph after the caption completely describes the image for those who cannot see it.
+A complete text description is also important for those persons who have trouble processing or understanding visual information.
+It can help them understand the image they are seeing.</p>
+<p>For another example of a complex image see <a class="reference internal" href="image-and-figure-details.html#complex-image-label"><span class="std std-ref">Complex Image Example</span></a>.</p>
+</section>
+<section id="image-files">
+<h3>Image Files<a class="headerlink" href="#image-files" title="Link to this heading"></a></h3>
+<p>Image files should be stored in an <code class="docutils literal notranslate"><span class="pre">images</span></code> sub directory in the folder of the current document.
+This allows the document to reference the image as follows: <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span> <span class="pre">images/my-image.png</span></code>.</p>
+<p>Example: The document <strong>field-coordinate-system.rst</strong> is in the <strong>game_specific_resources\field_coordinate_system</strong> folder.
+The images for that page are stored in the folder <strong>game_specific_resources\field_coordinate_system\images</strong>.</p>
+<p>Image file names should follow the naming scheme of <strong>short-description.ext</strong>, where the name of the image is a short description of what the image shows.
+This should be less than 24 characters.
+File name extensions should be <strong>.png</strong> or <strong>.jpg</strong>.</p>
+<p>Image file formats should be Portable Network Graphics(PNG) or Joint Photographic Experts Group(JPEG).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Images with the extension .gif and .svg are not supported in PDF format.</p>
+</div>
+<p>Images (including vector graphics) should be less than 500 kilobytes in size and no more than 1000 pixels in width.
+Please make use of a smaller resolution and more efficient compression algorithms.
+This facilitates reasonable web page loading for those with slow internet connections.
+Our HTML documents have a maximum width of 1000 pixels for desktop browsing so image width should be 1000 pixels or less.</p>
+<p>An exception to image size is images like the control system diagrams in the
+<a class="reference internal" href="../../control_hard_compon/rc_components/index.html#robot-controller-overview"><span class="std std-ref">Robot Controller Overview</span></a>.
+Those diagrams are over 2500 pixels wide and greater than 500 KB in size.
+However, that extra resolution is required to properly view the details of all the components and the connections.
+If those were reduced in resolution, or too heavily compressed as a jpg, relevant details might be lost or hard to see.</p>
+</section>
+</section>
+<section id="more-information">
+<h2>More Information<a class="headerlink" href="#more-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="ftc-docs-accessibility-guidelines.html"><span class="doc">FTC Docs Accessibility Guidelines</span></a></p></li>
+<li><p><a class="reference internal" href="image-and-figure-details.html"><span class="doc">Image and Figure Details</span></a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../guidelines/guidelines.html" class="btn btn-neutral float-left" title="Contribution Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ftc-docs-accessibility-guidelines.html" class="btn btn-neutral float-right" title="FTC Docs Accessibility Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

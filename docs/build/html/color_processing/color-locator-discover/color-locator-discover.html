@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Locator (Discover) &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Color Locator (Explore)" href="../color-locator-explore/color-locator-explore.html" />
+    <link rel="prev" title="Color Blob Concepts" href="../color-blob-concepts/color-blob-concepts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Color Processing</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../color-sensor/color-sensor.html">Color Processing Color Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-blob-concepts/color-blob-concepts.html">Color Blob Concepts</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Locator (Discover)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-opmode">Sample OpMode</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#opening-the-sample-opmode">Opening the Sample OpMode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#running-the-sample-opmode">Running the Sample OpMode</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ds-preview">DS Preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rc-preview">RC Preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-telemetry-data">Basic Telemetry Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blob-formation">Blob Formation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-boxfit-data-for-position">Using boxFit Data for Position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-boxfit-data-for-manipulation">Using boxFit Data for Manipulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#more-documentation">More Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-explore/color-locator-explore.html">Color Locator (Explore)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html">Color Locator (Challenge)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html">Color Locator (Round Blobs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-spaces/color-spaces.html">Color Spaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#compatibility">Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#two-processors">Two Processors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Color Processing Introduction</a></li>
+      <li class="breadcrumb-item active">Color Locator (Discover)</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/color_processing/color-locator-discover/color-locator-discover.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="color-locator-discover">
+<h1>Color Locator (Discover)<a class="headerlink" href="#color-locator-discover" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Another way to use FTC’s new <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpenCV"><span class="xref std std-term">OpenCV</span></a> vision tools is to operate a “Color
+Locator”.  Namely, it can <strong>find a target color that you specify</strong>.</p>
+<p>As with the Color Sensor tool, you can specify a <strong>Region of Interest</strong> (ROI).
+Only that zone of the camera’s view will be searched for the target color.</p>
+<p>The “target color” is actually a <strong>range</strong> of numerical color values, for a
+better chance of finding the desired color.</p>
+<p>OpenCV will form <strong>“Blobs”</strong> of that color.  As described in the Concepts page
+here, a Blob is a contiguous cluster of similar-colored pixels.</p>
+<p>Blobs often have a complex, irregular shape or <strong>contour</strong>, so they are
+represented here by a best-fit rectangle called <strong>“boxFit”</strong>.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/20-blob-zoom.png"><img alt="Zoomed Color Blob detection" src="../../_images/20-blob-zoom.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Zoomed Color Blob detection</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The target color here is BLUE.  The white rectangle is the Region of Interest
+(ROI), the teal jagged line is the Blob’s contour (fully inside the ROI), and
+the purple rectangle is the boxFit.</p>
+<p>The software reports the size, position and orientation of each “boxFit”.  That
+data can be evaluated by your <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> for <strong>robot navigation</strong> and other
+actions.</p>
+<p>The following sections describe how to do this, with a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpMode</span></a>.</p>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h2>
+<p><em>Skip this section if …</em></p>
+<ul class="simple">
+<li><p><em>the active</em> <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Configuration"><span class="xref std std-term">robot configuration</span></a> <em>already contains “Webcam 1”,</em> or</p></li>
+<li><p><em>using the built-in camera of an Android phone as</em> <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a>.</p></li>
+</ul>
+<p>Before starting the programming, REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> users should make a robot
+configuration that includes the USB <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcam</span></a> to be used as a color locator.</p>
+<p>For now, use the default webcam name, “Webcam 1”.  If a different name is
+preferred, edit the Sample OpMode to agree with the exact webcam name in the
+robot configuration.</p>
+<p><strong>Save and activate</strong> that configuration; its name should appear on the paired
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> screen.</p>
+</section>
+<section id="sample-opmode">
+<h2>Sample OpMode<a class="headerlink" href="#sample-opmode" title="Link to this heading"></a></h2>
+<section id="opening-the-sample-opmode">
+<h3>Opening the Sample OpMode<a class="headerlink" href="#opening-the-sample-opmode" title="Link to this heading"></a></h3>
+<p>To learn about opening the Sample OpMode, select and read the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> <strong>or</strong>
+Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>On a laptop or desktop computer connected via Wi-Fi to the Robot
+Controller, open the Chrome browser.  Go to the REV Control
+Hub’s address <a class="reference external" href="http://192.168.43.1:8080">http://192.168.43.1:8080</a> (or
+<a class="reference external" href="http://192.168.49.1:8080">http://192.168.49.1:8080</a> for Android RC phone) and click the
+Blocks tab.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">OpMode</span></code>, enter a new name such as
+“ColorLocator_Monica_v01”, and select the Sample OpMode
+<code class="docutils literal notranslate"><span class="pre">ConceptVisionColorLocator_Rectangle</span></code>.</p></li>
+<li><p>Near the beginning of the OpMode code, change <cite>ARTIFACT_PURPLE</cite> to <cite>BLUE</cite>.</p></li>
+<li><p>At the top of the Blocks screen, you can change the type from <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-TELEOP"><span class="xref std std-term">TeleOp</span></a>
+to <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Autonomous"><span class="xref std std-term">Autonomous</span></a>, since this Sample OpMode does not use <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Gamepad"><span class="xref std std-term">gamepads</span></a>.</p></li>
+<li><p>If using the built-in camera of an RC phone, drag out the relevant
+Block from the left-side <code class="docutils literal notranslate"><span class="pre">VisionPortal.Builder</span></code> toolbox.</p></li>
+<li><p>Save the OpMode, time to try it!</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Open your choice of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBot Java</span></a> or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a>.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">teamcode</span></code> folder, add/create a new OpMode with a name such
+as “ColorLocator_Javier_v01.java”, and select the Sample OpMode
+<code class="docutils literal notranslate"><span class="pre">ConceptVisionColorLocator_Rectangle.java</span></code>.</p></li>
+<li><p>Near the beginning of the OpMode code, change <cite>ARTIFACT_PURPLE</cite> to <cite>BLUE</cite>.</p></li>
+<li><p>At about Line 63, you can change <code class="docutils literal notranslate"><span class="pre">&#64;TeleOp</span></code> to <code class="docutils literal notranslate"><span class="pre">&#64;Autonomous</span></code>,
+since this Sample OpMode does not use gamepads.</p></li>
+<li><p>If using the built-in camera of an RC phone, follow the OpMode
+comments to specify that camera.</p></li>
+<li><p>Click “Build”, time to try it!</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="running-the-sample-opmode">
+<h3>Running the Sample OpMode<a class="headerlink" href="#running-the-sample-opmode" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the Driver Station, select the Autonomous OpMode that you just saved or
+built.</p></li>
+<li><p>Turn off the automatic 30-second match timer (green slider).  Aim the camera
+at a <strong>blue object</strong>.</p></li>
+<li><p>Touch INIT only.  The OpMode should give <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">Telemetry</span></a> showing the results of
+one or more Blobs:</p></li>
+</ol>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/23-basic-telemetry.png"><img alt="Basic Telemetry" src="../../_images/23-basic-telemetry.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Basic Telemetry</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this example, the Region of Interest (ROI) contains only one Blob of the
+default target color BLUE.</p>
+<p>Move the camera around, especially at BLUE objects, and watch the Telemetry
+area on the Driver Station screen.  It may sometimes show more lines of Blob
+data, and sometimes show no Blob data at all.</p>
+<p>It’s working!  Your camera is working as a <strong>color locator</strong>.  Think about how
+to use this in the FTC Robot Game.</p>
+<p><em>Skip the next two sections, if you already know how to use FTC previews.</em></p>
+</section>
+</section>
+<section id="ds-preview">
+<h2>DS Preview<a class="headerlink" href="#ds-preview" title="Link to this heading"></a></h2>
+<p>Before describing the telemetry data, this page offers two sections showing how
+to view the OpenCV results with <strong>previews</strong>.  Previewing is essential for
+working with vision code.</p>
+<p>On the Driver Station (DS), remain in INIT – don’t touch the Start button.</p>
+<p>At the top right corner, touch the 3-dots menu, then <code class="docutils literal notranslate"><span class="pre">Camera</span> <span class="pre">Stream</span></code>.  This
+shows the camera’s view; tap the image to refresh it.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/30-CameraStream.png"><img alt="DS Camera Stream Preview" src="../../_images/30-CameraStream.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">DS Camera Stream Preview</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The default target color here is BLUE.  The white rectangle is the Region of
+Interest (ROI), the teal (light blue) jagged line is the Blob’s contour (fully
+inside the ROI), and the orange rectangle is the boxFit.</p>
+<p>For a BIG preview, touch the arrows at the bottom right corner.</p>
+<p>Or, select Camera Stream again, to return to the previous screen and its
+Telemetry.</p>
+</section>
+<section id="rc-preview">
+<h2>RC Preview<a class="headerlink" href="#rc-preview" title="Link to this heading"></a></h2>
+<p>The Robot Controller (RC) device also makes a preview, called <code class="docutils literal notranslate"><span class="pre">LiveView</span></code>.
+This is full video, and is shown automatically on the screen of an RC phone.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/32-LiveView.png"><img alt="Image of a LiveView stream" src="../../_images/32-LiveView.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">LiveView stream</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above preview is from a REV Control Hub.</p>
+<p>It has no physical screen, so you must plug in an HDMI monitor <strong>or</strong> use
+open-source <a class="reference external" href="https://github.com/Genymobile/scrcpy">scrcpy</a> (called
+“screen copy”) to see the preview on a laptop or computer that’s connected via
+Wi-Fi to the Control Hub.</p>
+</section>
+<section id="basic-telemetry-data">
+<h2>Basic Telemetry Data<a class="headerlink" href="#basic-telemetry-data" title="Link to this heading"></a></h2>
+<p>Let’s look closer at the DS telemetry:</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/35-basic-telemetry-circled.png"><img alt="Image of telemetry output" src="../../_images/35-basic-telemetry-circled.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Locator Telemetry</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this example, the Region of Interest (ROI) contains only one Blob of the
+default target color BLUE.  You could probably move your camera to achieve the
+same result - with the help of previews.</p>
+<p>The <strong>first column</strong> shows the (X, Y) position of the <strong>Center</strong> of the boxFit
+rectangle.  With the origin at the full image’s top left corner, X increases to
+the right and Y increases downward.</p>
+<p>The <strong>second column</strong> shows the <strong>Area</strong>, in pixels, of the Blob (contour, not
+boxFit).  By default, the Sample OpMode uses a <strong>filter</strong> to show Blobs between
+50 and 20,000 pixels.  Also by default, the Sample uses a <strong>sort</strong> tool to
+display multiple Blobs in descending order of Area (largest is first).</p>
+<p>The <strong>third column</strong> shows the <strong>Density</strong> of the Blob contour.  From the
+Sample comments:</p>
+<blockquote>
+<div><p><em>A blob’s density is an indication of how “full” the contour is.  If you put
+a rubber band around the contour you would get the “Convex Hull” of the
+contour.  The density is the ratio of Contour-area to Convex Hull-area.</em></p>
+</div></blockquote>
+<p>The <strong>fourth column</strong> shows the <strong>Aspect Ratio of the boxFit</strong>, the best-fit
+rectangle around the contour:</p>
+<blockquote>
+<div><p><em>A blob’s Aspect Ratio is the ratio of boxFit long side to short side.  A
+perfect Square has an Aspect Ratio of 1.  All others are &gt; 1.</em></p>
+</div></blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The boxFit is not required to stay inside the ROI.  Also the boxFit may be
+<strong>tilted</strong> at some angle, namely not horizontal.  This will be discussed
+more in a later page.</p>
+</div>
+<p>The fifth and sixth columns are described in a later page called
+<a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html"><span class="doc">Color Locator (Round Blobs)</span></a>.</p>
+</section>
+<section id="blob-formation">
+<h2>Blob Formation<a class="headerlink" href="#blob-formation" title="Link to this heading"></a></h2>
+<p>So far these examples have shown a <strong>single Blob</strong> formed by OpenCV:</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/40-single-blob.png"><img alt="Boxfit and detection within ROI" src="../../_images/40-single-blob.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Single blob discovery</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>But OpenCV can form and return <strong>multiple Blobs</strong> in a single set of results:</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/43-two-blobs.png"><img alt="Two blobs detected" src="../../_images/43-two-blobs.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Two blob discovery</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Without controls, OpenCV can easily form a <strong>high number of Blobs</strong> (at least
+12 here):</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/45-many-blobs.png"><img alt="Multiple blob discovery" src="../../_images/45-many-blobs.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Multiple blob discovery</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>And as mentioned above, some of those Blobs might have a <strong>boxFit tilted</strong> at
+some angle:</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/49-tilted-box.png"><img alt="Tilted Boxfit" src="../../_images/49-tilted-box.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Tilted Boxfit</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This tutorial’s <strong>next two pages</strong> show how to manage these scenarios by
+<strong>editing the OpMode’s default settings</strong>, and <strong>accessing more OpenCV
+features</strong> not covered in the Sample OpMode.</p>
+</section>
+<section id="using-boxfit-data-for-position">
+<h2>Using boxFit Data for Position<a class="headerlink" href="#using-boxfit-data-for-position" title="Link to this heading"></a></h2>
+<p>A team’s Autonomous code can evaluate boxFit data to navigate or guide the
+robot on the field.</p>
+<p>Imagine your camera is on the robot, looking forward.  <strong>Underneath the
+camera</strong> is your <strong>intake mechanism</strong>, perhaps a top grabber, sideways claw
+or spinner.</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../_images/80-targeting.png"><img alt="Game piece targeting" src="../../_images/80-targeting.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Game piece targeting</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>OpenCV will report the data for this orange boxFit.  Could your code use this
+data to <strong>position the robot</strong> directly in front of the game piece, for a
+better chance to collect it?</p>
+<p>How would you do it?</p>
+</section>
+<section id="using-boxfit-data-for-manipulation">
+<h2>Using boxFit Data for Manipulation<a class="headerlink" href="#using-boxfit-data-for-manipulation" title="Link to this heading"></a></h2>
+<p>For advanced teams: imagine your webcam is on a grabber arm, looking down into
+the Submersible (from INTO THE DEEP).</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../_images/82-targeting.png"><img alt="Targeting in clutter" src="../../_images/82-targeting.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Targeting in clutter</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Could the data from this boxFit (orange rectangle) help you <strong>grab only the
+Blue Sample</strong>?</p>
+<p>Could this help in Autonomous <strong>and</strong> TeleOp?</p>
+</section>
+<section id="more-documentation">
+<h2>More Documentation<a class="headerlink" href="#more-documentation" title="Link to this heading"></a></h2>
+<p>This tutorial’s next page called <a class="reference internal" href="../color-locator-explore/color-locator-explore.html"><span class="doc">Explore</span></a> covers
+<strong>editing the OpMode’s existing default settings</strong>.</p>
+<p>After that, the following page called <a class="reference internal" href="../color-locator-challenge/color-locator-challenge.html"><span class="doc">Challenge</span></a> shows how to <strong>access
+more OpenCV features</strong> not covered in the Sample OpMode.</p>
+<p>Then a page called <a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html"><span class="doc">Color Locator (Round Blobs)</span></a> covers detection of round objects.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../color-blob-concepts/color-blob-concepts.html" class="btn btn-neutral float-left" title="Color Blob Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../color-locator-explore/color-locator-explore.html" class="btn btn-neutral float-right" title="Color Locator (Explore)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

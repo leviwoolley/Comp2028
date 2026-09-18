@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using Log Files to Troubleshoot Problems &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Managing Electrostatic Discharge Effects" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html" />
+    <link rel="prev" title="Using Wireshark for Packet Capture" href="../wireshark_packet_capture/wireshark-packet-capture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Control System Troubleshooting Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../wifi_technology/wifi-technology.html">Wi-Fi Technology and Direct Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitoring_wireless_environment/monitoring-wireless-environment.html">Monitoring the Wireless Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html">Troubleshooting Wireless Issues at an Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi_channel_planning/wifi-channel-planning.html">Planning Wi-Fi Channels for Large Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_common_issues/troubleshooting-common-issues.html">Troubleshooting Common Control System Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark_packet_capture/wireshark-packet-capture.html">Using Wireshark for Packet Capture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using Log Files to Troubleshoot Problems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify-the-date-and-time">Verify the Date and Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-first-tech-challenge-log-files">The FIRST Tech Challenge Log Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-the-first-tech-challenge-robot-controller-log-file">Viewing the FIRST Tech Challenge Robot Controller Log File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-navigation">File Navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-windows-file-explorer-to-locate-the-log-files">Using Windows File Explorer to Locate the Log Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewing-the-contents-of-the-log-file">Viewing the Contents of the Log File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#non-windows-users">Non-Windows Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-rev-hardware-client-windows-app-to-view-log-files">Using the REV Hardware Client Windows App to View Log Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-android-debug-bridge-for-troubleshooting">Using the Android Debug Bridge for Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#shelling-into-an-android-device">“Shelling” into an Android Device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulling-a-file-from-the-android-device">Pulling a File from the Android Device</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-android-studio-to-view-log-messages">Using Android Studio to View Log Messages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-your-own-log-statements-within-an-opmode">Creating Your Own Log Statements within an OpMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-opmode">Example OpMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-logcat-filter-in-android-studio">Creating a logcat Filter in Android Studio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mitigating-disruptions-due-to-electrostatic-shocks">Mitigating Disruptions Due to Electrostatic Shocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-additional-help">Getting Additional Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Control System Troubleshooting Guide</a></li>
+      <li class="breadcrumb-item active">Using Log Files to Troubleshoot Problems</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/control_system_troubleshooting/using_log_files/using-log-files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-log-files-to-troubleshoot-problems">
+<h1>Using Log Files to Troubleshoot Problems<a class="headerlink" href="#using-log-files-to-troubleshoot-problems" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>One of the most useful features in the troubleshooting process is the ability to retrieve and
+review the log files on the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> devices. The system logs all
+sorts of information in these files, and when an incident occurs it is often helpful to review
+them to look for a pattern or clue that can help diagnose the problem. This page is the full
+walkthrough referenced from <a class="reference internal" href="../troubleshooting_common_issues/troubleshooting-common-issues.html"><span class="doc">Troubleshooting Common Control System Issues</span></a>,
+covering how to find, view, and search these log files in detail.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are on a Windows machine, the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-REV-Hardware-Client"><span class="xref std std-term">REV Hardware Client</span></a> can be used to view and
+download log files from the Robot Controller Android device. See the
+<a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware Client documentation</a>
+for details.</p>
+</div>
+</section>
+<section id="verify-the-date-and-time">
+<h2>Verify the Date and Time<a class="headerlink" href="#verify-the-date-and-time" title="Link to this heading"></a></h2>
+<p>One important and often overlooked step you can take to help with your troubleshooting is to
+verify the date and time on your Android devices. Ideally, the dates and times on your devices
+should match the local date and time. When the FIRST Tech Challenge apps record statements to
+the log file, they include a timestamp that you can refer to when troubleshooting a specific
+event.</p>
+<p>When a problem with the robot occurs, you might not have the opportunity to view the log files
+and troubleshoot the problem right away. If you note the date and time of the incident, then at
+a later opportunity you can check the log files and read the timestamps to look for statements
+that occurred around the time of your incident.</p>
+</section>
+<section id="the-first-tech-challenge-log-files">
+<h2>The FIRST Tech Challenge Log Files<a class="headerlink" href="#the-first-tech-challenge-log-files" title="Link to this heading"></a></h2>
+<p>The logcat files are accessible on your phones. By default, the FTC Robot Controller and FTC
+Driver Station apps store these files (as text files) in the top-level directory on your Android
+device. For the FTC Robot Controller app, the path on the phone to the log file is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/sdcard/ftcRobotControllerLog.txt
+</pre></div>
+</div>
+<p>For the FTC Driver Station app, the path to the log file is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/sdcard/ftcDriverStationLog.txt
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These file path names are different than in previous versions of the software. They
+used to be <code class="docutils literal notranslate"><span class="pre">/sdcard/com.qualcomm.ftcrobotcontroller.logcat</span></code> and
+<code class="docutils literal notranslate"><span class="pre">/sdcard/com.qualcomm.ftcdriverstation.logcat</span></code> respectively.</p>
+</div>
+</section>
+<section id="viewing-the-first-tech-challenge-robot-controller-log-file">
+<h2>Viewing the FIRST Tech Challenge Robot Controller Log File<a class="headerlink" href="#viewing-the-first-tech-challenge-robot-controller-log-file" title="Link to this heading"></a></h2>
+<p>You can use the FTC Robot Controller app to browse log file information directly on the phone.
+From the main FTC Robot Controller screen, click on the three dots to bring up the main menu:</p>
+<figure class="align-default" id="id1">
+<img alt="FTC Robot Controller app menu listing Settings, Restart Robot, View logs, and About options below a red error status message." src="../../_images/rc-app-menu.png" />
+<figcaption>
+<p><span class="caption-text">Click on the three dots in the upper right hand portion of the screen then select View logs
+from the menu.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Select the View logs item from the menu to display the log file:</p>
+<figure class="align-default" id="id2">
+<img alt="Robot Controller log viewer screen displaying red error lines about a missing USB device and RobotCore exceptions." src="../../_images/rc-log-viewer.png" />
+<figcaption>
+<p><span class="caption-text">You can scroll up and down to view the statements in the log file.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Scroll up and down to view the log statements. The oldest statements appear at the top and the
+most recent statements appear at the bottom. Error messages are displayed in red.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The View logs feature only shows an abbreviated version of the log file. While this is
+useful, it is sometimes more helpful to view the entire log file and search for older
+statements which might not be available through the View logs feature. The following sections
+describe how to pull the full log file from the phone onto a computer.</p>
+</div>
+<section id="file-navigation">
+<h3>File Navigation<a class="headerlink" href="#file-navigation" title="Link to this heading"></a></h3>
+<p>Each FTC app stores log files at the top level of its Android device’s storage system. Using the
+device’s file manager app (if any), look inside Main Storage. The FTC Robot Controller app
+creates files named <code class="docutils literal notranslate"><span class="pre">robotControllerLog.txt</span></code>, sometimes with a digit appended. Similarly, the
+FTC Driver Station app creates files named <code class="docutils literal notranslate"><span class="pre">driverStationLog.txt</span></code>.</p>
+<p>Third-party file manager apps can also be found on the Google Play Store; many are free and
+perform well.</p>
+<p>For some FTC Android phones, the only pre-installed file navigation tool is found inside a menu
+that is not displayed on the Apps screen. Open the phone’s Settings, then select Storage. Scroll
+to the bottom of the list and touch Explore. This opens a basic file navigation screen, typically
+at the Main Storage level. Scroll down to see the FTC log files. Touch and hold a filename to
+activate a file management menu at the top of the screen, or briefly touch a filename to open it
+with a selected text viewing app, if any.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Besides the standard full logs, the FTC Robot Controller app can also create shorter
+Match Logs. These are found in the FIRST folder, in the subfolder called <code class="docutils literal notranslate"><span class="pre">matchlogs</span></code>. The
+FIRST folder also contains robot configuration (XML) files and other useful subfolders, beyond
+the scope of this troubleshooting guide.</p>
+</div>
+<p>The Android phone may have a pre-installed or third-party app for viewing text files in various
+formats, but FTC log files are large, each text line is long, and the phone’s screen is small. It
+is usually easier to copy these files to your PC and use an application there to browse the
+file.</p>
+</section>
+<section id="using-windows-file-explorer-to-locate-the-log-files">
+<h3>Using Windows File Explorer to Locate the Log Files<a class="headerlink" href="#using-windows-file-explorer-to-locate-the-log-files" title="Link to this heading"></a></h3>
+<p>If you are a Windows user, you can use Windows File Explorer to browse the contents of your
+Android phone and find the log files. First, connect the phone via a USB cable to your Windows
+machine.</p>
+<p>Once the phone is connected, make sure it is in media device mode rather than charging-only mode.
+For most FTC phones, swipe down from the top edge of the screen and select “use USB to transfer
+files.”</p>
+<figure class="align-default" id="id3">
+<img alt="Android USB connection settings with Media device (MTP) selected and USB debugging enabled." src="../../_images/media-device-mode.jpg" />
+<figcaption>
+<p><span class="caption-text">Make sure your phone is in Media device mode.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If the phone is in Media device mode, you can launch Windows File Explorer to browse its
+contents. The phone should appear as a media device connected to your PC:</p>
+<figure class="align-default" id="id4">
+<img alt="Windows File Explorer showing the phone listed as a media device under This PC." src="../../_images/phone-in-explorer.png" />
+<figcaption>
+<p><span class="caption-text">The phone should appear as a media device connected to your PC.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>You can double-click on the phone’s hard drive to open and browse its main directory.</p>
+<figure class="align-default" id="id5">
+<img alt="Phone's main storage directory in File Explorer listing folders including Alarms, Android, DCIM, and FIRST." src="../../_images/phone-main-dir.png" />
+<figcaption>
+<p><span class="caption-text">You can browse the main directory of the phone.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When you open the phone’s “hard drive,” you are exploring the top level, or Main Storage,
+directory of your Android device. You can see that there is a FIRST subdirectory in this main
+directory. Scroll down to the bottom of the window to find the log files:</p>
+<figure class="align-default" id="id6">
+<img alt="File Explorer listing showing the com.qualcomm.ftcrobotcontroller LOGCAT file among other files in the phone's storage." src="../../_images/log-files-listing.png" />
+<figcaption>
+<p><span class="caption-text">The log files should be visible in this directory.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>With Windows File Explorer you can copy one or more log files and then paste them onto your own
+PC’s hard drive. This allows you to create a local copy of the log file on your computer that you
+can open with a text editor or word processor.</p>
+<figure class="align-default" id="id7">
+<img alt="A log file being dragged from File Explorer onto the Windows desktop with a Copy to Desktop tooltip." src="../../_images/drag-log-to-desktop.jpg" />
+<figcaption>
+<p><span class="caption-text">You can make a copy of a log file by dragging and dropping the file to your personal computer.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="viewing-the-contents-of-the-log-file">
+<h3>Viewing the Contents of the Log File<a class="headerlink" href="#viewing-the-contents-of-the-log-file" title="Link to this heading"></a></h3>
+<p>Once you have successfully copied the log file to your local computer, you can use an
+application on your computer to open and read it. The log file is simply a text file, and you
+might be tempted to open it using an application like Windows Notepad. If you do, you might find
+that the formatting of the displayed text is not very useful:</p>
+<figure class="align-default" id="id8">
+<img alt="Log file opened in Notepad showing dense, unformatted text with no visible line breaks." src="../../_images/log-in-notepad.png" />
+<figcaption>
+<p><span class="caption-text">Using Notepad might not be as useful to browse the log files.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you are a Windows user, you can use Microsoft Word to open and view the file instead. When you
+try to find the file, make sure that the file type filter in the Open file dialog box is set to
+<code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Files</span></code>.</p>
+<figure class="align-default" id="id9">
+<img alt="Microsoft Word Open dialog with the file type filter dropdown set to All Files, circled in orange." src="../../_images/word-open-all-files.png" />
+<figcaption>
+<p><span class="caption-text">Make sure the file filter is set to <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Files</span></code> when you browse to find your log file.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Using Microsoft Word to view the log file makes it easier to read and search for text. A useful
+alternative is <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
+<figure class="align-default" id="id10">
+<img alt="Log file opened in Microsoft Word showing readable, line-wrapped monospace text." src="../../_images/log-in-word.png" />
+<figcaption>
+<p><span class="caption-text">Using Microsoft Word to view the log file makes it easier to read the contents and search for
+specific text strings.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="non-windows-users">
+<h3>Non-Windows Users<a class="headerlink" href="#non-windows-users" title="Link to this heading"></a></h3>
+<p>If you have a Mac or Linux computer, you do not have access to the File Explorer application to
+copy and paste files from the phone. Mac users have the option of using the
+<a class="reference external" href="https://www.android.com/filetransfer/">Android File Transfer</a> program to browse and copy
+files from the phone.</p>
+<p>Mac, Linux, and Windows users also have the option of using the Android Debug Bridge utility to
+transfer files from the phone to their local computer. The next section covers the Android Debug
+Bridge program in detail.</p>
+</section>
+<section id="using-the-rev-hardware-client-windows-app-to-view-log-files">
+<h3>Using the REV Hardware Client Windows App to View Log Files<a class="headerlink" href="#using-the-rev-hardware-client-windows-app-to-view-log-files" title="Link to this heading"></a></h3>
+<p>A convenient and easy way to troubleshoot problems with the REV Control system is to view log
+files using the REV Hardware Client for Windows computers. The REV Hardware Client log viewer has
+filters, tags, and a search function that makes it easy to see what is happening on the Control
+Hub or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a> during an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> run. Instructions for using the REV Hardware Client are
+available on the REV Robotics website:
+<a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/control-hub/using-the-log-viewer">Using the Log Viewer</a>.</p>
+</section>
+</section>
+<section id="using-the-android-debug-bridge-for-troubleshooting">
+<h2>Using the Android Debug Bridge for Troubleshooting<a class="headerlink" href="#using-the-android-debug-bridge-for-troubleshooting" title="Link to this heading"></a></h2>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Debug-Bridge"><span class="xref std std-term">Android Debug Bridge</span></a> (ADB) is a utility program included with the Android Software
+Development Kit (SDK) platform-tools. ADB is invoked from a command line and is a very helpful
+utility. To use ADB you will need the Android SDK platform-tools installed (preferably a recent
+version of the Android SDK). Normally, when you install <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a>, you also install the
+Android SDK, including the platform-tools package.</p>
+<p>The examples in this section were made with a Windows PC, but the process is similar for Mac and
+Linux computers. If your computer does not recognize the <code class="docutils literal notranslate"><span class="pre">adb</span></code> command, check that the Android
+SDK platform-tools are installed on your machine and that the path to the <code class="docutils literal notranslate"><span class="pre">adb</span></code> program is
+included in your command line search path (refer to the appropriate Windows, Mac, or Linux
+documentation for details on how to check this).</p>
+<section id="shelling-into-an-android-device">
+<h3>“Shelling” into an Android Device<a class="headerlink" href="#shelling-into-an-android-device" title="Link to this heading"></a></h3>
+<p>You can use ADB to “shell” into an Android device. This means that you can use ADB to establish a
+terminal session with an Android device. The ADB shell provides a command line interface that you
+can use to type commands to interact with the phone.</p>
+<p>To launch an ADB shell, first make sure that USB debugging is enabled on your Android phone and
+that you have the appropriate driver installed on your computer. Connect the phone to the
+computer with a USB cable. Open a command line window or terminal window and type the following
+to list all Android devices currently connected to your computer:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>adb<span class="w"> </span>devices
+</pre></div>
+</div>
+<figure class="align-default" id="id11">
+<img alt="Command Prompt output of adb devices starting the ADB daemon and listing one attached device." src="../../_images/adb-devices-output.png" />
+<figcaption>
+<p><span class="caption-text">From a terminal or command line interface type <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">devices</span></code> to see a listing of attached
+Android devices.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you want to establish a terminal or shell session with your Android phone, type the following
+at the command prompt:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>adb<span class="w"> </span>shell
+</pre></div>
+</div>
+<figure class="align-default" id="id12">
+<img alt="Command Prompt after running adb shell, with the prompt changed to shell&#64;speed:/ $." src="../../_images/adb-shell-prompt.png" />
+<figcaption>
+<p><span class="caption-text">Type in <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">shell</span></code> to create a terminal session with your Android device.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Notice that the command line prompt changes to <code class="docutils literal notranslate"><span class="pre">shell&#64;speed:/</span> <span class="pre">$</span></code> after <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">shell</span></code> is
+entered. This new prompt indicates that you are now connected to the phone, and any commands you
+enter will be processed by the phone. Note that Linux commands are case sensitive.</p>
+<p>You can use standard Linux commands to navigate the environment. Typing <code class="docutils literal notranslate"><span class="pre">pwd</span></code> at the shell
+prompt prints the current directory on the screen:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id13">
+<img alt="ADB shell session running pwd, printing the root directory / as the current working directory." src="../../_images/adb-shell-pwd.png" />
+<figcaption>
+<p><span class="caption-text">The command <code class="docutils literal notranslate"><span class="pre">pwd</span></code> prints the current working directory.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/sdcard</span></code> changes the current directory to the <code class="docutils literal notranslate"><span class="pre">/sdcard</span></code> subdirectory on the
+phone’s file system. Typing <code class="docutils literal notranslate"><span class="pre">pwd</span></code> again afterward shows your new location within the file
+system:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/sdcard
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id14">
+<img alt="ADB shell session after cd /sdcard and pwd, showing /sdcard as the new working directory." src="../../_images/adb-shell-cd-sdcard.png" />
+<figcaption>
+<p><span class="caption-text">Entering <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/sdcard</span></code> changes the working directory; entering <code class="docutils literal notranslate"><span class="pre">pwd</span></code> prints the new working
+directory.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">ls</span></code> at the command prompt lists the contents of the current directory. The directories
+and files shown here match the folders and files you would see using the Android device’s File
+Manager app, or using Windows File Explorer:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<figure class="align-default" id="id15">
+<img alt="ADB shell ls output listing folders and log files in the /sdcard directory." src="../../_images/adb-shell-ls.png" />
+<figcaption>
+<p><span class="caption-text">The command <code class="docutils literal notranslate"><span class="pre">ls</span></code> lists the folders and files in the current directory.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To exit the ADB shell and return to your personal computer’s command prompt, type the command
+<code class="docutils literal notranslate"><span class="pre">exit</span></code>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id16">
+<img alt="ADB shell session after typing exit, returning to the Windows Command Prompt." src="../../_images/adb-shell-exit.png" />
+<figcaption>
+<p><span class="caption-text">The command <code class="docutils literal notranslate"><span class="pre">exit</span></code> exits the phone’s shell and returns you to your computer’s command line.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pulling-a-file-from-the-android-device">
+<h3>Pulling a File from the Android Device<a class="headerlink" href="#pulling-a-file-from-the-android-device" title="Link to this heading"></a></h3>
+<p>You can also use the ADB utility program to pull a file from the phone to the local file system
+of your computer. The syntax is:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>adb<span class="w"> </span>pull<span class="w"> </span>&lt;SOURCE<span class="w"> </span>PATH&gt;<span class="w"> </span>&lt;DESTINATION<span class="w"> </span>PATH&gt;
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;SOURCE</span> <span class="pre">PATH&gt;</span></code> is the location of the original file on the phone and
+<code class="docutils literal notranslate"><span class="pre">&lt;DESTINATION</span> <span class="pre">PATH&gt;</span></code> is where on the computer you want to copy the file to.</p>
+<p>For example, the following command,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>adb<span class="w"> </span>pull<span class="w"> </span>/sdcard/com.qualcomm.ftcRobotcontroller.logcat<span class="w"> </span>c:<span class="se">\u</span>sers<span class="se">\T</span>EInspiron<span class="se">\D</span>esktop<span class="se">\r</span>c_log.txt
+</pre></div>
+</div>
+<p>copies the log file from the Android device to the local file system at
+<code class="docutils literal notranslate"><span class="pre">c:\users\TEInspiron\Desktop\rc_log.txt</span></code>.</p>
+<figure class="align-default" id="id17">
+<img alt="Command Prompt showing a directory listing followed by an adb pull command copying the log file successfully." src="../../_images/adb-pull-command.png" />
+<figcaption>
+<p><span class="caption-text">You can use the <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">pull</span></code> command to copy a file from the phone onto your local hard drive.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once you have copied the file to your local hard drive, you can use an appropriate application to
+view the log file.</p>
+</section>
+</section>
+<section id="using-android-studio-to-view-log-messages">
+<h2>Using Android Studio to View Log Messages<a class="headerlink" href="#using-android-studio-to-view-log-messages" title="Link to this heading"></a></h2>
+<p>You can also use Android Studio to view log messages from your phone. If your phone is connected
+either through a USB cable or via wireless ADB, you can view the log messages using the Android
+Monitor window within Android Studio. Detailed instructions on how to access the Android Monitor
+feature are available on the Android Developer website:
+<a class="reference external" href="https://developer.android.com/tools/debugging/debugging-studio.html">Android Studio debugging documentation</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The amount of log statements that appear in the window can be overwhelming. It is
+possible to create filters to show only a subset of data in the logcat window of Android
+Studio (refer to the Android Developer website for details on how to do this).</p>
+</div>
+<figure class="align-default" id="id18">
+<img alt="Android Studio's Android Monitor window showing verbose logcat output from a connected device." src="../../_images/android-studio-logcat.png" />
+<figcaption>
+<p><span class="caption-text">You can view and filter logcat statements through Android Studio.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="creating-your-own-log-statements-within-an-opmode">
+<h3>Creating Your Own Log Statements within an OpMode<a class="headerlink" href="#creating-your-own-log-statements-within-an-opmode" title="Link to this heading"></a></h3>
+<p>It is possible, and often helpful, to insert your own log statements within an OpMode for debug
+purposes. The FIRST Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> contains a class called <code class="docutils literal notranslate"><span class="pre">DbgLog</span></code> with two static methods
+that can be used to log messages to the log file:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DbgLog.err(String</span> <span class="pre">message)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DbgLog.msg(String</span> <span class="pre">message)</span></code></p></li>
+</ul>
+<p>These two methods can be used to create log statements in your log file. The <code class="docutils literal notranslate"><span class="pre">err</span></code> method
+creates an error message (which has a different level of severity and can be used to filter
+statements when viewing logcat output), and the <code class="docutils literal notranslate"><span class="pre">msg</span></code> method creates ordinary messages in the
+log file.</p>
+<p>You can embed these methods within your OpMode and use them to debug statements in real time
+using the Android Monitor. You can also look for your statements in the log file.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">DbgLog</span></code> class was removed (not deprecated, but removed) in version 3.3 of
+the FTC software. Use the <code class="docutils literal notranslate"><span class="pre">RobotLog</span></code> class shown below instead.</p>
+</div>
+</section>
+<section id="example-opmode">
+<h3>Example OpMode<a class="headerlink" href="#example-opmode" title="Link to this heading"></a></h3>
+<p>The following example OpMode shows how to use the <code class="docutils literal notranslate"><span class="pre">RobotLog</span></code> class to embed log statements
+within your OpMode. The <code class="docutils literal notranslate"><span class="pre">RobotLog.d()</span></code> method prints equivalent debug messages to the log file
+of the Robot Controller:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Autonomous</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.util.RobotLog</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Created by tom on 10/3/17.</span>
+<span class="cm"> */</span>
+
+<span class="nd">@Autonomous</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyLogDemo</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">InterruptedException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RobotLog</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;TIE - entered runOpMode()&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getRuntime</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dCurrent</span><span class="p">,</span><span class="w"> </span><span class="n">dElapsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">RobotLog</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;TIE - dStart = %.03f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dStart</span><span class="p">));</span>
+<span class="w">        </span><span class="n">RobotLog</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;TIE - about to wait for start...&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">dCurrent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getRuntime</span><span class="p">();</span>
+<span class="w">            </span><span class="n">dElapsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dCurrent</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dStart</span><span class="p">;</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;1. elapse&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%.03f&quot;</span><span class="p">,</span><span class="n">dElapsed</span><span class="p">));</span>
+<span class="w">            </span><span class="n">RobotLog</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;TIE - dElapsed = %.03f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dElapsed</span><span class="p">));</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This linear OpMode example shows how to use the <code class="docutils literal notranslate"><span class="pre">RobotLog.d</span></code> method to log information to the
+log file. You can use the Android Monitor window of the Android Studio <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-IDE"><span class="xref std std-term">IDE</span></a> to view these log
+messages in real time. You can also create a filter so you only see a subset of log messages in
+the window.</p>
+</section>
+<section id="creating-a-logcat-filter-in-android-studio">
+<h3>Creating a logcat Filter in Android Studio<a class="headerlink" href="#creating-a-logcat-filter-in-android-studio" title="Link to this heading"></a></h3>
+<p>It is often desirable to filter out unwanted logcat statements when you are debugging. In the
+example OpMode above, the log statements include the expression <code class="docutils literal notranslate"><span class="pre">TIE</span></code> (the original author’s
+initials). You can create a filter that displays only log statements containing this string.</p>
+<p>On the right-hand side of the Android Monitor window, use the drop-down selector to select Edit
+Filter Configuration to create a new filter:</p>
+<figure class="align-default" id="id19">
+<img alt="Android Monitor filter dropdown with Edit Filter Configuration option highlighted." src="../../_images/edit-filter-config.png" />
+<figcaption>
+<p><span class="caption-text">Select Edit Filter Configuration to create a new filter.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Create New Logcat Filter window then appears. Here you can specify a new name for your filter
+(for example, <code class="docutils literal notranslate"><span class="pre">TIE</span> <span class="pre">Filter</span></code>) along with a regular expression used to filter statements. In the
+example below, the expression <code class="docutils literal notranslate"><span class="pre">TIE</span></code> is used as a filter for the log message, meaning the
+Android Monitor window will only display log statements that include <code class="docutils literal notranslate"><span class="pre">TIE</span></code> in the body of the
+message.</p>
+<figure class="align-default" id="id20">
+<img alt="Create New Logcat Filter dialog with filter name TIE Filter and log message set to TIE." src="../../_images/new-logcat-filter.png" />
+<figcaption>
+<p><span class="caption-text">Specify the filter name and a regular expression to use for your filter (in this case
+<code class="docutils literal notranslate"><span class="pre">TIE</span></code>).</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Once you have created your filter, the Android Monitor window automatically filters out messages
+that do not match the search criteria. You should see the filtered statements in the window. If
+your OpMode is currently running, you can see them appear in real time.</p>
+<figure class="align-default" id="id21">
+<img alt="Android Studio logcat filtered by the TIE filter showing only log lines containing TIE." src="../../_images/logcat-filtered-tie.png" />
+<figcaption>
+<p><span class="caption-text">If the OpMode is running, you can see your log statements in real time over a USB or wireless
+ADB connection.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wireshark_packet_capture/wireshark-packet-capture.html" class="btn btn-neutral float-left" title="Using Wireshark for Packet Capture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html" class="btn btn-neutral float-right" title="Managing Electrostatic Discharge Effects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

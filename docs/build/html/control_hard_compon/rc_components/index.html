@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="FTC Robot Controller Overview, FTC Docs" name="title" />
+<meta content="A Visual Overview of the FTC Robot Controller" name="description" />
+<meta content="FTC, FIRST Tech Challenge, RC, Robot Controller, Control Hub, Expansion Hub" name="keywords" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot Controller Overview &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Power Distribution" href="power_distr/power-distr.html" />
+    <link rel="prev" title="Driver Station Components" href="../ds_components/components/components.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hardware Component Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ds_components/index.html">Driver Station Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Robot Controller Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html">Power Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hub/hub.html">REV Hubs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors/motors.html">Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encoders/encoders.html">Encoders (Rotation Counters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="servos/servos.html">Servos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html">Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uvc/uvc.html">UVC Webcam</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Hardware Component Overview</a></li>
+      <li class="breadcrumb-item active">Robot Controller Overview</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/control_hard_compon/rc_components/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="robot-controller-overview">
+<h1>Robot Controller Overview<a class="headerlink" href="#robot-controller-overview" title="Link to this heading"></a></h1>
+<p>These images represent a basic connection diagram for the components that have
+typically been included in a standard Robot Starter Kit plus the components
+purchased from the <em>FIRST</em> Storefront (demonstrating components from the REV
+and Tetrix starter kits, along with the Electronics kit). These configurations
+show sample connections, and in no way represent the only possible way of
+connecting these components.  In both diagrams is an extra optional REV
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a> that has NOT been included with standard starter kits nor
+electronics kits; it is included in these diagrams as a sample of how to
+connect an additional optional REV Expansion Hub if one is available and
+desired.</p>
+<p>Click on the headers below to switch between the different <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-System"><span class="xref std std-term">control system</span></a>
+configuration diagrams.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only the REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> is officially supported as a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot
+Controller</span></a>. An Android smartphone is legal to use in competition, but it is
+not supported. Teams who use one are responsible for all of their own
+testing and troubleshooting.</p>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Control Hub</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="../../_downloads/72e11f1d1139b2b0e65b937a2974e243/B1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Hub</span> <span class="pre">B1</span> <span class="pre">-</span> <span class="pre">Basic</span> <span class="pre">Config</span></code></a></p>
+<figure class="align-left" id="id1">
+<img alt="Basic Control Hub RC Diagram" src="../../_images/B1.svg" />
+<figcaption>
+<p><span class="caption-text">Diagrams courtesy of FRC Team 3161 and Stefen Acepcion</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference download internal" download="" href="../../_downloads/4b186ff4e86995d4783883bf72a90474/B2.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Hub</span> <span class="pre">B2</span> <span class="pre">-</span> <span class="pre">Advanced</span> <span class="pre">Config</span></code></a></p>
+<figure class="align-left" id="id2">
+<img alt="Advanced Control Hub RC Diagram" src="../../_images/B2.svg" />
+<figcaption>
+<p><span class="caption-text">Diagrams courtesy of FRC Team 3161 and Stefen Acepcion</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Android Phone / Hub</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="../../_downloads/8fcebc900593fa9c776ad0bd2c28e6d4/A1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Phone</span> <span class="pre">A1</span> <span class="pre">-</span> <span class="pre">Basic</span> <span class="pre">Config</span></code></a></p>
+<figure class="align-left" id="id3">
+<img alt="Basic Android Phone RC Diagram" src="../../_images/A1.svg" />
+<figcaption>
+<p><span class="caption-text">Diagrams courtesy of FRC Team 3161 and Stefen Acepcion</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference download internal" download="" href="../../_downloads/27dafd353271695f59d8b103142de605/A2.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Phone</span> <span class="pre">A1</span> <span class="pre">-</span> <span class="pre">Advanced</span> <span class="pre">Config</span></code></a></p>
+<figure class="align-left" id="id4">
+<img alt="Advanced Android Phone RC Diagram" src="../../_images/A2.svg" />
+<figcaption>
+<p><span class="caption-text">Diagrams courtesy of FRC Team 3161 and Stefen Acepcion</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+License</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="../../_downloads/c5ff73f495d1ae312e4d2d57812f763f/sa_license.pdf"><code class="xref download docutils literal notranslate"><span class="pre">License</span> <span class="pre">and</span> <span class="pre">Attribution</span></code></a></p>
+<figure class="align-left" id="id5">
+<img alt="License Info" src="../../_images/sa_license.png" />
+<figcaption>
+<p><span class="caption-text">Diagram courtesy of FRC Team 3161 and Stefen Acepcion</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="power_distr/power-distr.html">Power Distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="power_distr/power-distr.html#robot-main-battery">Robot Main Battery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_distr/power-distr.html#main-power-switch">Main Power Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_distr/power-distr.html#power-distribution-block">Power Distribution Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_distr/power-distr.html#rev-servo-power-module">REV Servo Power Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_distr/power-distr.html#cots-usb-battery-pack">COTS USB Battery Pack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#reputable-brands">Reputable Brands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#capacity-limits">Capacity Limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#standard-safety-features">Standard Safety Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#securing-the-battery-pack-to-the-robot">Securing the Battery Pack to the Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#cover-unused-ports">Cover Unused Ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#charge-cots-usb-battery-packs-properly">Charge COTS USB Battery Packs properly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#checking-for-signs-of-distress">Checking for signs of distress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power_distr/power-distr.html#isolate-cots-usb-battery-packs-from-the-robot-power">Isolate COTS USB Battery Packs from the Robot Power</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub/hub.html">REV Hubs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hub/hub.html#control-hub">Control Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hub/ports/ch-ports.html">Control Hub Ports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#battery-ports">Battery Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#motor-ports">Motor Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#encoder-ports">Encoder Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#servo-ports">Servo Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#v-power-ports">+5V Power Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#analog-ports">Analog Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#digital-ports">Digital Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#i2c-ports">I2C Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#rs485">RS485</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#uart">UART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#usb-ports">USB Ports</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="hub/ports/ch-ports.html#usb-2-0">USB 2.0</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hub/ports/ch-ports.html#usb-3-0">USB 3.0</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hub/ports/ch-ports.html#usb-c">USB C</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hub/ports/ch-ports.html#mini-usb">MINI USB</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#hdmi">HDMI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/ch-ports.html#micro-sd">MICRO SD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hub/hub.html#expansion-hub">Expansion Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hub/ports/exh-ports.html">Expansion Hub Ports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#battery-ports">Battery Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#motor-ports">Motor Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#encoder-ports">Encoder Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#servo-ports">Servo Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#v-power-ports">+5V Power Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#analog-ports">Analog Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#digital-ports">Digital Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#i2c-ports">I2C Ports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#rs485">RS485</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#uart">UART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hub/ports/exh-ports.html#usb-b-port">USB-B Port</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="motors/motors.html">Motors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motors/motors.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="encoders/encoders.html">Encoders (Rotation Counters)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="encoders/encoders.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="servos/servos.html">Servos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="servos/servos.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sensors/sensors.html">Sensors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sensors/sensors.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#distance-sensor-ultrasonic">Distance Sensor (Ultrasonic)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#distance-sensor-optical">Distance Sensor (Optical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#color-sensor">Color Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#touch-sensor">Touch Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#magnetic-limit-switch">Magnetic Limit Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#imu">IMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensors/sensors.html#potentiometer">Potentiometer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensors/sensors.html#sensor-compatibility-chart">Sensor Compatibility Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensors/sensors.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uvc/uvc.html">UVC Webcam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uvc/uvc.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ds_components/components/components.html" class="btn btn-neutral float-left" title="Driver Station Components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="power_distr/power-distr.html" class="btn btn-neutral float-right" title="Power Distribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Updating the Robot Controller (RC) App &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Updating the Driver Hub OS" href="../driverhub_os/Updating-the-Driver-Hub-OS.html" />
+    <link rel="prev" title="Updating the Driver Station App" href="../ds_app/Updating-the-DS-App.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Updating Components</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#update-instructions">Update Instructions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hardware_client/Updating-REV-Hardware-Client.html">Updating REV Hardware Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ds_app/Updating-the-DS-App.html">Updating Driver Station App</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Updating Robot Controller App</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blocks-onbot-java-vs-android-studio">Blocks / OnBot Java vs Android Studio</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#blocks-onbot-java">Blocks / OnBot Java</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#android-studio">Android Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-rc-app-for-android-studio">Updating the RC App for Android Studio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-rc-app-for-blocks-onbot-java">Updating the RC App for Blocks / OnBot Java</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../driverhub_os/Updating-the-Driver-Hub-OS.html">Updating Driver Hub OS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlhub_os/Updating-the-Control-Hub-OS.html">Updating Control Hub OS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hub_firmware/Updating-Hub-Firmware.html">Updating Hub Firmware</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#app-update-notifications">App Update Notifications</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Updating Components of the Control System</a></li>
+      <li class="breadcrumb-item active">Updating the Robot Controller (RC) App</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/ftc_sdk/updating/rc_app/Updating-the-RC-App.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="updating-the-robot-controller-rc-app">
+<h1>Updating the Robot Controller (RC) App<a class="headerlink" href="#updating-the-robot-controller-rc-app" title="Link to this heading"></a></h1>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller-App"><span class="xref std std-term">Robot Controller App</span></a> is one of the Apps provided with the <em>FIRST</em> Tech
+Challenge <a class="reference internal" href="../../overview/index.html"><span class="doc">Software Development Kit (SDK)</span></a>. The Robot
+Controller App is the application that runs on the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> Android
+Device (REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> or an Android RC phone). This app
+communicates with the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Station-App"><span class="xref std std-term">Driver Station App</span></a> to control the robot.</p>
+<p>This page shows how to update the Robot Controller (RC) app on these
+devices:</p>
+<ul class="simple">
+<li><p>REV Control Hub</p></li>
+<li><p>An Android RC smartphone</p></li>
+</ul>
+<section id="blocks-onbot-java-vs-android-studio">
+<h2>Blocks / OnBot Java vs Android Studio<a class="headerlink" href="#blocks-onbot-java-vs-android-studio" title="Link to this heading"></a></h2>
+<section id="blocks-onbot-java">
+<h3>Blocks / OnBot Java<a class="headerlink" href="#blocks-onbot-java" title="Link to this heading"></a></h3>
+<p>The Robot Controller (RC) App contains the programming environments for <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a>
+and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBot Java</span></a>, and the User Programs (Team Code) developed using those
+environments are stored independently ALONGSIDE the RC App. This makes it
+possible to update the RC App independently without affecting Team Code.  This
+incredibly simplifies updating the RC App software, since no <em>code</em> needs to be
+modified in order to upgrade/downgrade the RC App itself. This does mean,
+however, that users of Blocks and OnBot Java are limited to the “default” RC
+App dependencies that are shipped with the App. Blocks and OnBot Java programs
+can still be run with an Android Studio-built RC App, however, so some
+flexibility is still possible in this regard for advanced users.</p>
+</section>
+<section id="android-studio">
+<h3>Android Studio<a class="headerlink" href="#android-studio" title="Link to this heading"></a></h3>
+<p><a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a>, in general, works exactly the opposite. The FtcRobotController
+repository (the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Android-Studio-Project"><span class="xref std std-term">Android Studio Project</span></a>) contains the full source code needed to
+build a complete RC App; when the Android Studio Project is compiled and
+deployed, it’s actually building a complete Robot Controller App and installing
+it onto the RC Android device. Team Code <strong>and</strong> the Robot Controller code are
+compiled <em>together</em>, meaning the Team Code is embedded WITHIN the RC App and
+cannot be updated/edited independently of the RC App. If the Android
+Studio-deployed RC App is replaced using the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-REV-Hardware-Client"><span class="xref std std-term">REV Hardware Client</span></a> or similar
+process, the RC App with the Team Code embedded is removed and replaced with
+the default RC App - so Android Studio users should NEVER update the RC App
+using anything but Android Studio! However, this can complicate upgrading and
+downgrading software. In order to upgrade/downgrade the RC App portion of their
+Android Studio code, the team’s <a class="reference internal" href="../../../programming_resources/tutorial_specific/android_studio/fork_and_clone_github_repository/Fork-and-Clone-From-GitHub.html"><span class="doc">Android Studio project</span></a>
+must be merged properly with software releases of the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">FtcRobotController
+repository</a> code
+aligning to the version of the Robot Controller App that they want to use. This
+must be carefully weighed when deciding to use Android Studio.</p>
+</section>
+</section>
+<section id="updating-the-rc-app-for-android-studio">
+<h2>Updating the RC App for Android Studio<a class="headerlink" href="#updating-the-rc-app-for-android-studio" title="Link to this heading"></a></h2>
+<p><strong>Android Studio</strong> users should <strong>not</strong> use the steps on this page to update
+the RC app, for the reasons described above. <strong>Android Studio</strong> users must
+ensure that their Android Studio Projects are up to date with the desired version
+of the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">SDK GitHub Repo</a>.</p>
+<p>For information on how to properly create and maintain an Android Studio project
+that can be updated using GitHub, please see <a class="reference internal" href="../../../programming_resources/tutorial_specific/android_studio/fork_and_clone_github_repository/Fork-and-Clone-From-GitHub.html"><span class="doc">Using GitHub Fork and Clone</span></a></p>
+</section>
+<section id="updating-the-rc-app-for-blocks-onbot-java">
+<h2>Updating the RC App for Blocks / OnBot Java<a class="headerlink" href="#updating-the-rc-app-for-blocks-onbot-java" title="Link to this heading"></a></h2>
+<p>These instructions are for independently updating the RC App in situations where
+such an independent update is supported - i.e. Blocks or OnBot Java development.
+Expand the following instructions that apply to your Robot Controller hardware:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Robot Controller (RC) app on REV Control Hub</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Here are 3 methods to update the RC app on a REV Control Hub:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">REV Hardware Client (RHC)</p></li>
+<li><p class="sd-card-text">Manage page on computer</p></li>
+<li><p class="sd-card-text">Manage page on <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a> or DS phone</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">“Side loading”, while possible, is not described here for the Control Hub
+as it requires a cumbersome procedure with extra equipment.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Method 1 - REV Hardware Client - Windows computers only</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use a USB data cable to connect the REV Control Hub’s USB-C port to the
+Windows computer.  Make sure the “Hardware” tab on the RHC is active, at
+top left.</p>
+<p class="sd-card-text">Here the computer does not need to be connected to the internet, since
+<a class="reference internal" href="../hardware_client/Updating-REV-Hardware-Client.html"><span class="doc">in Updating the REV Hardware Client</span></a>
+the required DS update file was previously downloaded.</p>
+<p class="sd-card-text">The RHC app will recognize the Control Hub, as shown here:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/070-RHC-recognize-CH.png"><img alt="Recognizing the Control Hub" src="../../../_images/070-RHC-recognize-CH.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Recognizing the Control Hub</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Once recognized, click on the Control Hub’s large icon/rectangle. The RHC app now displays
+the update status of the RC app, if any.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/082-RHC-update-RC-CH.png"><img alt="Updating the Control Hub" src="../../../_images/082-RHC-update-RC-CH.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Updating the Control Hub</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Simply click the blue Update rectangle (green arrow) – done!</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Method 2 - Manage page on computer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic">
+<li><p class="sd-card-text">Connect a laptop to the internet, open a web browser, and
+navigate to the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">SDK github
+repository</a>.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/050-FTC-repo1.png"><img alt="SDK GitHub Repo" src="../../../_images/050-FTC-repo1.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">SDK GitHub Repo</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">At the right side under “Releases”, click the “Latest” icon (yellow
+oval, above).</p>
+<p class="sd-card-text">In the next page, scroll down slightly in the “Latest” section, to the
+short list of “Assets”. Click on the file
+“FtcRobotController-release.apk”, to download it to your computer.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/090-github-assets-RC.png"><img alt="SDK GitHub Releases" src="../../../_images/090-github-assets-RC.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">SDK GitHub Releases</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">At this time, you could rename the file to reflect its current version
+number. For example, <code class="docutils literal notranslate"><span class="pre">FtcRobotController-release-8.0.apk</span></code> or simply
+<code class="docutils literal notranslate"><span class="pre">RC-8.0-release.apk</span></code>. This distinguishes the file from other versions
+that might be stored later on that RC phone.</p>
+</li>
+<li><p class="sd-card-text">Turn on the Control Hub (apply robot power), wait for green LED.</p></li>
+<li><p class="sd-card-text">Connect the same laptop via Wi-Fi to the Control Hub. Open the Chrome
+browser, enter the usual address <code class="docutils literal notranslate"><span class="pre">http://192.168.43.1:8080</span></code></p>
+<p class="sd-card-text">Click the Manage tab, then scroll down to “Update Robot Controller App”.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/300-manage-RC-app.png"><img alt="Update RC App" src="../../../_images/300-manage-RC-app.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Update RC App</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Click “Select App…”. Navigate to the laptop folder where the RC APK file
+is stored, and select that file.</p>
+<p class="sd-card-text">Now click the “Update” button (green arrow, above).</p>
+<p class="sd-card-text">The software will replace the existing RC app with your new updated RC
+app. The connection between laptop and Control Hub will temporarily be
+lost, then automatically restored.</p>
+</li>
+</ol>
+<p class="sd-card-text">When the completion message appears, the updated RC app is ready to use.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Method 3 - Manage page on Driver Hub or DS phone</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This method can be used if your computer is unavailable or unable to
+connect via Wi-Fi to the Control Hub. For example, your desktop computer
+might have only a wired (Ethernet) network port, lacking Wi-Fi.</p>
+<p class="sd-card-text">But this method does require the RC APK file to be stored in the
+Download (or Downloads) folder on the Driver Hub or DS phone. That’s
+correct: <strong>Robot Controller APK</strong> stored on the <strong>Driver Station</strong>
+device.</p>
+<p class="sd-card-text">First download the RC APK file from the github repo to the computer,
+as shown in Step 1 of Method 2. Then transfer that APK file from the
+computer to the DS device’s Download folder, using a USB data cable. When
+complete, you may unplug the DS device from the computer.</p>
+<p class="sd-card-text">Connect the DS app to the Control Hub, from the DS app’s Settings menu
+(never with the Android device Wi-Fi settings).</p>
+<p class="sd-card-text">From the DS app’s menu, select “Program and Manage”. Then touch the 3
+bars at top right, and select “Manage”.</p>
+<p class="sd-card-text">This is the same Manage page that appears in a laptop browser. So the
+following instructions are the same as Method 2 above.</p>
+<p class="sd-card-text">Scroll down to “Update Robot Controller App”.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/330-manage-RC-app-CH-DS.png"><img alt="Update RC App" src="../../../_images/330-manage-RC-app-CH-DS.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Update RC App</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Touch “Select App…”. Navigate to the DS device’s Download folder, and
+select the latest RC APK file.</p>
+<p class="sd-card-text">Now touch the “Update” button (green arrow, above).</p>
+<p class="sd-card-text">The software will replace the existing RC app with your new updated RC
+app. The connection between <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> and Control Hub will
+temporarily be lost, then automatically restored.</p>
+<p class="sd-card-text">When the completion message appears, the updated RC app is ready to use.</p>
+</div>
+</details></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Robot Controller (RC) app on Android phone</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Here are 2 methods to update the RC app on a Robot Controller (RC)
+phone:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">REV Hardware Client (RHC)</p></li>
+<li><p class="sd-card-text">“Side loading” with APK</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">The Manage page, under Program and Manage, on a computer or Driver
+Station device, <strong>does not</strong> offer updating an RC app on a connected
+Robot Controller phone.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Method 1 - REV Hardware Client - Windows computers only</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Plug the RC phone directly into the computer with RHC installed and
+open. Use a USB data cable, not a charge-only cable. Make sure the
+“Hardware” tab is active, at top left. The RC app on the phone does
+<strong>not</strong> need to be open.</p>
+<p class="sd-card-text">Here the computer does not need to be connected to the internet, since
+<a class="reference internal" href="../hardware_client/Updating-REV-Hardware-Client.html"><span class="doc">in Updating the REV Hardware Client</span></a>
+the required DS update file was previously downloaded.</p>
+<p class="sd-card-text">The RHC app will recognize the phone, as shown here:</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/080-RHC-recognize-RC-phone.png"><img alt="Recognizing the Phone" src="../../../_images/080-RHC-recognize-RC-phone.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Recognizing the Phone</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">If the phone is not recognized, ensure that the phone has <a class="reference internal" href="../../../programming_resources/tutorial_specific/android_studio/enabling_developer_options/Enabling-Developer-Options.html"><span class="doc">developer
+options</span></a>
+enabled. If necessary, click the “Scan for Devices” button in the
+lower-left of the REV Hardware Client app to force the RHC to rescan
+devices.</p>
+<p class="sd-card-text">Once recognized, click on that phone’s large icon/rectangle. The RHC app
+now displays the update status of the DS app, if any.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/082-RHC-update-RC-phone.png"><img alt="Update Status of Phone" src="../../../_images/082-RHC-update-RC-phone.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Update Status of Phone</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Simply click the blue Update rectangle (green arrow) – done!</p>
+<p class="sd-card-text">The update was fast, because you had already downloaded the RC app to
+the RHC. That was noted with ’(Already Downloaded)“, to the left of the
+blue Update rectangle.</p>
+<p class="sd-card-text">You could have selected an <strong>older</strong> version of the RC app, in the
+drop-down list just above the blue Update rectangle.</p>
+<p class="sd-card-text">After install, drag the RC app icon from the menu to the phone’s home
+screen.</p>
+<p class="sd-card-text">You may now unplug the RC phone from the computer, and close the RHC
+app. The updated RC app is ready to use.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Method 2 - Side-load</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Here you will work directly with the Android Package or <strong>APK file</strong> to
+install the RC app on the Android phone. Any computer can be used, PC or
+Mac, old or new. This method is sometimes called “side-loading”.</p>
+<ol class="arabic">
+<li><p class="sd-card-text">Connect your computer to the internet, open a web browser, and
+navigate to the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">SDK github
+repository</a>.</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/050-FTC-repo1.png"><img alt="SDK GitHub Repo" src="../../../_images/050-FTC-repo1.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">SDK GitHub Repo</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">At the right side under “Releases”, click the “Latest” icon (yellow
+oval, above).</p>
+<p class="sd-card-text">In the next page, scroll down slightly in the “Latest” section, to the
+short list of “Assets”. Click on the file
+“FtcRobotController-release.apk”, to download it to your computer.</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/090-github-assets-RC.png"><img alt="SDK GitHub Releases" src="../../../_images/090-github-assets-RC.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">SDK GitHub Releases</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">At this time, you could rename the file to reflect its current version
+number. For example, <code class="docutils literal notranslate"><span class="pre">FtcRobotController-release-8.0.apk</span></code> or simply
+<code class="docutils literal notranslate"><span class="pre">RC-8.0-release.apk</span></code>. This distinguishes the file from other versions
+that might be stored later on that RC phone.</p>
+</li>
+<li><p class="sd-card-text">Transfer the APK file from the computer to the RC phone’s Downloads
+(or Download) folder. Use a USB data cable (not a charge-only cable).
+When complete, you may unplug the RC phone from the computer.</p></li>
+<li><p class="sd-card-text">Uninstall the existing (obsolete) RC app, by dragging its icon to a
+Trash/Uninstall icon. Or, touch and hold the RC icon for “App info”,
+then choose Uninstall.</p></li>
+<li><p class="sd-card-text">On the RC phone, navigate to the Downloads folder. This can be done
+in several ways:</p>
+<ul class="simple">
+<li><p class="sd-card-text">at the main app menu (swipe up), touch the Files icon or the
+Downloads icon (if present)</p></li>
+<li><p class="sd-card-text">use the basic file manager in Settings/Storage: touch Explore or
+Files</p></li>
+<li><p class="sd-card-text">use a third-party app such as FX File Explorer (from the Google Play
+Store)</p></li>
+</ul>
+<p class="sd-card-text">Touch the APK filename that you transferred. Respond to the prompts, to
+install the updated RC app.</p>
+<p class="sd-card-text">After install, drag the RC app icon from the app menu to the RC phone’s
+home screen.</p>
+</li>
+</ol>
+<p class="sd-card-text">Done! The updated RC app is now ready to use.</p>
+</div>
+</details></div>
+</details><p>Other descriptions of updating the RC app are
+<a class="reference external" href="https://docs.revrobotics.com/duo-control/managing-the-control-system/updating-robot-controller-application">at REV Robotics’ excellent documentation site</a>.</p>
+<p>Questions, comments and corrections to <a class="reference external" href="mailto:westsiderobotics&#37;&#52;&#48;verizon&#46;net">westsiderobotics<span>&#64;</span>verizon<span>&#46;</span>net</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ds_app/Updating-the-DS-App.html" class="btn btn-neutral float-left" title="Updating the Driver Station App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../driverhub_os/Updating-the-Driver-Hub-OS.html" class="btn btn-neutral float-right" title="Updating the Driver Hub OS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

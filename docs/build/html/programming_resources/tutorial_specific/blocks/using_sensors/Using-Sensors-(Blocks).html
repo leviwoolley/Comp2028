@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using Sensors Blocks &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Reference Documents Blocks" href="../../../blocks/reference/reference.html" />
+    <link rel="prev" title="Controlling a Servo Blocks" href="../controlling_a_servo/Controlling-a-Servo-%28Blocks%29.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#programming-tutorials">Programming Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../blocks/intro/intro.html">Introduction <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../blocks/config/config.html">Configuring Your Hardware <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../blocks/connecting/connecting.html">Connecting to the Program &amp; Manage Server <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../blocks/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../creating_op_modes/Writing-an-Op-Mode-with-FTC-Blocks.html">Creating Op Modes <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../running_op_modes/Running-Your-Op-Mode.html">Running Your OpMode (All Languages)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../running_op_modes/Running-Your-Op-Mode.html#running-your-opmode-instructions">Running Your OpMode Instructions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../managing_opmodes/managing-opmodes.html">Managing OpModes in Blocks <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../controlling_a_servo/Controlling-a-Servo-%28Blocks%29.html">Controlling a Servo <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Using Sensors <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../blocks/reference/reference.html">Reference Documents <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Programming Resources</a></li>
+          <li class="breadcrumb-item"><a href="../../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="../../../blocks/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></a></li>
+      <li class="breadcrumb-item active">Using Sensors <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span></li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/programming_resources/tutorial_specific/blocks/using_sensors/Using-Sensors-(Blocks).rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-sensors-blocks">
+<h1>Using Sensors <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Blocks</span><a class="headerlink" href="#using-sensors-blocks" title="Link to this heading"></a></h1>
+<section id="color-distance-sensor">
+<h2>Color-Distance Sensor<a class="headerlink" href="#color-distance-sensor" title="Link to this heading"></a></h2>
+<p>A <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Sensor"><span class="xref std std-term">sensor</span></a> is a device that lets the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> get information
+about its environment. In this example, you will use a REV Robotics
+Color-Distance sensor to display range (distance from an object) info to
+the DRIVER STATION.</p>
+<p>The Color-Range sensor uses reflected light to determine the distance
+from the sensor to the target object. It can be used to measure close
+distances (up 5” or more) with reasonable accuracy. Note that at the
+time this document was most recently edited, the REV Color-Range sensor
+saturates around 2” (5cm). This means that for distances less than or
+equal to 2”, the sensor returns a measured distance equal to 2” or so.</p>
+<p>Note that it will take an estimated 15 minutes to complete this task.</p>
+<section id="modifying-the-op-mode-to-display-distance-instructions">
+<h3>Modifying the Op Mode to Display Distance Instructions<a class="headerlink" href="#modifying-the-op-mode-to-display-distance-instructions" title="Link to this heading"></a></h3>
+<p>1. Verify that your laptop is still connected to the Robot
+Controller’s Program &amp; Manage Wi-Fi network.</p>
+<p>2. Verify that “MyFIRSTOpMode” is opened for editing. If it is not,
+you can click on the FIRST logo in the upper left hand corner of the
+browser window on the laptop. This should take you to the main
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> Development Tool project screen.</p>
+<img alt="../../../../_images/DistanceSensorStep2ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep2ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Click on the “MyFIRSTOpMode” project to open it for editing if it is not already opened.</p>
+</div></blockquote>
+<p>3. Click on the “Utilities” category on the left-hand side of your
+browser. Find and click on the “Telemetry” subcategory.</p>
+<img alt="../../../../_images/DistanceSensorStep3ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep3ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>4. Select the “call telemetry.addData” block (the numeric version)
+and drag it to the spot in your “while” loop block immediately before
+the “telemetry.update” block.</p>
+<img alt="../../../../_images/DistanceSensorStep4ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep4ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>5. Click and highlight the “key” text and change the text so it reads
+“Distance (cm)”.</p>
+<img alt="../../../../_images/DistanceSensorStep5ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep5ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>6. Click and expand the “Sensors” category. Click on the “REV
+Color/Range Sensor” subcategory. Click on and select the “call
+sensorColorRange.getDistance” programming block.</p>
+<img alt="../../../../_images/DistanceSensorStep6ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep6ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Note that earlier versions of the Blocks Programming tool refer to the REV Robotics Color-Distance Sensor as the “LynxI2cColorRangeSensor”.  Newer versions of the software refer to the device as the “REV Color/Range Sensor”.</p>
+</div></blockquote>
+<p>7. Drag the “call sensorColorRange.getDistance” programming block to
+the “number” field of the “call telemetry.addData” programming block.</p>
+<img alt="../../../../_images/DistanceSensorStep7ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep7ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>This will send the measured distance to the target in centimeters back to the DRIVER STATION.</p>
+</div></blockquote>
+<p>8. Save your op mode and verify that it was saved successfully to the
+Robot Controller.</p>
+<img alt="../../../../_images/DistanceSensorStep8ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep8ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>9. Follow the procedure outlined in the section titled <a class="reference internal" href="../running_op_modes/Running-Your-Op-Mode.html"><span class="doc">Running Your
+OpMode</span></a>
+to run your updated op mode.</p>
+<img alt="../../../../_images/DistanceSensorStep9ControlHub.jpg" class="align-center" src="../../../../_images/DistanceSensorStep9ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>As you run the op mode, if you move your hand above the color light sensor, you should see the measured distance change on the DRIVER STATION screen.  If the expression “NaN” (not a number) is displayed on the DRIVER STATION, the target is most likely out of range (and the sensor does not detect any reflected light).</p>
+</div></blockquote>
+</section>
+</section>
+<section id="touch-sensor">
+<h2>Touch Sensor<a class="headerlink" href="#touch-sensor" title="Link to this heading"></a></h2>
+<p>For this example, we assume that the REV Robotics <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Touch-Sensor"><span class="xref std std-term">Touch Sensor</span></a> has been
+configured as a digital touch sensor in the Robot Controller’s active
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Configuration-File"><span class="xref std std-term">configuration file</span></a>. We will use the “isPressed” programming block to
+determine if the button on the sensor is currently pressed or not.</p>
+<img alt="../../../../_images/REVTouchSensor2.jpg" class="align-center" src="../../../../_images/REVTouchSensor2.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a> digital ports contain two digital pins per port. When
+you use a 4-wire JST cable to connect a REV Robotics Touch sensor to a Control Hub or
+Expansion Hub digital port, the Touch Sensor is wired to the second of
+the two digital pins within the port. The first digital pin of the
+4-wire cable remains disconnected.</p>
+<p>For example, if you connect a Touch Sensor to the “0,1” digital port of
+the Control Hub or Expansion Hub, the Touch Sensor will be connected to the second pin
+(labeled “1”) of the port. The first pin (labeled “0”) will stay
+disconnected.</p>
+<p>Note that it will take an estimated 15 minutes to complete this task.</p>
+<section id="modifying-the-op-mode-to-display-button-touch-sensor-state-instructions">
+<h3>Modifying the Op Mode to Display Button (Touch Sensor) State Instructions<a class="headerlink" href="#modifying-the-op-mode-to-display-button-touch-sensor-state-instructions" title="Link to this heading"></a></h3>
+<p>1. Verify that your laptop is still connected to the Robot
+Controller’s Programming Mode Wi-Fi network.</p>
+<p>2. Verify that “MyFIRSTOpMode” is opened for editing. If it is not,
+you can click on the FIRST logo in the upper left hand corner of the
+browser window on the laptop. This should take you to the main
+Blocks Development Tool project screen.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep2ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep2ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Click on the “MyFIRSTOpMode” project to open it for editing if it is not already opened.</p>
+</div></blockquote>
+<p>3. Click on the “Logic” category. Find and click on the “if do else”
+block.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep3ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep3ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>4. Drag the “if do else” block to the position before the
+“telemetry.update” block.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep4ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep4ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>5. Click on the “Sensors” category to expand it (if it isn’t already
+expanded). Click on the “Touch Sensor” subcategory, then find and
+select the “.isPressed” block.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep5ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep5ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>6. Drag the “isPressed” block to the test condition of the “if do
+else” programming block.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep6ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep6ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>7. Click on the “Utilities” category on the left-hand side of your
+browser. Find and click on the “Telemetry” subcategory.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep7ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep7ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Select the “call telemetry.addData” block (the text version) and drag it to the “do” clause of the “if do else” block.</p>
+</div></blockquote>
+<p>8. Change the “key” value to “testTouch” and the “text” value to “is
+pressed”.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep8ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep8ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>9. Insert another “telemetry.addData” block (the text version) to the
+“else” clause of the “if do else” block. Change the “key” value to
+“testTouch” and the “text” value to “is NOT pressed”.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep9ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep9ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>10. Save your op mode and verify that it was saved successfully to
+the Robot Controller.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep10ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep10ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>11. Follow the procedure outlined in the section titled <a class="reference internal" href="../running_op_modes/Running-Your-Op-Mode.html"><span class="doc">Running Your
+OpMode</span></a>
+to run your updated op mode.</p>
+<img alt="../../../../_images/TouchSensorOpModeStep11ControlHub.jpg" class="align-center" src="../../../../_images/TouchSensorOpModeStep11ControlHub.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>As you run the op mode and push or release the button, the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">telemetry</span></a> message on the DRIVER STATION should update to reflect the current state of the digital Touch Sensor.</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../controlling_a_servo/Controlling-a-Servo-%28Blocks%29.html" class="btn btn-neutral float-left" title="Controlling a Servo Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../blocks/reference/reference.html" class="btn btn-neutral float-right" title="Reference Documents Blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

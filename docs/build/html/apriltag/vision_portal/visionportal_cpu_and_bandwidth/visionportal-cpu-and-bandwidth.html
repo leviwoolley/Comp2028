@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionPortal CPU and Bandwidth &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="VisionPortal Camera Controls" href="../visionportal_camera_controls/index.html" />
+    <link rel="prev" title="AprilTag Localization" href="../apriltag_localization/apriltag-localization.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_processor_init/vision-processor-init.html">Vision Processor Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_init/visionportal-init.html">VisionPortal Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_previews/visionportal-previews.html">VisionPortal Previews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_id_code/apriltag-id-code.html">AprilTag ID Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_metadata/apriltag-metadata.html">AprilTag Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_reference_frame/apriltag-reference-frame.html">AprilTag Reference Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_pose/apriltag-pose.html">AprilTag Pose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_library/apriltag-library.html">AprilTag Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">VisionPortal CPU and Bandwidth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#camera-status">Camera Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-previews">About Previews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pause-liveview-direct">Pause LiveView - Direct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pause-liveview-indirect">Pause LiveView - Indirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disable-liveview">Disable LiveView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-processors">Toggle Processors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toggle-camera-stream">Toggle Camera Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close-visionportal">Close VisionPortal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rapid-toggling">Rapid Toggling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cpu-management-choices">CPU Management Choices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frame-rate">Frame Rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dual-webcams">Dual Webcams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#streaming-formats">Streaming Formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#camera-resolution">Camera Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-tools">Other Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_multiportal/vision-multiportal.html">Vision Multiportal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_advanced_use/apriltag-advanced-use.html">AprilTag Advanced Use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+      <li class="breadcrumb-item active">VisionPortal CPU and Bandwidth</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/apriltag/vision_portal/visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visionportal-cpu-and-bandwidth">
+<h1>VisionPortal CPU and Bandwidth<a class="headerlink" href="#visionportal-cpu-and-bandwidth" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Vision processing can consume significant <strong>CPU resources</strong> and USB
+communications <strong>bandwidth</strong>.  Reaching such limits may affect previews, and
+cause an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> to slow down, or freeze, or crash.</p>
+<p>Teams can balance the benefits of higher resolution and speed
+(frames-per-second) against the risk of overloading CPU and bandwidth
+resources.</p>
+<p>The 8.2 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> provides numerous tools to manage this balance:</p>
+<ul class="simple">
+<li><p>disable and enable the RC preview (called LiveView) - “Level 1”</p></li>
+<li><p>disable and enable a vision processor - “Level 2”</p></li>
+<li><p>stop and resume the camera stream - “Level 3”</p></li>
+<li><p>close <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-VisionPortal"><span class="xref std std-term">VisionPortal</span></a> - “Level 4”</p></li>
+<li><p>monitor frames-per-second (FPS)</p></li>
+<li><p>select a compressed video streaming format</p></li>
+<li><p>select the camera resolution</p></li>
+<li><p>set decimation (down-sampling)</p></li>
+<li><p>select a pose solver algorithm</p></li>
+<li><p>get all or only fresh detections from the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTag</span></a> Processor</p></li>
+</ul>
+<p>The first four actions are informally rated for benefit and response:</p>
+<ul class="simple">
+<li><p><strong>LiveView</strong> “Level 1”: some reduction of resources used, resumes very quickly after stopping</p></li>
+<li><p><strong>Processor(s)</strong> “Level 2”: more reduction of resources used, resumes quickly after stopping</p></li>
+<li><p><strong>Camera Stream</strong> “Level 3”: high reduction of resources used, resumes less quickly after stopping</p></li>
+<li><p><strong>VisionPortal</strong> “Level 4”: maximum reduction of resources used, do not resume after stopping</p></li>
+</ul>
+</section>
+<section id="camera-status">
+<h2>Camera Status<a class="headerlink" href="#camera-status" title="Link to this heading"></a></h2>
+<p>Before discussing the tools to manage vision processing resources, we should
+review again the available <strong>camera states</strong>.  This may help you monitor,
+evaluate and troubleshoot your optimization efforts.</p>
+<p>Repeated from the <strong>Camera Controls</strong> page, these camera states are now available:</p>
+<ul class="simple">
+<li><p>OPENING_CAMERA_DEVICE - No vision processing is happening.</p></li>
+<li><p>CAMERA_DEVICE_READY - Camera is open.  No processing is happening, including
+background processing from EOCV (i.e. pulling frames and performing color
+conversion). Ready to call <code class="docutils literal notranslate"><span class="pre">resumeStreaming()</span></code>.</p></li>
+<li><p>STARTING_STREAM - No processing is happening.</p></li>
+<li><p>STREAMING - Frames are available for processing (AprilTag detections and/or
+Color Processing results) and preview (LiveView RC preview and DS Camera Stream).</p></li>
+<li><p>STOPPING_STREAM - Processing may or may not be happening.  This status is
+followed by <code class="docutils literal notranslate"><span class="pre">CAMERA_DEVICE_READY</span></code>.</p></li>
+<li><p>CLOSING_CAMERA_DEVICE - No processing is happening.</p></li>
+<li><p>CAMERA_DEVICE_CLOSED - Nothing is running, USB comms are closed.  Once
+closed, don’t open camera again during this OpMode.</p></li>
+<li><p>ERROR</p></li>
+</ul>
+<p>These <strong>enums</strong> are listed in sequence, as if opening a camera (fresh build),
+then starting or resuming streaming, then stopping streaming, then closing the
+VisionPortal.</p>
+<p>All of the above is completely separate from the vision processor
+status.  Those can be enabled or disabled at any time, but naturally require
+<code class="docutils literal notranslate"><span class="pre">STREAMING</span></code> status to actually process camera images.</p>
+</section>
+<section id="about-previews">
+<h2>About Previews<a class="headerlink" href="#about-previews" title="Link to this heading"></a></h2>
+<p>As noted at the <strong>Previews</strong> page, LiveView refers only to the <strong>Robot
+Controller</strong> preview.  It’s completely separate from the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> (DS)
+<strong>Camera Stream</strong>, which still operates normally even if LiveView is stopped
+(manually or automatically).</p>
+<p>DS Camera Stream uses its own frame collection process, which naturally still
+requires the camera/pipeline status to be <code class="docutils literal notranslate"><span class="pre">STREAMING</span></code>.</p>
+<p>Instructions for viewing DS Camera Stream are shown at
+<a class="reference internal" href="../../../hardware_and_software_configuration/configuring/configuring_external_webcam/configuring-external-webcam.html#image-preview"><span class="std std-ref">ftc-docs</span></a>.</p>
+<p>DS Camera Stream can display only one camera’s image, even under the new
+MultiPortal feature.  Teams can create specialty OpModes to see one camera’s
+image or the other camera’s image, if needed for match set-up.</p>
+<p>Side Note: For SDK 8.2, “LiveView” became the new universal name for the RC
+preview. There remain two instances of old names:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">myVisionPortalBuilder.enableCameraMonitoring(true);</span></code>, discussed below</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VIEWPORT</span></code> appears in the preview status window, when stopped</p></li>
+</ul>
+</section>
+<section id="pause-liveview-direct">
+<h2>Pause LiveView - Direct<a class="headerlink" href="#pause-liveview-direct" title="Link to this heading"></a></h2>
+<p>One way to conserve CPU resources (“Level 1”) is <strong>directly pausing</strong> LiveView,
+while running an OpMode.  The CPU continues processing camera images for
+the enabled vision processors, but does not actually generate an RC preview
+image (video).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These are found in the <code class="docutils literal notranslate"><span class="pre">VisionPortal</span></code> toolbox, or palette, under the
+<code class="docutils literal notranslate"><span class="pre">Vision</span></code> category.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/050-Blocks-LiveView-toggle.png"><img alt="Toggle LiveView" src="../../../_images/050-Blocks-LiveView-toggle.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Examples of Toggling LiveView</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Temporarily stop the live view (RC preview).</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">stopLiveView</span><span class="p">();</span>
+
+<span class="c1">// Start the live view (RC preview) again.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">resumeLiveView</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Your OpMode will <strong>not</strong> need to work with camera status <strong>enums</strong> here, since
+these “stop” and “resume” actions happen quickly.</p>
+<p>The above commands toggle only LiveView; the DS Camera Stream preview (touch to
+refresh) remains available.</p>
+</section>
+<section id="pause-liveview-indirect">
+<h2>Pause LiveView - Indirect<a class="headerlink" href="#pause-liveview-indirect" title="Link to this heading"></a></h2>
+<p>The SDK also offers an <strong>indirect</strong> control of LiveView, available in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a>
+and Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">builder</span><span class="p">.</span><span class="na">setAutoStopLiveView</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This setting causes LiveView to stop <strong>automatically</strong> if all of the Portal’s
+processors are disabled.  Being part of the Builder pattern, this
+feature cannot be directly toggled <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code> during the OpMode.</p>
+<p>This setting is triggered when <strong>both</strong> processors are disabled.  When set to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>, by default, the monitor continues showing the camera’s view without
+annotations.  If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the monitor is Auto Paused, showing a solid
+orange screen if no processors are enabled.  Thus the preview <strong>can</strong>
+effectively be toggled off and on, using this AutoPause feature.</p>
+<p>When one or both processors are re-enabled, LiveView resumes.  This setting
+affects only LiveView; the Driver Station Camera Stream preview remains
+available.</p>
+</section>
+<section id="disable-liveview">
+<h2>Disable LiveView<a class="headerlink" href="#disable-liveview" title="Link to this heading"></a></h2>
+<p>The SDK also contains a different Builder setting that allows (or disallows)
+LiveView <strong>in general</strong>, available in Blocks and Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">builder</span><span class="p">.</span><span class="na">enableLiveView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Sample OpModes set this Builder field to <code class="docutils literal notranslate"><span class="pre">true</span></code> by default.</p>
+<p>This could be set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, if the OpMode will not need the LiveView
+preview at all.  Being part of the Builder pattern, this feature cannot be
+directly toggled <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code> during the OpMode.</p>
+</section>
+<section id="toggle-processors">
+<h2>Toggle Processors<a class="headerlink" href="#toggle-processors" title="Link to this heading"></a></h2>
+<p>Another way to conserve CPU resources (“Level 2”) is <strong>disabling a vision
+Processor</strong>, while running an OpMode.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These are found in the <code class="docutils literal notranslate"><span class="pre">VisionPortal</span></code> toolbox, or palette, under the
+<code class="docutils literal notranslate"><span class="pre">Vision</span></code> category.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/060-Blocks-Processor-toggle.png"><img alt="Toggle Processor" src="../../../_images/060-Blocks-Processor-toggle.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Examples of Toggling Processors</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable or disable the AprilTag processor.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">setProcessorEnabled</span><span class="p">(</span><span class="n">myAprilTagProcessor</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// Enable or disable the Color Locator processor.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">setProcessorEnabled</span><span class="p">(</span><span class="n">myColorLocatorProcessor</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Disabling a Processor does not close LiveView, with its own controls described
+above.  Any annotations will stop appearing in the preview.</p>
+<p>Disabling and re-enabling processors is very fast, and saves CPU resources.
+But EOCV frame pulling and color conversion continue running in the background.</p>
+</section>
+<section id="toggle-camera-stream">
+<h2>Toggle Camera Stream<a class="headerlink" href="#toggle-camera-stream" title="Link to this heading"></a></h2>
+<p>A more active way to conserve CPU resources (“Level 3”) is <strong>stopping the
+camera stream</strong>, while running an OpMode.  Naturally this also achieves Levels
+1 and 2: stopping LiveView and preventing operation of all the Portal’s
+Processors. DS Camera Stream provides no new snapshots.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These are found in the <code class="docutils literal notranslate"><span class="pre">VisionPortal</span></code> toolbox, or palette, under the
+<code class="docutils literal notranslate"><span class="pre">Vision</span></code> category.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/080-Blocks-Streaming-toggle.png"><img alt="Toggle Camera Stream" src="../../../_images/080-Blocks-Streaming-toggle.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Examples of Toggling Camera Stream</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Temporarily stop the streaming session. This can save CPU</span>
+<span class="c1">// resources, with the ability to resume quickly when needed.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">stopStreaming</span><span class="p">();</span>
+
+<span class="c1">// Resume the streaming session if previously stopped.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">resumeStreaming</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Stopping (and later resuming) the stream is slightly risky, can take about 1
+second, and stops all background processing.  This is what happens when
+switching cameras, in the Sample OpModes called <code class="docutils literal notranslate"><span class="pre">SwitchableCameras</span></code>.  One
+stream stops, and the other stream starts.</p>
+</section>
+<section id="close-visionportal">
+<h2>Close VisionPortal<a class="headerlink" href="#close-visionportal" title="Link to this heading"></a></h2>
+<p>Closing the portal with <code class="docutils literal notranslate"><span class="pre">close()</span></code> stops all background processing permanently (“Level 4”), and closes USB communication with the camera.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-6">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These are found in the <code class="docutils literal notranslate"><span class="pre">VisionPortal</span></code> toolbox, or palette, under the
+<code class="docutils literal notranslate"><span class="pre">Vision</span></code> category.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/100-Blocks-close-VisionPortal.png"><img alt="Close VisionPortal" src="../../../_images/100-Blocks-close-VisionPortal.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Close VisionPortal Example</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-7">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save computing resources by closing VisionPortal at any time, if no</span>
+<span class="c1">// longer needed.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">close()</span></code> process is a “teardown” of all camera processing.  It is not
+recommended to “re-open” the camera within the same OpMode, by building another
+VisionPortal.  This is risky and might take several seconds.</p>
+<p>Accordingly, the SDK offers no corresponding <code class="docutils literal notranslate"><span class="pre">reopen()</span></code> or <code class="docutils literal notranslate"><span class="pre">resume()</span></code>
+method.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">close()</span></code> process happens automatically at the end of any OpMode.</p>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">stopStreaming()</span></code> before calling <code class="docutils literal notranslate"><span class="pre">close()</span></code> is allowed (for
+clarity), but not required, since <code class="docutils literal notranslate"><span class="pre">close()</span></code> internally calls
+<code class="docutils literal notranslate"><span class="pre">stopStreaming()</span></code> if applicable.</p>
+</section>
+<section id="rapid-toggling">
+<h2>Rapid Toggling<a class="headerlink" href="#rapid-toggling" title="Link to this heading"></a></h2>
+<p>Your OpMode (or manual testing) should avoid or handle rapid stacking of the
+“on” and “off” actions described above.</p>
+<p>It’s legal to call <code class="docutils literal notranslate"><span class="pre">resumeStreaming()</span></code> while the status is <code class="docutils literal notranslate"><span class="pre">STOPPING_STREAM</span></code>.
+But the program will be <strong>blocked</strong> until the stopping operation is done.</p>
+<p><strong>Blocking</strong> means the latest function doesn’t return immediately.  So the code
+is temporarily “stuck” there, as if executing a <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> command.</p>
+<p>The same applies if calling <code class="docutils literal notranslate"><span class="pre">stopStreaming()</span></code> while the status is
+<code class="docutils literal notranslate"><span class="pre">STARTING_STREAM</span></code>.  It’s allowed, but your code may have to wait.</p>
+<p>To avoid blocking, it’s best to check the relevant <strong>status enum</strong> to make sure
+the previous operation is complete.  This can be done with an empty <code class="docutils literal notranslate"><span class="pre">while()</span></code>
+loop, in a linear OpMode.</p>
+</section>
+<section id="cpu-management-choices">
+<h2>CPU Management Choices<a class="headerlink" href="#cpu-management-choices" title="Link to this heading"></a></h2>
+<p>So far, there are <strong>10 possible configurations</strong> to evaluate CPU performance,
+using only the vision process controls discussed above:</p>
+<ul class="simple">
+<li><p>VisionPortal closed</p></li>
+<li><p>VisionPortal open, Streaming off</p></li>
+</ul>
+<p>Then 4 with Streaming on, Preview off:</p>
+<ul class="simple">
+<li><p>only the AprilTag processor enabled</p></li>
+<li><p>only the Color Locator processor enabled</p></li>
+<li><p>both enabled</p></li>
+<li><p>both disabled</p></li>
+</ul>
+<p>Then 4 with Streaming on, Preview on:</p>
+<ul class="simple">
+<li><p>only the AprilTag processor enabled</p></li>
+<li><p>only the Color Locator processor enabled</p></li>
+<li><p>both enabled</p></li>
+<li><p>both disabled</p></li>
+</ul>
+<p>This gives Teams ample opportunity to evaluate and manage CPU performance
+and USB Bandwidth.  Many other tools remain:</p>
+<ul class="simple">
+<li><p>monitor frames-per-second (FPS)</p></li>
+<li><p>select a compressed video streaming format</p></li>
+<li><p>select the camera resolution</p></li>
+<li><p>set decimation (down-sampling)</p></li>
+<li><p>select a pose solver algorithm</p></li>
+<li><p>get all or only fresh detections from the AprilTag Processor</p></li>
+</ul>
+</section>
+<section id="frame-rate">
+<h2>Frame Rate<a class="headerlink" href="#frame-rate" title="Link to this heading"></a></h2>
+<p>The VisionPortal <strong>automatically optimizes</strong> for maximum frame rate, the number
+of processed frames per second (FPS).  Presuming this optimization is based on
+<strong>CPU resources</strong>, measuring effects on <strong>frame rate</strong> could indirectly reflect
+CPU resource status/consumption/capacity.</p>
+<p>Frame rate is reported visually in the LiveView status window.  It’s also
+available for your OpMode to track, record and evaluate, in Blocks and Java:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">myFPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myVisionPortal</span><span class="p">.</span><span class="na">getFps</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Teams can collect FPS data to illustrate the general effects of, for
+example, (a) resolution and (b) processors running, on CPU performance.
+Results will depend on many team-specific factors such as webcams, codebase
+(other processing), vision targets (number, type, distance), etc.</p>
+<p>Learn more about such studies at this <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Datalogging">Datalogging tutorial</a>.</p>
+</section>
+<section id="dual-webcams">
+<h2>Dual Webcams<a class="headerlink" href="#dual-webcams" title="Link to this heading"></a></h2>
+<p>Before discussing Streaming Formats, we should mention that <strong>USB Bandwidth</strong>
+can be a concern for <strong>dual webcams</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Internal phone cameras have an independent high-speed interconnect (not
+USB), unaffected by an added USB <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcam</span></a>.</p>
+</div>
+<p>The two webcams do <em>not</em> need to use the same format or resolution.</p>
+<p>For dual webcams <strong>plugged directly into the Control Hub</strong>, the USB 2.0 and USB
+3.0 ports are on different buses.  This reduces the concern about bandwidth
+capacity, although higher resolution can cause the auto-optimized frame rate to
+reduce.</p>
+<p>Using the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a>’s two USB ports, the choice of stream format has little
+impact.  But the USB 2.0 bus also carries the Control Hub’s <strong>WiFi radio</strong>;
+adding a webcam may affect its reliability.</p>
+<p>On the other hand, both webcams on an <strong>external USB Hub</strong> (plugged into the CH
+3.0 port) can reach <strong>bandwidth limits</strong>, causing preview failures and OpMode
+crashes.  This can be managed by factors discussed already, and by the choice
+of <strong>streaming format</strong>.</p>
+</section>
+<section id="streaming-formats">
+<h2>Streaming Formats<a class="headerlink" href="#streaming-formats" title="Link to this heading"></a></h2>
+<p>Under the legacy <strong>YUY2 format</strong>, one webcam or the other (on a shared hub) may
+stop streaming above roughly 640x360 resolution.  This is <strong>below the default</strong>
+resolution of 640x480.</p>
+<p>Bandwidth problems are often indicated by <strong>no detections</strong>, and a blue screen
+in LiveView.  A team using default resolutions may quickly conclude
+(incorrectly) that dual webcams <strong>does not work</strong>.</p>
+<p>The SDK now offers a compressed <strong>MJPEG format</strong>.  This can significantly
+reduce USB bandwidth issues, but must be evaluated also for speed and quality
+of recognitions.</p>
+<p>Under the MJPEG format, resolutions under roughly 432x240 may degrade the image
+to prevent AprilTag detection on at least 1 webcam, while higher resolutions
+may occasionally stop the RC app or crash the Control Hub.</p>
+<p>For both formats, higher resolution can reduce frame rate.</p>
+<p>These factors offer much opportunity for experimentation and Datalogging, to
+help optimize your VisionPortal performance.</p>
+</section>
+<section id="camera-resolution">
+<h2>Camera Resolution<a class="headerlink" href="#camera-resolution" title="Link to this heading"></a></h2>
+<p>Some teams believe “higher resolution is better”, when purchasing webcams and
+specifying resolution for vision processing.</p>
+<p>As indicated in the previous sections here, it’s more useful to consider a
+“suitable resolution” that satisfies multiple goals and challenges:</p>
+<ul class="simple">
+<li><p>quick and reliable AprilTag detections</p></li>
+<li><p>quick and reliable Color Processing results</p></li>
+<li><p>accurate AprilTag pose estimates</p></li>
+<li><p>smooth, accurate navigation while driving (higher FPS)</p></li>
+<li><p>avoid CPU overload</p></li>
+<li><p>avoid USB bandwidth limits</p></li>
+<li><p>resolution (or aspect ratio) for which calibration values exist</p></li>
+<li><p>accommodates lighting conditions and any Camera Controls applied</p></li>
+</ul>
+<p>You might end up preferring the <strong>lowest resolution</strong> that meets your needs.</p>
+<p>It’s easy to find out which resolutions are supported by your camera. Just try
+to run any VisionPortal OpMode with an <strong>incorrect (fake) resolution</strong>; the error
+message will tell you the supported resolutions. Write these down for future
+reference.</p>
+</section>
+<section id="other-tools">
+<h2>Other Tools<a class="headerlink" href="#other-tools" title="Link to this heading"></a></h2>
+<p>This topic continues at the <strong>AprilTag Advanced Use</strong> page, to discuss advanced
+tools for managing CPU usage. It includes a Test OpMode in Blocks and Java.</p>
+<p>For now, these are left for interested users to research and investigate:</p>
+<ul class="simple">
+<li><p>set decimation (down-sampling)</p></li>
+<li><p>select a pose solver algorithm</p></li>
+<li><p>get all or only fresh detections from the AprilTag Processor</p></li>
+</ul>
+<p>All of the above features are easily found in the <strong>FTC Blocks</strong> toolboxes, or
+palettes, under Vision category.</p>
+<p><strong>Java</strong> users should review the VisionPortal interface at the SDK
+<a class="reference external" href="https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/overview-summary.html">Javadocs</a>
+site.  Click <strong>FRAMES</strong> for easy navigation.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../apriltag_localization/apriltag-localization.html" class="btn btn-neutral float-left" title="AprilTag Localization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../visionportal_camera_controls/index.html" class="btn btn-neutral float-right" title="VisionPortal Camera Controls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

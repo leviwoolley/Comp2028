@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using Servos on Your Robot &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Calculating Motor and Servo Power" href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html" />
+    <link rel="prev" title="Motor Modes and Encoders" href="../tech-tip-motor-modes/tech-tip-motor-modes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#control-system-hardware">Control System Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#batteries-and-power">Batteries and Power</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../tech-tips.html#motors-and-servos">Motors and Servos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../tech-tip-motor-modes/tech-tip-motor-modes.html">Motor Modes and Encoders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using Servos on Your Robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#servos-on-the-control-and-expansion-hubs">Servos on the Control and Expansion Hubs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#servo-power-injectors">Servo Power Injectors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html">Calculating Motor and Servo Power</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#wireless-communications">Wireless Communications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#software-and-programming">Software and Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#competition-and-team-resources">Competition and Team Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#moved-tech-tips">Moved Tech Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+      <li class="breadcrumb-item active">Using Servos on Your Robot</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/tech_tips/tech-tips/tech-tip-using-servos/tech-tip-using-servos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-servos-on-your-robot">
+<h1>Using Servos on Your Robot<a class="headerlink" href="#using-servos-on-your-robot" title="Link to this heading"></a></h1>
+<p>Started in the 2023-2024 season, Tech Tips are segments released in the
+<em>FIRST</em> Tech Challenge <a class="reference external" href="https://www.firstinspires.org/resource-library/ftc/team-blast-archive">Team E-mail Blast</a>.
+Sometimes the Tech Tips are included in whole in the email blast, but sometimes
+there is more content than is reasonable in the email blast so partial content
+is included in the blast with the rest of the content here.</p>
+<section id="servos-on-the-control-and-expansion-hubs">
+<span id="servooncontrolhub"></span><h2>Servos on the Control and Expansion Hubs<a class="headerlink" href="#servos-on-the-control-and-expansion-hubs" title="Link to this heading"></a></h2>
+<p>There was a fantastic <a class="reference external" href="https://ftc-qa.firstinspires.org/qa/229">question on the FTC-QA</a> that prompted an in-depth
+discussion about <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servos</span></a> in <em>FIRST</em> Tech Challenge - the question was in regard
+to servo compatibility and operation/performance on a REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a>, REV
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a>, and REV Servo Power Module. While the full explanation was
+too much for a Q&amp;A answer, the complete answer was provided on the
+<a class="reference external" href="https://ftc-community.firstinspires.org/t/rev-control-hub-servo-port-compatibility/858">FTC-Community forums</a>.
+If you are using servos (or want to use servos) on your robot, the full
+answer contains an explanation of how servos are managed on a Control and
+Expansion Hub that you cannot get anywhere else!</p>
+</section>
+<section id="servo-power-injectors">
+<span id="servopowerinjectors"></span><h2>Servo Power Injectors<a class="headerlink" href="#servo-power-injectors" title="Link to this heading"></a></h2>
+<p>Servo Power Injectors have been used in <em>FIRST</em> Tech Challenge
+for several years now, but do you really understand what they are and how they
+work? What is a Servo Power Injector and how might servos behave differently
+when used with one?</p>
+<p>A servo connection is a 3-wire combination that combines power, ground, and
+a signal. The actual command signal for the servo travels on the signal wire,
+and the power used to power the servo travels on the other two wires. A servo
+power injector is a device that removes the power provided by the servo controller
+(REV Control Hub or REV Expansion Hub for FTC) and provides a new, usually higher
+wattage power source. Both the REV Servo Power Module and Studica Servo Power Block
+replace the 5V/10W power provided by the REV Control/Expansion Hubs with a 6V power
+source with a higher maximum wattage.</p>
+<p>So what does higher voltage do for a servo? Servos operate on a power range; the
+more power they get, the faster and stronger they can become, up to a certain limit.
+Servos operating at 5V get a noticeable boost in speed and output power when used
+at 6V. The same servos may seem superhuman at higher voltages!</p>
+<p>The downside of servo power injectors is that teams are now responsible for
+managing their own power usage. On the REV Control Hub, for instance, each servo
+port pair is limited in how much power it can draw (at least there’s a limit on
+how long it can draw high loads). When using a servo power injector, the pool of
+power for a servo is much larger and less restricted since it pulls its power
+directly from the robot <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Battery"><span class="xref std std-term">battery</span></a> - using power injectors means you could consume
+all of the power on the robot just from the servos alone! This will result in the
+robot power system browning out (resulting in loss of communications or loss of
+power to the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-System"><span class="xref std std-term">control system</span></a>) or even blowing the 20A battery <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Fuse"><span class="xref std std-term">fuse</span></a>.</p>
+<p>Using a servo power injector can also expose different behaviors in servos that
+were not present when using the REV Control/Expansion Hub directly. The biggest
+behavior is the “Lost Signal” behavior. When an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> ends, the REV
+Control/Expansion hubs stop the signal and also cut power to the servo ports -
+this leads to the servos “going limp” as they lose power. With a servo power
+injector, the servos never lose power, and so “lost signal” behaviors will often
+then take over which may cause the servo to move to a “default” position (which
+is virtually never advantageous for robots but definitely advantageous for R/C
+planes for example). The Axon MAX+ servo and several higher-power HiTec servos
+have this behavior, the Axon MAX+ behavior is at least configurable with a servo
+programmer.</p>
+<p>Finally, when using a servo power injector it’s of VITAL importance that you
+cover unused ports with tape or other debris-limiting measures to protect the
+ports. It’s very easy to get metal swarf in open servo ports, and that metal
+can short out the power output pins - especially lower-cost power injectors
+cannot tell when they’re being used, or don’t have protections against short
+circuits, but they still have all output pins powered. This can quickly turn
+your servo power injector into an expensive paperweight when the power
+regulator overloads and burns out.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wondering how to compare one servo against another? See
+<a class="reference internal" href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html#calculating-motor-and-servo-power"><span class="std std-ref">Calculating Motor and Servo Power</span></a>.</p>
+</div>
+<p>Got any questions about servos? Come start or join the conversation on the
+<a class="reference external" href="https://ftc-community.firstinspires.org/">FTC Community Forums</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tech-tip-motor-modes/tech-tip-motor-modes.html" class="btn btn-neutral float-left" title="Motor Modes and Encoders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html" class="btn btn-neutral float-right" title="Calculating Motor and Servo Power" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

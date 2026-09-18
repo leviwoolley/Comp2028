@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camera Calibration &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AprilTag Pose" href="../../../apriltag/vision_portal/apriltag_pose/apriltag-pose.html" />
+    <link rel="prev" title="AprilTag Reference Frame" href="../../../apriltag/vision_portal/apriltag_reference_frame/apriltag-reference-frame.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Camera Calibration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-camera-calibration-and-why-is-it-needed">What is a camera calibration and why is it needed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#does-your-camera-already-have-calibration-data">Does your camera already have calibration data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#capturing-calibration-frames">Capturing calibration frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-a-calibration-tool">Choosing a calibration tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibrating-with-3df-zephyr">Calibrating with 3DF Zephyr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration-warnings-from-the-sdk">Calibration warnings from the SDK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+      <li class="breadcrumb-item active">Camera Calibration</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/programming_resources/vision/camera_calibration/camera-calibration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="camera-calibration">
+<h1>Camera Calibration<a class="headerlink" href="#camera-calibration" title="Link to this heading"></a></h1>
+<section id="what-is-a-camera-calibration-and-why-is-it-needed">
+<h2>What is a camera calibration and why is it needed?<a class="headerlink" href="#what-is-a-camera-calibration-and-why-is-it-needed" title="Link to this heading"></a></h2>
+<p>Cameras are composed of many different components that can introduce variability
+in the actual image that a camera ultimately “sees”. Camera calibration is a
+process that mathematically models how a camera &amp; lens combination ultimately
+sees the world, for example how wide the field of view is. Calibrating your camera
+is a must if you desire to use it for high-precision tasks, such as performing
+precision measurements using the camera or obtaining accurate 6DOF pose data from
+fiducial marker systems like <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTags</span></a>.</p>
+<blockquote>
+<div><p><em>“Without a camera calibration, the best you could achieve is being
+able to turn towards the target. Range information would be
+incorrect.” – FIRST Tech Challenge navigation expert &#64;gearsincorg</em></p>
+</div></blockquote>
+<p>The calibration values are called <strong>lens intrinsics</strong>. It’s important to note
+that they are not only specific to the camera and lens, but also specific to the
+resolution used on a particular camera as well! A <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcam</span></a> that offers 18
+resolutions wants a separate calibration for each one.</p>
+</section>
+<section id="does-your-camera-already-have-calibration-data">
+<h2>Does your camera already have calibration data?<a class="headerlink" href="#does-your-camera-already-have-calibration-data" title="Link to this heading"></a></h2>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> ships calibration data for a limited number of webcams and resolutions,
+so check this list before calibrating anything yourself:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Webcam</p></th>
+<th class="head"><p>Calibrated resolutions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Logitech HD Webcam C270</p></td>
+<td><p>640x480</p></td>
+</tr>
+<tr class="row-odd"><td><p>Logitech HD Webcam C310</p></td>
+<td><p>640x480, 640x360</p></td>
+</tr>
+<tr class="row-even"><td><p>Logitech HD Pro Webcam C920</p></td>
+<td><p>640x480, 800x600, 640x360, 800x448, 864x480, 1920x1080</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microsoft Lifecam HD 3000 (v1 and v2)</p></td>
+<td><p>640x480</p></td>
+</tr>
+<tr class="row-even"><td><p>goBILDA (SKU 3122-0003-0001)</p></td>
+<td><p>640x480, 800x600, 1280x720, 1920x1080</p></td>
+</tr>
+</tbody>
+</table>
+<p>If your camera and resolution are both on this list, you do not need to
+calibrate. If your camera is on the list but your resolution is not, you can
+either switch to a calibrated resolution or generate your own values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This table can fall behind the SDK. The authoritative source is the SDK file
+<code class="docutils literal notranslate"><span class="pre">builtinwebcamcalibrations.xml</span></code>; in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a>, find it under the
+<code class="docutils literal notranslate"><span class="pre">RobotCore</span></code>, <code class="docutils literal notranslate"><span class="pre">res</span></code>, <code class="docutils literal notranslate"><span class="pre">xml</span></code> subfolders.</p>
+</div>
+<p>Android device cameras also need calibration data for good pose estimates. The
+SDK provides no lens intrinsics for these cameras.</p>
+</section>
+<section id="capturing-calibration-frames">
+<h2>Capturing calibration frames<a class="headerlink" href="#capturing-calibration-frames" title="Link to this heading"></a></h2>
+<p>Every calibration tool works from a set of photographs taken by the camera you
+are calibrating, at the resolution you are calibrating. The SDK provides a
+utility <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> to capture them.</p>
+<p>Create an OpMode from the Java Sample <code class="docutils literal notranslate"><span class="pre">UtilityCameraFrameCapture.java</span></code>.
+Android Studio teams can find this utility program in the External Samples
+folder; OnBot Java teams can copy it into their teamcode folder. Modify the
+parameters at the top – most importantly the resolution – according to your
+needs.</p>
+<p>FTC <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> teams can duplicate this OpMode, requiring a custom myBlock only for
+the method <code class="docutils literal notranslate"><span class="pre">saveNextFrameRaw()</span></code>. At some future time, this Java method may
+become available as a regular Block, avoiding the need for a myBlock. Learn more
+about myBlocks here:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../shared/myblocks/index.html#custom-blocks-myblocks"><span class="std std-ref">MyBlocks Tutorial</span></a>.</p></li>
+</ul>
+<p>The OpMode captures a camera frame (image) and stores it on the
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> with each press of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Gamepad"><span class="xref std std-term">gamepad</span></a> button X
+(or Square). To illustrate, it stores the first two captured images as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VisionPortal-CameraFrameCapture-000000.png</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VisionPortal-CameraFrameCapture-000001.png</span></code></p></li>
+</ul>
+<p>The numbering restarts for each run of the OpMode. Move each set of frames to
+its own folder on your computer, to avoid overwriting the previous run’s
+results.</p>
+<p>To retrieve the images, connect your Robot Controller device to your computer
+with a USB cable. The files are in the root of the USB storage, with names
+prefixed by <code class="docutils literal notranslate"><span class="pre">VisionPortal-</span></code>. Mac OSX users may need special software for
+Android file transfer.</p>
+</section>
+<section id="choosing-a-calibration-tool">
+<h2>Choosing a calibration tool<a class="headerlink" href="#choosing-a-calibration-tool" title="Link to this heading"></a></h2>
+<p>There are many methods to calibrate cameras, including <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpenCV"><span class="xref std std-term">OpenCV</span></a>, MATLAB, MRCAL
+etc.</p>
+<ul class="simple">
+<li><p>For advanced teams, using <a class="reference external" href="https://mrcal.secretsauce.net/">MRCAL</a> is
+likely the best option - it is a tool developed by NASA JPL that provides
+extensive data on how good your calibration is and what goes into the numerical
+optimization to arrive at the optimal parameters.</p></li>
+<li><p>For the rest of us, the walkthrough below explains how to calibrate your
+camera using <a class="reference external" href="https://www.3dflow.net/3df-zephyr-free/">3DF Zephyr</a>, which is
+extremely easy to use and can provide reasonable results.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>3DF Zephyr is a Microsoft Windows 64-bit application. It is not supported on
+32-bit versions of Windows, nor is it supported on Mac or on Linux platforms.
+Teams on those platforms will need MRCAL or another calibration program.</p>
+</div>
+</section>
+<section id="calibrating-with-3df-zephyr">
+<h2>Calibrating with 3DF Zephyr<a class="headerlink" href="#calibrating-with-3df-zephyr" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Download and install <a class="reference external" href="https://www.3dflow.net/3df-zephyr-free/">3DF Zephyr Free Edition</a>.</p></li>
+<li><p>In 3DF Zephyr, go to:</p>
+<ul class="simple">
+<li><p>Utilities –&gt; Images –&gt; Camera Calibration</p></li>
+</ul>
+<p>and follow the instructions. Use the frame capture OpMode described above to
+take the pictures.</p>
+</li>
+<li><p>Press the <em>Add Images</em> button in 3DF Zephyr and point it to the images you
+copied from the Robot Controller.</p></li>
+<li><p>Run the calibration target analysis in 3DF Zephyr; when it is complete, it
+will provide you with <code class="docutils literal notranslate"><span class="pre">fx,</span> <span class="pre">fy,</span> <span class="pre">cx,</span> <span class="pre">cy</span></code> which are the needed calibration
+parameters to be applied to your <code class="docutils literal notranslate"><span class="pre">AprilTagProcessor</span></code>.</p></li>
+</ol>
+</section>
+<section id="calibration-warnings-from-the-sdk">
+<h2>Calibration warnings from the SDK<a class="headerlink" href="#calibration-warnings-from-the-sdk" title="Link to this heading"></a></h2>
+<p>Running <code class="docutils literal notranslate"><span class="pre">ConceptDoubleVision</span></code> (or any AprilTag <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpMode</span></a>) with an
+uncalibrated camera gives the following error message on both devices:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/010-RC-warning.png"><img alt="Camera Calibration Warning" src="../../../_images/010-RC-warning.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Warning of no camera calibration provided</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/020-DS-warning.png"><img alt="Detections with warning" src="../../../_images/020-DS-warning.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Right-hand image shows that the warning still allows detections.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The SDK gives a different warning that covers a <strong>special case</strong>, where the
+OpMode uses:</p>
+<ul class="simple">
+<li><p>a camera model for which the SDK <strong>does have</strong> lens intrinsics, and</p></li>
+<li><p>a user-specified resolution for which</p>
+<ul>
+<li><ol class="loweralpha simple">
+<li><p>the SDK <strong>does not have</strong> lens intrinsics, and</p></li>
+</ol>
+</li>
+<li><p>(b) the <strong>aspect ratio</strong> matches that of lens intrinsics that the SDK
+<strong>does have</strong> (for that camera model).</p></li>
+</ul>
+</li>
+</ul>
+<p>In such a case, the SDK <strong>scales</strong> the results in an attempt to estimate
+AprilTag pose.</p>
+<p>For example, changing the Logitech C270 resolution from 640x480 to
+800x600 (also 4:3 aspect ratio), gives this warning on the RC preview
+and the DS screen:</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/030-scaling-warning.png"><img alt="Resolution Warning" src="../../../_images/030-scaling-warning.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Warning about no calibration at this resolution</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above warning advises the user of this situation, with the
+opportunity to accept/adjust the scaled estimate or provide actual
+calibration values.</p>
+<p>Neither warning affects the function of capturing and storing camera frames.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../../apriltag/vision_portal/apriltag_reference_frame/apriltag-reference-frame.html" class="btn btn-neutral float-left" title="AprilTag Reference Frame" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../apriltag/vision_portal/apriltag_pose/apriltag-pose.html" class="btn btn-neutral float-right" title="AprilTag Pose" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

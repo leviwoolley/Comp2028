@@ -1,0 +1,1894 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal IMU Interface &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using the Kotlin Programming Language" href="../shared/installing_kotlin/Installing-Kotlin.html" />
+    <link rel="prev" title="External Libraries in OnBot Java and Blocks" href="../shared/external_libraries_blocks/external-libraries-blocks.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#advanced-topics">Advanced Topics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../shared/pid_coefficients/pid-coefficients.html">Changing PID Coefficients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shared/pidf_coefficients/pidf-coefficients.html">Changing PIDF Coefficients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shared/auto_load_opmode/auto-load-opmode.html">Automatically Loading a Driver Controlled Op Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shared/myblocks/index.html">Custom Blocks (myBlocks)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shared/external_libraries_blocks/external-libraries-blocks.html">External Libraries in OnBot Java and Blocks</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Universal IMU Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#potential-usage">Potential Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-imu">Configure IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axes-definition">Axes Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#physical-hub-mounting">Physical Hub Mounting</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#orthogonal-mounting">Orthogonal Mounting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#non-orthogonal-mounting">Non-Orthogonal Mounting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#imu-programming">IMU Programming</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#initialize-imu">Initialize IMU</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#read-imu-angles-basic">Read IMU Angles - Basic</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#read-imu-angles-flexible">Read IMU Angles - Flexible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#read-angular-velocity">Read Angular Velocity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reset-heading">Reset Heading</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-opmodes">Sample OpModes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sdk-resources">SDK Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../shared/installing_kotlin/Installing-Kotlin.html">Using the Kotlin Programming Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../devices/huskylens/huskylens.html">HuskyLens Intro for <em>FIRST</em> Tech Challenge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Programming Resources</a></li>
+      <li class="breadcrumb-item active">Universal IMU Interface</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/programming_resources/imu/imu.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="universal-imu-interface">
+<h1>Universal IMU Interface<a class="headerlink" href="#universal-imu-interface" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In September 2022, REV Robotics began shipping <a class="reference external" href="https://www.revrobotics.com/rev-31-1595/">Control Hubs</a> with a different internal
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Inertial-Measurement-Unit"><span class="xref std std-term">Inertial Measurement Unit</span></a> (IMU). The new IMU chip is designated <a class="reference external" href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bhi260ap/">BHI260AP</a>,
+replacing the existing <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Hub"><span class="xref std std-term">Hub</span></a>’s IMU chip <a class="reference external" href="https://www.bosch-sensortec.com/en/products/smart-sensor-systems/bno055/">BNO055</a>.  Both are
+from Bosch Sensortec. An IMU can measure many aspects of device motion; this
+explanatory document focuses primarily on <strong>rotation</strong>.</p>
+<p>The <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases">Software SDK</a>
+<strong>version 8.1</strong> introduced a <strong>universal interface</strong> that supports both the
+BHI260AP and BNO055 IMU. This basic tutorial introduces some new features:</p>
+<ul class="simple">
+<li><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Configuration"><span class="xref std std-term">robot configuration</span></a> allows selection of IMU type</p></li>
+<li><p>universal classes and methods supporting both IMU types</p></li>
+<li><p>three ways to specify Hub mounting orientation on the robot</p></li>
+</ul>
+<p>Teams wanting to use the newer IMU are required to:</p>
+<ul class="simple">
+<li><p>use <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> 8.1 or newer</p></li>
+<li><p>update the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> OS to 1.1.3 or newer.</p></li>
+</ul>
+<p>However <strong>all teams</strong> are encouraged to begin using the universal IMU classes
+and methods for <strong>new</strong> <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> and Java code. And, migrating <strong>existing code</strong>
+would allow you to switch easily (and perhaps urgently) to a new Control Hub
+during the season.</p>
+<p>Don’t know which IMU you have? Check the <strong>Manage</strong> page under <code class="docutils literal notranslate"><span class="pre">Program</span> <span class="pre">&amp;</span>
+<span class="pre">Manage</span></code> in any of these places:</p>
+<ul class="simple">
+<li><p>connected <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> (DS) app</p></li>
+<li><p>connected computer’s Chrome browser, at <code class="docutils literal notranslate"><span class="pre">http://192.168.43.1:8080</span></code> (Control Hub) or <code class="docutils literal notranslate"><span class="pre">http://192.168.49.1:8080</span></code> (RC phone)</p></li>
+<li><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-REV-Hardware-Client"><span class="xref std std-term">REV Hardware Client</span></a> (when Hub LED is green)</p></li>
+</ul>
+<p>Each Hub’s IMU type is listed there, as of SDK 8.0.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/010-Manage-2-hubs.png"><img alt="2-hub display" src="../../_images/010-Manage-2-hubs.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Sample Control Hub and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a> display</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Reminder: REV Expansion Hubs purchased after December 2021 have no internal
+IMU.</em></p>
+</div>
+<p>Do you have existing <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpModes</span></a> using the original IMU? Your code can run
+unchanged, using Hubs with the BNO055. The new SDK 8.1 fully supports legacy
+Blocks and Java code using classes and methods for the BNO055 IMU.</p>
+<p>The SDK 8.1 README provides more technical background:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Unlike the old <code class="docutils literal notranslate"><span class="pre">BNO055IMU</span></code> interface, which only worked correctly when the</div>
+<div class="line">REV Hub was mounted flat on your robot, the <code class="docutils literal notranslate"><span class="pre">IMU</span></code> interface allows you to</div>
+<div class="line">specify the orientation of the REV Hub on your robot. It will account for</div>
+<div class="line">this, and give you your orientation in a Robot Coordinate System, instead of</div>
+<div class="line">a special coordinate system for the REV Hub. As a result, your pitch and yaw</div>
+<div class="line">will be 0 when your <em>robot</em> is level, instead of when the REV Hub is level,</div>
+<div class="line">which will result in much more reliable orientation angle values for most</div>
+<div class="line">mounting orientations.</div>
+<div class="line">…</div>
+<div class="line">If you have calibrated your BNO055, you can provide that calibration data to</div>
+<div class="line">the new <code class="docutils literal notranslate"><span class="pre">IMU</span></code> interface by passing a <code class="docutils literal notranslate"><span class="pre">BNO055IMUNew.Parameters</span></code> instance</div>
+<div class="line">to <code class="docutils literal notranslate"><span class="pre">IMU.initialize()</span></code>.</div>
+<div class="line">…</div>
+<div class="line">Because of the new robot-centric coordinate system, the pitch and roll</div>
+<div class="line">angles returned by the <code class="docutils literal notranslate"><span class="pre">IMU</span></code> interface will be different from the ones</div>
+<div class="line">returned by the <code class="docutils literal notranslate"><span class="pre">BNO055IMU</span></code> interface. When you are migrating your code,</div>
+<div class="line">pay careful attention to the documentation.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="potential-usage">
+<h2>Potential Usage<a class="headerlink" href="#potential-usage" title="Link to this heading"></a></h2>
+<p><em>FIRST</em> Tech Challenge robots drive mostly on a flat <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Playing-Field"><span class="xref std std-term">playing field</span></a>, typically
+using the IMU to monitor or control <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Heading"><span class="xref std std-term">Heading</span></a> (Yaw or Z-angle).</p>
+<p>Heading is preserved between OpMode runs, unless the robot or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a>
+(RC) app are restarted. This can be useful between <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Autonomous"><span class="xref std std-term">Autonomous</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-TELEOP"><span class="xref std std-term">TeleOp</span></a>.
+Heading can be reset during an OpMode, as discussed below.</p>
+<p><em>Heading can drift slowly over time. An absolute reference is not available
+from gravity or from a magnetometer, which can be affected by nearby motors.
+This ‘Yaw drift’ is discussed below.</em></p>
+<p>The IMU can help with more than Heading! Some <em>FIRST</em> Tech Challenge games have
+placed robots on <strong>tilted surfaces</strong>:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/002-tilted-games.png"><img alt="previous games 1" src="../../_images/002-tilted-games.png" style="width: 80%;" />
+</a>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/003-tilted-games-2.png"><img alt="previous games 2" src="../../_images/003-tilted-games-2.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Sample images from previous games utilizing tilted surfaces</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<div class="legend">
+<p>(Block Party!, <em>FIRST</em> RES-Q, Relic Recovery, Face Off!, Get Over It!)</p>
+</div>
+</figcaption>
+</figure>
+<p>Such fields, and special circumstances in <strong>any</strong> <em>FIRST</em> Tech Challenge game,
+may cause teams to seek IMU readings for <strong>Pitch</strong> and <strong>Roll</strong> angles.</p>
+<p>Examples might include:</p>
+<ul class="simple">
+<li><p>robot’s left wheels are raised, on an obstacle</p></li>
+<li><p>robot is tilted forward on its front 4 wheels (of 6-wheel West Coast Drive)</p></li>
+<li><p>robot has tipped over (!)</p></li>
+<li><p>robot’s secondary Expansion Hub (with IMU) is mounted on a tilting mechanism</p></li>
+</ul>
+<p>The Software SDK can also provide values for <strong>angular velocity</strong>, which is
+the rate of change (degrees per second) for Roll, Pitch or Yaw.</p>
+<p>Let’s get started!</p>
+</section>
+<section id="configure-imu">
+<h2>Configure IMU<a class="headerlink" href="#configure-imu" title="Link to this heading"></a></h2>
+<p>Robot configuration of the IMU is <strong>automatic</strong>, and shouldn’t need changes.
+But here’s how to confirm or rename your configured IMU.</p>
+<p>In a connected DS app, touch the 3-dots icon at top right, then touch
+<code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Robot</span></code>. For any new or existing Configuration, touch <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Hub</span>
+<span class="pre">Portal</span></code>, then select the Hub with the IMU you want to use. Typically this will
+be the Control Hub, whether old or new.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/020-DH-config-3-up.png"><img alt="IMU Robot Configuration" src="../../_images/020-DH-config-3-up.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">REV IMU Robot Configuration Validation</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Yellow</strong>: The internal IMU is (always) connected at <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-I2C"><span class="xref std std-term">I2C</span></a> Bus 0, Port 0.  If
+you want another I2C device also on Bus 0, plug it into the Hub and use the
+<code class="docutils literal notranslate"><span class="pre">Add</span></code> button.</p></li>
+<li><p><strong>Green</strong>: The default IMU type shown will reflect the actual unit in this Hub;
+fix this only if it was incorrectly modified. Your IMU OpModes <strong>require a
+correct choice here</strong>.</p></li>
+<li><p><strong>Purple</strong>: The default device name is “imu”, used by all <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpModes</span></a> for
+Blocks and Java. You may enter a custom name here, but you must then
+<strong>update</strong> all your OpModes that reference the IMU.</p></li>
+</ul>
+<p>When done, <strong>save</strong> and <strong>activate</strong> this configuration.</p>
+<p><em>If a Blocks OpMode is open at the computer’s programming screen, close and
+re-open that OpMode to capture this updated configuration. Blocks are provided
+only for devices in the configuration that’s active</em> <strong>upon opening</strong> <em>an
+OpMode.</em></p>
+</section>
+<section id="axes-definition">
+<span id="imu-axes-def"></span><h2>Axes Definition<a class="headerlink" href="#axes-definition" title="Link to this heading"></a></h2>
+<p>Robot orientation is defined using the Robot Coordinate System, with 3
+axes that are <strong>orthogonal</strong> (at 90 degrees to each other), with origin
+inside the robot.</p>
+<p>You must decide which face or direction is <strong>“forward”</strong> on your robot
+(which could be round!).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Placing a tape label “FRONT” at the <strong>team-agreed front face</strong> or front
+edge of the robot can avoid confusion later – really!</p>
+</div>
+<ul class="simple">
+<li><p>Heading, or Yaw, is the measure of rotation about the Z axis, which
+points <strong>up</strong> toward the ceiling.</p></li>
+<li><p>Pitch is the measure of rotation about the X axis, which points <strong>out
+the right side</strong> of the robot.</p></li>
+<li><p>Roll is the measure about the Y axis, which points <strong>out the front</strong>
+of the robot.</p></li>
+</ul>
+<p><em>These are Robot axes, different than (and not aligned with) the Hub
+axes used by the legacy</em> <code class="docutils literal notranslate"><span class="pre">BNO055IMU</span></code> <em>driver.</em></p>
+<p>Rotation follows the traditional <strong>right-hand rule</strong>: with the thumb
+pointing along the positive axis, the fingers curl in the direction of
+<strong>positive</strong> rotation.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><em>Fun fact: the IMU is located approximately under the word “PROUD”, near the
+lower right corner of the Hub.</em></p>
+</div>
+<p>This tutorial will <strong>not</strong> discuss the <em>FIRST</em> Tech Challenge
+<a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html#first-field-coordinate-system"><span class="std std-ref">Field Coordinate System</span></a>.
+Your OpModes might relate robot orientation to the overall field, or ‘global
+coordinates’, for navigation, but that’s beyond the focus here on using the
+IMU.</p>
+</section>
+<section id="physical-hub-mounting">
+<h2>Physical Hub Mounting<a class="headerlink" href="#physical-hub-mounting" title="Link to this heading"></a></h2>
+<p>Under SDK 8.1, you can specify the <strong>physical orientation</strong> of the Hub
+on the robot. This allows you to receive IMU angle values expressed in
+<strong>robot axes</strong>, useful for understanding and managing the robot’s
+movement.</p>
+<p>Before jumping into programming, let’s discuss your options for
+physically mounting the Hub on the robot. In general, the Hub’s mounting
+can be considered <strong>Orthogonal</strong> or <strong>Non-Orthogonal</strong>.</p>
+<section id="orthogonal-mounting">
+<h3>Orthogonal Mounting<a class="headerlink" href="#orthogonal-mounting" title="Link to this heading"></a></h3>
+<p>Imagine a <strong>cube</strong> anywhere on your robot, parallel to the floor, with
+one flat side facing exactly towards the designated “front” of your
+robot. Place your Hub on one of these cube faces, with the Hub’s
+straight edges <strong>parallel</strong> to the cube.</p>
+<p>If that describes the orientation of your Hub, use the <strong>Orthogonal</strong>
+method of specifying its orientation. See the IMU Programming section
+below.</p>
+<p>Here are some common examples:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #1</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-1.png"><img alt="Logo UP, USB Forward" src="../../_images/orthogonal-1.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo UP, USB FORWARD</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #2</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-2.png"><img alt="Logo LEFT, USB UP" src="../../_images/orthogonal-2.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo LEFT, USB UP</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #3</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-3.png"><img alt="Logo RIGHT, USB UP" src="../../_images/orthogonal-3.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo RIGHT, USB UP</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #4</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-4.png"><img alt="Logo FORWARD, USB UP" src="../../_images/orthogonal-4.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo FORWARD, USB UP</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #5</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-5.png"><img alt="Logo BACKWARD, USB UP" src="../../_images/orthogonal-5.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo BACKWARD, USB UP</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #6</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-6.png"><img alt="Logo DOWN, USB FORWARD" src="../../_images/orthogonal-6.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo DOWN, USB FORWARD</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #7</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-7.png"><img alt="Logo FORWARD, USB LEFT" src="../../_images/orthogonal-7.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo FORWARD, USB LEFT</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #8</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-8.png"><img alt="Logo FORWARD, USB RIGHT" src="../../_images/orthogonal-8.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo FORWARD, USB RIGHT</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Orthogonal #9</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/orthogonal-9.png"><img alt="Logo UP, USB BACKWARD" src="../../_images/orthogonal-9.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Logo UP, USB BACKWARD</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>With six cube faces, and four 90-degree positions on each face, there
+are <strong>24 possible Orthogonal orientations</strong>.</p>
+</section>
+<section id="non-orthogonal-mounting">
+<h3>Non-Orthogonal Mounting<a class="headerlink" href="#non-orthogonal-mounting" title="Link to this heading"></a></h3>
+<p>Here are some scenarios, ranging from simple to complex:</p>
+<ul class="simple">
+<li><p>Imagine the same front-aligned cube, with your Hub on any face. The
+Hub’s edges are <strong>not parallel</strong> to the cube. Namely, the Hub is
+rotated only <strong>in-plane</strong> (clockwise or counter-clockwise, looking at
+the REV logo).</p></li>
+<li><p>The Hub is mounted/tilted at some oblique angle from a face on the
+imaginary cube. At that single tilted angle, the Hub is not rotated
+in-plane (clockwise or counter-clockwise, looking at the logo).</p></li>
+<li><p>The Hub is tilted at multiple angles, with or without in-plane
+rotation.</p></li>
+</ul>
+<p>For any Non-Orthogonal scenarios, SDK 8.1 provides <strong>two ways</strong> to
+describe the Hub’s orientation. See below for the <strong>Angles</strong> method and
+the <strong>Quaternion</strong> method.</p>
+</section>
+</section>
+<section id="imu-programming">
+<h2>IMU Programming<a class="headerlink" href="#imu-programming" title="Link to this heading"></a></h2>
+<p>SDK 8.1 offers new classes and methods that apply <strong>universally</strong> to
+both types of IMU. Once configured, the IMU type will not affect your
+programming. The programming steps include:</p>
+<ul class="simple">
+<li><p>set the IMU <strong>parameters</strong>, or use defaults</p></li>
+<li><p><strong>initialize</strong> the IMU</p></li>
+<li><p><strong>read values</strong> from the IMU, use as needed to control the robot</p></li>
+<li><p>optional: <strong>reset Heading</strong> one or more times</p></li>
+</ul>
+<p>The following sections cover these topics in order.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<p>There are <strong>three ways</strong> to describe the Hub’s orientation, using IMU
+parameters. One is for Orthogonal mounting, and two are for Non-Orthogonal
+mounting. Choose the simplest method that applies to your robot.</p>
+<p>As an example, in the <em>FIRST</em> Tech Challenge Blocks menu under <code class="docutils literal notranslate"><span class="pre">Sensors</span></code> and <code class="docutils literal notranslate"><span class="pre">IMU</span></code>, you
+can find these three methods for specifying parameters:</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/045-Blocks-parameters-toolbox-labels.png"><img alt="Sample Blocks screenshot demonstrating parameter methods" src="../../_images/045-Blocks-parameters-toolbox-labels.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Sample Blocks screenshot, demonstrating the three parameter methods</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="parameters-for-method-1-orthogonal">
+<h4>Parameters for Method 1, Orthogonal<a class="headerlink" href="#parameters-for-method-1-orthogonal" title="Link to this heading"></a></h4>
+<p>Method 1 consists of supplying a simple Orthogonal configuration. This requires
+you to determine the direction that the REV logo is facing. To do this,
+consider the Hub is mounted on an imaginary cube aligned to the “front” of the
+robot.  Specify the Hub’s mounting face: “Forward” means robot forward (front
+face), “Left” means robot left, etc.</p>
+<p>Next, choose how the Hub is rotated on that face. Use the USB ports at
+the “top” of the Hub to determine this direction; assume you are at the
+rear of the robot, looking “forward”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Certain combinations are physically impossible. For example, if the REV
+logo is facing UP, the USB ports cannot also be facing UP. The OpMode will
+reject such combinations during IMU initialization.</em></p>
+</div>
+<p>It’s optional to save the parameters to a new variable called, for
+example, “myIMUparameters”. That variable can be used in the next step
+(IMU initialization).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/050-Blocks-parameters-1a.png"><img alt="specifying Logo Facing Direction" src="../../_images/050-Blocks-parameters-1a.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Specifying Logo Facing Direction</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/060-Blocks-parameters-1b.png"><img alt="specifying USB Facing Direction" src="../../_images/060-Blocks-parameters-1b.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Specifying USB Facing Direction</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/070-Blocks-myIMUparameters.png"><img alt="Setting parameters to variable" src="../../_images/070-Blocks-myIMUparameters.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting parameters to a Variable</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">myIMUparameters</span><span class="p">;</span>
+
+<span class="n">myIMUparameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span>
+<span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span>
+<span class="w">          </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="p">.</span><span class="na">UP</span><span class="p">,</span>
+<span class="w">          </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="p">.</span><span class="na">FORWARD</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hub-axes-for-setting-parameters">
+<h4>Hub Axes for Setting Parameters<a class="headerlink" href="#hub-axes-for-setting-parameters" title="Link to this heading"></a></h4>
+<p>Only for the next two Parameters sections (Angles and Quaternion), we
+must temporarily use <strong>Hub axes</strong> instead of Robot axes. Hub axes are
+also at 90 degrees to each other, with origin inside the Hub.</p>
+<p><strong>The assumed initial Hub position is REV logo facing UP (Robot +Z),
+with USB ports FORWARD (Robot +Y).</strong> For the Angles and Quaternion
+methods, all rotations start here.</p>
+<p><em>Again, “forward” is based on your team’s agreed definition.</em></p>
+<p>In this starting orientation, the Hub axes are <strong>aligned with</strong> the
+Robot Coordinate System:</p>
+<ul class="simple">
+<li><p>Heading, or Yaw, is the measure of rotation about the Z axis, which
+points upwards through the Hub’s front plate or logo.</p></li>
+<li><p>Pitch is the measure of rotation about the X axis, which points
+toward the right-side I2C <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sensor"><span class="xref std std-term">sensor</span></a> ports.</p></li>
+<li><p>Roll is the measure about the Y axis, which points toward the
+top-edge USB port(s).</p></li>
+</ul>
+<p>Hub rotations also follow the right-hand rule.</p>
+<p>The legacy <code class="docutils literal notranslate"><span class="pre">BNO055IMU</span></code> driver uses <strong>different Hub axes</strong>: its X
+axis pointed to the USB port, and Y axis pointed to the left-side motor
+ports. The new SDK 8.1 universal IMU driver uses the above Hub axes for
+BNO055 and BHI260AP.</p>
+</section>
+<section id="parameters-for-method-2-angles">
+<h4>Parameters for Method 2, Angles<a class="headerlink" href="#parameters-for-method-2-angles" title="Link to this heading"></a></h4>
+<p>If your Hub is <strong>not</strong> mounted Orthogonally, you can specify the Hub’s
+<em>rotation</em> about one or more <strong>Hub axes</strong> X, Y, Z. These are expressed in
+<em>degrees</em>, and the <strong>order</strong> in which the rotations are applied (it
+matters!).</p>
+<p>The Blocks IMU palette contains a Block with default parameters for the
+Angles method of describing the Hub’s orientation on the robot. Let’s
+review this Blocks palette function now, as a good example. The Java
+API closely resembles the Blocks method.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/080-Blocks-angles-01.png"><img alt="Sample Block demonstrating angles method" src="../../_images/080-Blocks-angles-01.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Sample Block demonstrating angles method</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The second listed default is ZYX, meaning you will provide the Hub’s
+rotations in that order. Thus the “first angle” is the Z axis, the
+“second angle” is the Y axis, and the “third angle” is the X axis.</p>
+<p>So the Hub will be rotated as follows: +90 degrees about <strong>Z</strong>, no
+rotation about <strong>Y</strong>, then -45 degrees about <strong>X</strong> (in its new
+direction).</p>
+<p>For the Angles method, the assumed initial Hub position is REV Logo
+facing UP, with USB ports facing FORWARD. Additional rotations begin
+at this orientation.</p>
+<ol class="arabic simple">
+<li><p>From logo-up/USB-forward, this example starts with a “first angle”
+rotation of <strong>+90 degrees about the Z axis</strong>. Namely, the Hub rotates
+counter-clockwise (CCW), ending with the USB ports pointing to the
+robot’s left side. Note the <strong>X and Y axes have also rotated CCW</strong>,
+since they are INTRINSIC (described below).</p></li>
+<li><p>The “second angle” rotation is <strong>0 degrees, no action</strong>.</p></li>
+<li><p>The “third angle” rotation is <strong>-45 degrees about the Hub’s X axis</strong>,
+which <strong>now points in the robot’s forward direction</strong> (after the
+first-angle Z rotation). So, the top edge of the Hub tilts downward,
+causing the USB ports to angle downward at 45 degrees, at the robot’s
+left side.</p></li>
+</ol>
+<p>Here’s the full sequence:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Angles Rotation Step #1</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/angle-1.png"><img alt="Starting Position" src="../../_images/angle-1.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Starting Position</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Angles Rotation Step #2</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/angle-2.png"><img alt="First Angle (Z axis +90)" src="../../_images/angle-2.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">First Angle (Z axis +90)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Angles Rotation Step #3</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/angle-3.png"><img alt="Third Angle (X axis -45)" src="../../_images/angle-3.png" style="width: 100%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Third Angle (X axis -45)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The remaining default parameters don’t need attention or editing. The third
+listed default is simply DEGREES, easy to work with. The first listed default
+is INTRINSIC axes reference, which means that the Hub axes move with each
+rotation of the Hub. (The other choice, rarely used, is EXTRINSIC for global
+axes that <strong>don’t move</strong> with each Hub rotation.)</p>
+<p>As with Orthogonal, it’s optional to save the parameters to a new variable
+called, for example, “myIMUparameters”. That variable can be used in the next
+step (IMU initialization).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/100-Blocks-angles-variable.png"><img alt="setting angles in Blocks" src="../../_images/100-Blocks-angles-variable.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting Angles in Blocks</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">myIMUparameters</span><span class="p">;</span>
+
+<span class="n">myIMUparameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span>
+<span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span>
+<span class="w">          </span><span class="k">new</span><span class="w"> </span><span class="n">Orientation</span><span class="p">(</span>
+<span class="w">               </span><span class="n">AxesReference</span><span class="p">.</span><span class="na">INTRINSIC</span><span class="p">,</span>
+<span class="w">               </span><span class="n">AxesOrder</span><span class="p">.</span><span class="na">ZYX</span><span class="p">,</span>
+<span class="w">               </span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">,</span>
+<span class="w">               </span><span class="mi">90</span><span class="p">,</span>
+<span class="w">               </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">               </span><span class="o">-</span><span class="mi">45</span><span class="p">,</span>
+<span class="w">               </span><span class="mi">0</span><span class="w">  </span><span class="c1">// acquisitionTime, not used</span>
+<span class="w">          </span><span class="p">)</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="parameters-for-method-3-quaternion">
+<h4>Parameters for Method 3, Quaternion<a class="headerlink" href="#parameters-for-method-3-quaternion" title="Link to this heading"></a></h4>
+<p>As an alternative to the Angles method, the Hub’s non-orthogonal
+orientation can be described using a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Quaternion">Quaternion</a>, an advanced
+math technique for describing <strong>any</strong> combination of tilting and
+rotating.</p>
+<p>The following default Quaternion (w=1, x=0, y=0, z=0) describes a Hub in the
+assumed starting position: Logo facing UP, and USB ports FORWARD. Namely, no
+rotations.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../_images/130-Blocks-quaternion.png"><img alt="default quaternion" src="../../_images/130-Blocks-quaternion.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Default Quaternion (no rotation)</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">myIMUparameters</span><span class="p">;</span>
+
+<span class="c1">// Default Quaternion</span>
+<span class="n">myIMUparameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span>
+<span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span>
+<span class="w">          </span><span class="k">new</span><span class="w"> </span><span class="n">Quaternion</span><span class="p">(</span>
+<span class="w">               </span><span class="mf">1.0f</span><span class="p">,</span><span class="w"> </span><span class="c1">// w</span>
+<span class="w">               </span><span class="mf">0.0f</span><span class="p">,</span><span class="w"> </span><span class="c1">// x</span>
+<span class="w">               </span><span class="mf">0.0f</span><span class="p">,</span><span class="w"> </span><span class="c1">// y</span>
+<span class="w">               </span><span class="mf">0.0f</span><span class="p">,</span><span class="w"> </span><span class="c1">// z</span>
+<span class="w">               </span><span class="mi">0</span><span class="w">     </span><span class="c1">// acquisitionTime</span>
+<span class="w">          </span><span class="p">)</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// Or, consider a single rotation of +30 degrees</span>
+<span class="c1">// about the X axis. Namely, the Hub’s USB ports</span>
+<span class="c1">// tilt 30 degrees upwards from the default starting</span>
+<span class="c1">// position.</span>
+<span class="n">myIMUparameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span>
+<span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span>
+<span class="w">          </span><span class="k">new</span><span class="w"> </span><span class="n">Quaternion</span><span class="p">(</span>
+<span class="w">               </span><span class="mf">0.9659258f</span><span class="p">,</span><span class="w"> </span><span class="c1">// w</span>
+<span class="w">               </span><span class="mf">0.258819f</span><span class="p">,</span><span class="w">  </span><span class="c1">// x</span>
+<span class="w">               </span><span class="mf">0.0f</span><span class="p">,</span><span class="w">       </span><span class="c1">// y</span>
+<span class="w">               </span><span class="mf">0.0f</span><span class="p">,</span><span class="w">       </span><span class="c1">// z</span>
+<span class="w">               </span><span class="mi">0</span><span class="w">           </span><span class="c1">// acquisitionTime</span>
+<span class="w">          </span><span class="p">)</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This basic tutorial does not cover the math behind Quaternions, an advanced
+substitute for Euler Angles described above. The SDK 8.1 IMU interface supports
+the use of Quaternions, for teams and third party libraries familiar with
+them.</p>
+</section>
+</section>
+<section id="initialize-imu">
+<h3>Initialize IMU<a class="headerlink" href="#initialize-imu" title="Link to this heading"></a></h3>
+<p>This prepares the IMU for operation, using the parameters you defined.</p>
+<p>In Blocks, use the first Block shown in the IMU palette, called
+<code class="docutils literal notranslate"><span class="pre">imu.initialize</span></code>. Most teams do this during the INIT phase of their
+OpMode, before <code class="docutils literal notranslate"><span class="pre">waitForStart()</span></code>.</p>
+<p>The IMU should be motionless during its initialization process. The
+OpMode will continue when initialization is complete.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fun fact: Under the legacy <code class="docutils literal notranslate"><span class="pre">BNO055IMU</span></code> interface, initialization takes
+about 900 milliseconds. Under the new universal IMU interface, the BNO055
+takes about 100 milliseconds, while the BHI260AP takes about 50
+milliseconds.</p>
+</div>
+<p>For <strong>any of the three methods</strong> (Orthogonal, Angles, Quaternion),
+initialize with the IMU parameters from the <code class="docutils literal notranslate"><span class="pre">new</span></code> Block, or from your
+optional Variable.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-6">
+Blocks</label><div class="sd-tab-content docutils">
+<p>Two methods for Initializing the IMU:</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../_images/200-Blocks-initialize-IMU.png"><img alt="Initialize IMU directly" src="../../_images/200-Blocks-initialize-IMU.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Initializing the IMU directly</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="../../_images/200-Blocks-initialize-IMU-parameter.png"><img alt="Initialize IMU using Parameters" src="../../_images/200-Blocks-initialize-IMU-parameter.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Initializing the IMU using Parameters</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-7">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Two methods for Initializing the IMU:</span>
+
+<span class="c1">// Initialize IMU directly</span>
+<span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span>
+<span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span>
+<span class="w">          </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span>
+<span class="w">               </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="p">.</span><span class="na">UP</span><span class="p">,</span>
+<span class="w">               </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="p">.</span><span class="na">FORWARD</span>
+<span class="w">          </span><span class="p">)</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// Initialize IMU using Parameters</span>
+<span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="n">myIMUparameters</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-imu-angles-basic">
+<h3>Read IMU Angles - Basic<a class="headerlink" href="#read-imu-angles-basic" title="Link to this heading"></a></h3>
+<p>Now you can read the IMU values for <strong>robot orientation</strong>, expressed as
+Heading (Yaw or Z-angle), Pitch (X-angle) and Roll (Y-angle). You have
+no concern now about the Hub’s orientation or mounting – that has been
+defined with parameters, and the SDK is ready to provide actual data
+about the robot, using the robot’s axes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Reminder: Robot Z points upwards to the ceiling. Robot Y points forward –
+whatever you decide is “forward” on your robot (which could be round!).
+Robot X points to the right side of the robot. Robot rotations follow the
+right-hand rule.</em></p>
+</div>
+<p>For all axes, IMU angles are provided in the range of <strong>-180 to +180
+degrees</strong> (or from <code class="docutils literal notranslate"><span class="pre">-Pi</span></code> to <code class="docutils literal notranslate"><span class="pre">+Pi</span></code> radians). If you are working
+with values that might cross the +/- 180-degree transition, handle this
+with your programming. That’s beyond the scope of this IMU tutorial.</p>
+<p>Here’s an example of reading IMU Angles:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-8">
+Blocks</label><div class="sd-tab-content docutils">
+<p>In Blocks, create a new Variable to receive data from this green
+Block in the <strong>IMU</strong> palette:</p>
+<figure class="align-center" id="id13">
+<a class="reference internal image-reference" href="../../_images/300-Blocks-get-robot-YPR-angles.png"><img alt="Get YPR Angles" src="../../_images/300-Blocks-get-robot-YPR-angles.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Get Yaw-Pitch-Roll Angles</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>From the <strong>YawPitchRollAngles</strong> palette under <strong>Utilities</strong>, use the
+green Blocks to read each angle from the Variable you just created.</p>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="../../_images/305-Blocks-extract-angles.png"><img alt="Extract Angles" src="../../_images/305-Blocks-extract-angles.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Extract Angles</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These Blocks are used here in a Repeat Loop, to display the angles on
+the Driver Station:</p>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="../../_images/310-Blocks-YPR-telemetry.png"><img alt="Displaying YPR using Telemetry" src="../../_images/310-Blocks-YPR-telemetry.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Displaying Yaw-Pitch-Roll using <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">Telemetry</span></a></span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These Blocks are shown in the Sample OpMode called <code class="docutils literal notranslate"><span class="pre">SensorIMU</span></code>.</p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-9">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create an object to receive the IMU angles</span>
+<span class="n">YawPitchRollAngles</span><span class="w"> </span><span class="n">robotOrientation</span><span class="p">;</span>
+<span class="n">robotOrientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotYawPitchRollAngles</span><span class="p">();</span>
+
+<span class="c1">// Now use these simple methods to extract each angle</span>
+<span class="c1">// (Java type double) from the object you just created:</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">Yaw</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">robotOrientation</span><span class="p">.</span><span class="na">getYaw</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">Pitch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">robotOrientation</span><span class="p">.</span><span class="na">getPitch</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">Roll</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">robotOrientation</span><span class="p">.</span><span class="na">getRoll</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the robot’s orientation is described here <strong>intrinsically</strong>;
+the axes move with each rotation. Here’s an example from the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Javadoc"><span class="xref std std-term">Javadocs</span></a>:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">As an example, if the yaw is 30 degrees, the pitch is 40 degrees, and</div>
+<div class="line">the roll is 10 degrees, that means that you would reach the described</div>
+<div class="line">orientation by first rotating a robot 30 degrees counter-clockwise from</div>
+<div class="line">the starting point, with all wheels continuing to touch the ground</div>
+<div class="line">(rotation around the Z axis). Then, you make your robot point 40 degrees</div>
+<div class="line">upward (rotate it 40 degrees around the X axis). Because the X axis</div>
+<div class="line">moved with the robot, the pitch is not affected by the yaw value. Then</div>
+<div class="line">from that position, the robot is tilted 10 degrees to the right, around</div>
+<div class="line">the newly positioned Y axis, to produce the actual position of the</div>
+<div class="line">robot.</div>
+</div>
+</div></blockquote>
+<p><em>Again, the IMU</em> <strong>output</strong> <em>results are given in the</em> <strong>Robot
+Coordinate System</strong><em>, or Robot axes. Only for a non-Orthogonal
+orientation,</em> <strong>Hub axes</strong> <em>were used temporarily
+for</em> <strong>input</strong> <em>parameters, describing the Hub’s rotation to achieve
+its mounted orientation.</em></p>
+</section>
+<section id="read-imu-angles-flexible">
+<h3>Read IMU Angles - Flexible<a class="headerlink" href="#read-imu-angles-flexible" title="Link to this heading"></a></h3>
+<p>As an alternative to the <code class="docutils literal notranslate"><span class="pre">YawPitchRollAngles</span></code> class, the SDK also
+provides a more flexible <code class="docutils literal notranslate"><span class="pre">Orientation</span></code> class. This allows you to
+specify a <strong>custom order</strong> of axis rotations, and a choice of intrinsic
+or extrinsic axes.</p>
+<p><em>Again, IMU angles are provided in the range of -180 to +180 degrees (or
+from</em> <code class="docutils literal notranslate"><span class="pre">-Pi</span></code> <em>to</em> <code class="docutils literal notranslate"><span class="pre">+Pi</span></code> <em>radians).</em></p>
+<p>Here is an example use of these functions:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-10">
+Blocks</label><div class="sd-tab-content docutils">
+<p>As before, first create an object (Blocks Variable) containing the array
+of orientation values (from the Blocks <code class="docutils literal notranslate"><span class="pre">Sensors</span> <span class="pre">/</span> <span class="pre">IMU</span></code> palette):</p>
+<figure class="align-center" id="id16">
+<a class="reference internal image-reference" href="../../_images/322-blocks-getRobotOrientation.png"><img alt="Get Robot Orientation" src="../../_images/322-blocks-getRobotOrientation.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Get Robot Orientation</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Notice the <strong>axes order of XYZ</strong>, different than the ZXY order used by
+the <code class="docutils literal notranslate"><span class="pre">YawPitchRollAngles</span></code> class.</p>
+<p>Then extract the specific axis rotations you want, from the Blocks
+<code class="docutils literal notranslate"><span class="pre">Utilities</span> <span class="pre">/</span> <span class="pre">Orientation</span></code> palette:</p>
+<figure class="align-center" id="id17">
+<a class="reference internal image-reference" href="../../_images/324-blocks-myRobotOrientation.png"><img alt="Extract Orientation Angles" src="../../_images/324-blocks-myRobotOrientation.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Extract Orientation Angles</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-11">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create Orientation variable</span>
+<span class="n">Orientation</span><span class="w"> </span><span class="n">myRobotOrientation</span><span class="p">;</span>
+
+<span class="c1">// Get Robot Orientation</span>
+<span class="n">myRobotOrientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotOrientation</span><span class="p">(</span>
+<span class="w">     </span><span class="n">AxesReference</span><span class="p">.</span><span class="na">INTRINSIC</span><span class="p">,</span>
+<span class="w">     </span><span class="n">AxesOrder</span><span class="p">.</span><span class="na">XYZ</span><span class="p">,</span>
+<span class="w">     </span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span>
+<span class="p">);</span>
+
+<span class="c1">// Then read or display the desired values (Java type float):</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">X_axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotOrientation</span><span class="p">.</span><span class="na">firstAngle</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">Y_axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotOrientation</span><span class="p">.</span><span class="na">secondAngle</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">Z_axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotOrientation</span><span class="p">.</span><span class="na">thirdAngle</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Pay close attention to the selection of</em> <strong>axes order</strong><em>, which
+greatly affects the IMU results. If you care mostly about Heading (Yaw),
+choose an axes order that starts with Z.</em></p>
+</div>
+</section>
+<section id="read-angular-velocity">
+<h3>Read Angular Velocity<a class="headerlink" href="#read-angular-velocity" title="Link to this heading"></a></h3>
+<p>The SDK also provides values for <strong>angular velocity</strong>, the rate of
+change (degrees or radians per second) for Roll, Pitch or Yaw.</p>
+<p>Here is an example for reading Angular Velocity:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-12">
+Blocks</label><div class="sd-tab-content docutils">
+<p>As before, first create an object (Blocks Variable) containing the array
+of angular velocity values (from the Blocks <code class="docutils literal notranslate"><span class="pre">Sensors</span> <span class="pre">/</span> <span class="pre">IMU</span></code> palette):</p>
+<figure class="align-center" id="id18">
+<a class="reference internal image-reference" href="../../_images/332-blocks-getRobotAngularVelocity.png"><img alt="Get Robot Angular Velocity" src="../../_images/332-blocks-getRobotAngularVelocity.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Get Robot Angular Velocity</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Then extract the specific axis rotations you want, from the Blocks
+<code class="docutils literal notranslate"><span class="pre">Utilities</span> <span class="pre">/</span> <span class="pre">AngularVelocity</span></code> palette:</p>
+<figure class="align-center" id="id19">
+<a class="reference internal image-reference" href="../../_images/334-blocks-myRobotAngularVelocity.png"><img alt="Extract Rotation Rates" src="../../_images/334-blocks-myRobotAngularVelocity.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Extract Rotation Rates</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These Blocks are shown in the Sample OpMode called <code class="docutils literal notranslate"><span class="pre">SensorIMU</span></code>.</p>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-13">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create angular velocity array variable</span>
+<span class="n">AngularVelocity</span><span class="w"> </span><span class="n">myRobotAngularVelocity</span><span class="p">;</span>
+
+<span class="c1">// Read Angular Velocities</span>
+<span class="n">myRobotAngularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotAngularVelocity</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+
+<span class="c1">// Then read or display these values (Java type float)</span>
+<span class="c1">// from the object you just created:</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">zRotationRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotAngularVelocity</span><span class="p">.</span><span class="na">zRotationRate</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">xRotationRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotAngularVelocity</span><span class="p">.</span><span class="na">xRotationRate</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">yRotationRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myRobotAngularVelocity</span><span class="p">.</span><span class="na">yRotationRate</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>These are also shown in each of the Java <strong>Sample OpModes</strong> listed in a
+section below.</p>
+</div>
+</div>
+</section>
+<section id="reset-heading">
+<h3>Reset Heading<a class="headerlink" href="#reset-heading" title="Link to this heading"></a></h3>
+<p>It can be useful to reset the Heading (or Yaw or Z-angle) to zero, at
+one or more places in your OpMode.</p>
+<p>Here is an example for resetting the Yaw axis:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-14">
+Blocks</label><div class="sd-tab-content docutils">
+<p>In Blocks, this optional command is simple:</p>
+<figure class="align-center" id="id20">
+<a class="reference internal image-reference" href="../../_images/210-Blocks-reset-Yaw.png"><img alt="Reset Yaw" src="../../_images/210-Blocks-reset-Yaw.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Reset Yaw</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-15">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Reset Yaw</span>
+<span class="n">imu</span><span class="p">.</span><span class="na">resetYaw</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It’s safest to reset Yaw only when the robot has not significantly
+deviated from a flat/horizontal orientation.</p>
+<p>This command assumes the Hub’s actual orientation was <strong>correctly
+described</strong> with Orthogonal, Angles or Quaternion parameters.</p>
+<p>In other words, a non-Orthogonal Hub moved away from its
+parameter-defined orientation, may not give reliable results for
+Heading/Yaw or <code class="docutils literal notranslate"><span class="pre">resetYaw()</span></code>, even after the robot has returned to its
+original defined orientation.</p>
+<p><em>An exception, or loophole, is that “reset” Heading/Yaw values might
+still be valid if the Hub is actually mounted in an incorrectly
+described Orthogonal orientation, and the robot remains level. This may
+benefit a rookie team that overlooked the IMU Parameters or moved the
+Hub to a different Orthogonal position, still relying only on Heading.
+This</em> <code class="docutils literal notranslate"><span class="pre">resetYaw()</span></code> <em>exception does</em> <strong>not</strong> <em>apply to angular velocity
+for Yaw (Z-axis).</em></p>
+<p>Here’s the official Javadocs description for <code class="docutils literal notranslate"><span class="pre">resetYaw()</span></code>:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Resets the robot’s yaw angle to 0. After calling this method, the reported</div>
+<div class="line">orientation will be relative to the robot’s position when this method is</div>
+<div class="line">called, as if the robot was perfectly level right now. That is to say, the</div>
+<div class="line">pitch and yaw will be ignored when this method is called.</div>
+</div>
+</div></blockquote>
+<p><em>The Javadocs’ statement ‘resets to 0’ should be read in the context of
+the previous discussion. In certain off-axis Hub orientations, a reset
+Yaw value might not actually display as zero.</em></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">resetYaw()</span></code> does not meet your needs, other code-based choices
+(possibly less effective) include:</p>
+<ul class="simple">
+<li><p>‘Save &amp; Subtract’ to establish the current Heading as a new “zero”
+baseline for further navigation</p></li>
+<li><p>use the original Heading for the entire match, using only absolute
+(global) targets</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><em>For all choices, be aware of “gyro drift”. Most electronic IMUs give
+slowly shifting Z-angle results over time, for various reasons. Although
+the Pitch and Roll axes can use</em> <strong>gravity’s direction</strong> <em>to correct
+for drift, Yaw (Heading or Z-angle) cannot.</em></p>
+</div>
+</section>
+</section>
+<section id="sample-opmodes">
+<h2>Sample OpModes<a class="headerlink" href="#sample-opmodes" title="Link to this heading"></a></h2>
+<p>SDK 8.1 and newer contains Sample OpModes demonstrating the above.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-16" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-16">
+Blocks</label><div class="sd-tab-content docutils">
+<p>In Blocks, a simple example is called <code class="docutils literal notranslate"><span class="pre">SensorIMU</span></code>.</p>
+<figure class="align-center" id="id21">
+<a class="reference internal image-reference" href="../../_images/350-Blocks-IMU-Sample.png"><img alt="Blocks IMU Sample" src="../../_images/350-Blocks-IMU-Sample.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Blocks IMU Sample</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Here’s an <a class="reference download internal" download="" href="../../_downloads/22f4505549ef9b28d0ccea32a04ef61e/360-SensorIMU.png"><code class="xref download docutils literal notranslate"><span class="pre">image</span></code></a> and the
+<a class="reference download internal" download="" href="../../_downloads/f350e6de5b45ff6c93921a17a7813659/SensorIMU.blk"><code class="xref download docutils literal notranslate"><span class="pre">Blocks</span> <span class="pre">file</span></code></a> of this Sample OpMode.</p>
+</div>
+<input id="sd-tab-item-17" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-17">
+Java</label><div class="sd-tab-content docutils">
+<p>In Java, three Sample OpModes demonstrate the new universal IMU
+interface:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">ConceptExploringIMUOrientation.java</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Provides a tool to experiment with setting your Hub orientation on the robot</p>
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../_downloads/35698e25fe7cdbd406f1483eb3a5051a/ConceptExploringIMUOrientation.java"><code class="xref download docutils literal notranslate"><span class="pre">ConceptExploringIMUOrientation.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">Copyright (c) 2022 REV Robotics, FIRST</span>
+<span class="cm">All rights reserved.</span>
+<span class="cm">Redistribution and use in source and binary forms, with or without modification,</span>
+<span class="cm">are permitted (subject to the limitations in the disclaimer below) provided that</span>
+<span class="cm">the following conditions are met:</span>
+<span class="cm">Redistributions of source code must retain the above copyright notice, this list</span>
+<span class="cm">of conditions and the following disclaimer.</span>
+<span class="cm">Redistributions in binary form must reproduce the above copyright notice, this</span>
+<span class="cm">list of conditions and the following disclaimer in the documentation and/or</span>
+<span class="cm">other materials provided with the distribution.</span>
+<span class="cm">Neither the name of REV Robotics nor the names of its contributors may be used to</span>
+<span class="cm">endorse or promote products derived from this software without specific prior</span>
+<span class="cm">written permission.</span>
+<span class="cm">NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY&#39;S PATENT RIGHTS ARE GRANTED BY THIS</span>
+<span class="cm">LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span>
+<span class="cm">&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,</span>
+<span class="cm">THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span>
+<span class="cm">ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE</span>
+<span class="cm">FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</span>
+<span class="cm">DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR</span>
+<span class="cm">SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span>
+<span class="cm">CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR</span>
+<span class="cm">TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span>
+<span class="cm">THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
+<span class="cm">*/</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcontroller.external.samples</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.hardware.rev.RevHubOrientationOnRobot</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Disabled</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.hardware.IMU</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngleUnit</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * This file demonstrates the impact of setting the IMU orientation correctly or incorrectly. This</span>
+<span class="cm"> * code assumes there is an IMU configured with the name &quot;imu&quot;.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Note: This OpMode is more of a tool than a code sample. The User Interface portion of this code</span>
+<span class="cm"> *       goes beyond simply showing how to interface to the IMU.&lt;br&gt;</span>
+<span class="cm"> *       For a minimal example of interfacing to an IMU, please see the SensorIMUOrthogonal or SensorIMUNonOrthogonal sample OpModes.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * This sample enables you to re-specify the Hub Mounting orientation dynamically by using gamepad controls.</span>
+<span class="cm"> * While doing so, the sample will display how Pitch, Roll and Yaw angles change as the hub is moved.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The gamepad controls let you change the two parameters that specify how the Control/Expansion Hub is mounted. &lt;br&gt;</span>
+<span class="cm"> * The first parameter specifies which direction the printed logo on the Hub is pointing. &lt;br&gt;</span>
+<span class="cm"> * The second parameter specifies which direction the USB connector on the Hub is pointing. &lt;br&gt;</span>
+<span class="cm"> * All directions are relative to the robot, and left/right is as viewed from behind the robot.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * How will you know if you have chosen the correct Orientation? With the correct orientation</span>
+<span class="cm"> * parameters selected, pitch/roll/yaw should act as follows:</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> *   Pitch value should INCREASE as the robot is tipped UP at the front. (Rotation about X) &lt;br&gt;</span>
+<span class="cm"> *   Roll value should INCREASE as the robot is tipped UP at the left side. (Rotation about Y) &lt;br&gt;</span>
+<span class="cm"> *   Yaw value should INCREASE as the robot is rotated Counter Clockwise. (Rotation about Z) &lt;br&gt;</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The Yaw can be reset (to zero) by pressing the Y button on the gamepad (Triangle on a PS4 controller)</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The rotational velocities should follow the change in corresponding axes.</span>
+<span class="cm"> */</span>
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Concept: IMU Orientation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="s">&quot;Concept&quot;</span><span class="p">)</span>
+<span class="nd">@Disabled</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConceptExploringIMUOrientation</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="o">[]</span><span class="w"> </span><span class="n">logoFacingDirections</span>
+<span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="p">.</span><span class="na">values</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="o">[]</span><span class="w"> </span><span class="n">usbFacingDirections</span>
+<span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="p">.</span><span class="na">values</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LAST_DIRECTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logoFacingDirections</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">TRIGGER_THRESHOLD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2f</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">IMU</span><span class="w"> </span><span class="n">imu</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">logoFacingDirectionPosition</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">usbFacingDirectionPosition</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">orientationIsValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">InterruptedException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">imu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">IMU</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;imu&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">logoFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Up</span>
+<span class="w">        </span><span class="n">usbFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Forward</span>
+
+<span class="w">        </span><span class="n">updateOrientation</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">justChangedLogoDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">justChangedUsbDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Loop until stop requested</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isStopRequested</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="c1">// Check to see if Yaw reset is requested (Y button)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Resetting\n&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">imu</span><span class="p">.</span><span class="na">resetYaw</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Press Y (triangle) on Gamepad to reset.\n&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Check to see if new Logo Direction is requested</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_bumper</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_bumper</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">justChangedLogoDirection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">justChangedLogoDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_bumper</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">logoFacingDirectionPosition</span><span class="o">--</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">logoFacingDirectionPosition</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">logoFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LAST_DIRECTION</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">logoFacingDirectionPosition</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">logoFacingDirectionPosition</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">LAST_DIRECTION</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">logoFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="n">updateOrientation</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">justChangedLogoDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Check to see if new USB Direction is requested</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_trigger</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TRIGGER_THRESHOLD</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_trigger</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TRIGGER_THRESHOLD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">justChangedUsbDirection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">justChangedUsbDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_trigger</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TRIGGER_THRESHOLD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">usbFacingDirectionPosition</span><span class="o">--</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usbFacingDirectionPosition</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">usbFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LAST_DIRECTION</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">usbFacingDirectionPosition</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usbFacingDirectionPosition</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">LAST_DIRECTION</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">usbFacingDirectionPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="n">updateOrientation</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">justChangedUsbDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Display User instructions and IMU data</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;logo Direction (set with bumpers)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">logoFacingDirections</span><span class="o">[</span><span class="n">logoFacingDirectionPosition</span><span class="o">]</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;usb Direction (set with triggers)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usbFacingDirections</span><span class="o">[</span><span class="n">usbFacingDirectionPosition</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">orientationIsValid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">YawPitchRollAngles</span><span class="w"> </span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotYawPitchRollAngles</span><span class="p">();</span>
+<span class="w">                </span><span class="n">AngularVelocity</span><span class="w"> </span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotAngularVelocity</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg. (Heading)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getYaw</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getPitch</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getRoll</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">zRotationRate</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">xRotationRate</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">yRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Selected orientation on robot is invalid&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// apply any requested orientation changes.</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">updateOrientation</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="w"> </span><span class="n">logo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">logoFacingDirections</span><span class="o">[</span><span class="n">logoFacingDirectionPosition</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="w"> </span><span class="n">usb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">usbFacingDirections</span><span class="o">[</span><span class="n">usbFacingDirectionPosition</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">RevHubOrientationOnRobot</span><span class="w"> </span><span class="n">orientationOnRobot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span><span class="n">logo</span><span class="p">,</span><span class="w"> </span><span class="n">usb</span><span class="p">);</span>
+<span class="w">            </span><span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">orientationOnRobot</span><span class="p">));</span>
+<span class="w">            </span><span class="n">orientationIsValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">orientationIsValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">SensorIMUOrthogonal.java</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Shows how to define your Hub orientation on the robot, for simple orthogonal (90 degree) mounting</p>
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../_downloads/0dbd7eaad35b1b031b859fa108331a6d/SensorIMUOrthogonal.java"><code class="xref download docutils literal notranslate"><span class="pre">SensorIMUOrthogonal.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Copyright (c) 2022 FIRST. All rights reserved.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistribution and use in source and binary forms, with or without modification,</span>
+<span class="cm"> * are permitted (subject to the limitations in the disclaimer below) provided that</span>
+<span class="cm"> * the following conditions are met:</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistributions of source code must retain the above copyright notice, this list</span>
+<span class="cm"> * of conditions and the following disclaimer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistributions in binary form must reproduce the above copyright notice, this</span>
+<span class="cm"> * list of conditions and the following disclaimer in the documentation and/or</span>
+<span class="cm"> * other materials provided with the distribution.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Neither the name of FIRST nor the names of its contributors may be used to endorse or</span>
+<span class="cm"> * promote products derived from this software without specific prior written permission.</span>
+<span class="cm"> *</span>
+<span class="cm"> * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY&#39;S PATENT RIGHTS ARE GRANTED BY THIS</span>
+<span class="cm"> * LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span>
+<span class="cm"> * &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,</span>
+<span class="cm"> * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span>
+<span class="cm"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE</span>
+<span class="cm"> * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</span>
+<span class="cm"> * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR</span>
+<span class="cm"> * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span>
+<span class="cm"> * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span>
+<span class="cm"> * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span>
+<span class="cm"> * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcontroller.external.samples</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.hardware.rev.RevHubOrientationOnRobot</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Disabled</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.hardware.IMU</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngleUnit</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * {@link SensorIMUOrthogonal} shows how to use the new universal {@link IMU} interface. This</span>
+<span class="cm"> * interface may be used with the BNO055 IMU or the BHI260 IMU. It assumes that an IMU is configured</span>
+<span class="cm"> * on the robot with the name &quot;imu&quot;.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The sample will display the current Yaw, Pitch and Roll of the robot.&lt;br&gt;</span>
+<span class="cm"> * With the correct orientation parameters selected, pitch/roll/yaw should act as follows:</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> *   Pitch value should INCREASE as the robot is tipped UP at the front. (Rotation about X) &lt;br&gt;</span>
+<span class="cm"> *   Roll value should INCREASE as the robot is tipped UP at the left side. (Rotation about Y) &lt;br&gt;</span>
+<span class="cm"> *   Yaw value should INCREASE as the robot is rotated Counter Clockwise. (Rotation about Z) &lt;br&gt;</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The yaw can be reset (to zero) by pressing the Y button on the gamepad (Triangle on a PS4 controller)</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * This specific sample assumes that the Hub is mounted on one of the three orthogonal planes</span>
+<span class="cm"> * (X/Y, X/Z or Y/Z) and that the Hub has only been rotated in a range of 90 degree increments.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Note: if your Hub is mounted on a surface angled at some non-90 Degree multiple (like 30) look at</span>
+<span class="cm"> *       the alternative SensorImuNonOrthogonal sample in this folder.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * This &quot;Orthogonal&quot; requirement means that:</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * 1) The Logo printed on the top of the Hub can ONLY be pointing in one of six directions:</span>
+<span class="cm"> *    FORWARD, BACKWARD, UP, DOWN, LEFT and RIGHT.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * 2) The USB ports can only be pointing in one of the same six directions:&lt;br&gt;</span>
+<span class="cm"> *    FORWARD, BACKWARD, UP, DOWN, LEFT and RIGHT.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * So, To fully define how your Hub is mounted to the robot, you must simply specify:&lt;br&gt;</span>
+<span class="cm"> *    logoFacingDirection&lt;br&gt;</span>
+<span class="cm"> *    usbFacingDirection</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Use Android Studio to Copy this Class, and Paste it into your team&#39;s code folder with a new name.</span>
+<span class="cm"> * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Finally, choose the two correct parameters to define how your Hub is mounted and edit this OpMode</span>
+<span class="cm"> * to use those parameters.</span>
+<span class="cm"> */</span>
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sensor: IMU Orthogonal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sensor&quot;</span><span class="p">)</span>
+<span class="nd">@Disabled</span><span class="w">   </span><span class="c1">// Comment this out to add to the OpMode list</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SensorIMUOrthogonal</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// The IMU sensor object</span>
+<span class="w">    </span><span class="n">IMU</span><span class="w"> </span><span class="n">imu</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//----------------------------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Main logic</span>
+<span class="w">    </span><span class="c1">//----------------------------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">InterruptedException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Retrieve and initialize the IMU.</span>
+<span class="w">        </span><span class="c1">// This sample expects the IMU to be in a REV Hub and named &quot;imu&quot;.</span>
+<span class="w">        </span><span class="n">imu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">IMU</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;imu&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/* Define how the hub is mounted on the robot to get the correct Yaw, Pitch and Roll values.</span>
+<span class="cm">         *</span>
+<span class="cm">         * Two input parameters are required to fully specify the Orientation.</span>
+<span class="cm">         * The first parameter specifies the direction the printed logo on the Hub is pointing.</span>
+<span class="cm">         * The second parameter specifies the direction the USB connector on the Hub is pointing.</span>
+<span class="cm">         * All directions are relative to the robot, and left/right is as-viewed from behind the robot.</span>
+<span class="cm">         */</span>
+
+<span class="w">        </span><span class="cm">/* The next two lines define Hub orientation.</span>
+<span class="cm">         * The Default Orientation (shown) is when a hub is mounted horizontally with the printed logo pointing UP and the USB port pointing FORWARD.</span>
+<span class="cm">         *</span>
+<span class="cm">         * To Do:  EDIT these two lines to match YOUR mounting configuration.</span>
+<span class="cm">         */</span>
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="w"> </span><span class="n">logoDirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">LogoFacingDirection</span><span class="p">.</span><span class="na">UP</span><span class="p">;</span>
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="w">  </span><span class="n">usbDirection</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">.</span><span class="na">UsbFacingDirection</span><span class="p">.</span><span class="na">FORWARD</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="w"> </span><span class="n">orientationOnRobot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span><span class="n">logoDirection</span><span class="p">,</span><span class="w"> </span><span class="n">usbDirection</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Now initialize the IMU with this mounting orientation</span>
+<span class="w">        </span><span class="c1">// Note: if you choose two conflicting directions, this initialization will cause a code exception.</span>
+<span class="w">        </span><span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">orientationOnRobot</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Loop and update the dashboard</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isStopRequested</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Hub orientation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Logo=%s   USB=%s\n &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">logoDirection</span><span class="p">,</span><span class="w"> </span><span class="n">usbDirection</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Check to see if heading reset is requested</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Resetting\n&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">imu</span><span class="p">.</span><span class="na">resetYaw</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Press Y (triangle) on Gamepad to reset\n&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Retrieve Rotational Angles and Velocities</span>
+<span class="w">            </span><span class="n">YawPitchRollAngles</span><span class="w"> </span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotYawPitchRollAngles</span><span class="p">();</span>
+<span class="w">            </span><span class="n">AngularVelocity</span><span class="w"> </span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotAngularVelocity</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg. (Heading)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getYaw</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getPitch</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getRoll</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">zRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">xRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">yRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">SensorIMUNonOrthogonal.java</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Shows how to define (with the Angles method) your Hub orientation on the robot for a non-orthogonal orientation</p>
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../_downloads/cd7fe2c7746e33e707f86588fb131244/SensorIMUNonOrthogonal.java"><code class="xref download docutils literal notranslate"><span class="pre">SensorIMUNonOrthogonal.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Copyright (c) 2022 FIRST. All rights reserved.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistribution and use in source and binary forms, with or without modification,</span>
+<span class="cm"> * are permitted (subject to the limitations in the disclaimer below) provided that</span>
+<span class="cm"> * the following conditions are met:</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistributions of source code must retain the above copyright notice, this list</span>
+<span class="cm"> * of conditions and the following disclaimer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Redistributions in binary form must reproduce the above copyright notice, this</span>
+<span class="cm"> * list of conditions and the following disclaimer in the documentation and/or</span>
+<span class="cm"> * other materials provided with the distribution.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Neither the name of FIRST nor the names of its contributors may be used to endorse or</span>
+<span class="cm"> * promote products derived from this software without specific prior written permission.</span>
+<span class="cm"> *</span>
+<span class="cm"> * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY&#39;S PATENT RIGHTS ARE GRANTED BY THIS</span>
+<span class="cm"> * LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span>
+<span class="cm"> * &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,</span>
+<span class="cm"> * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span>
+<span class="cm"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE</span>
+<span class="cm"> * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</span>
+<span class="cm"> * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR</span>
+<span class="cm"> * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span>
+<span class="cm"> * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span>
+<span class="cm"> * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span>
+<span class="cm"> * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import static</span><span class="w"> </span><span class="nn">com.qualcomm.hardware.rev.RevHubOrientationOnRobot.xyzOrientation</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.hardware.rev.RevHubOrientationOnRobot</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Disabled</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.hardware.IMU</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngleUnit</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.Orientation</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * {@link SensorIMUNonOrthogonal} shows how to use the new universal {@link IMU} interface. This</span>
+<span class="cm"> * interface may be used with the BNO055 IMU or the BHI260 IMU. It assumes that an IMU is configured</span>
+<span class="cm"> * on the robot with the name &quot;imu&quot;.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The sample will display the current Yaw, Pitch and Roll of the robot.&lt;br&gt;</span>
+<span class="cm"> * With the correct orientation parameters selected, pitch/roll/yaw should act as follows:</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> *   Pitch value should INCREASE as the robot is tipped UP at the front. (Rotation about X) &lt;br&gt;</span>
+<span class="cm"> *   Roll value should INCREASE as the robot is tipped UP at the left side. (Rotation about Y) &lt;br&gt;</span>
+<span class="cm"> *   Yaw value should INCREASE as the robot is rotated Counter Clockwise. (Rotation about Z) &lt;br&gt;</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * The yaw can be reset (to zero) by pressing the Y button on the gamepad (Triangle on a PS4 controller)</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * This specific sample DOES NOT assume that the Hub is mounted on one of the three orthogonal</span>
+<span class="cm"> * planes (X/Y, X/Z or Y/Z) OR that the Hub has only been rotated in a range of 90 degree increments.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Note: if your Hub is mounted Orthogonally (on a orthogonal surface, angled at some multiple of</span>
+<span class="cm"> * 90 Degrees) then you should use the simpler SensorImuOrthogonal sample in this folder.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * But... If your Hub is mounted Non-Orthogonally, you must specify one or more rotational angles</span>
+<span class="cm"> * that transform a &quot;Default&quot; Hub orientation into your desired orientation.  That is what is</span>
+<span class="cm"> * illustrated here.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Use Android Studio to Copy this Class, and Paste it into your team&#39;s code folder with a new name.</span>
+<span class="cm"> * Remove or comment out the @Disabled line to add this OpMode to the Driver Station OpMode list.</span>
+<span class="cm"> * &lt;p&gt;</span>
+<span class="cm"> * Finally, edit this OpMode to use at least one angle around an axis to orient your Hub.</span>
+<span class="cm"> */</span>
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sensor: IMU Non-Orthogonal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sensor&quot;</span><span class="p">)</span>
+<span class="nd">@Disabled</span><span class="w">     </span><span class="c1">// Comment this out to add to the OpMode list</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_nonortho</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// The IMU sensor object</span>
+<span class="w">    </span><span class="n">IMU</span><span class="w"> </span><span class="n">imu</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//----------------------------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Main logic</span>
+<span class="w">    </span><span class="c1">//----------------------------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">InterruptedException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Retrieve and initialize the IMU.</span>
+<span class="w">        </span><span class="c1">// This sample expects the IMU to be in a REV Hub and named &quot;imu&quot;.</span>
+<span class="w">        </span><span class="n">imu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">IMU</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;imu&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/* Define how the hub is mounted to the robot to get the correct Yaw, Pitch and Roll values.</span>
+<span class="cm">         *</span>
+<span class="cm">         * You can apply up to three axis rotations to orient your Hub according to how it&#39;s mounted on the robot.</span>
+<span class="cm">         *</span>
+<span class="cm">         * The starting point for these rotations is the &quot;Default&quot; Hub orientation, which is:</span>
+<span class="cm">         * 1) Hub laying flat on a horizontal surface, with the Printed Logo facing UP</span>
+<span class="cm">         * 2) Rotated such that the USB ports are facing forward on the robot.</span>
+<span class="cm">         *</span>
+<span class="cm">         * The order that the rotations are performed matters, so this sample shows doing them in the order X, Y, then Z.</span>
+<span class="cm">         * For specifying non-orthogonal hub mounting orientations, we must temporarily use axes</span>
+<span class="cm">         * defined relative to the Hub itself, instead of the usual Robot Coordinate System axes</span>
+<span class="cm">         * used for the results the IMU gives us. In the starting orientation, the Hub axes are</span>
+<span class="cm">         * aligned with the Robot Coordinate System:</span>
+<span class="cm">         *</span>
+<span class="cm">         * X Axis:  Starting at Center of Hub, pointing out towards I2C connectors</span>
+<span class="cm">         * Y Axis:  Starting at Center of Hub, pointing out towards USB connectors</span>
+<span class="cm">         * Z Axis:  Starting at Center of Hub, pointing Up through LOGO</span>
+<span class="cm">         *</span>
+<span class="cm">         * Positive rotation is defined by right-hand rule with thumb pointing in +ve direction on axis.</span>
+<span class="cm">         *</span>
+<span class="cm">         * Some examples.</span>
+<span class="cm">         *</span>
+<span class="cm">         * ----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="cm">         * Example A) Assume that the hub is mounted on a sloped plate at the back of the robot, with the USB ports coming out the top of the hub.</span>
+<span class="cm">         *  The plate is tilted UP 60 degrees from horizontal.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  To get the &quot;Default&quot; hub into this configuration you would just need a single rotation.</span>
+<span class="cm">         *  1) Rotate the Hub +60 degrees around the X axis to tilt up the front edge.</span>
+<span class="cm">         *  2) No rotation around the Y or Z axes.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  So the X,Y,Z rotations would be 60,0,0</span>
+<span class="cm">         *</span>
+<span class="cm">         * ----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="cm">         * Example B) Assume that the hub is laying flat on the chassis, but it has been twisted 30 degrees towards the right front wheel to make</span>
+<span class="cm">         *  the USB cable accessible.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  To get the &quot;Default&quot; hub into this configuration you would just need a single rotation, but around a different axis.</span>
+<span class="cm">         *  1) No rotation around the X or Y axes.</span>
+<span class="cm">         *  1) Rotate the Hub -30 degrees (Clockwise) around the Z axis, since a positive angle would be Counter Clockwise.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  So the X,Y,Z rotations would be 0,0,-30</span>
+<span class="cm">         *</span>
+<span class="cm">         * ----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="cm">         *  Example C) Assume that the hub is mounted on a vertical plate on the right side of the robot, with the Logo facing out, and the</span>
+<span class="cm">         *  Hub rotated so that the USB ports are facing down 30 degrees towards the back wheels of the robot.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  To get the &quot;Default&quot; hub into this configuration will require several rotations.</span>
+<span class="cm">         *  1) Rotate the hub +90 degrees around the X axis to get it standing upright with the logo pointing backwards on the robot</span>
+<span class="cm">         *  2) Next, rotate the hub +90 around the Y axis to get it facing to the right.</span>
+<span class="cm">         *  3) Finally rotate the hub +120 degrees around the Z axis to take the USB ports from vertical to sloping down 30 degrees and</span>
+<span class="cm">         *     facing towards the back of the robot.</span>
+<span class="cm">         *</span>
+<span class="cm">         *  So the X,Y,Z rotations would be 90,90,120</span>
+<span class="cm">         */</span>
+
+<span class="w">        </span><span class="c1">// The next three lines define the desired axis rotations.</span>
+<span class="w">        </span><span class="c1">// To Do: EDIT these values to match YOUR mounting configuration.</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">xRotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// enter the desired X rotation angle here.</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">yRotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// enter the desired Y rotation angle here.</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">zRotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// enter the desired Z rotation angle here.</span>
+
+<span class="w">        </span><span class="n">Orientation</span><span class="w"> </span><span class="n">hubRotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xyzOrientation</span><span class="p">(</span><span class="n">xRotation</span><span class="p">,</span><span class="w"> </span><span class="n">yRotation</span><span class="p">,</span><span class="w"> </span><span class="n">zRotation</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Now initialize the IMU with this mounting orientation</span>
+<span class="w">        </span><span class="n">RevHubOrientationOnRobot</span><span class="w"> </span><span class="n">orientationOnRobot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RevHubOrientationOnRobot</span><span class="p">(</span><span class="n">hubRotation</span><span class="p">);</span>
+<span class="w">        </span><span class="n">imu</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">IMU</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">orientationOnRobot</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Loop and update the dashboard</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isStopRequested</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Hub orientation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X=%.1f,  Y=%.1f,  Z=%.1f \n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">xRotation</span><span class="p">,</span><span class="w"> </span><span class="n">yRotation</span><span class="p">,</span><span class="w"> </span><span class="n">zRotation</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Check to see if heading reset is requested</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Resetting\n&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">imu</span><span class="p">.</span><span class="na">resetYaw</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Press Y (triangle) on Gamepad to reset\n&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Retrieve Rotational Angles and Velocities</span>
+<span class="w">            </span><span class="n">YawPitchRollAngles</span><span class="w"> </span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotYawPitchRollAngles</span><span class="p">();</span>
+<span class="w">            </span><span class="n">AngularVelocity</span><span class="w"> </span><span class="n">angularVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imu</span><span class="p">.</span><span class="na">getRobotAngularVelocity</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg. (Heading)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getYaw</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getPitch</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg.\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orientation</span><span class="p">.</span><span class="na">getRoll</span><span class="p">(</span><span class="n">AngleUnit</span><span class="p">.</span><span class="na">DEGREES</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Yaw (Z) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">zRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pitch (X) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">xRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Roll (Y) velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.2f Deg/Sec&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">angularVelocity</span><span class="p">.</span><span class="na">yRotationRate</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details><p>These three Java samples include extensive comments describing the IMU
+interface, consistent with this tutorial. In particular,
+<code class="docutils literal notranslate"><span class="pre">SensorIMUNonOrthogonal.java</span></code> describes three helpful examples.</p>
+</div>
+</div>
+</section>
+<section id="sdk-resources">
+<h2>SDK Resources<a class="headerlink" href="#sdk-resources" title="Link to this heading"></a></h2>
+<p>Advanced programmers are invited to browse the <a class="reference external" href="https://javadoc.io/doc/org.firstinspires.ftc">Javadocs
+documentation</a> (API),
+particularly in:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">com.qualcomm.robotcore.hardware</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">org.firstinspires.ftc.robotcore.external.navigation</span></code></p></li>
+</ul>
+<p>The new universal IMU classes for SDK 8.1 are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IMU</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ImuOrientationOnRobot</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">YawPitchRollAngles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RevHubOrientationOnRobot</span></code></p></li>
+</ul>
+<p>The Javadocs describe other IMU methods and variables not covered in
+this basic tutorial.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>The SDK 8.1 provides a universal interface that supports both the
+BHI260AP and BNO055 IMU. This basic tutorial introduced some new
+features:</p>
+<ul class="simple">
+<li><p>robot configuration allows selection of IMU type</p></li>
+<li><p>three ways to specify Hub mounting orientation on the robot</p></li>
+<li><p>new Blocks and Java methods to read data from both IMU types</p></li>
+</ul>
+<p>Teams using the new Control Hub IMU must use at least SDK 8.1 AND
+must update to at least Control Hub OS 1.1.3.</p>
+<p>However <strong>all teams</strong> are encouraged to begin using the universal IMU
+classes and methods for <strong>new</strong> Blocks and Java code, and consider
+migrating <strong>existing</strong> code.</p>
+<p>Questions, comments and corrections to <a class="reference external" href="mailto:westsiderobotics&#37;&#52;&#48;verizon&#46;net">westsiderobotics<span>&#64;</span>verizon<span>&#46;</span>net</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../shared/external_libraries_blocks/external-libraries-blocks.html" class="btn btn-neutral float-left" title="External Libraries in OnBot Java and Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../shared/installing_kotlin/Installing-Kotlin.html" class="btn btn-neutral float-right" title="Using the Kotlin Programming Language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

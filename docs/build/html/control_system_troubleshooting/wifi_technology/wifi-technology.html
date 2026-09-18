@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi-Fi Technology and Direct Connections &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Monitoring the Wireless Environment" href="../monitoring_wireless_environment/monitoring-wireless-environment.html" />
+    <link rel="prev" title="Control System Troubleshooting Guide" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Control System Troubleshooting Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Wi-Fi Technology and Direct Connections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wireless-access-point">Wireless Access Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi-direct-group-owner">Wi-Fi Direct Group Owner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programming-laptop">Programming Laptop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-activity">Configuration Activity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-the-wi-fi-direct-configuration-activity">Accessing the Wi-Fi Direct Configuration Activity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting-wi-fi-direct-connections">Troubleshooting Wi-Fi Direct Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#is-the-robot-controller-on">Is the Robot Controller On?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#are-both-first-tech-challenge-apps-installed">Are Both FIRST Tech Challenge Apps Installed?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#do-both-ftc-apps-have-the-same-version-numbers">Do Both FTC Apps Have the Same Version Numbers?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#is-either-device-also-connected-to-another-network">Is Either Device Also Connected to Another Network?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#are-there-lots-of-devices-trying-to-pair-simultaneously">Are There Lots of Devices Trying to Pair Simultaneously?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../monitoring_wireless_environment/monitoring-wireless-environment.html">Monitoring the Wireless Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html">Troubleshooting Wireless Issues at an Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi_channel_planning/wifi-channel-planning.html">Planning Wi-Fi Channels for Large Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_common_issues/troubleshooting-common-issues.html">Troubleshooting Common Control System Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark_packet_capture/wireshark-packet-capture.html">Using Wireshark for Packet Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using_log_files/using-log-files.html">Using Log Files to Troubleshoot Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mitigating-disruptions-due-to-electrostatic-shocks">Mitigating Disruptions Due to Electrostatic Shocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-additional-help">Getting Additional Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Control System Troubleshooting Guide</a></li>
+      <li class="breadcrumb-item active">Wi-Fi Technology and Direct Connections</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/control_system_troubleshooting/wifi_technology/wifi-technology.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wi-fi-technology-and-direct-connections">
+<h1>Wi-Fi Technology and Direct Connections<a class="headerlink" href="#wi-fi-technology-and-direct-connections" title="Link to this heading"></a></h1>
+<p>The <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> are Android devices that run special
+<em>FIRST</em> Tech Challenge apps to create a unique and secure wireless connection
+between the two devices. For this connection, the REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> uses
+Wireless Access Point (WAP) technology, while a standalone phone-based Robot
+Controller uses <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Wi-Fi-Direct"><span class="xref std std-term">Wi-Fi Direct</span></a> (P2P) technology. There are some minor, subtle
+differences between how these two technologies connect the devices together
+wirelessly. Note that the FTC Driver Station app is able to connect to both
+types of Robot Controllers.</p>
+<section id="wireless-access-point">
+<h2>Wireless Access Point<a class="headerlink" href="#wireless-access-point" title="Link to this heading"></a></h2>
+<p>A Control Hub acts as an actual wireless access point. A Driver Station device
+connects to the Control Hub’s Wi-Fi network like it would to any other Wi-Fi
+network. The user only needs to provide the correct password in order to
+access the wireless network – no manual acceptance step on the access point
+is required.</p>
+</section>
+<section id="wi-fi-direct-group-owner">
+<h2>Wi-Fi Direct Group Owner<a class="headerlink" href="#wi-fi-direct-group-owner" title="Link to this heading"></a></h2>
+<p>A phone-based Robot Controller works a little differently. For a Wi-Fi Direct
+P2P connection, one of the peer-to-peer devices acts like
+a Wi-Fi access point and is referred to as the group owner. The group owner
+establishes a Wi-Fi Direct group that the other devices can connect to. The
+other peer-to-peer device is referred to as the client device. For the
+<em>FIRST</em> Tech Challenge application, the Robot Controller phone is the device
+that acts as the group owner for the P2P connection. The Driver Station
+device is the client device, and it connects to the Wi-Fi Direct group
+through the FTC Driver Station app using Android’s P2P technology. A Wi-Fi
+Direct connection requires that a user manually accept (using the P2P group
+owner’s touch screen) the initial connection request from a P2P client.</p>
+<figure class="align-default" id="id1">
+<img alt="Diagram pairing a Robot Controller phone labeled P2P Group Owner with a Driver Station phone labeled P2P Client, alongside a wireless router connected to a laptop." src="../../_images/wifi-direct-vs-wap.png" />
+<figcaption>
+<p><span class="caption-text">The P2P group owner is analogous to a Wi-Fi access point.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="programming-laptop">
+<h2>Programming Laptop<a class="headerlink" href="#programming-laptop" title="Link to this heading"></a></h2>
+<p>During a typical <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Match"><span class="xref std std-term">match</span></a>, only a team’s Driver Station
+is connected to the Wi-Fi Direct group or the wireless access point (WAP)
+that is established by the team’s Robot Controller. Away from the
+competition field, however, a team might have additional devices connected
+to this Wi-Fi Direct group. For example, when a team edits an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> using
+the FTC <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> Development Tool or the FTC <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBot Java</span></a> Development Tool, their
+developer’s laptop will also be connected to the Robot Controller’s wireless
+network.</p>
+<figure class="align-default" id="id2">
+<img alt="Diagram of a laptop connected over Wi-Fi Direct to a Robot Controller phone displaying a Programming Mode screen." src="../../_images/laptop-wifi-direct.png" />
+<figcaption>
+<p><span class="caption-text">A team might also have a developer’s laptop connected when they are away
+from the competition field.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that the wireless connection between the developer’s laptop and the
+Robot Controller does not violate the prohibition in the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Competition-Manual"><span class="xref std std-term">Competition Manual</span></a>
+on teams setting up their own wireless network. For this case, the
+developer’s laptop is connected to the existing Wi-Fi Direct group or
+wireless access point that is also used by the Driver Station to communicate
+with the Robot Controller.</p>
+</section>
+<section id="configuration-activity">
+<h2>Configuration Activity<a class="headerlink" href="#configuration-activity" title="Link to this heading"></a></h2>
+<p>The Android operating system has a built-in configuration screen, or
+activity, that can be used to view and configure the Wi-Fi Direct settings.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the <em>FIRST</em> Tech Challenge apps, you typically do NOT want to
+use the Android Wi-Fi Direct menu to pair your devices. Instead, you
+should use the Pair with Robot Controller activity that is available from
+the Settings menu of the FTC Driver Station app to pair/unpair your
+devices.</p>
+</div>
+<p>It is useful to be familiar with Android’s Wi-Fi Direct configuration
+activity. As an FTA/CSA you might need to use this screen to check on the
+configuration of an Android device, and to clear/erase remembered groups or
+do other tasks to help get a robot back in action.</p>
+<section id="accessing-the-wi-fi-direct-configuration-activity">
+<h3>Accessing the Wi-Fi Direct Configuration Activity<a class="headerlink" href="#accessing-the-wi-fi-direct-configuration-activity" title="Link to this heading"></a></h3>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>On your Android device, launch the Settings activity then click on
+the Wi-Fi item.</p></td>
+<td><figure class="align-default" id="id3">
+<img alt="Android home screen with the Settings app icon circled." src="../../_images/android-home-settings.jpg" />
+<figcaption>
+<p><span class="caption-text">Launch the Settings menu.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id4">
+<img alt="Android Settings screen with the Wi-Fi menu item circled." src="../../_images/wifi-settings-item.jpg" />
+<figcaption>
+<p><span class="caption-text">Click on “Wi-Fi”.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>To access the Wi-Fi Direct menu, touch the three dots in the top
+right-hand corner of the screen to display a short pop-up menu.
+Select Advanced from the pop-up menu.</p></td>
+<td><figure class="align-default" id="id5">
+<img alt="Wi-Fi network list screen with the three-dot overflow menu icon circled in the top right corner." src="../../_images/wifi-list-3-dots.jpg" />
+<figcaption>
+<p><span class="caption-text">Click on the 3 dots.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<img alt="Wi-Fi overflow menu with the Advanced option circled." src="../../_images/wifi-menu-advanced.jpg" />
+<figcaption>
+<p><span class="caption-text">Choose Advanced.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>In the Advanced Wi-Fi menu, select Wi-Fi Direct. Note that the
+screenshots in this document were generated using an Android
+smartphone. The screen images and menu text might vary from device
+to device.</p></td>
+<td><figure class="align-default" id="id7">
+<img alt="Advanced Wi-Fi menu with the Wi-Fi Direct option circled." src="../../_images/advanced-wifi-direct.jpg" />
+<figcaption>
+<p><span class="caption-text">Select Wi-Fi Direct.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This screen shows the Wi-Fi Direct group name, if any, along with any
+connected device(s) and remembered group(s). When troubleshooting, it is
+usually best to clear all the items that this screen will allow. Sometimes
+the “connections” listed here have become corrupted. Clearing connections
+here, and re-establishing later (from the FTC Driver Station app), is a
+fast, simple, and reliable way to ensure good communications.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Wi-Fi Direct group cannot be renamed at this stage. All
+connections must be cleared first. Also, you should request and be
+granted permission from the team before you clear any Wi-Fi Direct
+groups.</p>
+</div>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>To begin, touch one of the remembered group names, then click OK to
+forget that group. Repeat for any other remembered groups listed.</p></td>
+<td><figure class="align-default" id="id8">
+<img alt="Wi-Fi Direct screen with a remembered group name circled." src="../../_images/wifi-direct-groups.jpg" />
+<figcaption>
+<p><span class="caption-text">Touch any group name(s).</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id9">
+<img alt="&quot;Forget this group?&quot; confirmation dialog with the OK button circled." src="../../_images/forget-group-dialog.jpg" />
+<figcaption>
+<p><span class="caption-text">Forget each group.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Next, do the same thing with any peer devices and the created group.</p></td>
+<td><figure class="align-default" id="id10">
+<img alt="Wi-Fi Direct screen with a connected peer device circled." src="../../_images/wifi-direct-peer-device.jpg" />
+<figcaption>
+<p><span class="caption-text">Peer Devices.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<img alt="Wi-Fi Direct screen with the created group entry circled." src="../../_images/created-group.jpg" />
+<figcaption>
+<p><span class="caption-text">Created Group.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Touching either of these items brings up the following
+“Disconnect?” screen – select OK. If one of these items cannot be
+disconnected after several tries, continue with the other items. A
+persistent item like this will generally not cause a problem later.
+When the disconnecting is complete, the screen will list only the
+device name, which was also the Wi-Fi Direct group name.</p></td>
+<td><figure class="align-default" id="id12">
+<img alt="&quot;Disconnect?&quot; confirmation dialog with the OK button circled." src="../../_images/disconnect-dialog.jpg" />
+<figcaption>
+<p><span class="caption-text">Select OK to disconnect.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id13">
+<img alt="Wi-Fi Direct screen showing only the device name with no peer devices or remembered groups." src="../../_images/wifi-direct-cleared.jpg" />
+<figcaption>
+<p><span class="caption-text">All clear.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>In this disconnected state, the device name can be changed. Touch the
+3 dots again at the top right corner. Now the Configure Device
+selection is live and can be clicked. Device naming must follow the
+rules described in the Competition Manual. At this screen, some
+smartphones offer three features not present on older models.</p></td>
+<td><figure class="align-default" id="id14">
+<img alt="Overflow menu with the Configure device option enabled and circled." src="../../_images/configure-device-menu.jpg" />
+<figcaption>
+<p><span class="caption-text">Configure Device.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id15">
+<img alt="Rename device dialog with a text field for the device name plus options for broadcast band, device limit, and inactivity timeout." src="../../_images/rename-device-dialog.jpg" />
+<figcaption>
+<p><span class="caption-text">Rename Device.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>The maximum number of connections can be specified, ranging from 2 to
+8. A smaller number is safer and more efficient, while a larger
+number could allow (for example) multiple Blocks or OnBot Java
+programmers to access a single shared Robot Controller device. Users
+must be very careful to avoid conflicts in sharing and editing. The
+other two items allow selection of a Wi-Fi Direct inactivity timeout,
+and whether or not to automatically connect to a remembered Wi-Fi
+Direct group when discovered. You can make selections here, but in
+general, the FTC apps will manage connections as needed.</p></td>
+<td><figure class="align-default" id="id16">
+<img alt="Rename device dialog with the Wi-Fi Direct inactivity timeout dropdown set to Never disconnect." src="../../_images/wifi-direct-options.jpg" />
+<figcaption>
+<p><span class="caption-text">Optional Settings.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Click Save when done and return to the home screen. Make new connections
+only from the FTC Driver Station app, as described in the following section.</p>
+</section>
+</section>
+<section id="troubleshooting-wi-fi-direct-connections">
+<h2>Troubleshooting Wi-Fi Direct Connections<a class="headerlink" href="#troubleshooting-wi-fi-direct-connections" title="Link to this heading"></a></h2>
+<p>Ideally, teams should be able to use the Pair with Robot Controller activity
+of the FTC Driver Station app to pair to the target FTC Robot Controller.
+Once the devices have been paired through the FTC Driver Station app, they
+should automatically reconnect to each other when both devices are turned on
+and both devices have their respective FTC apps running.</p>
+<figure class="align-default" id="id17">
+<img alt="Driver Station app screen showing the connected device name, Wi-Fi Direct ping time, battery percentages, and a Status of Robot is stopped." src="../../_images/ds-connected-status.png" />
+<figcaption>
+<p><span class="caption-text">When the Driver Station is connected, it displays useful status info.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>When your Driver Station is able to connect to the Robot Controller
+successfully, it will display useful status information (see the figure
+above) on its screen, including the name of the device that it is connected
+to, the average ping time between the Driver Station and Robot Controller,
+and voltage info for the Robot Controller smartphone (if used) and the main
+robot <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Battery"><span class="xref std std-term">battery</span></a>.</p>
+<section id="is-the-robot-controller-on">
+<h3>Is the Robot Controller On?<a class="headerlink" href="#is-the-robot-controller-on" title="Link to this heading"></a></h3>
+<p>For problems connecting to the Robot Controller, check the following basic
+items:</p>
+<ul class="simple">
+<li><p>Is the Robot Controller device turned on?</p></li>
+</ul>
+<p>Smartphone specific:</p>
+<ul class="simple">
+<li><p>Is the Robot Controller smartphone in Airplane mode with Wi-Fi enabled?</p></li>
+<li><p>Is the Robot Controller device running the FTC Robot Controller app?</p></li>
+<li><p>Is the FTC Robot Controller app in the foreground (and NOT minimized)?</p></li>
+</ul>
+<p>The Robot Controller device must be powered on and have the FTC Robot
+Controller app running before the Driver Station can connect to it.</p>
+</section>
+<section id="are-both-first-tech-challenge-apps-installed">
+<h3>Are Both FIRST Tech Challenge Apps Installed?<a class="headerlink" href="#are-both-first-tech-challenge-apps-installed" title="Link to this heading"></a></h3>
+<p>If you are having problems pairing the Android devices, please make sure
+that you do not have the FTC Driver Station app and the FTC Robot Controller
+app installed at the same time on a single Android device. The apps have
+the potential to cause Wi-Fi Direct conflicts if they are both installed.
+Make sure neither device has both apps installed at the same time.</p>
+</section>
+<section id="do-both-ftc-apps-have-the-same-version-numbers">
+<h3>Do Both FTC Apps Have the Same Version Numbers?<a class="headerlink" href="#do-both-ftc-apps-have-the-same-version-numbers" title="Link to this heading"></a></h3>
+<p>If you have verified that the Robot Controller and the Driver Station are
+turned on and have their respective FTC apps running, verify that the apps
+have compatible version numbers. If you select the About menu item for each
+app, a new screen should appear on the Android device with version
+information about the app.</p>
+<table class="borderless docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id18">
+<img alt="About screen listing the App Version, Robot Wi-Fi Protocol Version v4, and Wi-Fi Direct group owner info for the device." src="../../_images/rc-about-screen.png" />
+<figcaption>
+<p><span class="caption-text">About screen for an app acting as the Wi-Fi Direct group owner.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id19">
+<img alt="About screen listing the App Version, Robot Wi-Fi Protocol Version v4, and no active Wi-Fi Direct connection for the device." src="../../_images/ds-about-screen.png" />
+<figcaption>
+<p><span class="caption-text">About screen for an app with no active Wi-Fi Direct connection.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It is most important that the “Robot Wi-Fi Protocol Version” numbers of the
+FTC Robot Controller app and the FTC Driver Station app match. For example,
+if the Robot Controller has a “Robot Wi-Fi Protocol Version” number of v4
+but the Driver Station only has a “Robot Wi-Fi Protocol Version” number of
+v3.5, then the two apps might be unable to connect and communicate with
+each other, due to the difference in the versions.</p>
+<p>If the “Robot Wi-Fi Protocol Version” numbers do not match, then one of the
+apps should be downgraded or upgraded so that the numbers will match. Often
+it is advisable to upgrade, however, in some instances, a team might feel
+more comfortable downgrading to a previous, stable version of the app.
+Minimum required levels of FTC app versions are specified in the Competition
+Manual and its updates. The Competition Manual specifies a minimum required
+app version level, and the major and minor version numbers for the DS and RC
+apps must be the same.</p>
+</section>
+<section id="is-either-device-also-connected-to-another-network">
+<h3>Is Either Device Also Connected to Another Network?<a class="headerlink" href="#is-either-device-also-connected-to-another-network" title="Link to this heading"></a></h3>
+<p>For <em>FIRST</em> Tech Challenge competitions, we recommend that the Driver
+Station and Robot Controller devices are not connected to any other
+networks other than each other. It is possible, and sometimes desirable, to
+connect your Android device to an alternate wireless network:</p>
+<ul class="simple">
+<li><p>Teams like to use the wireless <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-ADB"><span class="xref std std-term">ADB</span></a> mechanism to debug their apps.</p></li>
+<li><p>Teams might need to connect to a wireless network to download something
+to their phone from the internet.</p></li>
+<li><p>Teams might have used the Android device to check their e-mail or look up
+something on the internet (we do not recommend doing this).</p></li>
+</ul>
+<p>We also recommend that teams forget any other Wi-Fi or Wi-Fi Direct network,
+except for the primary Wi-Fi Direct connection between the Driver Station
+and Robot Controller (this applies only when using a smartphone as the
+Robot Controller).</p>
+<p>If a team’s Driver Station is having trouble connecting to the Robot
+Controller, check the following:</p>
+<ul class="simple">
+<li><p>Check to see if either Android device is connected to another Wi-Fi or
+Wi-Fi Direct device.</p></li>
+<li><p>If either Android device is connected to another wireless network,
+disconnect the device from the other network, forget the other network,
+and restart the Driver Station and Robot Controller apps.</p></li>
+</ul>
+</section>
+<section id="are-there-lots-of-devices-trying-to-pair-simultaneously">
+<h3>Are There Lots of Devices Trying to Pair Simultaneously?<a class="headerlink" href="#are-there-lots-of-devices-trying-to-pair-simultaneously" title="Link to this heading"></a></h3>
+<p>Before an Android device can connect to another device, it will scan the
+wireless spectrum to determine what Wi-Fi Direct enabled devices are
+available in the vicinity. This discovery process can be negatively
+affected if there is a high concentration of Wi-Fi Direct devices in the
+vicinity that are also scanning the spectrum for available devices. For
+instance, if there are many devices in the vicinity, the target device that
+you are trying to connect to (for example, “12345-A-RC”) might not be
+visible in your list of available Wi-Fi Direct devices on your Android
+phone.</p>
+<p>If you are at an event and the Android devices are consistently unable to
+find each other, or if the devices have trouble establishing a connection,
+it could be due to the presence of so many other Wi-Fi Direct enabled
+devices. If this is the case, one option would be to remove the pair of
+devices that you are trying to connect away from the crowd, and pair the
+two devices further away so that the other devices do not interfere with
+the discovery and pairing process.</p>
+<p>Another option is to turn off the Android devices in the vicinity, and then
+have the teams turn on and pair their devices in successive small groups of
+no more than four teams or eight devices at a time. A wait time of a few
+minutes between each small group is recommended.</p>
+<p>Once the devices are connected, they can withstand a reasonable amount of
+wireless traffic and noise and still operate reliably. This means that once
+a team has been able to pair/connect its Android devices, the team should
+be able to use the devices, even if there are a relatively high number of
+other devices operating in the vicinity.</p>
+<p>For help diagnosing wireless problems once you’re at an event, see
+<a class="reference internal" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html"><span class="doc">Troubleshooting Wireless Issues at an Event</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Control System Troubleshooting Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../monitoring_wireless_environment/monitoring-wireless-environment.html" class="btn btn-neutral float-right" title="Monitoring the Wireless Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Filaments &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Filament Storage Details" href="../filament_storage/filament_storage.html" />
+    <link rel="prev" title="Common Filaments" href="../common_filaments/common_filaments.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Manufacturing Methods</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">3D Printing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3d_printing_intro/3d_printing_intro.html">3D Printing Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d_printed_parts/3d_printed_parts.html">Example 3D Printed Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../general_knowledge/general_knowledge.html">General Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../printer_choice/printer_choice.html">Printer Choice</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../filament_choice.html">Filament Choice</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../common_filaments/common_filaments.html">Common Filaments</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Advanced Filaments</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#abs-acrylonitrile-butadiene-styrene-asa-acrylonitrile-styrene-acrylate">ABS (Acrylonitrile Butadiene Styrene) / ASA (Acrylonitrile Styrene Acrylate)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#polyamide-filaments">Polyamide Filaments</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#carbon-fiber-filaments">Carbon Fiber Filaments</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tpu-tpe-thermoplastic-polyurethane-elastomer">TPU/TPE (Thermoplastic Polyurethane/Elastomer)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../filament_storage/filament_storage.html">Filament Storage Details</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../designing_and_slicing/designing_and_slicing.html">Designing and Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../specific_skill_guides/specific_skill_guides.html">Specific Skill Guides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../troubleshooting/troubleshooting.html">Troubleshooting Common Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#volunteer-special-thanks">Volunteer Special Thanks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Manufacturing</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">3D Printing</a></li>
+          <li class="breadcrumb-item"><a href="../filament_choice.html">Filament Choice</a></li>
+      <li class="breadcrumb-item active">Advanced Filaments</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/manufacturing/3d_printing/filament_choice/advanced_filaments/advanced_filaments.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advanced-filaments">
+<h1>Advanced Filaments<a class="headerlink" href="#advanced-filaments" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If your printer’s hotend (the part that melts the filament) has a PTFE (Teflon) lining where the PTFE tube
+goes all the way down to the heat block (common in lower price printers like the base Ender 3), then you
+should not be printing at or above 250° C. Doing so will cause the PTFE tube to degrade and melt, potentially
+releasing toxic fumes. If you need to print at these temperatures (used for some of the advanced filaments
+listed here), and you have a PTFE lined hotend, you can look at upgrading to an all-metal hotend.</p>
+</div>
+<section id="abs-acrylonitrile-butadiene-styrene-asa-acrylonitrile-styrene-acrylate">
+<h2>ABS (Acrylonitrile Butadiene Styrene) / ASA (Acrylonitrile Styrene Acrylate)<a class="headerlink" href="#abs-acrylonitrile-butadiene-styrene-asa-acrylonitrile-styrene-acrylate" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/legoabsparts.png"><img alt="A lego brick showing the plastic used" src="../../../../_images/legoabsparts.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ABS can best be recognized as the plastic used for Lego Bricks.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Before PLA became readily available, ABS was the most common filament used for <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-3D-Printing"><span class="xref std std-term">3D printing</span></a>. Nowadays, it’s regarded as a
+more advanced filament with a specialized setup needed. ABS is very strong, having a high ductility and able to withstand
+shock loads well. These strengths come with major difficulties, however, as an enclosure is often needed to increase the
+ambient temperature in order to prevent severe part warping. This enclosure is also a good idea due to ABS’s production of
+styrene when it melts, a carcinogenic gas that can cause headaches. ABS should only be printed within filtered enclosures
+or in extremely well ventilated areas. If you have a proper setup with a heated enclosure, ABS can be very worth your time,
+but if you don’t have a setup for it, it’s not worth the pain to try and print it. Notably, ABS can be very inexpensive and
+often found near the same price as PLA or even cheaper.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ASA, a slightly more expensive but similar material, prints at approximately the same temperatures but prints
+slightly easier and produces considerably less styrene. It also may not require an enclosure for smaller prints. Alongside that, it’s UV Resistant and typically offers slightly better mechanical properties compared to most ABS plastics.</p>
+</div>
+<ul class="simple">
+<li><p>ABS hotend temperatures: 230-250° C</p></li>
+<li><p>ABS bed temperatures: 100-120° C</p></li>
+<li><p>ABS enclosure temperature: 30-40° C</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to properly vent/filter fumes emitting from ABS/ASA, as prolonged exposure to either can lead to poisoning. Typically it’s recommended to use an activated carbon air filter, however most enclosures aren’t airtight, and therefore it’s also important to leave your printer somewhere safe if you plan on printing large or numerous parts.</p>
+</div>
+</section>
+<section id="polyamide-filaments">
+<h2>Polyamide Filaments<a class="headerlink" href="#polyamide-filaments" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/nylonexampleparts.jpg"><img alt="Picture of Nylon parts" src="../../../../_images/nylonexampleparts.jpg" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">A collection of Nylon parts, including gears, a great use case for Nylon</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nylon is a category of Polyamide, and these generalizations should apply to all filaments based on Nylon or a general Polyamide.</p>
+</div>
+<p>Being more of a category of filaments, polyamide (PA) based filaments can boast impressive capabilities while being relatively
+easy to print. These show their strength in extreme durability and resistance to wear, making them ideal for gears and
+pulleys if you can safely print them. Common filaments in this category include Pure Nylon, Polyamide, PA-KV (kevlar filled nylon),
+and PA-CF (carbon fiber filled polyamide). Polyamide filaments will commonly require printing temperatures in excess of 250° C,
+making an all-metal hotend necessary, and require heated bed temperatures in the range of 80-100° C. Some of these
+filaments are abrasive, requiring a hardened steel nozzle on your hotend to avoid damage. These filaments are also
+<strong>extremely</strong> hygroscopic, making proper storage a necessity even while actively printing. Nylon prints also tend to shrink when cooling.</p>
+</section>
+<section id="carbon-fiber-filaments">
+<h2>Carbon Fiber Filaments<a class="headerlink" href="#carbon-fiber-filaments" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/cf_filament_roll.png"><img alt="Picture of a Carbon Fiber filament roll" src="../../../../_images/cf_filament_roll.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">The abrasiveness of Carbon Fiber filament is visible.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Carbon fiber (CF) filled filaments are everywhere, bringing increased stiffness and strength to many parts while keeping them
+light. You can find PLA-CF, PETG-CF, PA-CF, CF-ASA, PC-CF, and many others. CF filled filaments typically keep many
+properties from the filament they are based on, including how hygroscopic the filament is, the printing temperatures, and
+the ease of printing. The one large difference is the abrasion of the filament, meaning that you need a hardened steel nozzle
+or other abrasion resistant nozzle for your hotend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Carbon Fiber reinforced PLA is one of the most commonly used CF Filaments, but comes with a notable drawback that it becomes incredibly brittle. It’s important to to keep these kinds of trade-offs in mind, as while it’s seen as “stronger”, it doesn’t hold up as well as most regular PLAs when it comes to dealing with impacts and may suffer from poor layer adhesion.</p>
+</div>
+</section>
+<section id="tpu-tpe-thermoplastic-polyurethane-elastomer">
+<h2>TPU/TPE (Thermoplastic Polyurethane/Elastomer)<a class="headerlink" href="#tpu-tpe-thermoplastic-polyurethane-elastomer" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/tpu_intake_rollers.png"><img alt="Picture of TPU parts" src="../../../../_images/tpu_intake_rollers.png" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">An intake using custom TPU parts to grab game elements.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>TPU and TPE are flexible filaments that can be used to create parts that are flexible and can bend. These filaments are sold
+under a variety of different durometers (a measure of a material’s hardness). You will find 95A durometer the most common
+durometer due to it’s printability. TPU/TPE’s flexibility grants it an extremely high impact resistance, making it very
+durable as well. In FTC, TPU/TPE is often used to make flexible components such as intake rollers, wheel bumpers, and
+occasionally low-load toothed belts. Finally, TPU is extremely hygroscopic, and proper filament storage practices should
+be used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since TPU/TPE is very flexible, printers with a Bowden extrusion system, where the extruder motor and gear is
+not located near the hotend, will have a very difficult time printing with it.</p>
+</div>
+<ul class="simple">
+<li><p>TPU hotend temperatures: 210-250° C</p></li>
+<li><p>TPU bed temperatures: Heated bed not required, but do not exceed 60° C</p></li>
+<li><p>TPU printing speeds should never exceed 50mm/s on a direct drive printer and 20mm/s on a bowden printer</p></li>
+<li><p>Direct drive extrusion system highly recommended</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../common_filaments/common_filaments.html" class="btn btn-neutral float-left" title="Common Filaments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../filament_storage/filament_storage.html" class="btn btn-neutral float-right" title="Filament Storage Details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choosing a Wi-Fi Band for Your Robot &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Monitoring Your Robot’s Wi-Fi Connection" href="../tech-tip-wifi-monitoring/tech-tip-wifi-monitoring.html" />
+    <link rel="prev" title="Calculating Motor and Servo Power" href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#control-system-hardware">Control System Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#batteries-and-power">Batteries and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#motors-and-servos">Motors and Servos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../tech-tips.html#wireless-communications">Wireless Communications</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Choosing a Wi-Fi Band for Your Robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#frequencies-and-wavelengths">Frequencies and Wavelengths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sources-of-interference">Sources of Interference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#robot-design-and-choosing-your-band">Robot Design and Choosing Your Band</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tech-tip-wifi-monitoring/tech-tip-wifi-monitoring.html">Monitoring Your Robot’s Wi-Fi Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#software-and-programming">Software and Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#competition-and-team-resources">Competition and Team Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#moved-tech-tips">Moved Tech Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+      <li class="breadcrumb-item active">Choosing a Wi-Fi Band for Your Robot</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/tech_tips/tech-tips/tech-tip-wifi-bands/tech-tip-wifi-bands.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="choosing-a-wi-fi-band-for-your-robot">
+<h1>Choosing a Wi-Fi Band for Your Robot<a class="headerlink" href="#choosing-a-wi-fi-band-for-your-robot" title="Link to this heading"></a></h1>
+<p>Started in the 2023-2024 season, Tech Tips are segments released in the
+<em>FIRST</em> Tech Challenge <a class="reference external" href="https://www.firstinspires.org/resource-library/ftc/team-blast-archive">Team E-mail Blast</a>.
+Sometimes the Tech Tips are included in whole in the email blast, but sometimes
+there is more content than is reasonable in the email blast so partial content
+is included in the blast with the rest of the content here.</p>
+<p id="wifibands">Hopefully “Bandwidth of Robots” will be your new favorite way to refer to
+groups of wireless robots. This Tech Tip covers Wi-Fi bands and why you might
+be shooting yourself in the foot by not selecting (and designing your robots
+for) the right Wi-Fi band. And at the end of the day how do you truly know
+which band you should be using?</p>
+<p>If you’re anything like the average team, Wi-Fi bands are something nebulous
+that you don’t really understand or even give a second thought to. At least,
+until “bad things” start happening and you’re grasping at straws trying to
+resolve them. So let’s start this discussion by talking about radio
+frequency bands and then the two Wi-Fi bands we have access to, 2.4GHz and
+5GHz.</p>
+<section id="frequencies-and-wavelengths">
+<span id="wifibands1"></span><h2>Frequencies and Wavelengths<a class="headerlink" href="#frequencies-and-wavelengths" title="Link to this heading"></a></h2>
+<p>What are the important properties of Wi-Fi frequencies we should know? To
+explain Wi-Fi frequencies, let’s look at something most of us might already
+be more familiar with - AM and FM radio frequency bands (which share similar
+behaviors, ignoring modulation differences).</p>
+<p>AM radio stations are assigned carrier radio frequencies between
+540kHz-1600kHz. For example WGHM 900 AM out of Nashua, NH, is licensed to
+broadcast at 900kHz. AM radio station signals travel very far very easily
+mostly because the frequencies in AM radio have very large wavelengths -
+900kHz, for example, has a full wavelength of 333m (just over one fifth of a
+mile) - and because of this they can bend around obstacles very easily
+(buildings, mountains, curvature of the earth, etc). However, long
+wavelength AM radio is more susceptible to interference and static than
+shorter wavelength transmissions, like FM.</p>
+<p>FM radio stations are assigned frequencies between 88.1MHz-108.1MHz. For
+example, WEVS 88.3 FM also in Nashua, NH broadcasts at 88.3MHz. FM radio
+frequencies are higher frequency, and have a shorter wavelength - 88.3MHz is
+about 3.4m (about 11 feet) in wavelength - and cannot bend around obstacles
+as easily. Shorter wavelength frequencies also tend to be absorbed/reflected
+(comparatively) much easier by obstacles as well.</p>
+<p>Hence when driving through the mountains and forests of NH I am more apt to
+be able to cleanly listen to the AM station uninterrupted but not the FM
+station, even though they’re broadcasting at roughly the same power and from
+very similar locations.</p>
+<p>Frequency bands used for Wi-Fi share very similar characteristics, but
+because the frequencies for Wi-Fi are much higher some characteristics are
+more exaggerated. As an analogy, for the purposes of this discussion, we can
+say that 2.4GHz is to 5GHz as AM is to FM. 2.4GHz frequencies have a longer
+wavelength (starting at ~0.125m or ~5 inches) than 5GHz frequencies
+(starting at ~0.05m or ~2 inches), and because of that 2.4GHz radio waves
+can bend around objects better than 5GHz ones but are much more susceptible
+to interference than 5GHz. Similarly 5GHz frequencies will also tend to be
+reflected/absorbed much easier by solid objects, and so 5GHz tends to
+perform better with an unobstructed line of sight between antennas.</p>
+</section>
+<section id="sources-of-interference">
+<span id="wifibands2"></span><h2>Sources of Interference<a class="headerlink" href="#sources-of-interference" title="Link to this heading"></a></h2>
+<p>Unlike AM and FM radio, Wi-Fi doesn’t have dedicated frequency space. This can
+cause legitimate issues due to the number of existing devices and services that
+already use frequencies that Wi-Fi has to share.</p>
+<p>You might have realized this, but wireless devices are all the rage. The FCC
+(in the USA) doesn’t just let any device broadcast on any frequency they
+want. Instead, there are licensed and unlicensed radio frequency bands. Some
+frequencies are uniquely licensed to private operators, for example radio
+stations pay a lot of money to the FCC for the exclusive rights to broadcast
+on specific frequencies. HAM radio operators undergo special training to be
+allowed to broadcast on a range of licensed frequencies (some reserved only
+for HAM radio, some not). The FCC also sets aside frequencies that are
+unlicensed, meaning the operators themselves (like you, your neighbor, or
+the kid down the street) don’t need training or licensing to operate devices
+that broadcast on those frequencies. The devices themselves must adhere to
+specific regulations, but those requirements are generally easy to meet.</p>
+<p>Wi-Fi uses portions of the radio frequency spectrum designated as unlicensed
+- remember that these frequencies are available to the general public to use
+- so anyone can broadcast signals over it. And boy howdy do they. The
+2.4GHz frequency band was opened to the public in 1985, and devices
+began using that frequency for use. Wi-Fi emerged in the late 1990’s.
+The 2.4GHz frequency band became extremely crowded, and by devices using
+different protocols - think about trying to have a conversation with a
+friend in a crowded room, but some people are talking “normally”, some
+are using air horns, and others are mimicking nails on a chalkboard. The
+resource was very narrow, but at least interference was just a matter of
+distance - though not everyone lives in the deserts of Arizona where
+they can carry out their conversations in relative peace.</p>
+<p>By the turn of the 20th century, the 5GHz space was opened up for unlicensed
+use. This required different hardware, as the 2.4GHz devices couldn’t simply
+just start using 5GHz. The 5GHz band was much larger, and it took longer for
+it to become crowded as more devices came onto the market that could use it.
+5GHz already had a bunch of legacy systems that used portions of it, and so
+the FCC grandfathered those systems and made special regulations for using
+those frequencies (most manufacturers designed their devices to only use the
+portions of the 5GHz band with the least rules and regulations). Some uses
+of 2.4GHz could not move to 5GHz because of the frequency wave propagation
+behaviors (that we talked about previously, e.g. reflections and wave
+bending), but many systems like Wi-Fi found the greatest use in 5GHz. The
+number of channels and the frequency space was much larger in 5GHz, and 5GHz
+Wi-Fi technologies learned to use the 5GHz space more efficiently and
+robustly.</p>
+<p>When you consider which frequency you should use, you have to consider many
+factors. How obstructed is the path from the radio to the receiver?  How
+crowded might the frequency space be that you’re trying to use? Has the
+event organizer worked with the venue to clear specific channels for robots
+to use? What advanced technologies might the device you’re using be capable
+of utilizing on specific frequency bands?</p>
+</section>
+<section id="robot-design-and-choosing-your-band">
+<span id="wifibands3"></span><h2>Robot Design and Choosing Your Band<a class="headerlink" href="#robot-design-and-choosing-your-band" title="Link to this heading"></a></h2>
+<p>Robot design - and more aptly “<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> placement” - is THE critical
+factor in influencing the Wi-Fi frequency/band you should be using. Remember
+Wi-Fi is a line-of-sight technology, that means Wi-Fi does best when there’s
+a straight unobstructed path from the antenna on the Control Hub to the
+antenna on the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a>. Where is the antenna in a Control Hub? It’s right
+under the plastic on the “face” of the hub on the logo side. If the Control
+Hub can be mounted so that its antenna is generally not
+covered/surrounded/blocked by metal, 5GHz should be your target band.
+However, if your Control Hub is buried deep inside the robot and surrounded
+by metal, the 2.4GHz band may be your only option (remember, the lower
+frequencies of 2.4GHz might be able to “bend around” metal obstacles
+slightly better). Unfortunately exposing the “back side” of the Control Hub
+instead of the “front side” of the hub is not going to yield similar
+results, as there is a PCB with metal traces between the antenna and the
+“back side” of the Hub that will block/reflect/absorb signals.</p>
+<p>Does that mean your Control Hub needs to be mounted unprotected on the
+outside of the robot in order to get good signal reception? Not necessarily,
+fortunately not all materials are the same. Plastics are generally the most
+“invisible” to Wi-Fi frequencies, or at least their
+absorption/blocking/reflection (also known as attenuation) is generally
+minimal enough to not sufficiently matter. Wood, especially thin birch
+commonly used in many robot designs, is slightly more attenuating but
+definitely still a great option. Metals, however, will greatly attenuate
+Wi-Fi frequencies and are the worst materials for Wi-Fi transmission. Yes,
+I’m looking at YOU teams who use hook-and-loop to mount your robot <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Battery"><span class="xref std std-term">battery</span></a>
+to the top of the Control Hub - stop doing that! And for those looking for
+inspiration in this upcoming season, water is also an incredibly poor medium
+for transmission of Wi-Fi frequencies.</p>
+<p>But how do you know for sure how well your robot’s Wi-Fi is performing? You
+can monitor the Wi-Fi signal’s strength through the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Station-App"><span class="xref std std-term">Driver Station App</span></a>. Check
+out <a class="reference internal" href="../tech-tip-wifi-monitoring/tech-tip-wifi-monitoring.html#monitoring-your-robot-s-wi-fi-connection"><span class="std std-ref">Monitoring Your Robot’s Wi-Fi Connection</span></a>
+for info on how to view and understand Wi-Fi Signal Strength. If your signal
+is strong when using 5GHz at maximum <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Playing-Field"><span class="xref std std-term">field</span></a> range (from the Driver Hub) and
+in all robot orientations, you should be good to go on 5GHz! Feel free to
+compare the performance on 5GHz and 2.4GHz, and if they’re comparable you
+should stick with 5GHz for better interference reduction.</p>
+<p>In summary, the vast majority of robots should be using 5GHz as this is the
+optimal channel in terms of interference reduction, device crowding, and
+channel utilization by the Wi-Fi standards. Robot design - specifically
+Control Hub placement - might necessitate the use of 2.4GHz if the
+line-of-sight path to the Control Hub antenna in the robot is too greatly
+obstructed by metal, especially motors. By monitoring the robot’s Wi-Fi
+signal strength, you can determine which frequency band yields the best
+Wi-Fi signal performance for your robot.</p>
+<p>Got any questions about Wi-Fi bands? Come start or join the conversation on
+the <a class="reference external" href="https://ftc-community.firstinspires.org/">FTC Community Forums</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tech-tip-motor-servo-power/tech-tip-motor-servo-power.html" class="btn btn-neutral float-left" title="Calculating Motor and Servo Power" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tech-tip-wifi-monitoring/tech-tip-wifi-monitoring.html" class="btn btn-neutral float-right" title="Monitoring Your Robot’s Wi-Fi Connection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

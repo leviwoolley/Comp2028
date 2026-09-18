@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Makes Battery Voltage Sag? &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Motor Modes and Encoders" href="../tech-tip-motor-modes/tech-tip-motor-modes.html" />
+    <link rel="prev" title="Robot Battery Care, Charging, and Fuses" href="../tech-tip-battery-care/tech-tip-battery-care.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#control-system-hardware">Control System Hardware</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../tech-tips.html#batteries-and-power">Batteries and Power</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../tech-tip-battery-care/tech-tip-battery-care.html">Robot Battery Care, Charging, and Fuses</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">What Makes Battery Voltage Sag?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#battery-chemistry-and-heavy-use">Battery Chemistry and Heavy Use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cell-health-and-battery-temperature">Cell Health and Battery Temperature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#internal-resistance">Internal Resistance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#motors-and-servos">Motors and Servos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#wireless-communications">Wireless Communications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#software-and-programming">Software and Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#competition-and-team-resources">Competition and Team Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech-tips.html#moved-tech-tips">Moved Tech Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+      <li class="breadcrumb-item active">What Makes Battery Voltage Sag?</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/tech_tips/tech-tips/tech-tip-battery-voltage-sag/tech-tip-battery-voltage-sag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-makes-battery-voltage-sag">
+<h1>What Makes Battery Voltage Sag?<a class="headerlink" href="#what-makes-battery-voltage-sag" title="Link to this heading"></a></h1>
+<p>Started in the 2023-2024 season, Tech Tips are segments released in the
+<em>FIRST</em> Tech Challenge <a class="reference external" href="https://www.firstinspires.org/resource-library/ftc/team-blast-archive">Team E-mail Blast</a>.
+Sometimes the Tech Tips are included in whole in the email blast, but sometimes
+there is more content than is reasonable in the email blast so partial content
+is included in the blast with the rest of the content here.</p>
+<p id="batteryvoltagesag">This Tech Tip surrounds a question that we get asked at events all the time -
+“What makes <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Battery"><span class="xref std std-term">battery</span></a> voltage sag?”. As a battery is heavily used, teams will
+notice that the voltage of the battery temporarily decreases from its starting
+voltage during periods of heavy use, and then generally raises back up once the
+heavy use has subsided. So what causes this?</p>
+<p>There are LOTS of reasons why battery voltage will sag during use. Below we
+cover the major factors: battery chemistry and heavy use, cell health and
+battery temperature, and internal resistance.</p>
+<section id="battery-chemistry-and-heavy-use">
+<span id="batteryvoltagesag1"></span><h2>Battery Chemistry and Heavy Use<a class="headerlink" href="#battery-chemistry-and-heavy-use" title="Link to this heading"></a></h2>
+<p>The first thing to remember is that a battery is a chemical reaction factory,
+and does not exactly work the same as the typical “gas tank” analogy makes it
+seem. The chemical reactions at the electrodes create a potential difference
+(voltage) between them. This voltage drives the flow of electrons generated
+by hydrogen and hydroxide ion creation and transfer. In NiMH batteries this
+reaction is reversible but it takes time and energy. What’s important to
+understand is that the chemical reaction can happen only at a specific rate
+(the rate is based on a number of factors which we’ll discuss later); if the
+demand exceeds the rate of reaction for the battery, the voltage and current
+will drop until the reactions can replenish the battery output (this
+temporary drop is known as “sag”). As the materials at the electrodes are
+gradually consumed, the overall battery charge will deplete and can no longer
+sustain the flow of electrons, and the battery will need to be recharged or
+replaced.</p>
+<p>So what is the biggest reason why batteries will sag? On a <em>FIRST</em> Tech
+Challenge robot, this reason is actuator (<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-DC-Motor"><span class="xref std std-term">motor</span></a> and
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servo</span></a>) current draw.
+Motors and Servos can pull a considerable amount of current when they’re
+being used, especially when they’re being used in low-torque configurations.
+Motors that are geared closer to 1:1 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Gear-Ratio"><span class="xref std std-term">gear ratio</span></a> can spin faster - they can
+propel your robot’s drivetrain across the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Playing-Field"><span class="xref std std-term">field</span></a> much faster - but have less
+torque because of the lower gear ratio. Motor configurations that have less
+torque consume significantly more current to operate (when driving the same
+load) than motor configurations with more torque. Systems being driven by
+actuators that have more friction or less torque will cause the motors to
+consume larger amounts of current, and this can cause even healthy batteries
+to have their voltages “sag” during periods of high use. Teams must consider
+their power consumption very carefully when optimizing their battery and
+motor utilization during a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Match"><span class="xref std std-term">match</span></a>, even though that’s often an afterthought
+for most teams.</p>
+</section>
+<section id="cell-health-and-battery-temperature">
+<span id="batteryvoltagesag2"></span><h2>Cell Health and Battery Temperature<a class="headerlink" href="#cell-health-and-battery-temperature" title="Link to this heading"></a></h2>
+<p>Battery cell health is an important factor in the overall health of a
+battery. An NiMH battery used in <em>FIRST</em> Tech Challenge is a multi-cell
+battery, meaning it’s composed of individual smaller batteries connected
+together. Each cell contributes to the overall power output of the battery.
+As a battery ages, individual cells in the battery may age at different rates
+- this aging can lead to degradation of cell material, electrolyte breakdown,
+and creation of dendrites that can eventually puncture the cell wall from
+inside the cell among others. Most often this cell breakdown is accelerated
+due to improper storage, overcharging, deep discharging, excessive
+temperatures, or physical damage (especially due to dropping). When a cell
+fails, it can lead to a reduced capacity of the battery pack, and the
+battery will not last as long on a single charge nor will it be able to
+provide the peak power output that it previously could. Failed cells can
+cause other cells to fail prematurely, primarily due to overcharging and
+imbalanced voltage due to the fact that NiMH batteries and chargers for
+NiMH batteries do not contain a load-balancing management system for
+individual cells. In some cases, failed cells can cause short circuits,
+overheating, and increased risk of fire/explosion! If you’re suspicious of
+a battery, get it tested before using it again.</p>
+<p>Battery temperature is also an important consideration. When a battery is
+being charged, it will likely become warm and even slightly hot to the touch
+- this is expected and natural due to the process of recharging a battery.
+NiMH batteries deliver their best performance at moderate temperatures.
+When a battery is hot from charging, its internal resistance increases
+(covered in the next section) which can lead to reduced power output.
+Allowing the battery to cool down before use helps to ensure optimal
+performance. This process of allowing the battery to cool down before use can
+also prolong the life of the battery. This advice should also be tempered with
+the knowledge that most modern NiMH batteries are generally designed to handle
+some degree of heat; if you need to use the battery immediately after
+charging, it’s usually safe to do so as long as the battery is not excessively
+hot to the touch. However, understand that it may not provide the maximum
+level of power output as it would have if it had cooled first.</p>
+</section>
+<section id="internal-resistance">
+<span id="batteryvoltagesag3"></span><h2>Internal Resistance<a class="headerlink" href="#internal-resistance" title="Link to this heading"></a></h2>
+<p>Understanding Internal Resistance (IR) requires talking about the discharge
+rate of a battery. The discharge rate is a measure of how quickly the battery
+can deliver its stored energy. Most NiMH batteries used in <em>FIRST</em> Tech
+Challenge are rated at a nominal 12V and a maximum discharge rate of 30A,
+though that rate is limited by the 20A <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Fuse"><span class="xref std std-term">fuse</span></a>. A battery’s IR refers to any
+opposition to that flow of electric current within the battery itself.
+Resistance can come from a number of sources, such as resistance within the
+battery’s chemistry (such as a breakdown of the conductive electrolyte within
+the battery), changes to the resistance of the electrodes (such as a buildup of
+crystals around the electrodes), resistance added due to connectors and wiring,
+and others. Rising IR affects the battery performance primarily in decreasing
+the Voltage and Current that the battery can provide, and causes the battery to
+generate excess heat when used. The starting IR of a battery can vary among
+different manufacturing processes and batches, so much that batteries should
+have their IR measured (using a <a class="reference external" href="https://www.andymark.com/products/battery-beak-frc-ftc-usage?Intended%20Use=FTC%20(am-3430)&amp;quantity=1">CTR Battery Beak</a>,
+<a class="reference external" href="https://www.westmountainradio.com/cba.php">West Mountain Radio CBA</a>, or
+similarly capable battery tester) at “birth” (when “new” at time of purchase)
+and the IR then should be tracked over time. Once the battery’s IR increases by
+50% from when it was “born”, the battery is universally considered ready for
+replacement.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>You cannot measure the internal resistance of a battery directly with a
+multimeter. Please do not even try. Doing so will certainly blow your
+multimeter’s fuse, and may even damage the multimeter. Please do not
+attempt.  Internal resistance can only be measured indirectly using a
+load-measuring device like a <a class="reference external" href="https://www.andymark.com/products/battery-beak-frc-ftc-usage?Intended%20Use=FTC%20(am-3430)&amp;quantity=1">CTR Battery Beak</a>.</p>
+</div>
+<p>What can teams do to slow the increase in a battery’s IR? Naturally the
+battery’s IR will change as the battery ages, increasing due to chemical
+changes and wear and tear. The temperature of the battery can also have a
+negative effect on IR, higher temperatures cause higher resistance (so keep
+your batteries cool!). It’s also important to note that the state of charge
+of a battery can change the IR, battery IR should always be measured fully
+charged. But the most important ways to keep your battery healthy are to
+avoid deep discharges (avoid letting your batteries drain below 10V
+steady-state, definitely never below 9V!), use a high-quality charger that
+prevents batteries from overcharging, follow the battery manufacturer’s
+recommended charging procedures, and use low-resistance connections (thick
+wires and clean connectors!).</p>
+<p>Finally, the IR of NiMH batteries can also sometimes be decreased through a
+process known as “battery conditioning” (also referred to as “charge
+cycling”). If IR within a battery is raised due to crystal formations inside
+the battery, this process of conditioning can help break down those crystal
+formations and improve Voltage and the flow of current in a battery. Some
+chargers have automatic conditioning modes, but always refer to your
+manufacturer’s recommended procedure for charge cycling your NiMH batteries.</p>
+<p>Got any questions about battery voltage sag? Come start or join the
+conversation on the <a class="reference external" href="https://ftc-community.firstinspires.org/">FTC Community Forums</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tech-tip-battery-care/tech-tip-battery-care.html" class="btn btn-neutral float-left" title="Robot Battery Care, Charging, and Fuses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tech-tip-motor-modes/tech-tip-motor-modes.html" class="btn btn-neutral float-right" title="Motor Modes and Encoders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

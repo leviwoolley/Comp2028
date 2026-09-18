@@ -1,0 +1,798 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Managing a Control Hub &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Managing a Driver Hub" href="../managing_smartphone_ds/Managing-a-Smartphone-Driver-Station.html" />
+    <link rel="prev" title="Phone Pairing" href="../phone_pairing/phone-pairing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#supporting-documentation">Supporting Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../required_materials/Required-Materials.html">Required Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using_android_device/Using-Your-Android-Device.html">Using Your Android Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phone_pairing/phone-pairing.html">Phone Pairing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuring_android/Configuring-Your-Android-Devices.html">Configuring your Android Devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../program_and_manage_network/Connecting-a-Laptop-to-the-Program-%26-Manage-Network.html">Connecting a Laptop to the Program &amp; Manage Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installing_javascript_browser/Installing-a-Javascript-Enabled-Browser.html">Installing a Javascript Enabled Browser</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Managing a Control Hub</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-name">Changing the Name</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#changing-the-name-of-a-control-hub">Changing the Name of a Control Hub</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-password">Changing the Password</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#changing-the-password-of-a-control-hub">Changing the Password of a Control Hub</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#resetting-a-control-hub">Resetting a Control Hub</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#resetting-instructions">Resetting Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-wifi-channel">Changing the WiFi Channel</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#changing-the-wifi-channel-instructions">Changing the WiFi Channel Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#downloading-the-log-file">Downloading the Log File</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#downloading-the-log-file-instructions">Downloading the Log File Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-expansion-hub-firmware">Updating the Expansion Hub Firmware</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#uploading-and-updating-the-expansion-hub-firmware">Uploading and Updating the Expansion Hub Firmware</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-robot-controller-app">Updating the Robot Controller App</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#updating-the-robot-controller-app-instructions">Updating the Robot Controller App Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#uploading-a-custom-webcam-calibration-file">Uploading a Custom Webcam Calibration File</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#uploading-a-custom-webcam-calibration-file-instructions">Uploading a Custom Webcam Calibration File Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#updating-the-control-hub-os">Updating the Control Hub OS</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#updating-the-control-hub-os-instructions">Updating the Control Hub OS Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-to-the-control-hub-using-wireless-adb">Connecting to the Control Hub Using Wireless ADB</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#connecting-to-the-control-hub-using-wireless-adb-instructions">Connecting to the Control Hub Using Wireless ADB Instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../managing_smartphone_ds/Managing-a-Smartphone-Driver-Station.html">Managing a Driver Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../managing_smartphone_rc/Managing-a-Smartphone-Robot-Controller.html">Managing a Smartphone Robot Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Programming Resources</a></li>
+      <li class="breadcrumb-item active">Managing a Control Hub</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/programming_resources/shared/managing_control_hub/Managing-a-Control-Hub.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="managing-a-control-hub">
+<h1>Managing a Control Hub<a class="headerlink" href="#managing-a-control-hub" title="Link to this heading"></a></h1>
+<section id="changing-the-name">
+<h2>Changing the Name<a class="headerlink" href="#changing-the-name" title="Link to this heading"></a></h2>
+<p>By default, the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> has a name that begins with the phrase
+“FTC-” and ends with four characters that are assigned at the factory.
+In order to comply with the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Competition-Manual"><span class="xref std std-term">Competition Manual</span></a>, the name should be
+changed.</p>
+<p>The name of a Control Hub (or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> phone) can be changed
+from a paired DS app, as shown in <a class="reference internal" href="../managing_smartphone_rc/Managing-a-Smartphone-Robot-Controller.html#changing-the-name"><span class="std std-ref">Changing the Name</span></a>.</p>
+<p>As an alternate, you can change the name of a Control Hub at the
+<em>Manage</em> page from a connected <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> or laptop, as described
+below. Click <code class="docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Wi-Fi</span> <span class="pre">Settings</span></code> when done.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Changing the name of a Control Hub changes the name
+of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Hub"><span class="xref std std-term">Hub</span></a>’s wireless network. Once the name is changed, you will have
+to connect your devices (Driver Station and programming laptop) to the
+new network.</p>
+</div>
+<section id="changing-the-name-of-a-control-hub">
+<h3>Changing the Name of a Control Hub<a class="headerlink" href="#changing-the-name-of-a-control-hub" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Verify that your laptop or Chromebook is connected to the Program &amp; Manage wireless network of the Control Hub. If you are connected to the network, you should be able to see the <em>Robot Controller Connection Info</em> page when you navigate to address “192.168.43.1:8080”:</p></li>
+</ol>
+<img alt="../../../_images/RCConnectionInfoPage.jpg" class="align-center" src="../../../_images/RCConnectionInfoPage.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>If your laptop or Chromebook is not connected and you are unable to access the <em>Robot Controller Connection Info</em> page, then read the instructions in the following tutorial to learn how to connect to the Program &amp; Manage network.</p>
+<p><a class="reference internal" href="../program_and_manage_network/Connecting-a-Laptop-to-the-Program-%26-Manage-Network.html"><span class="doc">Connecting a laptop to the Program &amp; Manage Network</span></a></p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Click on the <em>Manage</em> link towards the top of the <em>Robot Controller Connection Info</em> page to navigate to the Manage page.</p></li>
+</ol>
+<img alt="../../../_images/manageLink.jpg" class="align-center" src="../../../_images/manageLink.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Change the name in the <em>Robot Controller Name</em> field and click on the <em>Change Name</em> button to change the Control Hub’s name.</p></li>
+</ol>
+<img alt="../../../_images/manageLink.jpg" class="align-center" src="../../../_images/manageLink.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>After you press the <em>Change Name</em> button, a dialog box will appear, indicating that the name has been changed and that you will need to connect to the new wireless network and refresh the current page.</p></li>
+</ol>
+<img alt="../../../_images/changeNameWarning.jpg" class="align-center" src="../../../_images/changeNameWarning.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="changing-the-password">
+<h2>Changing the Password<a class="headerlink" href="#changing-the-password" title="Link to this heading"></a></h2>
+<p>By default, the Control Hub has its password set to password at the
+factory. It is a good idea to change the password from its default value
+before you begin using your Control Hub.</p>
+<p>You can change the password of a Control Hub using a laptop or
+Chromebook that is connected to the Hub’s Program &amp; Management page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Commit your new password to memory or store it in a
+secure location so you will not forget it. You will need this password
+to manage and operate your Control Hub. Also note, once the password has
+been changed, you will have to reconnect your devices (Driver Station
+and programming laptop/Chromebook) to the network using the new
+password.</p>
+</div>
+<section id="changing-the-password-of-a-control-hub">
+<h3>Changing the Password of a Control Hub<a class="headerlink" href="#changing-the-password-of-a-control-hub" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the <em>Manage</em> page of the Control Hub user interface, find specify your new password and then confirm this new password in the <em>Access Point Password</em> section of the page. Press the <em>Change Password</em> to change the password.</p></li>
+</ol>
+<img alt="../../../_images/changePassword.jpg" class="align-center" src="../../../_images/changePassword.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>After you press the <em>Change Password</em> button, a dialog box will appear, indicating that the password has been changed and that you will need to reconnect to the wireless network using the new password.</p></li>
+</ol>
+<img alt="../../../_images/changePasswordWarning.jpg" class="align-center" src="../../../_images/changePasswordWarning.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="resetting-a-control-hub">
+<h2>Resetting a Control Hub<a class="headerlink" href="#resetting-a-control-hub" title="Link to this heading"></a></h2>
+<p>If you forget the network name or password for a Control Hub, you can
+reset the Hub’s name and password back to their factory default values.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Resetting a Control Hub will restore its default
+network name and password. However, existing configuration files and
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">op modes</span></a> should not be affected by the reset. This includes op modes that
+were created using the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a>, <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBot Java</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a> tools.</p>
+</div>
+<section id="resetting-instructions">
+<h3>Resetting Instructions<a class="headerlink" href="#resetting-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Turn off the power to your Control Hub for 5 seconds.</p></li>
+<li><p>Press and hold the button on the Control Hub (see image below).</p></li>
+</ol>
+<img alt="../../../_images/controlHubButton.jpg" class="align-center" src="../../../_images/controlHubButton.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="3">
+<li><p>Power on the Control Hub while continuing to hold the button. Monitor the LED while the Control Hub is rebooting. Eventually, the LED will switch from being solid blue, to a multi-color blink pattern.</p>
+<p>When the reset has started, the LED should blink purple, yellow, blue, and then red. This pattern should occur five times in rapid succession.</p>
+<p>Once the multi-colored blink pattern is complete, you can release the button. The Control Hub’s network name and password should be restored to their factory values. Note that the reboot and reset process should take approximately 30 seconds to complete.</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="changing-the-wifi-channel">
+<h2>Changing the WiFi Channel<a class="headerlink" href="#changing-the-wifi-channel" title="Link to this heading"></a></h2>
+<p>The Control Hub acts as a wireless access point for the Driver Station
+and for the programming laptop or Chromebook. By default the Control Hub
+automatically picks an operating WiFi channel. However, it is sometimes
+necessary to specify the operating channel for the Hub.</p>
+<p>For example, at a large competition an FTA might ask that you switch to
+a designated channel to avoid wireless interference that is present in
+the venue. Similarly, an FTA might ask you to switch to a specific
+channel because the FTA is monitoring that designated channel for
+interference or other wireless disruptions.</p>
+<p>You can select the operating channel for the Control Hub from the
+<em>Manage</em> page.</p>
+<section id="changing-the-wifi-channel-instructions">
+<h3>Changing the WiFi Channel Instructions<a class="headerlink" href="#changing-the-wifi-channel-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the <em>Manage</em> page of the Control Hub user interface, use the drop down selector to select the desired operating channel. Note that the Control Hub supports both the 2.4 GHz and 5 GHz bands.</p></li>
+</ol>
+<img alt="../../../_images/selectChannel.jpg" class="align-center" src="../../../_images/selectChannel.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Press the <em>Change Channel</em> button to change to the new channel. Note that when the channel change occurs, the Driver Station might momentarily disconnect from the Control Hub. It should eventually, however, reconnect to Control Hub’s wireless network.</p></li>
+</ol>
+<p>3. Verify on the Driver Station that the Control Hub is operating on
+the desired WiFi channel. The operating channel should be displayed
+under the network name in the <em>Network</em> section of the main Driver
+Station screen.</p>
+<img alt="../../../_images/dsOperatingChannel.jpg" class="align-center" src="../../../_images/dsOperatingChannel.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="downloading-the-log-file">
+<h2>Downloading the Log File<a class="headerlink" href="#downloading-the-log-file" title="Link to this heading"></a></h2>
+<p>It’s often helpful when troubleshooting problems with the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-System"><span class="xref std std-term">Control System</span></a>
+to download the log file from the Control Hub. This can be done from the
+<em>Manage</em> page. Note that the log file name is <em>robotControllerLog.txt</em>
+by default.</p>
+<section id="downloading-the-log-file-instructions">
+<h3>Downloading the Log File Instructions<a class="headerlink" href="#downloading-the-log-file-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the <em>Manage</em> page of the Control Hub user interface, press the <em>Download Logs</em> button to download the Robot Controller log file.</p></li>
+</ol>
+<img alt="../../../_images/downloadLogs.jpg" class="align-center" src="../../../_images/downloadLogs.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Verify that the Robot Controller log file was downloaded to the Downloads directory of your computer.</p></li>
+<li><p>Use a text editor such as <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> or Microsoft’s WordPad to open and view the contents of the log file. Note that the Windows app, Notepad, will not properly display the contents of the log file.</p></li>
+</ol>
+<img alt="../../../_images/notepadplusplus.jpg" class="align-center" src="../../../_images/notepadplusplus.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="updating-the-expansion-hub-firmware">
+<h2>Updating the Expansion Hub Firmware<a class="headerlink" href="#updating-the-expansion-hub-firmware" title="Link to this heading"></a></h2>
+<p>The Control Hub has its own built-in REV Robotics <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a>. The
+purpose of the Expansion Hub board is to facilitate communication
+between the Control Hub’s Android controller and the motors, <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servos</span></a>, and
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Sensor"><span class="xref std std-term">sensors</span></a> of the robot. Periodically, REV Robotics will release new
+versions of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Firmware"><span class="xref std std-term">firmware</span></a> which contains fixes and improvements for the
+Expansion Hub. The firmware releases are in the form of a binary
+(.bin) file.</p>
+<p>The <a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware Client</a>
+software can update the firmware for the Control Hub’s embedded
+Expansion Hub.</p>
+<p>As an alternate, you can use the <em>Manage</em> interface from a connected
+laptop or Driver Station (DS) app to upload a Control Hub’s firmware, or
+to update it using the included or uploaded version. New firmware images
+can be obtained from the <a class="reference external" href="https://docs.revrobotics.com/duo-control/managing-the-control-system/updating-firmware#using-the-robot-controller-console">REV Robotics website</a>.</p>
+<p>Also, included or uploaded Control Hub firmware can be updated in Robot
+Controller Advanced Settings, from a paired Driver Station (DS) app as
+shown below.</p>
+<p>These three methods do not apply to updating the firmware of an
+Expansion Hub connected to a Control Hub via RS485 data wire. Standalone
+Expansion Hubs must be updated by direct USB plug-in to a laptop running
+the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-REV-Hardware-Client"><span class="xref std std-term">REV Hardware Client</span></a> or to a Robot Controller phone.</p>
+<section id="uploading-and-updating-the-expansion-hub-firmware">
+<h3>Uploading and Updating the Expansion Hub Firmware<a class="headerlink" href="#uploading-and-updating-the-expansion-hub-firmware" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the <em>Manage</em> page of the Control Hub user interface, press the <em>Select Firmware</em> button to to select the firmware file that you would like to upload.</p></li>
+</ol>
+<img alt="../../../_images/notepadplusplus.jpg" class="align-center" src="../../../_images/notepadplusplus.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>An <em>Upload</em> button should appear after you successfully selected a file.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Press the <em>Upload</em> button to upload the firmware file from your computer to the Control Hub.</p></li>
+</ol>
+<img alt="../../../_images/uploadFirmwareFile.jpg" class="align-center" src="../../../_images/uploadFirmwareFile.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>The words “Firmware upload complete” should appear once the file has been uploaded successfully.</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>On the Driver Station, touch the three dots in the upper right hand corner to display a pop-up menu.</p></li>
+</ol>
+<img alt="../../../_images/touchThreeDots.jpg" class="align-center" src="../../../_images/touchThreeDots.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Select <em>Settings</em> from the pop-up menu to display the Settings activity.</p></li>
+</ol>
+<img alt="../../../_images/touchSettings.jpg" class="align-center" src="../../../_images/touchSettings.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>On the Driver Station, scroll down and select the <em>Advanced Settings</em> item (under the <em>ROBOT CONTROLLER SETTINGS</em> category).</p></li>
+</ol>
+<img alt="../../../_images/selectAdvancedSettings.jpg" class="align-center" src="../../../_images/selectAdvancedSettings.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Select the <em>Expansion Hub Firmware Update</em> item on the <em>ADVANCED ROBOT CONTROLLER SETTINGS</em> activity.</p></li>
+</ol>
+<img alt="../../../_images/selectExpansionHubFirmwareUpdate.jpg" class="align-center" src="../../../_images/selectExpansionHubFirmwareUpdate.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>If a firmware file that is different from the version currently installed on the Expansion Hub was successfully uploaded, the Driver Station should display some information about the current firmware version and the new firmware version. Press the <em>Update Expansion Hub Firmware</em> button to start the update process.</p></li>
+</ol>
+<img alt="../../../_images/pressUpdateExpansionHubFirmwareButton.jpg" class="align-center" src="../../../_images/pressUpdateExpansionHubFirmwareButton.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>A progress bar will display while the firmware is being updated. Do not power off the Control Hub/Expansion Hub during this process. The Driver Station will display a message when the update process is complete.</p></li>
+</ol>
+<img alt="../../../_images/dsUpdateComplete.jpg" class="align-center" src="../../../_images/dsUpdateComplete.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="updating-the-robot-controller-app">
+<h2>Updating the Robot Controller App<a class="headerlink" href="#updating-the-robot-controller-app" title="Link to this heading"></a></h2>
+<p>It is important to know how to update the Robot Controller app that is
+installed on a Control Hub. FIRST periodically releases new versions of
+this app, which contain improvements and fixes, as well as
+season-specific data and features.</p>
+<p>Note that you can see the Robot Controller app version number through
+the Driver Station user interface. Select the <em>About</em> menu option on the
+Driver Station and note the App Version number under the <em>ABOUT ROBOT
+CONTROLLER</em> section.</p>
+<img alt="../../../_images/aboutRobotController.jpg" class="align-center" src="../../../_images/aboutRobotController.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The <a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware Client</a>
+software can update the Robot Controller (RC) app on the Control Hub.</p>
+<p>As an alternate, Control Hub users can download the RC app from the
+FIRST Tech Challenge <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases">Github repository</a>
+and use the <em>Manage</em> page to complete the update.</p>
+<p>Note that if you are an Android Studio user, then by updating to the
+newest version of the Android Studio project folder you will update the
+Robot Controller app when you build the project and install it on your
+Control Hub.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you update your Robot Controller, then you should
+also update your Driver Station software to the same version number.</p>
+</div>
+<section id="updating-the-robot-controller-app-instructions">
+<h3>Updating the Robot Controller App Instructions<a class="headerlink" href="#updating-the-robot-controller-app-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Go to the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases">GitHub repository</a>.</p></li>
+<li><p>Locate the <em>FtcRobotController-release.apk</em> file.</p></li>
+</ol>
+<img alt="../../../_images/apkFolderOnRepo.jpg" class="align-center" src="../../../_images/apkFolderOnRepo.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Click on the filename (or <em>Download</em> button) to download the Robot Controller app as an APK file to your computer.</p></li>
+</ol>
+<img alt="../../../_images/downloadRobotControllerAPK.jpg" class="align-center" src="../../../_images/downloadRobotControllerAPK.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>On the <em>Manage</em> page, click on the <em>Select App</em> button to select the Robot Controller app that you would like to upload to the Control Hub.</p></li>
+</ol>
+<img alt="../../../_images/downloadRobotControllerAPK.jpg" class="align-center" src="../../../_images/downloadRobotControllerAPK.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>An <em>Update</em> button should appear if an APK file was successfully selected.</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Click on the <em>Update</em> button to begin the update process.</p></li>
+</ol>
+<img alt="../../../_images/uploadRobotControllerPleaseWait.jpg" class="align-center" src="../../../_images/uploadRobotControllerPleaseWait.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="6">
+<li><p>During the update process, if the Control Hub detects that the digital signature of the APK that is being installed is different from the digital signature of the APK that is already installed, the Hub might prompt you to ask if it is OK to uninstall the current app and replace it with the new one.</p>
+<p>This difference in digital signatures can occur, for example, if the previous version of the app was built and installed using Android Studio, but the newer app was downloaded from the GitHub repository.</p>
+<p>Press <em>OK</em> to uninstall the old app and continue with the update process.</p>
+</li>
+</ol>
+<img alt="../../../_images/uploadRobotControllerWarning.jpg" class="align-center" src="../../../_images/uploadRobotControllerWarning.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>If the update process had to uninstall the previous version of the Robot Controller app, the network name and password for the Control Hub will be reset back to their factory values. If this happens, then you will need to reconnect your computer to the Control Hub using the factory default values.</p></li>
+</ol>
+<img alt="../../../_images/uploadRobotControllerUninstalling.jpg" class="align-center" src="../../../_images/uploadRobotControllerUninstalling.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>When the update process is complete and you have successfully reconnected your computer to the Control Hub’s network, you should see an <em>installed successfully</em> message on the <em>Manage</em> web page.</p></li>
+</ol>
+<img alt="../../../_images/uploadRobotControllerInstalledSuccessfully.jpg" class="align-center" src="../../../_images/uploadRobotControllerInstalledSuccessfully.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="uploading-a-custom-webcam-calibration-file">
+<h2>Uploading a Custom Webcam Calibration File<a class="headerlink" href="#uploading-a-custom-webcam-calibration-file" title="Link to this heading"></a></h2>
+<p>The Robot Controller app has built-in calibration information for a
+variety of commonly available <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcams</span></a>. Users can also create their own
+custom calibration files and then upload these files to a Control Hub.</p>
+<p>A commented example of what the contents of a calibration file should
+look like can be found in a file called <em>teamwebcamcalibrations.xml</em>,
+which is included with the Android Studio project folder.
+This example calibration file can be found
+<a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/blob/master/TeamCode/src/main/res/xml/teamwebcamcalibrations.xml">here</a>.</p>
+<section id="uploading-a-custom-webcam-calibration-file-instructions">
+<h3>Uploading a Custom Webcam Calibration File Instructions<a class="headerlink" href="#uploading-a-custom-webcam-calibration-file-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>On the <em>Manage</em> page, click on the <em>Select Webcam Calibration File</em> button to select the calibration file.</p></li>
+</ol>
+<img alt="../../../_images/selectWebcamCalibrationFile.jpg" class="align-center" src="../../../_images/selectWebcamCalibrationFile.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>An <em>Upload</em> button should appear if a file was successfully selected.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Click on the <em>Upload</em> button to upload the selected file. If the upload was successful, then the <em>Manage</em> page will display a message indicating that the upload has completed.</p></li>
+</ol>
+<img alt="../../../_images/uploadWebcamCalibrationFileComplete.jpg" class="align-center" src="../../../_images/uploadWebcamCalibrationFileComplete.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="updating-the-control-hub-os">
+<h2>Updating the Control Hub OS<a class="headerlink" href="#updating-the-control-hub-os" title="Link to this heading"></a></h2>
+<p>REV Robotics periodically releases new versions of the Control Hub
+operating system (OS). These new versions incorporate fixes,
+improvements, and new features.</p>
+<p>Note that you can see the Control Hub OS version number through the
+Driver Station user interface. Select the <em>About</em> menu option on the
+Driver Station and note the Operating System Version number under the
+<em>ABOUT ROBOT CONTROLLER</em> section.</p>
+<img alt="../../../_images/aboutRobotControllerOSVersion.jpg" class="align-center" src="../../../_images/aboutRobotControllerOSVersion.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The <a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware Client</a>
+software can update the Control Hub operating system.</p>
+<p>As an alternate, Control Hub users can download a new Control Hub OS
+file from the REV Robotics website and use the <em>Manage</em> page to complete
+the update of the OS.</p>
+<section id="updating-the-control-hub-os-instructions">
+<h3>Updating the Control Hub OS Instructions<a class="headerlink" href="#updating-the-control-hub-os-instructions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Download the new Control Hub OS update file from the <a class="reference external" href="https://docs.revrobotics.com/duo-control/managing-the-control-system/updating-operating-system">REV Robotics website</a>.</p></li>
+<li><p>On the <em>Manage</em> page, click on the <em>Select Update File</em> button to select the OS update file that you would like to upload.</p></li>
+</ol>
+<img alt="../../../_images/selectOSUpdateFile.jpg" class="align-center" src="../../../_images/selectOSUpdateFile.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>An <em>Update &amp; Reboot</em> button should appear if an update file was successfully selected.</p>
+</div></blockquote>
+<p>3. Click on the <em>Update &amp; Reboot</em> button to start the update process.
+Please wait while the OS file gets uploaded to the Control Hub. Note
+that since the file is relatively large, it might take several
+minutes before the upload is complete. Do not turn off the Control
+Hub while the process is underway.</p>
+<img alt="../../../_images/osUpdatePleaseWait.jpg" class="align-center" src="../../../_images/osUpdatePleaseWait.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>4. If the upload was successful, the <em>Manage</em> page will display a
+message indicating that the device is being rebooted and the update
+is being installed.</p>
+<img alt="../../../_images/osUpdateVerificationSucceeded.jpg" class="align-center" src="../../../_images/osUpdateVerificationSucceeded.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>5. When the OS update has completed, the Control Hub LED should
+switch from blue, back to its normal blink pattern (green, then it
+will blink blue once to indicate the Hub’s serial address number,
+then the pattern repeats itself). Reconnect your computer to the
+Control Hub network and verify that the update was a success.</p>
+<img alt="../../../_images/osUpdateSuccess.jpg" class="align-center" src="../../../_images/osUpdateSuccess.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Note that you can also check in the About page (through the Driver Station app) to verify the updated version number of the Control Hub OS.</p>
+</div></blockquote>
+<img alt="../../../_images/aboutRobotControllerNewOSVersion.jpg" class="align-center" src="../../../_images/aboutRobotControllerNewOSVersion.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="connecting-to-the-control-hub-using-wireless-adb">
+<h2>Connecting to the Control Hub Using Wireless ADB<a class="headerlink" href="#connecting-to-the-control-hub-using-wireless-adb" title="Link to this heading"></a></h2>
+<p>Advanced users who use Android Studio to build and install the Robot
+Controller app onto their Control Hub should be familiar with the
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Android-Debug-Bridge"><span class="xref std std-term">Android Debug Bridge</span></a> (adb) utility. adb is included with the Android
+development platform tools. It can be used to communicate with an
+Android device such as the Control Hub.</p>
+<p>Traditionally, programmers use a hard-wired USB connection to
+communicate using adb to their Android device. adb also supports a mode
+where commands are sent back and forth through a wireless connection.</p>
+<p>The Control Hub is configured so that it automatically will support an
+adb wireless connection request on port 5555.</p>
+<section id="connecting-to-the-control-hub-using-wireless-adb-instructions">
+<h3>Connecting to the Control Hub Using Wireless ADB Instructions<a class="headerlink" href="#connecting-to-the-control-hub-using-wireless-adb-instructions" title="Link to this heading"></a></h3>
+<p>1. Verify that your laptop is connected to the Program &amp; Manage
+wireless network of the Control Hub. If you are connected to the
+network, you should be able to see the <em>Robot Controller Connection
+Info</em> page when you navigate to address “192.168.43.1:8080”:</p>
+<img alt="../../../_images/aboutRobotControllerNewOSVersion.jpg" class="align-center" src="../../../_images/aboutRobotControllerNewOSVersion.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>If your laptop is not connected and you are unable to access the <em>Robot Controller Connection Info</em> page, then read the instructions in the following tutorial (Connecting-a-Laptop-to-the-Program-&amp;-Manage-Network) to learn how to connect to the Program &amp; Manage network.</p>
+<p><a class="reference internal" href="../program_and_manage_network/Connecting-a-Laptop-to-the-Program-%26-Manage-Network.html"><span class="doc">Connecting a laptop to the Program &amp; Manage Network</span></a></p>
+</div></blockquote>
+<p>2. Verify that the PATH environment variable for your Windows
+computer includes the path to the adb.exe executable file. The
+<a class="reference external" href="https://developer.android.com/tools/adb">Android Developer website</a>
+tells you where in your Android SDK installation you can find the
+adb.exe file. This
+<a class="reference external" href="https://helpdeskgeek.com/add-windows-path-environment-variable/">post</a>
+from
+<a class="reference external" href="https://helpdeskgeek.com/add-windows-path-environment-variable/">HelpDeskGeek.com</a>
+shows how to add a directory to your Windows PATH environment
+variable.</p>
+<ol class="arabic simple" start="3">
+<li><p>Open a Windows Command Prompt and type in “adb.exe connect 192.168.43.1:5555”. This should connect your adb server to the Control Hub over the wireless connection.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../phone_pairing/phone-pairing.html" class="btn btn-neutral float-left" title="Phone Pairing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../managing_smartphone_ds/Managing-a-Smartphone-Driver-Station.html" class="btn btn-neutral float-right" title="Managing a Driver Hub" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoring the Wireless Environment &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Troubleshooting Wireless Issues at an Event" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html" />
+    <link rel="prev" title="Wi-Fi Technology and Direct Connections" href="../wifi_technology/wifi-technology.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Control System Troubleshooting Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../wifi_technology/wifi-technology.html">Wi-Fi Technology and Direct Connections</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Monitoring the Wireless Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-wireless-spectrum">The Wireless Spectrum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ghz-portion-of-the-spectrum">2.4GHz Portion of the Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">5GHz Portion of the Spectrum</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring-the-wireless-spectrum">Monitoring the Wireless Spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi-analyzer">Wi-Fi Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac-os-airport-utility">Mac OS Airport Utility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#netscout-fluke-aircheck-wi-fi-tester">NetScout/Fluke AirCheck Wi-Fi Tester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metageek-inssider">MetaGeek inSSIDer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wireshark">Wireshark</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html">Troubleshooting Wireless Issues at an Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi_channel_planning/wifi-channel-planning.html">Planning Wi-Fi Channels for Large Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_common_issues/troubleshooting-common-issues.html">Troubleshooting Common Control System Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark_packet_capture/wireshark-packet-capture.html">Using Wireshark for Packet Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using_log_files/using-log-files.html">Using Log Files to Troubleshoot Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mitigating-disruptions-due-to-electrostatic-shocks">Mitigating Disruptions Due to Electrostatic Shocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-additional-help">Getting Additional Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Control System Troubleshooting Guide</a></li>
+      <li class="breadcrumb-item active">Monitoring the Wireless Environment</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/control_system_troubleshooting/monitoring_wireless_environment/monitoring-wireless-environment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="monitoring-the-wireless-environment">
+<h1>Monitoring the Wireless Environment<a class="headerlink" href="#monitoring-the-wireless-environment" title="Link to this heading"></a></h1>
+<p>The <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-System"><span class="xref std std-term">Control System</span></a> uses <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Wi-Fi-Direct"><span class="xref std std-term">Wi-Fi Direct</span></a> and/or wireless
+access point technology to connect the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> device to the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot
+Controller</span></a>. Wi-Fi Direct networks can be managed like normal Wi-Fi networks,
+so the techniques and tools used to monitor and troubleshoot a corporate
+Wi-Fi network can also be applied to the Wi-Fi Direct networks used by the
+FTC Control System. This page provides some basic information to help an
+FTA, CSA, or WTA keep the wireless environment clean and operational at an
+event.</p>
+<section id="the-wireless-spectrum">
+<h2>The Wireless Spectrum<a class="headerlink" href="#the-wireless-spectrum" title="Link to this heading"></a></h2>
+<p>Wi-Fi enabled devices use wireless radios to send digital information back
+and forth to each other. These devices operate at specific frequencies
+within legally allocated portions of the wireless spectrum. All FTC-approved
+Android devices can operate at the 2.4GHz and 5GHz frequencies.</p>
+<section id="ghz-portion-of-the-spectrum">
+<h3>2.4GHz Portion of the Spectrum<a class="headerlink" href="#ghz-portion-of-the-spectrum" title="Link to this heading"></a></h3>
+<p>In the U.S., there is a band of 11 channels in the 2.4GHz region that a
+Wi-Fi enabled device can use to communicate (other regions outside of the
+U.S. often allow Wi-Fi devices to operate on a few additional channels). As
+the figure below shows, adjacent channels overlap each other, so two devices
+operating on channels that are not separated by at least 5 channel widths
+will interfere with each other. For example, channels 1 and 6 are spaced far
+enough apart to avoid interference, while channels 1 and 5 overlap slightly.</p>
+<figure class="align-default" id="id2">
+<img alt="Diagram of 2.4 GHz Wi-Fi channels 1 through 14 showing overlapping 22 MHz channel widths, with channels 1, 6, and 11 as the only non-overlapping set." src="../../_images/2ghz-channel-overlap.png" />
+<figcaption>
+<p><span class="caption-text">In the U.S., there are 11 Wi-Fi channels in the 2.4GHz band; other
+countries allow a few additional channels.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In practice, a little bit of channel overlap is usually acceptable. If one
+or more channels are very noisy at an event, you might need to move devices
+to alternate, possibly overlapping, channels. Each wireless channel can only
+support a limited number of devices, and noise and interference on a channel
+increase as more devices join it. The FTC Driver Station and Robot
+Controller apps can tolerate a fair amount of noise and interference, so a
+single 2.4GHz channel can usually support a relatively large number (25 to
+35, or even more) Driver Station-Robot Controller pairs. However, other
+traffic on a channel, including non-Wi-Fi devices, can still degrade
+connectivity for those pairs.</p>
+</section>
+<section id="id1">
+<h3>5GHz Portion of the Spectrum<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>The REV Robotics <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a>, and most Android smartphones,
+support both the 2.4GHz and 5GHz bands. 5GHz channels do not overlap each
+other, and they offer greater bandwidth than 2.4GHz channels. They also have
+more limited range, which can be useful in a crowded competition venue with
+lots of robots.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>FIRST</em> Robotics Competition (FRC) robots now exclusively compete
+on the 6GHz portion of the spectrum. This makes it easier to manage and
+troubleshoot the spectrum at FRC/FTC hybrid events.</p>
+</div>
+<p>For a deeper look at how to choose between the 2.4GHz and 5GHz bands based
+on your robot’s design, see the
+<a class="reference internal" href="../../tech_tips/tech-tips/tech-tip-wifi-bands/tech-tip-wifi-bands.html#choosing-a-wi-fi-band-for-your-robot"><span class="std std-ref">Choosing a Wi-Fi Band for Your Robot</span></a>
+Tech Tip.</p>
+</section>
+</section>
+<section id="monitoring-the-wireless-spectrum">
+<h2>Monitoring the Wireless Spectrum<a class="headerlink" href="#monitoring-the-wireless-spectrum" title="Link to this heading"></a></h2>
+<p>There are some tools available to an FTA, CSA, or WTA that can be helpful
+in monitoring activity on the wireless spectrum.</p>
+</section>
+<section id="wi-fi-analyzer">
+<h2>Wi-Fi Analyzer<a class="headerlink" href="#wi-fi-analyzer" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer&amp;hl=en">Wi-Fi Analyzer</a>
+is a free, open-source app, available on the Google Play store, that you can install
+onto an Android device. It lets you see what wireless networks are
+operating in your venue, with a graphical display that overlays the
+available networks onto a graph of operating channels and shows the
+relative signal strength of each network.</p>
+<img alt="Wi-Fi Analyzer Android app showing signal-strength curves for several nearby networks plotted across 2.4 GHz Wi-Fi channels 1 through 14." src="../../_images/wifi-analyzer-app.png" />
+<p>An FTA, CSA, WTA, or Tech Director can use Wi-Fi Analyzer to see which
+networks are present at a venue, identify unauthorized wireless networks on
+a channel, and determine which wireless channel a team’s Driver
+Station-Robot Controller pair is using. The app can also help plan which
+channels teams should use for robot communication: in general, robots
+should operate on the Wi-Fi channel with the fewest other wireless networks
+(assuming there are no other sources of interference on that channel).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you run Wi-Fi Analyzer on an Android device with a dual-band
+(2.4GHz and 5GHz) radio, you can monitor channels on both bands.</p>
+</div>
+<p>While Wi-Fi Analyzer is a helpful tool, it has some limitations:</p>
+<ul class="simple">
+<li><p>It will not display activity from non-Wi-Fi signals operating on the same
+frequency. For example, a wireless microphone system transmitting on
+2.4GHz would not appear, even though it could interfere with FTC devices.</p></li>
+<li><p>It only lists wireless networks and their relative signal strength. It
+does not show how much activity is occurring on a network, so it cannot
+tell you whether a network is very busy and using up a lot of a channel’s
+available capacity.</p></li>
+<li><p>It will not display hidden Wi-Fi networks. When someone sets up a
+wireless network, they have the option of hiding it, and Wi-Fi Analyzer
+will not list a hidden network.</p></li>
+</ul>
+</section>
+<section id="mac-os-airport-utility">
+<h2>Mac OS Airport Utility<a class="headerlink" href="#mac-os-airport-utility" title="Link to this heading"></a></h2>
+<p>If you have access to a Mac OS computer, you can use its airport utility to
+scan for locally available wireless networks. To use the airport utility,
+you need the <code class="docutils literal notranslate"><span class="pre">airport</span></code> executable in your Mac OS shell’s search path. You
+can place a symbolic link to the utility in the <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> folder of
+your Mac’s file system. From a Mac OS command terminal, the following
+command creates the symbolic link (you will need super user status and your
+account’s password):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport<span class="w"> </span>/usr/local/bin/airport
+</pre></div>
+</div>
+<p>Once the link is created, running the following command from a Mac OS
+command terminal scans the wireless environment and lists the available
+local networks that were detected:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>airport<span class="w"> </span>--scan
+</pre></div>
+</div>
+<figure class="align-default" id="id3">
+<img alt="Mac terminal output of the airport --scan command, listing SSID, BSSID, signal strength, channel, and security for nearby networks." src="../../_images/airport-scan-terminal.png" />
+<figcaption>
+<p><span class="caption-text">The <code class="docutils literal notranslate"><span class="pre">airport</span> <span class="pre">--scan</span></code> command lists available, visible Wi-Fi networks.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">airport</span> <span class="pre">--scan</span></code> utility has similar limitations to the Wi-Fi
+Analyzer app described above. It also does not run continuously — a user
+must repeatedly issue the command (or write a script to do so) to get a
+continuous listing of available Wi-Fi networks.</p>
+</section>
+<section id="netscout-fluke-aircheck-wi-fi-tester">
+<h2>NetScout/Fluke AirCheck Wi-Fi Tester<a class="headerlink" href="#netscout-fluke-aircheck-wi-fi-tester" title="Link to this heading"></a></h2>
+<p>A company called netAlly (formerly NetScout and Fluke) makes an expensive,
+but powerful, wireless network monitoring tool. The netAlly AirCheck Wi-Fi
+Tester is a handheld device that can be used to monitor the wireless
+spectrum at an event. Details can be found on the
+<a class="reference external" href="https://www.netally.com/products/aircheck/">netAlly website</a>.</p>
+<p>The current netAlly AirCheck (left) and the older Fluke Networks AirCheck
+Wi-Fi Tester (right) look different but offer similar functionality:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><img alt="NetScout AirCheck G2 handheld tester displaying 2.4 GHz and 5 GHz channel utilization bar charts on its touchscreen." src="../../_images/netscout-aircheck-g2.jpg" />
+</td>
+<td><img alt="Older yellow and blue Fluke Networks AirCheck Wi-Fi Tester with a color screen and directional keypad." src="../../_images/fluke-aircheck-tester.jpg" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Both devices can display information about any wireless network in the
+vicinity and, unlike the Wi-Fi Analyzer app and the Mac airport utility,
+they also report on hidden wireless networks. The AirCheck can tell the
+user how much wireless activity (both Wi-Fi and non-Wi-Fi) is occurring on
+a specific channel and estimate how much of that channel’s capacity is
+being consumed, which can help an FTA/CSA/WTA determine if a channel is
+clean or noisy. Because it measures non-Wi-Fi activity as well, it can also
+help determine whether devices such as a wireless audio-visual system or a
+Bluetooth device are affecting Wi-Fi connections on a channel.</p>
+<p>The AirCheck can be equipped with an external directional antenna, which is
+helpful for locating the source of a wireless signal: an FTA/CSA/WTA can
+point the antenna around a venue, and the measured signal strength will
+increase as the antenna is pointed at the source.</p>
+<figure class="align-default" id="id4">
+<img alt="Blue paddle-shaped directional antenna with a coiled cable and connector." src="../../_images/aircheck-antenna.jpg" />
+<figcaption>
+<p><span class="caption-text">The AirCheck can be equipped with an external directional antenna.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="metageek-inssider">
+<h2>MetaGeek inSSIDer<a class="headerlink" href="#metageek-inssider" title="Link to this heading"></a></h2>
+<p>A company called MetaGeek makes software and hardware devices for Windows
+computers and smartphones that provide capabilities similar to the AirCheck
+at a slightly lower price. MetaGeek’s inSSIDer software, combined with
+their Wi-Spy Mini or DBx hardware and a Windows computer, can be used to
+monitor wireless channels and see both Wi-Fi and non-Wi-Fi traffic on the
+spectrum. The MetaGeek Wi-Spy Air hardware connected to a smartphone
+provides similar Wi-Fi scanning capability in a more portable
+configuration.</p>
+<figure class="align-default" id="id5">
+<img alt="MetaGeek inSSIDer spectrum waterfall chart of the 2.4 GHz band showing a tall green Wi-Fi signal amid scattered red and blue interference." src="../../_images/inssider-waterfall-chart.png" />
+<figcaption>
+<p><span class="caption-text">MetaGeek’s inSSIDer software, paired with Wi-Spy Mini or DBx hardware,
+shows both Wi-Fi and non-Wi-Fi activity.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Details regarding Wi-Spy Air, inSSIDer, and the Wi-Spy Mini and DBx
+hardware can be found on the
+<a class="reference external" href="https://www.metageek.com/">MetaGeek website</a>. The MetaGeek software and
+Wi-Spy Mini or DBx hardware require a laptop running Windows 10 to operate.</p>
+</section>
+<section id="wireshark">
+<h2>Wireshark<a class="headerlink" href="#wireshark" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://www.wireshark.org/">Wireshark</a> is a free software application
+that can also be used to help monitor and diagnose wireless issues. It is a
+powerful tool that requires specialized knowledge to operate, along with a
+computer whose wireless adapter supports monitor mode.</p>
+<p>For step-by-step instructions on using Wireshark to capture and filter
+wireless traffic, see
+<a class="reference internal" href="../wireshark_packet_capture/wireshark-packet-capture.html"><span class="doc">Using Wireshark for Packet Capture</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wifi_technology/wifi-technology.html" class="btn btn-neutral float-left" title="Wi-Fi Technology and Direct Connections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html" class="btn btn-neutral float-right" title="Troubleshooting Wireless Issues at an Event" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

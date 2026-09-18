@@ -1,0 +1,857 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fork and Clone from GitHub AS &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Writing an Op Mode AS" href="../../../android_studio_java/opmode/opmode.html" />
+    <link rel="prev" title="Managing an Android Studio Project AS" href="../../../android_studio_java/manage/manage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#programming-tutorials">Programming Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../android_studio_java/before_you_start/before-you-start.html">Before You Start <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../android_studio_java/intro/intro.html">Introduction <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../android_studio_java/config/config.html">Configuring your Hardware <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../android_studio_java/install/install.html">Installing Android Studio <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../android_studio_java/manage/manage.html">Managing an Android Studio Project <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Fork and Clone from GitHub <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../android_studio_java/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Programming Resources</a></li>
+          <li class="breadcrumb-item"><a href="../../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="../../../android_studio_java/manage/manage.html">Managing an Android Studio Project <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></a></li>
+      <li class="breadcrumb-item active">Fork and Clone from GitHub <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span></li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/programming_resources/tutorial_specific/android_studio/fork_and_clone_github_repository/Fork-and-Clone-From-GitHub.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fork-and-clone-from-github-as">
+<h1>Fork and Clone from GitHub <span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">AS</span><a class="headerlink" href="#fork-and-clone-from-github-as" title="Link to this heading"></a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This approach assumes a basic familiarity with <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#git">git</a> and <a class="reference external" href="https://github.com/">GitHub</a>.  As with most
+things related to git there are many different ways to satisfy any
+objective.  This documentation describes one method for Windows users.
+Users not comfortable with command line tools and git should obtain the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a>
+via <a class="reference internal" href="../downloading_as_project_folder/Downloading-the-Android-Studio-Project-Folder.html"><span class="doc">Downloading the SDK as a zip archive</span></a>.</p>
+</div>
+<section id="forks-vs-clones">
+<h2>Forks vs. Clones<a class="headerlink" href="#forks-vs-clones" title="Link to this heading"></a></h2>
+<p>A <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#fork">Fork</a> on GitHub is a copy of another <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#repository">repository</a> on GitHub from one account
+to another account. The new forked repository retains a parent-child
+relationship with the <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#origin">origin</a> repository. Forks are typically used when software
+will have an independent line of development, such as when FTC teams develop
+their own team code using the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">FIRST-Tech-Challenge/FtcRobotController</a>
+repository as a basis.  FTC teams should create a Fork of the
+<a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">FIRST-Tech-Challenge/FtcRobotController</a> repository as a convenient way to
+manage their software development process. Thanks to the parent-child
+relationship, when changes are made to the parent repository those changes can
+be easily tracked and <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#fetch">fetched</a>/<a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#merge">merged</a> into the forked repository, keeping the
+forked repository up to date.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Teams should not issue pull requests against the <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#upstream">upstream</a> parent, the
+FIRST-Tech-Challenge/FtcRobotController repository. Forks of the
+FIRST-Tech-Challenge/FtcRobotController repo may always fetch changes, but
+should never attempt to push changes up to the repo.</p>
+</div>
+<p>A <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#clone">Clone</a> is a copy of a repository, typically on a local computer. A team
+member creates a <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#clone">feature branch</a> of the team’s repository for feature development, and
+clones the branch to a local computer. Software development and testing then
+happens completely within their local clone. Once they’re finished, or they’ve
+reached a checkpoint, the changes within the local clone can then be pushed
+from their local clone back to the team fork. That feature branch can then be
+merged into the team’s main repository branch once it has been accepted by the
+team. Multiple different developers can work seamlessly using this process.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/fork-clone-diagram.png"><img alt="Diagram showing the relationship between forks and clones." src="../../../../_images/fork-clone-diagram.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">The relationship between forks and clones.  The clone exists on your local
+laptop while the fork exists on GitHub servers.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="branch-strategies">
+<h2>Branch Strategies<a class="headerlink" href="#branch-strategies" title="Link to this heading"></a></h2>
+<p>A <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch">branch</a> is a series of <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#commit">commits</a> that are independent of any other lines of development
+and is typically used to develop new features for the repository. The default branch for the
+FtcRobotController repository, and its forks and clones, is <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#master">master</a> (though for all newer
+repositories created by GitHub the default branch is called <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#main">main</a>).  Using
+branches judiciously can help developers collaborate on a common set of
+software by isolating changes, keeping the default branch clean, and providing
+space for feature development to iterate independent of software that’s been
+deemed ‘production ready’.</p>
+<figure class="align-center" id="id4">
+<img alt="one branch" src="../../../../_images/single-branch.png" />
+<figcaption>
+<p><span class="caption-text">A single branch with the default name of master</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Each circle represents a commit to a branch. The name of the branch always points to the most recent
+commit, also known as the <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#head">HEAD</a>.  While there may be many branches there is only one HEAD and it always,
+unless it is in a <a class="reference external" href="https://git-scm.com/docs/git-checkout#_detached_head">detached state</a>, points to the
+latest commit of the currently checked out branch.  All other commits point to their immediate parent.</p>
+<p>A commit is a <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#snapshot">snapshot</a> of the entire workspace at a point in time.  Git does not store <a class="reference external" href="https://docs.github.com/en/get-started/learning-about-github/github-glossary#diff">diffs</a>.  If you make a change to a file, and
+create a new commit with the changed file, it stores the entire changed file in the commit.  To avoid unnecessary
+duplication of files, if your repository consists of three files - one changed and the other two were unchanged - then the
+snapshot merely points back to the unchanged files rather than containing unchanged data.</p>
+<p>Note that each commit has a parent which allows git to determine reachability of commits from different
+branches.  It also allows git to determine the common ancestor commit of any two branches, which is important
+when merging branches.  More on that later.</p>
+<p>So what is a branch?  A branch is simply a named pointer to a commit.  When a branch is created you are just
+telling git to create a name, and point it at a commit.  Being on a branch simply means that when you add
+a new commit, git moves the branch name to the new commit and the new commit’s parent is the commit that the
+branch name was pointing to previously. Since this creates a line of development independent of the parent, developers can experiment,
+make changes, develop new features, all without disrupting the work of other team members.  When a developer is satisfied
+that a branch is stable enough to be shared, the branch can be merged back into the parent.</p>
+<figure class="align-center" id="id5">
+<img alt="two branches" src="../../../../_images/two-branches.png" />
+<figcaption>
+<p><span class="caption-text">Two branches that point to the same commit.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Immediately after creating a branch the new branch name simply points to the latest commit from the branch that
+the new branch was created from.  Now imagine that we create a new commit on that branch.</p>
+<figure class="align-center" id="id6">
+<img alt="two branches" src="../../../../_images/new-commit-on-feature.png" />
+<figcaption>
+<p><span class="caption-text">New commit on the feature branch.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note how the new commit caused the name pointer of the feature branch to move to the new commit, while the
+name pointer for the master branch remains on the prior commit, but the parent of the new commit is the
+commit that the name pointer for master points to.  If a new commit is added to the master branch then the
+parent of the new commit is also the commit that master is pointing to thereby creating independent lines
+of development.</p>
+<figure class="align-center" id="id7">
+<img alt="independent lines of development" src="../../../../_images/new-commit-on-master.png" />
+<figcaption>
+<p><span class="caption-text">Two independent lines of development.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Eventually you typically want to merge that feature branch back into the main
+line of development represented by the master branch.  When you merge one
+branch into another, git traverses the ancestor commits of the branches
+to find the common <a class="reference external" href="https://stackoverflow.com/questions/55203122/what-do-people-mean-when-they-say-ancestor-with-regards-to-git">ancestor</a>.  It then determines what changed from the
+common ancestor, to the head of each branch, and applies those changes to
+a new commit called a <em>merge commit</em>.  An artifact of this process is that
+the merge commit will have two parents.</p>
+<figure class="align-center" id="id8">
+<img alt="demonstration of merge commit" src="../../../../_images/merge-commit.png" />
+<figcaption>
+<p><span class="caption-text">Merging the feature branch back into the master branch.</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As shown above, the feature branch still exists.  New commits added to
+the feature branch will diverge again from the master branch.  However if
+development of the feature is finished, the branch can be deleted.  Deletion
+of the branch simply results in the name pointer being deleted.  Branch
+deletion does not result in the deletion of any commits that were made
+on that branch.  As you can see here, the commit that was on the feature
+branch still exists and is reachable by referencing the correct parent
+from the merge branch.</p>
+<p>It can be useful to ensure that the default branch in team forks and clones matches the default branch for
+FIRST-Tech-Challenge/FtcRobotController.  However a typical development pattern will have team developers committing
+team software back to the master branch, whether via merges from feature branches, or direct commits to master.</p>
+<figure class="align-center" id="id9">
+<img alt="FTC master vs Team master" src="../../../../_images/master-comparison.svg" />
+<figcaption>
+<p><span class="caption-text">FIRST-Tech-Challenge/FtcRobotController master vs. typical team repository
+master.</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Team commits are represented by blue circles, while commits containing SDK updates are represented by green circles.  The
+purple circle is a merge commit.  More on merges later. In this
+instance team commits are interleaved with SDK updates (1), which produces a situation where the two default branches do not match.</p>
+<blockquote>
+<div><p>(1) Not really, or maybe depending upon how the commit parentage lays out.
+This is a vastly simplified view of things, but is sufficient to demonstrate the logical concept
+and is the view of things you get if you simply execute <a class="reference external" href="https://www.atlassian.com/git/tutorials/git-log">git log</a>.
+For an in-depth, approachable, explanation of exactly what is happening with commits as they relate to
+branches <a class="reference external" href="https://www.biteinteractive.com/picturing-git-conceptions-and-misconceptions/">see this tutorial</a>.</p>
+</div></blockquote>
+<p>While this is a perfectly acceptable, and a very common branch management strategy, certain benefits can be obtained if we
+isolate the default branch so that it always matches the parent.  The following figure demonstrates a clone whose master branch
+is tracking the master branch from FIRST-Tech-Challenge/FtcRobotController.</p>
+<figure class="align-center" id="id10">
+<img alt="keeping branches in sync" src="../../../../_images/clean-master.svg" />
+<figcaption>
+<p><span class="caption-text">Team repository’s master always matches
+FIRST-Tech-Challenge/FtcRobotController’s master branch.</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The purple commit is a merge of v7.1 into the competition branch.  In this diagram, v7.2 and v8.0 remain unmerged and the
+competition branch will be building against v7.1 of the SDK.</p>
+<p>Following this model means that commit history for the master branch for the team’s repository will always match the commit
+history for the FIRST-Tech-Challenge/FtcRobotController’s master branch.  All software that teams intend to compete with is merged into a competition branch.
+Features, new software, experiments, etc, are worked on in child branches of the competition branch and merge back into the
+competition branch, not the master branch.  SDK updates to a team clone’s master branch should always be conflict free,
+updates can be done independent of merges into a competition branch, and if something goes sideways when doing a merge of
+an SDK update into development it can be more straightforward to recover as opposed to backing out of an update straight into
+master where the branches do not match.</p>
+<p>More detailed information on the mechanics of branching can be found here
+<a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches">Using Branches</a></p>
+</section>
+<section id="getting-started-quick-start-guide">
+<h2>Getting Started (Quick-Start Guide)<a class="headerlink" href="#getting-started-quick-start-guide" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The following assumes all operations are done on the master branch of your
+local repository.</p>
+</div>
+<ol class="arabic">
+<li><p>Obtain and install <a class="reference external" href="https://gitforwindows.org/">GitForWindows</a>  This
+software contains a git client along with a bash shell.  All of the command
+line snippets below assume you are using a bash shell and that git is in
+your path.  GitForWindows is the easiest way to provide this for Windows
+machines.  Macs have a built in bash shell called terminal, but git must be
+installed separately.</p></li>
+<li><p>Fork the <a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">FIRST-Tech-Challenge/FtcRobotController</a> repository
+into your account on GitHub.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This step requires you to have a GitHub account, and you need to be logged
+in to GitHub in order to Fork a repository.</p>
+</div>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../../../_images/fork.png"><img alt="Forking a repo" src="../../../../_images/fork.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Forking a GitHub repository.</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Forking the repository is as easy as clicking the “<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-repo-forked sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path></svg> Fork”
+button shown in the image above. This will take you to the “Create a new fork”
+page, and will auto-fill the “Owner” and “Repository name” fields. Just enter a
+description (optional), leave the “Copy the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch only” option checked,
+and click the green “Create fork” button.</p>
+<p>Once created, your new fork will be located at <code class="docutils literal notranslate"><span class="pre">github.com/&lt;username&gt;/FtcRobotController</span></code>
+unless you edited the fork name.</p>
+</li>
+<li><p>Clone from your fork onto your local computer.  Note in the image below the
+account is FIRST-Tech-Challenge, but after your fork, the account should be
+your team account.  In all other respects the user interface will be
+identical.</p>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="../../../../_images/clone.png"><img alt="Cloning a repo" src="../../../../_images/clone.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Cloning a forked repository.</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>To clone your fork of the FtcRobotController, follow these steps:</p>
+<ol class="arabic">
+<li><p>Click the green “<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-code sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg> Code” button shown in
+the image above.</p></li>
+<li><p>Ensure the “Local” and “HTTPS” sub-tabs are selected.</p></li>
+<li><p>Click the “<svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-copy sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>” button to copy the url in
+the text entry box.</p></li>
+<li><p>Open a “Git Bash” shell in a suitable directory.  This is easily done
+on Windows by opening the File Explorer, finding the directory you want
+to clone the repository into, right clicking on that directory folder
+and selecting “Git Bash here”</p></li>
+<li><p>Within the Git Bash shell, execute the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;copied-url&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Git will download a clone of your repository. When it’s done, Code away…</p></li>
+<li><p>This is the point where you can create a branch for feature development, if
+desired. To create a branch, we can create and switch to a new branch via
+the following <a class="reference external" href="https://git-scm.com/docs/git-checkout">git-checkout</a> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;branchname&gt;
+</pre></div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">-b</span></code> option creates the new branch specified by <code class="docutils literal notranslate"><span class="pre">&lt;branchname&gt;</span></code>
+and automatically switches to that branch. Omitting the <code class="docutils literal notranslate"><span class="pre">-b</span></code> option will
+simply <em>switch</em> to an existing branch if one exists.</p>
+</li>
+</ol>
+<section id="best-practices">
+<h3>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Do not make changes to software in the FtcRobotController directory within
+the repository.  SDK updates will be much easier if you do not change anything
+within the FtcRobotController directory.</p></li>
+<li><p>Limit the use of long-lived branches.  Branches should implement a feature.
+Branches should not track milestones.  For example a branch named
+‘league-meet-1’ is tracking a milestone.  It is much better if your branches
+track smaller units of development.  ‘detect-target’, ‘drive-to-parking’,
+‘drop-game-element’.  Break your software down into tasks for the robot to
+do, and use branches to implement those tasks.  This will allow for much
+easier collaborative development, much smaller change sets when merging, and
+much easier fetches and merges.</p></li>
+<li><p>Try to keep your <a class="reference external" href="http://shafiul.github.io/gitbook/1_the_git_index.html">git index</a> clean.  This will
+make fetches and merges easier.  <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> is your best friend here.  Use
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> often to see what has changed in your local workspace.  Commit
+often in logical chunks so that it is easy to see the most recent changes.</p></li>
+<li><p>Use short, meaningful, commit messages.  Do not use slang, offensive, or
+personal messaging in a commit message.  When you push your software to
+GitHub, those commit messages will be public.  If you plan to eventually
+become a professional software developer, and you retain your existing GitHub
+account any potential employer will be able to review your commit messages.
+Tread lightly here.</p></li>
+</ul>
+</section>
+</section>
+<section id="updating-your-fork-and-local-clone">
+<h2>Updating your Fork and Local Clone.<a class="headerlink" href="#updating-your-fork-and-local-clone" title="Link to this heading"></a></h2>
+<p>Updating the SDK involves pulling newly released software into both your local
+clone’s and your fork.  There are two ways to go about this.  Either directly
+fetch and merge software from the parent into your fork on github, then fetch
+and merge to your local, or fetch from the parent into your local clone, merge
+locally and then push to your fork.</p>
+<p>This author prefers the latter because it gives the developer the opportunity
+test new software before pushing to the fork.  It also allows for merge
+conflict resolution locally instead of through GitHub’s UI.</p>
+<section id="obtaining-the-latest-software">
+<h3>Obtaining the Latest Software<a class="headerlink" href="#obtaining-the-latest-software" title="Link to this heading"></a></h3>
+<p>When describing how to update a repository many basic tutorials will use the
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> command.  The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> command is actually doing a <em>fetch</em> and
+<em>merge</em> for the user behind the scenes.  This can be fine, but it is useful to
+understand the concepts of <em>fetching</em> and <em>merging</em> as independent operations.
+If things go south, and you have a good concept of the underlying mechanics,
+you are much more likely to be able to fix any subsequent problems.</p>
+<section id="remotes">
+<h4>Remotes<a class="headerlink" href="#remotes" title="Link to this heading"></a></h4>
+<p>Git is fundamentally built around the idea that there can be many copies of a
+repository floating about on the internet, or other people’s machines, or
+corporate file servers, or any number of locations.  And that these
+repositories can linked to each other remotely.  A remote repository is simply
+defined as a version of a repository hosted somewhere else.   In the preceding
+examples, your fork of FtcRobotController is a remote of your local clone.</p>
+<blockquote>
+<div><figure class="align-center" id="id13">
+<img alt="remote named origin" src="../../../../_images/origin-remote.svg" />
+<figcaption>
+<p><span class="caption-text">Illustration of FtcRobotController as remote named <cite>origin</cite>.</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Remotes may be referenced in git commands and a repository can have any number
+of remotes.  The default name for the remote of a repository that has been
+cloned is ‘origin’.  The conventional name of a remote that tracks the parent
+of a fork is ‘upstream’.</p>
+<blockquote>
+<div><figure class="align-center" id="id14">
+<img alt="repo with two remotes" src="../../../../_images/two-remotes.svg" />
+<figcaption>
+<p><span class="caption-text">A local repository with two remotes.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>To see what remote are established for a given repository</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+</pre></div>
+</div>
+</div></blockquote>
+<p>To add the parent of your team’s fork as a remote of your local clone</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/FIRST-Tech-Challenge/FtcRobotController.git
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Setting the FIRST Tech Challenge FtcRobotController repository as
+an upstream remote of your local clone allows you to fetch
+changes from the FIRST-Tech-Challenge/FtcRobotController to your
+local clone using the alias name ‘upstream’.  This is very powerful.
+If the reason why this is important isn’t immediately obvious, please
+re-read the two paragraphs under header marked <code class="docutils literal notranslate"><span class="pre">Updating</span> <span class="pre">your</span> <span class="pre">Fork</span>
+<span class="pre">and</span> <span class="pre">Local</span> <span class="pre">Clone</span></code> above.</p>
+</div>
+<p><strong>The rest of this tutorial assumes that you have added
+FIRST-Tech-Challenge/FtcRobotController as an upstream in your local clone.</strong></p>
+</section>
+<section id="fetching">
+<h4>Fetching<a class="headerlink" href="#fetching" title="Link to this heading"></a></h4>
+<p>Fetching is the process of downloading software changes from a remote
+repository.  Note specifically that fetching <strong>does not</strong> modify any of the
+existing software in the repository that you are fetching into, git isolates
+the changes in the local repository.</p>
+<p>If you are working with a team, and a teammate has pushed software to your
+FtcRobotController fork, you may fetch that software to a local clone by
+running</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</pre></div>
+</div>
+</div></blockquote>
+<p>This will download any changes in all branches on the remote named origin that
+are not present in the local repository.</p>
+<blockquote>
+<div><figure class="align-center" id="id15">
+<img alt="fetching changes from origin" src="../../../../_images/fetch-from-origin.svg" />
+<figcaption>
+<p><span class="caption-text">Fetching changes from origin.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</section>
+<section id="merging">
+<h4>Merging<a class="headerlink" href="#merging" title="Link to this heading"></a></h4>
+<p>Merging is the process of merging fetched software into a branch, most commonly
+the current branch of the repository.  A merge is where things are most likely
+to get a bit confusing.  However, if you are simply merging from a remote
+master into a local master, and your local master is always tracking the
+remote, your merges should go smoothly.</p>
+<blockquote>
+<div><figure class="align-center" id="id16">
+<img alt="merging fetched changes" src="../../../../_images/merge-from-origin.png" />
+<figcaption>
+<p><span class="caption-text">Merging fetched changes from the origin repository.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Ensure you are on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and run the following:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>origin/master
+</pre></div>
+</div>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">master</span></code> branch should be <em>clean</em> (i.e. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> on the <code class="docutils literal notranslate"><span class="pre">master</span></code>
+branch shows no files that are modified but uncommitted) when this operation is
+performed.  Team members should be doing development work in feature branches,
+not in the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+</section>
+<section id="conflicts">
+<h4>Conflicts<a class="headerlink" href="#conflicts" title="Link to this heading"></a></h4>
+<p>Conflicts, or “What happens when more than one change is pending for a given
+piece of code.”  It’s best to read this great tutorial on
+<a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts">Git merge conflicts</a>.
+Merge conflicts are a normal part of working in teams, and only with experience
+can you learn to effectively manage conflicts. Always approach with patience and
+a deep respect for the process.</p>
+</section>
+</section>
+</section>
+<section id="updating-the-sdk-to-the-latest-version">
+<h2>Updating the SDK to the Latest Version<a class="headerlink" href="#updating-the-sdk-to-the-latest-version" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> to ensure that the upstream has been set
+as a remote on your clone. If not, be sure to review the “Remotes” section
+again to add the FtcRobotController repository to the upstream remote on
+your clone.</p>
+</div>
+<p>To update from the SDK, we simply fetch from upstream,
+FIRST-Tech-Challenge/FtcRobotController, the parent of your team fork, then
+merge and push to origin to complete the update.</p>
+<blockquote>
+<div><figure class="align-center" id="id17">
+<img alt="Fetching changes from upstream" src="../../../../_images/fetch-from-upstream.svg" />
+<figcaption>
+<p><span class="caption-text">Fetching changes from the upstream repository.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Instead of fetching from origin, fetch from upstream.  This copies in any commits that you don’t already have in your local clone.
+In the diagram above that is the v8.0 commit.  Your local master is not changed.  It is still pointing to, and representing, the v7.2
+commit.  Since a commit is a complete snapshot of a workspace at a point in time, nothing changes in your workspace, but your
+repository has a new commit with the branch name upstream/master.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</pre></div>
+</div>
+<figure class="align-center" id="id18">
+<img alt="remotes" src="../../../../_images/merge-from-upstream.png" />
+<figcaption>
+<p><span class="caption-text">Merging fetched changes from the upstream repository.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>After fetching, merge the upstream/master branch into master.  If your local master matches your upstream master then a merge is as
+simple as moving the master branch label to the commit that upstream/master is pointing to.  This is referred to as a fast-forward
+merge.  And since a commit is a complete snapshot of a workspace at a point time, your local workspace now contains the snapshot
+represented by v8.0.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>upstream/master
+</pre></div>
+</div>
+<figure class="align-center" id="id19">
+<img alt="Pushing fetched changes" src="../../../../_images/push-to-origin.png" />
+<figcaption>
+<p><span class="caption-text">Pushing fetched and merged changes back to your team fork.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Once you’ve merged the upstream/master into your local clone’s master branch, push those changes to GitHub so that your GitHub clone
+reflects the upstream repository.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</pre></div>
+</div>
+</div></blockquote>
+<p>If you were working in a feature branch and want to bring the new SDK changes into that feature branch you
+merge from master into the branch by checking out the branch and running the merge command.  This is where things might get dicey
+as this is where you are most likely to encounter merge conflicts.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;feature-branch&gt;
+<span class="gp">$ </span>get<span class="w"> </span>merge<span class="w"> </span>master
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="downgrading-the-sdk-to-a-previous-version">
+<h2>Downgrading the SDK to a Previous Version<a class="headerlink" href="#downgrading-the-sdk-to-a-previous-version" title="Link to this heading"></a></h2>
+<p>Typically, the working branch of a local repository, whether it’s master, or a competition branch will eventually contain a
+series of team commits interleaved with SDK update commits.  In this scenario a team can not simply roll back to a prior SDK
+version without also rolling back all of their team commits.  Consider the following diagram.</p>
+<blockquote>
+<div><figure class="align-center" id="id20">
+<img alt="sample repository" src="../../../../_images/sample-rollback.png" />
+<figcaption>
+<p><span class="caption-text">A repository with both team commits and SDK update commits.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>If you just chopped off the branch at M7.2, you’d lose the three blue team commits.  In order to retain team work, instead create a
+new merge commit that reverts the 8.0 commit.  Do not revert merge commits, e.g. M8.0.  The merge commit itself may contain work that
+represents the divergence of the the two branches that were merged.  This is not what you want.  You want to revert the parent of the merge
+commit that represents the new, old, SDK version.</p>
+<section id="a-short-digression-on-tags">
+<h3>A Short Digression on Tags<a class="headerlink" href="#a-short-digression-on-tags" title="Link to this heading"></a></h3>
+<p>A tag is simply a named pointer to a commit, that unlike a branch pointer, or HEAD, never moves.  Since a commit is a snapshot in
+time of an entire workspace, this allows a developer to <em>tag</em> a point in time in an immutable fashion.
+<em>FIRST</em> uses tags to track SDK versions through a standard <a class="reference external" href="https://semver.org/">semantic versioning</a> naming scheme.  When a new
+SDK version is released, the FTC engineering team pushes a release candidate branch to FIRST-Tech-Challenge/FtcRobotController, then merges
+that branch into master.  This results in two commits, the new SDK version commit that contains all the good stuff, and a merge commit
+representing the merge from the candidate branch into master.  The release is then formally cut, where a tag is then created,
+on the merge commit.</p>
+<p>Tags from remotes are not automatically copied into a repository on a clone.  To retrieve tags execute.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>fetch<span class="w"> </span>--all<span class="w"> </span>--tags
+</pre></div>
+</div>
+</div></blockquote>
+<p>The –all option fetches at once from all remotes, the –tags option tells git to fetch the tags.
+Tags always follow the semantic versioning rules.  e.g. v7.0, v7.1, v7.2, v8.0, etc.</p>
+<p>The <a class="reference external" href="https://medium.com/&#64;gabicle/git-ancestry-references-explained-bd3a84a0b821">^ syntax</a> allows one to reference parents of a commit and can be applied to tag names.  tag^ is the immediate parent of the commit
+tag points to.  For commits with multiple parents such as merge commits one can apply a number to refer to a specific parent.
+tag^1 is the same as tag^ and is the first parent of the commit, tag^2 is the second parent of the commit.</p>
+</section>
+<section id="merging-the-inverse-of-an-sdk-update">
+<h3>Merging the Inverse of an SDK Update<a class="headerlink" href="#merging-the-inverse-of-an-sdk-update" title="Link to this heading"></a></h3>
+<p>The diagram below shows the v8.0 tag pointing to the v8.0 merge commit along with references to the parents of v8.0.</p>
+<blockquote>
+<div><figure class="align-center" id="id21">
+<img alt="tags" src="../../../../_images/tags.png" />
+<figcaption>
+<p><span class="caption-text">v8.0 tag pointing to the v8.0 merge commit.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If any commits have dependencies on new features or APIs introduced in the reverted versions, then your
+build will break.  You will have to manually figure out how to fix your software so that it is no longer depends upon
+reverted software.</p>
+</div>
+<p>Remember that Git does not delete commits (with a few exceptions), so in order to revert a commit we must create a new commit that is the inverse of the commit you want to revert <em>from</em>.  And you’ll want to do this for every version,
+in reverse order, that you want to undo.  The target of the command below is the tag of the version you want to undo, not the tag of the
+version you want to revert to.</p>
+<blockquote>
+<div><figure class="align-center" id="id22">
+<img alt="demonstrating the revert" src="../../../../_images/revert.png" />
+<figcaption>
+<p><span class="caption-text">Result of revert - a new merge commit representing the revert from v8.0 to v7.2.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>Because the merge commit has two parents, and you want to reference the SDK version commit, use the tag name you want to roll back and append ^2.  For example to roll back v8.0, resulting in the SDK
+compiling against v7.2 use.</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>revert<span class="w"> </span>-Xtheirs<span class="w"> </span>v8.0^2
+</pre></div>
+</div>
+</div></blockquote>
+<p>The -Xtheirs option is a convenience that says, “If there are any conflicts, automatically take the software from the v8.0^2 side.”</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you want to downgrade more than one revision you must revert
+each revision in sequence otherwise you could wind up with changes remaining
+after reversion from the SDK version in between latest and the target you
+are referring to. For example if you need to downgrade from v8.1.1 to v8.0,
+for reference all SDK versions can be found
+<a class="reference external" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases">here</a>,
+you must revert v8.1.1 followed by v8.1. If you don’t follow this order,
+then changes in v8.1.1 that don’t overlap with v8.1 will remain in your
+workspace and that’s not what you want.</p>
+</div>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Assumes all commands are run from the root directory of your local clone.  Also assumes you are not committing team code to your local
+master branch, but instead are working in a competition branch.</p>
+<section id="add-first-tech-challenge-ftcrobotcontroller-as-a-remote">
+<h3>Add FIRST-Tech-Challenge/FtcRobotController as a remote<a class="headerlink" href="#add-first-tech-challenge-ftcrobotcontroller-as-a-remote" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/FIRST-Tech-Challenge/FtcRobotController.git
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="update-the-to-latest-sdk-version">
+<h3>Update the to latest SDK version<a class="headerlink" href="#update-the-to-latest-sdk-version" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>master
+<span class="gp">$ </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>upstream/master
+<span class="gp">$ </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+<span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>competition
+<span class="gp">$ </span>git<span class="w"> </span>merge<span class="w"> </span>master
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../../android_studio_java/manage/manage.html" class="btn btn-neutral float-left" title="Managing an Android Studio Project AS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../android_studio_java/opmode/opmode.html" class="btn btn-neutral float-right" title="Writing an Op Mode AS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

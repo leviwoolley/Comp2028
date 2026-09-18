@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionPortal Initialization &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="VisionPortal Previews" href="../visionportal_previews/visionportal-previews.html" />
+    <link rel="prev" title="Vision Processor Initialization" href="../vision_processor_init/vision-processor-init.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_processor_init/vision-processor-init.html">Vision Processor Initialization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">VisionPortal Initialization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visionportal-initialization-easy">VisionPortal Initialization - Easy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visionportal-initialization-builder">VisionPortal Initialization - Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-builder-chain">Java Builder Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enabling-and-disabling-processors">Enabling and Disabling Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_previews/visionportal-previews.html">VisionPortal Previews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_id_code/apriltag-id-code.html">AprilTag ID Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_metadata/apriltag-metadata.html">AprilTag Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_reference_frame/apriltag-reference-frame.html">AprilTag Reference Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_pose/apriltag-pose.html">AprilTag Pose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_library/apriltag-library.html">AprilTag Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html">VisionPortal CPU and Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_multiportal/vision-multiportal.html">Vision Multiportal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_advanced_use/apriltag-advanced-use.html">AprilTag Advanced Use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+      <li class="breadcrumb-item active">VisionPortal Initialization</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/apriltag/vision_portal/visionportal_init/visionportal-init.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visionportal-initialization">
+<h1>VisionPortal Initialization<a class="headerlink" href="#visionportal-initialization" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Here we describe Step 3, <strong>creating a VisionPortal</strong>, to allow an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> to use
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTag</span></a> and/or Color Processing. This continues from the
+previous page <a class="reference internal" href="../vision_processor_init/vision-processor-init.html"><span class="doc">Vision Processor Initialization</span></a>, which described Step 2:
+creating an AprilTag Processor and/or a Color Locator or Color Sensor
+Processor. Each Processor evaluates camera frames independently.</p>
+<p>Steps 1, 2 and 3 are typically performed in the OpMode’s INIT section, before
+the <code class="docutils literal notranslate"><span class="pre">waitForStart()</span></code> method or Block.</p>
+<p>After this Step 3, actual use of those Processors can begin – before or after
+the DS Start button is touched.</p>
+</section>
+<section id="visionportal-initialization-easy">
+<h2>VisionPortal Initialization - Easy<a class="headerlink" href="#visionportal-initialization-easy" title="Link to this heading"></a></h2>
+<p>The SDK provides an “easy” way to make VisionPortal, using only <strong>defaults</strong>
+and not mentioning a “Builder”:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/040-VisionPortal-easy-AT-webcam.png"><img alt="Easy VisionPortal Initialization" src="../../../_images/040-VisionPortal-easy-AT-webcam.png" style="width: 75%;" />
+</a>
+</figure>
+<p>The FTC <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> VisionPortal toolbox, or palette, offers “Easy Create” Blocks
+combining:</p>
+<ul class="simple">
+<li><p>the available Processors, singly or together</p></li>
+<li><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Webcam"><span class="xref std std-term">webcam</span></a>, built-in RC phone camera, or “Switchable Camera Name”</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VisionPortal</span><span class="w"> </span><span class="n">myVisionPortal</span><span class="p">;</span>
+
+<span class="c1">// Create a VisionPortal, with the specified camera and AprilTag processor, and assign it to a variable.</span>
+<span class="n">myVisionPortal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">easyCreateWithDefaults</span><span class="p">(</span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To also use a Color Processor in the same OpMode, simply add it like this example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">myVisionPortal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">easyCreateWithDefaults</span><span class="p">(</span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">,</span><span class="w"> </span><span class="n">myColorLocatorProcessor</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visionportal-initialization-builder">
+<h2>VisionPortal Initialization - Builder<a class="headerlink" href="#visionportal-initialization-builder" title="Link to this heading"></a></h2>
+<p>The SDK also provides the “Builder” way to make VisionPortal, allowing <strong>custom
+settings</strong>:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/050-VisionPortal-AT-webcam-options-enabled.png"><img alt="VisionPortal Initialization" src="../../../_images/050-VisionPortal-AT-webcam-options-enabled.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">VisionPortal Initialization with a Builder</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myVisionPortalBuilder</span><span class="p">;</span>
+<span class="n">VisionPortal</span><span class="w"> </span><span class="n">myVisionPortal</span><span class="p">;</span>
+
+<span class="c1">// Create a new VisionPortal Builder object.</span>
+<span class="n">myVisionPortalBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+
+<span class="c1">// Specify the camera to be used for this VisionPortal.</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">setCamera</span><span class="p">(</span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">));</span><span class="w">      </span><span class="c1">// Other choices are: RC phone camera and &quot;switchable camera name&quot;.</span>
+
+<span class="c1">// Add the AprilTag Processor to the VisionPortal Builder.</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">addProcessor</span><span class="p">(</span><span class="n">myAprilTagProcessor</span><span class="p">);</span><span class="w">       </span><span class="c1">// An added Processor is enabled by default.</span>
+
+<span class="c1">// Optional: set other custom features of the VisionPortal (4 are shown here).</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">setCameraResolution</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">));</span><span class="w">  </span><span class="c1">// Each resolution, for each camera model, needs calibration values for good pose estimation.</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">setStreamFormat</span><span class="p">(</span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">StreamFormat</span><span class="p">.</span><span class="na">YUY2</span><span class="p">);</span><span class="w">  </span><span class="c1">// MJPEG format uses less bandwidth than the default YUY2.</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">enableCameraMonitoring</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">      </span><span class="c1">// Enable LiveView (RC preview).</span>
+<span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">setAutoStopLiveView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">     </span><span class="c1">// Automatically stop LiveView (RC preview) when all vision processors are disabled.</span>
+
+<span class="c1">// Create a VisionPortal by calling build()</span>
+<span class="n">myVisionPortal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myVisionPortalBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This example shows only 4 VisionPortal Builder features; others are available.</p>
+<p>To also use a Color Processor in the same OpMode, simply insert its
+<code class="docutils literal notranslate"><span class="pre">addProcessor(myColorLocatorProcessor)</span></code> Block or Java method.</p>
+<p>The SDK allows multiple, fully capable Portals.  This is covered separately at
+the <strong>MultiPortal</strong> page.</p>
+</section>
+<section id="java-builder-chain">
+<h2>Java Builder Chain<a class="headerlink" href="#java-builder-chain" title="Link to this heading"></a></h2>
+<p>The Builder pattern can be implemented in a streamlined manner, using Java.  The following code is equivalent to the above individual method calls.</p>
+<p>Comments are omitted here, to clearly illustrate the chaining.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">VisionPortal</span><span class="w"> </span><span class="n">myVisionPortal</span><span class="p">;</span>
+
+<span class="n">myVisionPortal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setCamera</span><span class="p">(</span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="na">addProcessor</span><span class="p">(</span><span class="n">myAprilTagProcessor</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setCameraResolution</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setStreamFormat</span><span class="p">(</span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">StreamFormat</span><span class="p">.</span><span class="na">YUY2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">enableCameraMonitoring</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">setAutoStopLiveView</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Here the object <code class="docutils literal notranslate"><span class="pre">myVisionPortalBuilder</span></code> was not created; the build was
+performed directly on <code class="docutils literal notranslate"><span class="pre">myVisionPortal</span></code>.  The Builder pattern allows the “dot”
+methods to be chained in a single Java statement ending with <code class="docutils literal notranslate"><span class="pre">.build()</span></code>.</p>
+</section>
+<section id="enabling-and-disabling-processors">
+<h2>Enabling and Disabling Processors<a class="headerlink" href="#enabling-and-disabling-processors" title="Link to this heading"></a></h2>
+<p>This note is repeated from the previous page 2, <a class="reference internal" href="../vision_processor_init/vision-processor-init.html"><span class="doc">Vision Processor Initialization</span></a></p>
+<p>For a Processor created at Step 2, an OpMode does <strong>not need</strong> to enable that
+Processor at this Step 3, <strong>VisionPortal Initialization</strong>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">setProcessorEnabled()</span></code> command is <strong>not</strong> part of the Builder pattern.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">setProcessorEnabled(</span>&#160;&#160; <span class="pre">,</span> <span class="pre">true)</span></code> only to <strong>re-enable</strong> the processor,
+after <strong>disabling</strong> (by setting to <code class="docutils literal notranslate"><span class="pre">false</span></code>).  This topic is covered further
+at the <strong>Managing CPU and Bandwidth</strong> page.</p>
+<p>At this page’s Step 3, the <code class="docutils literal notranslate"><span class="pre">addProcessor()</span></code> command <strong>automatically enables</strong>
+the specified processor.   Thus OpModes <strong>do not initialize</strong> with this, after
+Step 2 or 3:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/060-enable-AT-processor1.png"><img alt="VisionPortal Enable" src="../../../_images/060-enable-AT-processor1.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">VisionPortal Enabling/Disabling</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable or disable the AprilTag processor.</span>
+<span class="n">myVisionPortal</span><span class="p">.</span><span class="na">setProcessorEnabled</span><span class="p">(</span><span class="n">myAprilTagProcessor</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, use this only to <strong>re-enable</strong> the processor, after <strong>disabling</strong> (by setting to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../vision_processor_init/vision-processor-init.html" class="btn btn-neutral float-left" title="Vision Processor Initialization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../visionportal_previews/visionportal-previews.html" class="btn btn-neutral float-right" title="VisionPortal Previews" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

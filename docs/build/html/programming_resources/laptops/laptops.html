@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Requirements for FIRST Programs &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FIRST Tech Challenge Software Development Kit" href="../../ftc_sdk/overview/index.html" />
+    <link rel="prev" title="FIRST Tech Challenge Field Coordinate System Definition" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Laptop Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#program-specific-requirements">Program-Specific Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-computer-hardware-for-first-lego-league">Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> LEGO<sup>®</sup> League</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-computer-hardware-for-first-tech-challenge">Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> Tech Challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-computer-hardware-for-first-robotics-competition">Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> Robotics Competition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#driver-station">Driver Station</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-development-and-design">Software Development and Design</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-hardware-sets">Recommended Hardware Sets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows-performance-laptop"><strong>Windows Performance Laptop</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-standard-laptop"><strong>Windows Standard Laptop</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos-standard-laptop"><strong>MacOS Standard Laptop</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ios-standard-tablet"><strong>iOS Standard Tablet</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chrome-os-standard-laptop"><strong>Chrome OS Standard Laptop</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-standard-tablet"><strong>Android Standard Tablet</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Computer Requirements for <em>FIRST</em> Programs</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/programming_resources/laptops/laptops.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="computer-requirements-for-first-programs">
+<h1>Computer Requirements for <em>FIRST</em> Programs<a class="headerlink" href="#computer-requirements-for-first-programs" title="Link to this heading"></a></h1>
+<p><em>FIRST</em><sup>®</sup> programs, such as <em>FIRST</em><sup>®</sup> LEGO<sup>®</sup>
+League, <em>FIRST</em><sup>®</sup> Tech Challenge, and <em>FIRST</em><sup>®</sup> Robotics
+Competition, are as unique as the teams that participate in them. This
+uniqueness is partially due to the wide variety of vendors that provide
+technologies to the programs, the hardware and software necessary to
+manage each program’s distinctive goals, and the constantly evolving
+landscape of tools and techniques that teams find useful to participate
+and excel. One commonality between programs is the need for teams to
+have a computer platform for software development, design, and
+collaboration. This document serves as a recommendation for the hardware
+and operating system requirements for that computer system.</p>
+<p>Of the many factors that can affect the minimum requirements for a
+computer, these are the ones that affect those requirements most
+heavily:</p>
+<ul class="simple">
+<li><p>Any role-specific tasks that the computer may perform in the program</p></li>
+<li><p>Type of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Computer-Aided-Design"><span class="xref std std-term">Computer-Aided Design</span></a> (CAD) software that may be used on the
+computer</p></li>
+<li><p>Software development and hardware update requirements</p></li>
+<li><p>Vendor-specific application requirements and limitations</p></li>
+</ul>
+<section id="program-specific-requirements">
+<h2>Program-Specific Requirements<a class="headerlink" href="#program-specific-requirements" title="Link to this heading"></a></h2>
+<p>Each program has a unique set of requirements, but each of those
+requirements can be met with a minimum computer configuration. This
+section attempts to identify the minimum requirements for each program’s
+roles. Specific recommended hardware that meets each of the requirements
+are listed in the “Recommended Hardware Sets” section.</p>
+<section id="recommended-computer-hardware-for-first-lego-league">
+<h3>Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> LEGO<sup>®</sup> League<a class="headerlink" href="#recommended-computer-hardware-for-first-lego-league" title="Link to this heading"></a></h3>
+<p><em>FIRST</em> LEGO League has two divisions which use programmable platforms:
+<em>FIRST</em> LEGO League Challenge which uses the <a class="reference external" href="https://education.lego.com/en-us/product-resources/spike-prime/downloads/system-requirements/">LEGO® Education SPIKE™
+Prime</a>
+platform, and <em>FIRST</em> LEGO League Explore which uses the <a class="reference external" href="https://education.lego.com/en-us/products/lego-education-spike-essential-set/45345/">LEGO®
+Education SPIKE™
+Essential</a>
+platform. Both platforms have virtually the same computer requirements,
+differences are noted below. These platforms are some of the most
+accessible, as they are supported by most computer configurations.</p>
+<p><em>Recommended for Software Development:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-standard-laptop">Windows Standard Laptop</a></p></li>
+</ul>
+<p>Also Supported:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#macos-standard-laptop">MacOS Standard Laptop</a></p></li>
+<li><p><a class="reference internal" href="#chrome-os-standard-laptop">Chrome OS Standard Laptop</a></p></li>
+<li><p><a class="reference internal" href="#ios-standard-tablet">iOS Standard Tablet</a></p>
+<ul>
+<li><p>LEGO<sup>®</sup> Education SPIKE™ Essential hub cannot be updated
+with iPad</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#android-standard-tablet">Android Standard Tablet</a></p>
+<ul>
+<li><p>LEGO<sup>®</sup> Education SPIKE™ Essential not supported</p></li>
+</ul>
+</li>
+</ul>
+<p>It is also recommended to have an active internet connection to access
+the Google Play Store (for Chromebook Android apps), to download in-app
+content, to access teacher support materials, and to use certain
+features such as live weather data.</p>
+</section>
+<section id="recommended-computer-hardware-for-first-tech-challenge">
+<h3>Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> Tech Challenge<a class="headerlink" href="#recommended-computer-hardware-for-first-tech-challenge" title="Link to this heading"></a></h3>
+<p>The predominant hardware platform used in <em>FIRST</em> Tech Challenge is the
+<a class="reference external" href="https://docs.revrobotics.com/duo-control/control-system-overview/control-hub-basics">REV Control
+Hub</a>
+and <a class="reference external" href="https://docs.revrobotics.com/duo-control/control-system-overview/driver-hub-specifications">REV Driver
+Hub</a>.
+These platforms have unique operating system and application
+requirements, though it is possible to perform most of the basic
+functions with most hardware platforms (albeit with more manual steps).
+Teams in <em>FIRST</em> Tech Challenge use computers for two basic purposes –
+software development and CAD – and team preference in these two uses
+shapes the required hardware.</p>
+<p><em>Recommended for Software Development and CAD:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-performance-laptop">Windows Performance Laptop</a></p></li>
+</ul>
+<p><em>Recommended for Software Development Only:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-standard-laptop">Windows Standard Laptop</a></p>
+<ul>
+<li><p>Only cloud CAD solutions are recommended</p>
+<ul>
+<li><p>OnShape, SolidWorks 3D Experience, etc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Also Supported:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#macos-standard-laptop">MacOS Standard Laptop</a></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware
+Client</a> not
+supported</p>
+<ul>
+<li><p>Must update manually using browser-based interface</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#chrome-os-standard-laptop">Chrome OS Standard Laptop</a></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware
+Client</a> not
+supported</p>
+<ul>
+<li><p>Must update manually using browser-based interface</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://developer.android.com/studio">Android Studio</a> not
+supported</p>
+<ul>
+<li><p>Only <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBotJava</span></a> supported</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>It is also recommended to have an active internet connection during
+software development. Access to <a class="reference external" href="https://github.com">https://github.com</a> is required by the
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-REV-Hardware-Client"><span class="xref std std-term">REV Hardware Client</span></a> to download and install required season software
+updates and is required for <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a> users to download software
+templates.</p>
+</section>
+<section id="recommended-computer-hardware-for-first-robotics-competition">
+<h3>Recommended Computer Hardware for <em>FIRST</em><sup>®</sup> Robotics Competition<a class="headerlink" href="#recommended-computer-hardware-for-first-robotics-competition" title="Link to this heading"></a></h3>
+<p>The predominant hardware platform used in <em>FIRST</em> Robotics Competition
+is the <a class="reference external" href="https://www.ni.com/docs/en-US/bundle/roborio-20-specs/page/specs.html">NI
+roboRIO</a>.
+This platform has a unique set of requirements for computer hardware in
+competition that may be different than requirements for software
+development depending on the programming environment. Like <em>FIRST</em> Tech
+Challenge, teams in <em>FIRST</em> Robotics Competition use software
+development computers for two basic purposes – software development and
+CAD – and team preferences in these two uses shape the required
+hardware. However, in <em>FIRST</em> Robotics Competition there are two roles
+that computers can serve, such as Software and Design Development
+platforms and/or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> platforms, and those roles also shape
+the requirements of the computer hardware.</p>
+<p>It is recommended to have two separate computers, one to use for the
+Driver Station platform and another for Software and Design Development,
+though one laptop can be used for both purposes if necessary.</p>
+<section id="driver-station">
+<h4>Driver Station<a class="headerlink" href="#driver-station" title="Link to this heading"></a></h4>
+<p>The driver station computer is used as the primary interface to the
+robot, is used to interface with the Field Management System (FMS) at an
+event and is limited by the software tools used to communicate with the
+hardware and software platform on the robot. Teams find it advantageous
+to have separate computers for the Driver Station role and for the
+Software and Design Development role to enable them to segregate the
+duties and physical demands of the systems at an event. Budget-conscious
+teams can certainly use a single computer for both roles if that
+computer at least meets the minimum requirements of the Driver Station
+role. Note that the Driver Station role requires a Windows operating
+system, as the applications required to perform the role’s duties are
+Windows-only applications.</p>
+<p><em>Recommended for the Driver Station role:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-standard-laptop">Windows Standard Laptop</a></p></li>
+</ul>
+<p>Also Supported:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-performance-laptop">Windows Performance Laptop</a></p></li>
+</ul>
+</section>
+<section id="software-development-and-design">
+<h4>Software Development and Design<a class="headerlink" href="#software-development-and-design" title="Link to this heading"></a></h4>
+<p>Like <em>FIRST</em> Tech Challenge, <em>FIRST</em> Robotics Competition teams use
+Software Development and Design laptops for Software Development and
+CAD, and depending on the use of CAD the hardware requirements are
+slightly different:</p>
+<p><em>Recommended for the Software and Design Development role with CAD:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-performance-laptop">Windows Performance Laptop</a></p></li>
+</ul>
+<p><em>Recommended for Software Development Only:</em></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-standard-laptop">Windows Standard Laptop</a></p>
+<ul>
+<li><p>Only cloud CAD solutions are recommended</p>
+<ul>
+<li><p>OnShape, SolidWorks 3D Experience, etc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Also Supported:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#macos-standard-laptop">MacOS Standard Laptop</a></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">REV Hardware
+Client</a> not
+supported</p></li>
+<li><p><a class="reference external" href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/labview-setup.html">LabVIEW</a>
+software not supported</p></li>
+</ul>
+</li>
+</ul>
+<p>It is also recommended to have an active internet connection during
+software development. Access to <a class="reference external" href="https://github.com">https://github.com</a> is required by the
+REV Hardware Client to download and install required season software and
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Firmware"><span class="xref std std-term">firmware</span></a> updates. Additional software may have similar requirements.</p>
+</section>
+</section>
+</section>
+<section id="recommended-hardware-sets">
+<h2>Recommended Hardware Sets<a class="headerlink" href="#recommended-hardware-sets" title="Link to this heading"></a></h2>
+<p>These are the Recommended Hardware sets referenced by the
+Program-Specific Requirements. There are a few extra requirements and
+recommendations for all hardware platforms, such as:</p>
+<p><em>Windows Operating System</em></p>
+<ul class="simple">
+<li><p>Support for Windows 10 is ending in mid-2025, so purchasing a Windows
+system that supports Windows 11 is highly recommended. While not all
+software is specifically labeled as being supported by Windows 11,
+virtually all the required software has been tested to work with
+Windows 11.</p></li>
+</ul>
+<p><em>USB Ports</em></p>
+<ul class="simple">
+<li><p>Laptops should have at least 2 available physical USB-A ports.</p></li>
+<li><p>For <em>FIRST</em> Tech Challenge, USB-C ports on laptops are not able to
+work properly with the REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> nor REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a>, so it is
+important to have USB-A ports also available.</p></li>
+</ul>
+<p><em>Bluetooth</em></p>
+<ul class="simple">
+<li><p>For <em>FIRST</em> LEGO League, it is important that laptops and tablets
+support Bluetooth 4.0 or above.</p></li>
+</ul>
+<p><em>Physical Ethernet Ports</em></p>
+<ul class="simple">
+<li><p>While most features of hardware and software can be easily supported
+by Wi-Fi, in some situations (such as the Driver Station for <em>FIRST</em>
+Robotics Competition) having a physical RJ-45 ethernet port on the
+system is a huge benefit.</p></li>
+</ul>
+<p><em>SSD Hard Drive</em></p>
+<ul class="simple">
+<li><p>While not specifically required, hard drives that use SSD technology
+(versus spinning disk technology) boot up faster and are less likely
+to be damaged when carrying while powered on or experiences
+“unexpected bumps” as is common for a <em>FIRST</em> Robotics Competition
+Driver Station computer.</p></li>
+</ul>
+<section id="windows-performance-laptop">
+<h3><strong>Windows Performance Laptop</strong><a class="headerlink" href="#windows-performance-laptop" title="Link to this heading"></a></h3>
+<p>A laptop designed for high graphics performance containing a high-end
+processor, like a <a class="reference external" href="https://www.dell.com/en-us/shop/dell-laptops/g16-gaming-laptop/spd/g-series-16-7630-laptop">Dell
+G16</a>
+or <a class="reference external" href="https://www.hp.com/us-en/shop/pdp/omen-gaming-laptop-16-xf0087nr">HP
+Omen</a>,
+with the following recommended specs:</p>
+<ul class="simple">
+<li><p>Processor: Intel Core i7, AMD Ryzen 7, or better</p></li>
+<li><p>Graphics: NVIDIA GeForce RTX 4050 or better</p></li>
+<li><p>Memory: 16GB RAM or more, 32GB preferred</p></li>
+<li><p>Storage: 512 GB SSD or greater, 1TB SSD preferred</p></li>
+<li><p>Ethernet: RJ-45 Ethernet Port preferred</p></li>
+<li><p>Ports: 2 or more USB type A ports preferred</p></li>
+<li><p>Bluetooth: Bluetooth 4.0 or better</p></li>
+<li><p>Wi-Fi: Integrated Wi-Fi, Wi-Fi 6E or better preferred</p></li>
+<li><p>Operating System: Windows 10 or better, Windows 11 preferred</p></li>
+</ul>
+</section>
+<section id="windows-standard-laptop">
+<h3><strong>Windows Standard Laptop</strong><a class="headerlink" href="#windows-standard-laptop" title="Link to this heading"></a></h3>
+<p>A standard Windows laptop, like a <a class="reference external" href="https://www.dell.com/en-us/shop/dell-laptops/inspiron-15-laptop/spd/inspiron-15-3530-laptop">Dell Inspiron
+15</a>
+or <a class="reference external" href="https://www.hp.com/us-en/shop/mdp/laptops/pavilion-15-344522--1">HP Pavilion
+Laptop</a>,
+designed for smooth performance and everyday tasks,</p>
+<ul class="simple">
+<li><p>Processor: Intel Core i5, AMD Ryzen 5, or better</p></li>
+<li><p>Graphics: Intel or AMD embedded graphics adapter or better</p></li>
+<li><p>Memory: 8GB RAM or more, 16GB preferred</p></li>
+<li><p>Storage: 256GB or greater, 512 GB SSD preferred</p></li>
+<li><p>Ethernet: RJ-45 Ethernet Port preferred</p></li>
+<li><p>Ports: 2 or more USB type A ports preferred</p></li>
+<li><p>Bluetooth: Bluetooth 4.0 or better</p></li>
+<li><p>Wi-Fi: Integrated Wi-Fi, Wi-Fi 6E or better preferred</p></li>
+<li><p>Operating System: Windows 10 or better, Windows 11 preferred</p></li>
+</ul>
+</section>
+<section id="macos-standard-laptop">
+<h3><strong>MacOS Standard Laptop</strong><a class="headerlink" href="#macos-standard-laptop" title="Link to this heading"></a></h3>
+<p>A standard MacOS laptop, like a <a class="reference external" href="https://www.apple.com/shop/buy-mac/macbook-air">MacBook
+Air</a> or <a class="reference external" href="https://www.apple.com/shop/buy-mac/macbook-pro">MacBook
+Pro</a>,
+designed for smooth performance and everyday tasks.</p>
+<ul class="simple">
+<li><p>Processor: Apple M1 or better, Apple M2 preferred</p></li>
+<li><p>Memory: 4GB RAM or more</p></li>
+<li><p>Storage: 2GB available storage space or better</p></li>
+<li><p>Bluetooth: Bluetooth 4.0 or better</p></li>
+<li><p>Operating System: MacOS Mojave 10.14 or newer</p></li>
+</ul>
+</section>
+<section id="ios-standard-tablet">
+<h3><strong>iOS Standard Tablet</strong><a class="headerlink" href="#ios-standard-tablet" title="Link to this heading"></a></h3>
+<p>A standard iOS tablet, such as an iPad Air 2 or iPad Mini 4 or newer.</p>
+<ul class="simple">
+<li><p>Operating System: iOS 13 or newer</p></li>
+</ul>
+</section>
+<section id="chrome-os-standard-laptop">
+<h3><strong>Chrome OS Standard Laptop</strong><a class="headerlink" href="#chrome-os-standard-laptop" title="Link to this heading"></a></h3>
+<p>A standard Chromebook, such as the <a class="reference external" href="https://www.google.com/chromebook/discover/pdp-samsung-galaxy-chromebook-2/sku-samsung-galaxy-chromebook-2-8gb-128gb/">Samsung Galaxy Chromebook
+2</a>,
+or similar.</p>
+<ul class="simple">
+<li><p>Processor: 1.40 GHz Intel Celeron 2955U dual-core processor or better</p></li>
+<li><p>Memory: 4GB RAM or better</p></li>
+<li><p>Storage: 3GB available storage space or better</p></li>
+<li><p>Bluetooth: Bluetooth 4.0 or above</p></li>
+<li><p>Operating System: Android 7.0 or newer</p></li>
+</ul>
+</section>
+<section id="android-standard-tablet">
+<h3><strong>Android Standard Tablet</strong><a class="headerlink" href="#android-standard-tablet" title="Link to this heading"></a></h3>
+<p>A standard Android Tablet, such as the <a class="reference external" href="https://www.samsung.com/us/tablets/galaxy-tab-a/galaxy-tab-a7-10-4-inch-gray-64gb-wi-fi-sm-t500nzaexar/">Samsung Galaxy Tab A7
+Lite</a>,
+or similar.</p>
+<ul class="simple">
+<li><p>8” display or larger</p></li>
+<li><p>Memory: 3GB RAM or better</p></li>
+<li><p>Storage: 3GB available storage space or better</p></li>
+<li><p>Bluetooth: Bluetooth 4.0 or above</p></li>
+<li><p>Operating System: Android 7.0 or newer</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html" class="btn btn-neutral float-left" title="FIRST Tech Challenge Field Coordinate System Definition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../ftc_sdk/overview/index.html" class="btn btn-neutral float-right" title="FIRST Tech Challenge Software Development Kit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

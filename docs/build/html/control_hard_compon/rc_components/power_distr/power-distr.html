@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Distribution &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="REV Hubs" href="../hub/hub.html" />
+    <link rel="prev" title="Robot Controller Overview" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Hardware Component Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ds_components/index.html">Driver Station Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Robot Controller Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Power Distribution</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#robot-main-battery">Robot Main Battery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-power-switch">Main Power Switch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-distribution-block">Power Distribution Block</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rev-servo-power-module">REV Servo Power Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cots-usb-battery-pack">COTS USB Battery Pack</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#reputable-brands">Reputable Brands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#capacity-limits">Capacity Limits</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#standard-safety-features">Standard Safety Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#securing-the-battery-pack-to-the-robot">Securing the Battery Pack to the Robot</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cover-unused-ports">Cover Unused Ports</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#charge-cots-usb-battery-packs-properly">Charge COTS USB Battery Packs properly</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#checking-for-signs-of-distress">Checking for signs of distress</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#isolate-cots-usb-battery-packs-from-the-robot-power">Isolate COTS USB Battery Packs from the Robot Power</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hub/hub.html">REV Hubs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motors/motors.html">Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../encoders/encoders.html">Encoders (Rotation Counters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../servos/servos.html">Servos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sensors/sensors.html">Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uvc/uvc.html">UVC Webcam</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Hardware Component Overview</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Robot Controller Overview</a></li>
+      <li class="breadcrumb-item active">Power Distribution</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/control_hard_compon/rc_components/power_distr/power-distr.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="power-distribution">
+<h1>Power Distribution<a class="headerlink" href="#power-distribution" title="Link to this heading"></a></h1>
+<section id="robot-main-battery">
+<h2>Robot Main Battery<a class="headerlink" href="#robot-main-battery" title="Link to this heading"></a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">TETRIX 12V Battery</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/W39057.jpg"><img alt="W39057" src="../../../_images/W39057.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">TETRIX (W39057, formally 739023)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">MATRIX 12V Battery</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/14-0014-FTCLegal__75264.jpg"><img alt="14-0014" src="../../../_images/14-0014-FTCLegal__75264.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Modern Robotics/MATRIX (14-0014)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">REV 12V Battery</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/am-4649.jpg"><img alt="REV-31-1302" src="../../../_images/am-4649.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">REV Robotics (REV-31-1302)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The main power of a robot comes from one 12v <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Battery"><span class="xref std std-term">battery</span></a>. The batteries above are
+samples of these batteries, check the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Competition-Manual"><span class="xref std std-term">Competition Manual</span></a> for the full list of
+batteries. Note that it is typically allowed to replace the connector on the
+batteries, provided the in-line fuse on the battery is preserved, again check
+the Competition Manual for full details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to remove the 20A fuse from the in-line fuse holder prior to cutting
+any wires/connectors if/when replacing the factory default battery connector.</p>
+</div>
+</section>
+<section id="main-power-switch">
+<h2>Main Power Switch<a class="headerlink" href="#main-power-switch" title="Link to this heading"></a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">REV Power Switch</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/REV-31-1387.png"><img alt="REV-31-1387" src="../../../_images/REV-31-1387.png" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">REV (REV-31-1387)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">TETRIX Power Switch</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/W39129.jpg"><img alt="REV-31-1387" src="../../../_images/W39129.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">TETRIX (part # W39129)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">MATRIX Power Switch</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/50-0030.jpeg"><img alt="REV-31-1387" src="../../../_images/50-0030.jpeg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">MATRIX (part #50-0030)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">AndyMark Power Switch</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/am-4969.jpg"><img alt="AM-4969 Switch" src="../../../_images/am-4969.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">AndyMark (part #am-4969)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>One Main Power Switch must control all power provided by the Main Battery. The
+legal power switches above are representative examples, check the Competition
+Manual for the full list.</p>
+</section>
+<section id="power-distribution-block">
+<h2>Power Distribution Block<a class="headerlink" href="#power-distribution-block" title="Link to this heading"></a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">REV XT30 Power Distribution Block</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/XT30_Power_Distribution_Block.png"><img alt="REV-31-1293" src="../../../_images/XT30_Power_Distribution_Block.png" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">REV (REV-31-1293)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">goBILDA XT30 Power Distribution Block</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/goBILDApdb.jpg"><img alt="goBildaPDB" src="../../../_images/goBILDApdb.jpg" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">goBILDA (SKU: 3108-2833-0801)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Power Distribution Blocks help to distribute the power to devices such as
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hubs</span></a>, SPARKminis, and more.  See the Competition Manual for a
+description of legal Power Distribution methods. The Power Distribution Blocks
+shown are not the only legal devices for power distribution.</p>
+</section>
+<section id="rev-servo-power-module">
+<h2>REV Servo Power Module<a class="headerlink" href="#rev-servo-power-module" title="Link to this heading"></a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">REV Servo Power Module</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/REV-11-1144.png"><img alt="REV-31-1144" src="../../../_images/REV-11-1144.png" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">REV (REV-11-1144)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This is an electronic device (also known as a Servo Power Injector) that boosts
+the power supplied to 3-wire <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servos</span></a>. A REV Servo Power Module has 6 input servo
+ports and 6 matching output ports. It draws power from a 12V source and
+provides 6V power to each output servo port.  A REV Servo Power Module can
+provide up to 15A of current across all output servo ports for a total of 90
+Watts of power per module. There are more Servo Power Injectors allowed by the
+Competition Manual.</p>
+</section>
+<section id="cots-usb-battery-pack">
+<h2>COTS USB Battery Pack<a class="headerlink" href="#cots-usb-battery-pack" title="Link to this heading"></a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">USB Battery Pack</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/ankerbattery1.png"><img alt="Anker Pack" src="../../../_images/ankerbattery1.png" style="width: 50%;" />
+</a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Anker Battery Pack</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>A Commercial Off The Shelf (COTS) USB battery pack is an auxiliary power source
+that can be used in specific situations in accordance with the Competition
+Manual. In the 2023-2024 season, these batteries were deemed permissible to
+power LEDs and, by extension, COTS light controller sources like the <a class="reference external" href="https://www.revrobotics.com/rev-11-1105/">REV
+Blinkin</a>.  However, having a COTS
+USB External Battery on the Robot carries additional considerations.  All teams
+must ensure their COTS USB Battery Pack:</p>
+<ul class="simple">
+<li><p>Is manufactured by a reputable brand.</p></li>
+<li><p>Is within allowed Watt-hour capacity limits.</p></li>
+<li><p>Includes standard safety features.</p></li>
+<li><p>Is secured on the Robot.</p></li>
+<li><p>Has unused ports covered.</p></li>
+<li><p>Is always charged properly.</p></li>
+<li><p>Does not show any signs of distress.</p></li>
+<li><p>Is never connected to the Robot power</p></li>
+</ul>
+<p>The following sections are intended to help clarify the list above.</p>
+<section id="reputable-brands">
+<h3>Reputable Brands<a class="headerlink" href="#reputable-brands" title="Link to this heading"></a></h3>
+<p>Far and above, the most important factor regarding the safety of COTS USB
+Battery Packs is ensuring that the battery pack was manufactured by a reputable
+brand. International testing of COTS USB Battery Packs has concluded that
+unbranded batteries, or batteries manufactured by little-known companies, tend
+to fail more often than batteries from reputable brands. How do you know what
+brands are reputable and which ones are not? That’s not always an easy thing to
+determine, however brands such as
+<a class="reference external" href="https://www.anker.com/collections/power-banks">Anker</a>,
+<a class="reference external" href="https://www.belkin.com/products/chargers/portable-chargers-power-banks/">Belkin</a>,
+<a class="reference external" href="https://www.otterbox.com/en-us/portable-chargers">Otterbox</a>, and
+<a class="reference external" href="https://www.bioliteenergy.com/collections/portable-battery-banks">BioLite</a>
+are among the most-used brands in the world. <em>FIRST</em> Tech Challenge recommends
+choosing an internationally reputable brand, even if the brand is more
+expensive than a lesser-known brand, as these batteries will be more apt to
+follow safety and performance guidelines. NEVER choose a COTS USB Battery
+Pack based on its (low) price alone!</p>
+</section>
+<section id="capacity-limits">
+<h3>Capacity Limits<a class="headerlink" href="#capacity-limits" title="Link to this heading"></a></h3>
+<p>The recurring theme in most discussions of COTS USB Battery Packs is safety.
+The United States Transportation Safety Administration (TSA) has strict
+limitations on COTS USB Battery Packs aboard aircraft, and <em>FIRST</em> Tech
+Challenge has adopted the capacity limit restriction. <strong>Batteries are limited
+to 100 Watt-Hours (Wh) or less</strong>.</p>
+<p>How do you calculate Watt-hours? To calculate Watt-hours of a battery, multiply
+the Voltage (V) of the battery by its capacity measured in Amp-Hours (Ah). For
+example, a 12V battery with 3,000mAh capacity has a 36Wh capacity - when
+capacity is measured in milli-Amp Hours (mAh), divide the capacity by 1000 to
+get Ah and them multiply by Voltage.  However, for COTS USB Battery Packs, the
+Voltage cells predominantly used in the packs is <strong>3.7V</strong>, regardless of the
+ultimate Voltage provided by the USB ports. Therefore to calculate Wh for a
+COTS USB Battery Pack, multiply <strong>3.7V</strong> by the <strong>Ah rating</strong> of the pack. A 25,000mAh
+COTS USB Battery Pack has a rating of 92.5Wh. Using this formula, the maximum
+capacity COTS USB Battery Pack that is allowed is a <strong>27,000mAh</strong> pack.</p>
+</section>
+<section id="standard-safety-features">
+<h3>Standard Safety Features<a class="headerlink" href="#standard-safety-features" title="Link to this heading"></a></h3>
+<p>The major benefit of using a reputable COTS USB Battery Pack brand is the
+guarantee that the battery pack includes standard safety features, including
+but not limited to:</p>
+<ul class="simple">
+<li><p>Reverse Polarity Protection</p></li>
+<li><p>Short-Circuit Protection</p></li>
+<li><p>Over-Charge Protection</p></li>
+<li><p>Over-Temperature or Over-Heat Protection</p></li>
+<li><p>Over-Current Protection</p></li>
+</ul>
+<p>You should perform a good-faith effort to determine if your Battery Pack
+contains these safety features. Often within the documentation provided with
+your pack it will list the protections offered by the pack. Remember that the
+Battery Pack likely contains Lithium-Ion or Lithium Polymer batteries that will
+often explode or catch fire when they fail, and these protections are vital to
+ensuring that the batteries do not fail prematurely. It is not recommended to
+use COTS USB Battery Packs without these protections.</p>
+</section>
+<section id="securing-the-battery-pack-to-the-robot">
+<h3>Securing the Battery Pack to the Robot<a class="headerlink" href="#securing-the-battery-pack-to-the-robot" title="Link to this heading"></a></h3>
+<p>The leading cause of battery failure is physical damage to the battery. For
+COTS USB Battery Packs this is usually attributed to dropping the battery pack,
+applying excessive force on the Battery Pack, and subjecting the pack to excessive
+shock (which might also damage internal components). In order to prevent damage,
+the Battery Pack should be properly secured within the robot. Tips for securing
+the battery are:</p>
+<ul class="simple">
+<li><p>Use Hook and Loop or 3M DualLock fasteners to secure the battery, <strong>OR</strong></p></li>
+<li><p>Store the battery in a tight-fitting or custom-fit enclosure within the robot
+that allows the battery to be exposed to air (for cooling), <strong>AND</strong></p></li>
+<li><p>Protect the battery from contact from other robots, game pieces, or field
+elements that might breach the perimeter of the robot.</p></li>
+</ul>
+<p>If utilizing a COTS USB Battery Pack, it is of utmost importance to ensure
+that the battery is secured, protected, and ventilated. All batteries (both
+main batteries and COTS USB Battery Packs) should be easily accessible and be
+able to be quickly removed from the robot in case of an emergency.</p>
+</section>
+<section id="cover-unused-ports">
+<h3>Cover Unused Ports<a class="headerlink" href="#cover-unused-ports" title="Link to this heading"></a></h3>
+<p>Some COTS USB Battery Packs contain multiple ports, and it is often that not
+all ports are in-use while securely mounted to the robot. For example, the
+COTS USB Battery Pack may have multiple USB ports, a dedicated charging port,
+and other ports as necessary. Any ports that are not in-use (meaning don’t have
+a USB connector inserted in them) are at great risk of short-circuiting. The
+most common reason for short-circuiting is metal fragments that may make their
+way into the ports, especially swarf due to metal rubbing together, gears wearing,
+or robot maintenance performed while electronics are present. Any unused ports
+should be covered using electrical tape, Gaffers Tape, or any other means of
+preventing debris from entering the ports. Short circuits may present risks of
+excessive heat, fire, or explosion and all reasonable efforts should be taken
+to prevent them.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never get a COTS USB Battery Pack wet. If it gets wet, follow the
+manufacturer’s recommended procedure to clean and dry the battery before
+continuing use.</p>
+</div>
+</section>
+<section id="charge-cots-usb-battery-packs-properly">
+<h3>Charge COTS USB Battery Packs properly<a class="headerlink" href="#charge-cots-usb-battery-packs-properly" title="Link to this heading"></a></h3>
+<p>The owners/instruction manual provided with the COTS USB Battery Pack often
+contains instructions for the proper care and maintenance of the battery pack,
+including proper charging. Always follow the manufacturer’s recommendations.
+In addition, these are common best practices for charging your Batteries:</p>
+<ul class="simple">
+<li><p>Avoid charging the power bank on places that build up heat, such as on your
+bed or within a bag.</p></li>
+<li><p>Unless it’s a solar power bank, NEVER leave your battery in the sun!</p></li>
+<li><p>Follow the manufacturer’s guidelines on the time required to fully charge
+your COTS USB Battery Pack.</p></li>
+<li><p>Avoid leaving your COTS USB Battery Pack on prolonged charge as this may
+cause it to overheat.</p></li>
+<li><p>If the COTS USB Battery Pack becomes excessively hot during charging or
+discharging, unplug it from the power source or powered device immediately
+and allow it to cool before doing anything else with the battery.</p></li>
+</ul>
+</section>
+<section id="checking-for-signs-of-distress">
+<h3>Checking for signs of distress<a class="headerlink" href="#checking-for-signs-of-distress" title="Link to this heading"></a></h3>
+<p>Most COTS USB Battery Packs are contained within a hard plastic shell in order
+to protect and package the battery cell(s) within. Therefore it can be
+difficult to determine if the battery is showing signs of failure and distress.
+Here are several tips for identifying a failing battery:</p>
+<ul class="simple">
+<li><p>Check for Leaking Power Cells. Similar to an acid leak in an alkaline
+battery, check to see if there are any signs of corrosion or acid leak from
+the battery pack. This might be difficult to determine, so stay vigilant. If
+signs of acid or corrosion are present, dispose of the battery per the
+manufacturer’s recommendations immediately with extreme prejudice.</p></li>
+<li><p>Look for bulging within the battery casing. When Lithium batteries fail,
+often they will begin to bulge like a balloon. If the case of the battery
+shows any signs of pressure from within, dispose of the battery per the
+manufacturer’s recommendations immediately with extreme prejudice.</p></li>
+<li><p>Test the battery pack for any non-functional ports. Sometimes non-functional
+ports can be an early sign of internal damage. DO NOT use batteries that are
+suspected of being damaged - dispose of the battery per the manufacturer’s
+recommendations immediately.</p></li>
+</ul>
+</section>
+<section id="isolate-cots-usb-battery-packs-from-the-robot-power">
+<h3>Isolate COTS USB Battery Packs from the Robot Power<a class="headerlink" href="#isolate-cots-usb-battery-packs-from-the-robot-power" title="Link to this heading"></a></h3>
+<p>Great care must be take to NEVER allow the COTS USB Battery Pack to be
+connected to the main (or any) power system in use by the robot. The COTS USB
+Battery Pack and connected devices must be completely isolated from the robot
+electrical system, with the exception of controlling signals provided by the
+Competition Manual.  When using a COTS USB Battery Pack, controlling signals
+for LEDs powered by the Pack should ONLY connect to allowed compatible devices.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Robot Controller Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../hub/hub.html" class="btn btn-neutral float-right" title="REV Hubs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

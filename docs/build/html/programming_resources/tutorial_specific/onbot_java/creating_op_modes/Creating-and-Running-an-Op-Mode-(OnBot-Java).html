@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating and Running an Op Mode OBJ &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../_static/js/hoverxref.js"></script>
+      <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Controlling a Servo OBJ" href="../controlling_a_servo/Controlling-a-Servo-%28OnBot-Java%29.html" />
+    <link rel="prev" title="Writing an Op Mode OBJ" href="../../../onbot_java/opmode/opmode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#programming-tutorials">Programming Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../onbot_java/intro/intro.html">Introduction <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../onbot_java/config/config.html">Configuring Your Hardware <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../onbot_java/connecting/connecting.html">Connecting to the Program &amp; Manage Server <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../onbot_java/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Creating and Running an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../controlling_a_servo/Controlling-a-Servo-%28OnBot-Java%29.html">Controlling a Servo <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../using_sensors/Using-Sensors-%28OnBot-Java%29.html">Using Sensors <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../onbot_java/reference/reference.html">Reference Documentation <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Programming Resources</a></li>
+          <li class="breadcrumb-item"><a href="../../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="../../../onbot_java/opmode/opmode.html">Writing an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></a></li>
+      <li class="breadcrumb-item active">Creating and Running an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span></li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/programming_resources/tutorial_specific/onbot_java/creating_op_modes/Creating-and-Running-an-Op-Mode-(OnBot-Java).rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-and-running-an-op-mode-obj">
+<h1>Creating and Running an Op Mode <span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">OBJ</span><a class="headerlink" href="#creating-and-running-an-op-mode-obj" title="Link to this heading"></a></h1>
+<section id="the-java-programming-language">
+<h2>The Java Programming Language<a class="headerlink" href="#the-java-programming-language" title="Link to this heading"></a></h2>
+<p>This tutorial assumes that you have a sound understanding of the Java
+programming language. If you do not know Java, then you should consider
+using the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Blocks-Programming-Tool"><span class="xref std std-term">Blocks Programming Tool</span></a>, which is a visual development
+tool. Information about the Blocks Programming Tool can be found at
+the following link:</p>
+<p><a class="reference internal" href="../../../blocks/Blocks-Tutorial.html"><span class="doc">Blocks Tutorial</span></a></p>
+<p>Or, you can learn the Java programming language by completing the Oracle
+Java Tutorial, which is available at the following address:</p>
+<p><a class="reference external" href="https://docs.oracle.com/javase/tutorial/">https://docs.oracle.com/javase/tutorial/</a></p>
+</section>
+<section id="what-s-an-op-mode">
+<h2>What’s an Op Mode?<a class="headerlink" href="#what-s-an-op-mode" title="Link to this heading"></a></h2>
+<p>During a typical <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Match"><span class="xref std std-term">match</span></a>, a team’s robot must perform
+a variety of tasks to score points. For example, a team might want their
+robot to follow a white line on the competition floor and then score a
+game element into a goal autonomously during a match. Teams write
+programs called <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpModes</span></a> (which stands for “operational modes”) to
+specify the behavior for their robot. These OpModes run on the ROBOT
+CONTROLLER after being selected on the DRIVER STATION device.</p>
+<p>Teams who are participating in the <em>FIRST</em> Tech Challenge have a variety
+of programming tools that they can use to create their own OpModes.
+This document explains how to use the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-OnBot-Java-Programming-Tool"><span class="xref std std-term">OnBot Java Programming Tool</span></a> to
+write an op mode for a robot.</p>
+</section>
+<section id="the-onbot-java-programming-tool">
+<h2>The OnBot Java Programming Tool<a class="headerlink" href="#the-onbot-java-programming-tool" title="Link to this heading"></a></h2>
+<p>The OnBot Java Programming Tool is a user-friendly programming tool
+that is served up by the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a>. A user can create
+custom op modes for their robot using this tool and then save these op
+modes directly onto the Robot Controller. Users write their op modes
+using Java. The op modes are compiled very quickly on the Robot
+Controller and then loaded dynamically by the Robot Controller during
+run time.</p>
+<img alt="../../../../_images/OnBotDoc001_MainScreen.jpg" class="align-center" src="../../../../_images/OnBotDoc001_MainScreen.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The examples in this document use a Windows laptop computer to connect
+to the Robot Controller. This Windows laptop computer has a
+Javascript-enabled web browser installed that is used to access the
+OnBot Java Programming Tool.</p>
+<img alt="../../../../_images/BlocksPicture2b1.jpg" class="align-center" src="../../../../_images/BlocksPicture2b1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Note that the process used to create and edit an op mode is identical if
+you are using an Android phone as your Robot Controller.</p>
+<img alt="../../../../_images/BlocksPicture21.jpg" class="align-center" src="../../../../_images/BlocksPicture21.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Note that if you prefer, you can use an alternate device, such as an
+Apple Mac laptop, Chromebook, or an iPad instead of a Windows computer
+to access the OnBot Java Programming Tool. The instructions included in
+this document, however, assume that you are using a Windows laptop.</p>
+<p>Note that this section of the wiki assumes that you have already setup
+and configured your Android devices and robot hardware. It also assumes
+that you have successfully connected your laptop to the Program &amp; Manage
+server on the Robot Controller device.</p>
+</section>
+<section id="creating-your-first-op-mode">
+<h2>Creating Your First Op Mode<a class="headerlink" href="#creating-your-first-op-mode" title="Link to this heading"></a></h2>
+<p>If you connected your laptop successfully to the Program &amp; Manage
+wireless network of the Robot Controller, then you are ready to create
+your first op mode. In this section, you will use the OnBot Java
+Programming Tool to create the program logic for your first op mode.</p>
+<section id="creating-your-first-op-mode-instructions">
+<h3>Creating Your First Op Mode Instructions<a class="headerlink" href="#creating-your-first-op-mode-instructions" title="Link to this heading"></a></h3>
+<p>1. Launch the web browser on your laptop (<em>FIRST</em> recommends using
+Google Chrome) and find the web address that is displayed on the
+Program &amp; Manage screen of the Robot Controller.</p>
+<img alt="../../../../_images/WritingFirstOpModeStep1aControlHub1.jpg" class="align-center" src="../../../../_images/WritingFirstOpModeStep1aControlHub1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Note: If your Robot Controller is an Android smartphone, then the address to access the Program &amp; Manage server is “192.168.49.1:8080”. Notice the difference in the third octet of the IP addresses (the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> has a “43” instead of a “49”).</p>
+</div>
+<img alt="../../../../_images/WritingFirstOpModeStep1a1.jpg" class="align-center" src="../../../../_images/WritingFirstOpModeStep1a1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Type this web address into the address field of your browser and press RETURN to navigate to the Program &amp; Manage web server.</p>
+</div></blockquote>
+<img alt="../../../../_images/WritingFirstOpModeStep1bControlHub1.jpg" class="align-center" src="../../../../_images/WritingFirstOpModeStep1bControlHub1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>2. Verify that your web browser is connected to the programming mode
+server. If it is connected to the programming mode server
+successfully, the Robot Controller Console should be displayed.</p>
+<img alt="../../../../_images/WritingFirstOpModeStep2ControlHub1.jpg" class="align-center" src="../../../../_images/WritingFirstOpModeStep2ControlHub1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>3. Click on the word <em>OnBotJava</em> towards the top of the screen. This
+will switch the browser to OnBot Java Programming mode.</p>
+<img alt="../../../../_images/OnBotDoc_Step3_OnBotJavaButton.jpg" class="align-center" src="../../../../_images/OnBotDoc_Step3_OnBotJavaButton.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>4. Take a look at the OnBot Java user interface. On the left hand
+side, there is the project browser pane. In the upper right hand
+corner, there is the source code editing pane. In the lower right
+hand corner, there is the message pane.</p>
+<img alt="../../../../_images/OnBotDoc_Step4_OnBotScreen.jpg" class="align-center" src="../../../../_images/OnBotDoc_Step4_OnBotScreen.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>5. In the project browser pane, press the “+” symbol to create a new
+file. Pushing this button will launch the New File dialog box. This
+dialog box has several parameters that you can configure to customize
+your new file.</p>
+<img alt="../../../../_images/OnBotDoc_Step5_NewFile.jpg" class="align-center" src="../../../../_images/OnBotDoc_Step5_NewFile.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>For this example, specify “MyFIRSTJavaOpMode” as the File Name in the New File dialog box.</p>
+<p>Using the Sample dropdown list control, select “BlankLinearOpMode” from the list of available <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">sample op modes</span></a> (see image above).  By selecting “BlankLinearOpMode” the OnBot Java editor will automatically generate a basic <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-LinearOpMode"><span class="xref std std-term">LinearOpMode</span></a> framework for you.</p>
+<p>Check the option labeled “TeleOp” to ensure that this new file will be configured as a tele-operated (i.e., driver controlled) op mode.</p>
+<p>Also, make sure you check the “Setup Code for Configured Hardware” option.  If this option is enabled, the OnBot Java editor will look at the hardware <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Configuration-File"><span class="xref std std-term">configuration file</span></a> for your Robot Controller and automatically generate the code that you will need to access the configured devices in your op mode.</p>
+<p>Press the “OK” button to create your new op mode.</p>
+</div></blockquote>
+<p>6. You should see your newly created op mode in the editing pane of
+the OnBot Java user interface.</p>
+<img alt="../../../../_images/OnBotDoc_Step6_NewOpModeEditPane.jpg" class="align-center" src="../../../../_images/OnBotDoc_Step6_NewOpModeEditPane.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Congratulations, you created your first op mode! The op mode currently
+does not do much, but you will eventually modify it to make it more
+useful.</p>
+<img alt="../../../../_images/OnBotDoc_Step6_ProjectBrowser.jpg" class="align-center" src="../../../../_images/OnBotDoc_Step6_ProjectBrowser.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Note that when you create an OnBot op mode, you create a .java file that
+is stored on the Robot Controller. You can access your saved op modes
+using the project browser on the left side of the screen. You can also
+organize your saved op modes by right mouse clicking on the project
+browser to display a list of options to create, edit or delete files and
+folders.</p>
+<p>Also, note that the OnBot Java editor automatically saves your op mode
+as you are editing it, provided that you are connected to the Program &amp;
+Manage server.</p>
+</section>
+</section>
+<section id="examining-the-structure-of-your-op-mode">
+<h2>Examining the Structure of Your Op Mode<a class="headerlink" href="#examining-the-structure-of-your-op-mode" title="Link to this heading"></a></h2>
+<p>It can be helpful to think of an op mode as a list of tasks for the
+Robot Controller to perform. For a linear op mode, the Robot Controller
+will process this list of tasks sequentially. Users can also use control
+loops (such as a while loop) to have the Robot Controller repeat (or
+iterate) certain tasks within a linear op mode.</p>
+<img alt="../../../../_images/ExaminingStructurePic22.jpg" class="align-center" src="../../../../_images/ExaminingStructurePic22.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you think about an op mode as a list of instructions for the robot,
+this set of instructions that you created will be executed by the robot
+whenever a team member selects the op mode called “MyFIRSTJavaOpMode”
+from the list of available op modes for this Robot Controller.</p>
+<p>Let’s look at the structure of your newly created op mode. Here’s a copy
+of the op mode text (minus some comments, the package definition, and
+some import package statements):</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@TeleOp</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyFIRSTJavaOpMode</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Gyroscope</span><span class="w"> </span><span class="n">imu</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">DcMotor</span><span class="w"> </span><span class="n">motorTest</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">DigitalChannel</span><span class="w"> </span><span class="n">digitalTouch</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">DistanceSensor</span><span class="w"> </span><span class="n">sensorColorRange</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Servo</span><span class="w"> </span><span class="n">servoTest</span><span class="p">;</span>
+
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">imu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Gyroscope</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;imu&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">motorTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;motorTest&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">digitalTouch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DigitalChannel</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;digitalTouch&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">sensorColorRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DistanceSensor</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sensorColorRange&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">servoTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Servo</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;servoTest&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Initialized&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// Wait for the game to start (driver presses PLAY)</span>
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// run until the end of the match (driver presses STOP)</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Running&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>At the start of the op mode there is an annotation that occurs before
+the class definition. This annotation states that this is a
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-TELEOP"><span class="xref std std-term">tele-operated</span></a> (i.e., driver controlled) op mode:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@TeleOp</span>
+</pre></div>
+</div>
+<p>If you wanted to change this op mode to an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Autonomous"><span class="xref std std-term">autonomous</span></a> op mode, you would
+replace the <code class="docutils literal notranslate"><span class="pre">&#64;TeleOp</span></code> with an <code class="docutils literal notranslate"><span class="pre">&#64;Autonomous</span></code> annotation instead.</p>
+<p>You can see from the sample code that an op mode is defined as a Java
+class. In this example, the op mode name is called “MyFIRSTJavaOpMode”
+and it inherits characteristics from the LinearOpMode class.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyFIRSTJavaOpMode</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<p>You can also see that the OnBot Java editor created five private member
+variables for this op mode. These variables will hold references to the
+five configured devices that the OnBot Java editor detected in the
+configuration file of your Robot Controller.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="n">Gyroscope</span><span class="w"> </span><span class="n">imu</span><span class="p">;</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">DcMotor</span><span class="w"> </span><span class="n">motorTest</span><span class="p">;</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">DigitalChannel</span><span class="w"> </span><span class="n">digitalTouch</span><span class="p">;</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">DistanceSensor</span><span class="w"> </span><span class="n">sensorColorRange</span><span class="p">;</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">Servo</span><span class="w"> </span><span class="n">servoTest</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Next, there is an overridden method called runOpMode. Every op mode of
+type LinearOpMode must implement this method. This method gets called
+when a user selects and runs the op mode.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<p>At the start of the runOpMode method, the op mode uses an object named
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-hardwareMap"><span class="xref std std-term">hardwareMap</span></a> to get references to the hardware devices that are listed in
+the Robot Controller’s configuration file:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">imu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Gyroscope</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;imu&quot;</span><span class="p">);</span>
+<span class="n">motorTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DcMotor</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;motorTest&quot;</span><span class="p">);</span>
+<span class="n">digitalTouch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DigitalChannel</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;digitalTouch&quot;</span><span class="p">);</span>
+<span class="n">sensorColorRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">DistanceSensor</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sensorColorRange&quot;</span><span class="p">);</span>
+<span class="n">servoTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Servo</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;servoTest&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The hardwareMap object is available to use in the runOpMode method. It
+is an object of type HardwareMap class.</p>
+<p>Note that when you attempt to retrieve a reference to a specific device
+in your op mode, the name that you specify as the second argument of the
+HardwareMap.get method must match the name used to define the device in
+your configuration file. For example, if you created a configuration
+file that had a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-DC-Motor"><span class="xref std std-term">DC motor</span></a> named “motorTest”, then you must use this same
+name (it is case sensitive) to retrieve this motor from the hardwareMap
+object. If the names do not match, the op mode will throw an exception
+indicating that it cannot find the device.</p>
+<p>In the next few statements of the example, the op mode prompts the user
+to push the start button to continue. It uses another object that is
+available in the runOpMode method. This object is called <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">telemetry</span></a> and
+the op mode uses the addData method to add a message to be sent to the
+DRIVER STATION. The op mode then calls the update method to send the
+message to the DRIVER STATION. Then it calls the waitForStart method, to
+wait until the user pushes the start button on the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">driver station</span></a> to
+begin the op mode run.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Initialized&quot;</span><span class="p">);</span>
+<span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="c1">// Wait for the game to start (driver presses PLAY)</span>
+<span class="n">waitForStart</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Note that all linear op modes should have a waitForStart statement to
+ensure that the robot will not begin executing the op mode until the
+driver pushes the start button.</p>
+<p>After a start command has been received, the op mode enters a while loop
+and keeps iterating in this loop until the op mode is no longer active
+(i.e., until the user pushes the stop button on the DRIVER STATION):</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// run until the end of the match (driver presses STOP)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Running&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As the op mode iterates in the while loop, it will continue to send
+telemetry messages with the index of “Status” and the message of
+“Running” to be displayed on the DRIVER STATION.</p>
+</section>
+<section id="building-your-op-mode">
+<h2>Building Your Op Mode<a class="headerlink" href="#building-your-op-mode" title="Link to this heading"></a></h2>
+<p>When you create or edit an op mode the OnBot Java editor will auto-save
+the .java file to the file system of the Robot Controller. However,
+before you can execute your changes on the Robot Controller, you must
+first build the op mode and convert it from a Java text file to a binary
+that can be loaded dynamically into the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Robot-Controller-App"><span class="xref std std-term">Robot Controller app</span></a>.</p>
+<p>If you are satisfied with your op mode and are ready to build, press the
+Build button (which is the button with the wrench symbol, see image
+below) to start the build process. Note that the build process will
+build <strong>all of the .java files</strong> on your Robot Controller.</p>
+<img alt="../../../../_images/OnBotDoc_BuildButton.jpg" class="align-center" src="../../../../_images/OnBotDoc_BuildButton.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You should see messages appear in the message pane, which is located in
+the lower right hand side of the window. If your build was successful,
+you should see a “Build succeeded!” message in the message pane.</p>
+<img alt="../../../../_images/OnBotDoc_BuildSucceeded.jpg" class="align-center" src="../../../../_images/OnBotDoc_BuildSucceeded.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Once you have built the binary files with your updated op modes, they
+are ready to run on the Robot Controller. Before we run our example op
+mode, let’s see what happens if a problem occurs during the build
+process.</p>
+</section>
+<section id="troubleshooting-build-messages">
+<h2>Troubleshooting Build Messages<a class="headerlink" href="#troubleshooting-build-messages" title="Link to this heading"></a></h2>
+<p>In the previous section, the build process went smoothly. Let’s modify
+your op mode slightly to cause an error in the build process.</p>
+<p>In the editing pane of the OnBot Java window, look for the line that
+reads <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">Servo</span> <span class="pre">servoTest;</span></code>. This should appear somewhere near the
+beginning of your op mode class definition. Change the word “Servo” to
+the word “Zervo”:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="n">Zervo</span><span class="w"> </span><span class="n">servoTest</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Also, let’s modify the telemetry statement that informs the user that
+the op mode has been initialized, and let’s remove one of the two
+arguments so that the statement looks like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,);</span>
+</pre></div>
+</div>
+<p>Note that when you eliminate the second argument, a little “x” should
+appear next to the line with the modified addData statement. This “x”
+indicates that there is a syntax error in the statement.</p>
+<img alt="../../../../_images/OnBotDoc_SyntaxError.jpg" class="align-center" src="../../../../_images/OnBotDoc_SyntaxError.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>After you have modified your op mode, you can press the build button and
+see what error messages appear.</p>
+<img alt="../../../../_images/OnBotDoc_IllegalStart.jpg" class="align-center" src="../../../../_images/OnBotDoc_IllegalStart.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When you first attempt to build the op mode, you should get an “illegal
+start of expression error”. This is because the addData method is
+missing its second argument. The OnBot Java system also directs you to
+the file that has the error, and the location within the file where the
+error occurs.</p>
+<p>In this example, the problem file is called
+“org/firstinspires/ftc/teamcode/MyFIRSTJavaOpMode.java” and the error
+occurs at line 62, column 37. It is important to note that the build
+process builds all of the .java files on the Robot Controller. If there
+is an error in a different file (one that you are not currently editing)
+you will need to look at the file name to determine which file is
+causing the problem.</p>
+<p>Let’s restore this statement back to its original, correct form:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Initialized&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>After you have corrected the addData statement, push the build button
+again to see what happens. The OnBot Java system should complain that it
+cannot find the symbol “Zervo” in a source file called
+“org/firstinspires/ftc/teamcode/MyFIRSTJavaOpMode.java” at line 51,
+column 13.</p>
+<img alt="../../../../_images/OnBotDoc_cannotFind.jpg" class="align-center" src="../../../../_images/OnBotDoc_cannotFind.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You should restore the statement back to its original form and then push
+the build button and verify that the op mode gets built properly.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="n">Servo</span><span class="w"> </span><span class="n">servoTest</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="running-your-op-mode">
+<h2>Running Your Op Mode<a class="headerlink" href="#running-your-op-mode" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you successfully rebuilt your op mode, you are ready to run the op mode. Verify that the DRIVER STATION is still connected to the Robot Controller. Since you designated that your example op mode is a tele-operated op mode, it will be listed as a “TeleOp” op mode.</p></li>
+<li><p>On the DRIVER STATION, use the “TeleOp” dropdown list control to display the list of available op modes. Select your op mode (“MyFIRSTJavaOpMode”) from the list.</p></li>
+</ul>
+<img alt="../../../../_images/OpModeSelectionDH2.png" class="align-center" src="../../../../_images/OpModeSelectionDH2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/OnBotDoc_SelectMyFIRSTOpMode1.jpg" class="align-center" src="../../../../_images/OnBotDoc_SelectMyFIRSTOpMode1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Press the INIT button to initialize the op mode.</p>
+</div></blockquote>
+<img alt="../../../../_images/InitDH2.png" class="align-center" src="../../../../_images/InitDH2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/OnBotDoc_MyFIRSTPushInit1.jpg" class="align-center" src="../../../../_images/OnBotDoc_MyFIRSTPushInit1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The op mode will execute the statements in the runOpMode method up to
+the waitForStart statement. It will then wait until you press the start
+button (which is represented by the triangular shaped symbol) to
+continue.</p>
+<img alt="../../../../_images/RunDH2.png" class="align-center" src="../../../../_images/RunDH2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/OnBotDoc_PressStart1.jpg" class="align-center" src="../../../../_images/OnBotDoc_PressStart1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Once you press the start button, the op mode will continue to iterate
+and send the “Status: Running” message to the DRIVER STATION. To stop
+the op mode, press the square-shaped stop button.</p>
+<img alt="../../../../_images/TelemetryDH2.png" class="align-center" src="../../../../_images/TelemetryDH2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/OnBotDoc_PressStop1.jpg" class="align-center" src="../../../../_images/OnBotDoc_PressStop1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Congratulations! You ran your first java op mode!</p>
+</section>
+<section id="modifying-your-op-mode-to-control-a-motor">
+<h2>Modifying Your Op Mode to Control a Motor<a class="headerlink" href="#modifying-your-op-mode-to-control-a-motor" title="Link to this heading"></a></h2>
+<p>Let’s modify your op mode to control the DC motor that you connected and
+configured for your REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a>. Modify the code for the program
+loop so that it looks like the following:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// run until the end of the match (driver presses STOP)</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">tgtPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tgtPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">;</span>
+<span class="w">    </span><span class="n">motorTest</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="n">tgtPower</span><span class="p">);</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Target Power&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tgtPower</span><span class="p">);</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Motor Power&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">motorTest</span><span class="p">.</span><span class="na">getPower</span><span class="p">());</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Running&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you look at the code that was added, you will see that we defined a
+new variable called target power before we enter the while loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">tgtPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>At the start of the while loop we set the variable tgtPower equal to the
+negative value of the gamepad1’s left joystick:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">tgtPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The object gamepad1 is available for you to access in the runOpMode
+method. It represents the state of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-Gamepad"><span class="xref std std-term">gamepad</span></a> #1 in your OPERATOR CONSOLE.
+Note that for the F310 gamepads that are used during the competition,
+the Y value of a joystick ranges from -1, when a joystick is in its
+topmost position, to +1, when a joystick is in its bottommost position.
+In the example code above, you negate the left_stick_y value so that
+pushing the left joystick forward will result in a positive power being
+applied to the motor. Note that in this example, the notion of forwards
+and backwards for the motor is arbitrary. However, the concept of
+negating the joystick y value can be very useful in practice.</p>
+<img alt="../../../../_images/OnBotDoc_left_stick_y1.jpg" class="align-center" src="../../../../_images/OnBotDoc_left_stick_y1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The next set of statements sets the power of motorTest to the value
+represented by the variable tgtPower. The values for target power and
+actual motor power are then added to the set of data that will be sent
+via the telemetry mechanism to the DRIVER STATION.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">tgtPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">;</span>
+<span class="n">motorTest</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="n">tgtPower</span><span class="p">);</span>
+<span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Target Power&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tgtPower</span><span class="p">);</span>
+<span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Motor Power&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">motorTest</span><span class="p">.</span><span class="na">getPower</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>After you have modified your op mode to include these new statements,
+press the build button and verify that the op mode was built
+successfully.</p>
+</section>
+<section id="running-your-op-mode-with-a-gamepad-connected">
+<h2>Running Your Op Mode with a Gamepad Connected<a class="headerlink" href="#running-your-op-mode-with-a-gamepad-connected" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Your op mode takes input from a gamepad and uses this input to control
+a DC motor. To run your op mode, you will need to connect a Logitech
+F310 gamepad to the DRIVER STATION.</p></li>
+</ul>
+<p>Connect the gamepad to the DRIVER STATION. If using a phone, you will
+need a Micro USB <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../../glossary/glossary.html#term-OTG-Adapter"><span class="xref std std-term">OTG adapter</span></a> cable.</p>
+<img alt="../../../../_images/GamepadDHConnection2.jpg" class="align-center" src="../../../../_images/GamepadDHConnection2.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/RunningOpModeStep22.jpg" class="align-center" src="../../../../_images/RunningOpModeStep22.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Your example op mode is looking for input from the gamepad designated as
+the user or driver #1. Press the Start button and the A button
+simultaneously on the Logitech F310 controller to designate your
+gamepad as user #1. Note that pushing the Start button and the B button
+simultaneously would designate the gamepad as user #2.</p>
+<img alt="../../../../_images/RunningOpModeStep32.jpg" class="align-center" src="../../../../_images/RunningOpModeStep32.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you successfully designated the gamepad to be user #1, you should see
+a little gamepad icon above the text “User 1” in the upper right hand
+corner of the DRIVER STATION Screen. Whenever there is activity on
+gamepad #1, the little icon should be highlighted in green. If the icon
+is missing or if it does not highlight in green when you use your
+gamepad, then there is a problem with the connection to the gamepad.</p>
+<p>Select, initialize and run your “MyFIRSTJavaOpMode” op mode. It is
+important to note that whenever you rebuild an op mode, you must stop
+the current op mode run and then restart it before the changes that you
+just built take effect.</p>
+<p>If you configured your gamepad properly, then the left joystick should
+control the motion of the motor. As you run your op mode, be careful and
+make sure you do not get anything caught in the turning motor. Note that
+the User #1 gamepad icon should highlight green each time you move the
+joystick. Also note that the target power and actual motor power values
+should be displayed in the telemetry area on the DRIVER STATION.</p>
+<img alt="../../../../_images/TelemetryDH2.png" class="align-center" src="../../../../_images/TelemetryDH2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/OnBotDoc_RunOpModeDCMotor1.jpg" class="align-center" src="../../../../_images/OnBotDoc_RunOpModeDCMotor1.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../../onbot_java/opmode/opmode.html" class="btn btn-neutral float-left" title="Writing an Op Mode OBJ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../controlling_a_servo/Controlling-a-Servo-%28OnBot-Java%29.html" class="btn btn-neutral float-right" title="Controlling a Servo OBJ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

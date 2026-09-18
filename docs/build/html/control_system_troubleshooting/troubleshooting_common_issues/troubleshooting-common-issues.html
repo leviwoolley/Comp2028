@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting Common Control System Issues &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Using Wireshark for Packet Capture" href="../wireshark_packet_capture/wireshark-packet-capture.html" />
+    <link rel="prev" title="Planning Wi-Fi Channels for Large Events" href="../wifi_channel_planning/wifi-channel-planning.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Control System Troubleshooting Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../wifi_technology/wifi-technology.html">Wi-Fi Technology and Direct Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../monitoring_wireless_environment/monitoring-wireless-environment.html">Monitoring the Wireless Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting_wireless_at_events/troubleshooting-wireless-at-events.html">Troubleshooting Wireless Issues at an Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi_channel_planning/wifi-channel-planning.html">Planning Wi-Fi Channels for Large Events</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Troubleshooting Common Control System Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-tech-challenge-driver-station">FIRST Tech Challenge Driver Station</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamepad-is-not-recognized">Gamepad is Not Recognized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gamepad-joysticks-were-not-in-neutral-position-when-connected-to-driver-station">Gamepad Joysticks Were Not in Neutral Position When Connected to Driver Station</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mode-button-on-f310-gamepad-is-pressed">Mode Button on F310 Gamepad is Pressed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gamepad-disconnects-while-joysticks-are-in-a-non-neutral-position-during-an-opmode-run">Gamepad Disconnects While Joysticks are in a Non-Neutral Position During an OpMode Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#driver-station-goes-to-sleep-while-opmode-is-running">Driver Station Goes to Sleep While OpMode is Running</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#driver-station-powers-off-unexpectedly">Driver Station Powers Off Unexpectedly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unable-to-find-a-specific-opmode-in-the-driver-station-s-list-of-available-opmodes">Unable to Find a Specific OpMode in the Driver Station’s List of Available OpModes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gamepad-left-joystick-is-not-working">Gamepad Left Joystick is Not Working</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-controller">Robot Controller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user-code-threw-an-uncaught-exception-null">User Code Threw an Uncaught Exception: null</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-code-threw-an-uncaught-exception-number-xxx-is-invalid">User Code Threw an Uncaught Exception: number XXX is invalid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unable-to-find-a-hardware-device-with-the-name">Unable to Find a Hardware Device with the Name “…”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-programming-errors">Common Programming Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neglecting-to-insert-waitforstart-statement">Neglecting to Insert waitForStart() Statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninterruptible-threads">Uninterruptible Threads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rev-robotics-control-and-expansion-hubs">REV Robotics Control and Expansion Hubs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#resetting-a-rev-control-hub-wi-fi-password">Resetting a REV Control Hub Wi-Fi Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-cycle-time">Power Cycle Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logic-level-converters">Logic Level Converters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#v-modern-robotics-compatible-encoders">5V Modern Robotics-Compatible Encoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#v-modern-robotics-compatible-i2c-sensors">5V Modern Robotics-Compatible I2C Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#led-blink-codes">LED Blink Codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting-dual-expansion-hubs">Troubleshooting Dual Expansion Hubs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-a-pair-of-android-devices-to-monitor-wi-fi-channel">Use a Pair of Android Devices to Monitor Wi-Fi Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-the-log-files-to-help-troubleshoot-problems">Use the Log Files to Help Troubleshoot Problems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark_packet_capture/wireshark-packet-capture.html">Using Wireshark for Packet Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using_log_files/using-log-files.html">Using Log Files to Troubleshoot Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mitigating-disruptions-due-to-electrostatic-shocks">Mitigating Disruptions Due to Electrostatic Shocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-additional-help">Getting Additional Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Control System Troubleshooting Guide</a></li>
+      <li class="breadcrumb-item active">Troubleshooting Common Control System Issues</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/control_system_troubleshooting/troubleshooting_common_issues/troubleshooting-common-issues.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting-common-control-system-issues">
+<h1>Troubleshooting Common Control System Issues<a class="headerlink" href="#troubleshooting-common-control-system-issues" title="Link to this heading"></a></h1>
+<p>This page collects common <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-System"><span class="xref std std-term">Control System</span></a> problems reported by teams at
+events, along with the checks and fixes an FTA, CSA, or WTA can walk a team
+through.</p>
+<section id="first-tech-challenge-driver-station">
+<h2>FIRST Tech Challenge Driver Station<a class="headerlink" href="#first-tech-challenge-driver-station" title="Link to this heading"></a></h2>
+<section id="gamepad-is-not-recognized">
+<h3>Gamepad is Not Recognized<a class="headerlink" href="#gamepad-is-not-recognized" title="Link to this heading"></a></h3>
+<p>If a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Gamepad"><span class="xref std std-term">gamepad</span></a> is recognized by the <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Station"><span class="xref std std-term">Driver Station</span></a> app,
+then whenever there is activity with that gamepad, the appropriate gamepad
+icon in the upper right-hand corner of the Driver Station main screen will
+be highlighted in green.</p>
+<figure class="align-default" id="id1">
+<img alt="Driver Station main screen with the User 1 gamepad icon outlined in green, indicating an active, recognized gamepad." src="../../_images/gamepad-icon-active.png" />
+<figcaption>
+<p><span class="caption-text">The gamepad icon is highlighted in green when the gamepad is recognized
+and active.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you encounter a team who is having problems with input from the gamepad,
+check the following items:</p>
+<ul>
+<li><p>If a team is using Logitech F310 gamepads, make sure the switch on the
+bottom of the gamepad is set to the “X” position (Xbox emulation mode).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In SDK 9.1 and newer, this is not necessary — both “X” and “D”
+mode are supported.</p>
+</div>
+</li>
+<li><p>Make sure the gamepad has been designated as either driver (user) #1 or
+driver (user) #2. To designate a gamepad as driver #1, press the START
+button and the A (green) button on the F310 gamepad. To designate a
+gamepad as driver #2, press the START button and the B (red) button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Driver Station software version 5.5 and later automatically
+recognizes the type of FTC-approved gamepad a team is using. Teams no
+longer need to configure the gamepad type manually.</p>
+</div>
+</li>
+<li><p>Check the wired connection. If the gamepad was temporarily disconnected
+from the Driver Station, the driver will have to re-designate which
+driver they would like to be by pressing START and A (driver #1) or START
+and B (driver #2). The Driver Station can sometimes automatically recover
+a lost joystick, but if both gamepads are the same type and both get
+disconnected at the same time, the user will have to re-designate the
+driver position for each gamepad.</p></li>
+<li><p>Disable Advanced Gamepad Settings. If the app is crashing when the gamepad
+is plugged in, or the gamepad is not being detected properly, disabling
+Advanced Gamepad Settings is one step to triage the issue. This has only
+been shown effective when troubleshooting first-generation DualShock 4
+controllers, and Advanced Gamepad Settings are not required to use a
+gamepad.</p></li>
+</ul>
+</section>
+<section id="gamepad-joysticks-were-not-in-neutral-position-when-connected-to-driver-station">
+<h3>Gamepad Joysticks Were Not in Neutral Position When Connected to Driver Station<a class="headerlink" href="#gamepad-joysticks-were-not-in-neutral-position-when-connected-to-driver-station" title="Link to this heading"></a></h3>
+<p>Teams can connect up to two gamepads to the Driver Station Android device.
+Each gamepad has a pair of joysticks that the team’s drivers use to control
+their robot. The gamepads are usually connected directly to a REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Driver-Hub"><span class="xref std std-term">Driver Hub</span></a>
+or through a non-powered <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-USB-Hub"><span class="xref std std-term">USB hub</span></a> to the USB Micro OTG port on an Android
+smartphone Driver Station. When the gamepads are first connected, the
+Android device calibrates the zero, or neutral, position of the two analog
+joysticks on each gamepad.</p>
+<p>If a user has deflected or moved the joysticks while they are being plugged
+in, the Driver Station might use that non-zero position as the calibrated
+reference point. This can cause unexpected behavior when an <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> runs —
+for example, if the user starts the OpMode and the robot starts driving
+without the user touching the joysticks, an improperly calibrated joystick
+could be the cause.</p>
+<p>To clear this problem, stop the OpMode, disconnect the gamepads from the
+Driver Station, and then reconnect the gamepads, making sure the joysticks
+are in their neutral position.</p>
+</section>
+<section id="mode-button-on-f310-gamepad-is-pressed">
+<h3>Mode Button on F310 Gamepad is Pressed<a class="headerlink" href="#mode-button-on-f310-gamepad-is-pressed" title="Link to this heading"></a></h3>
+<p>The Logitech F310 gamepad has a button labeled “MODE”. When this button is
+pressed, the small green LED next to it turns on. Teams usually do <strong>not</strong>
+want this button enabled — with MODE enabled, the outputs of the left
+joystick and the D-pad are swapped, which often confuses teams if the
+button gets pressed during a <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Match"><span class="xref std std-term">match</span></a>.</p>
+<figure class="align-default" id="id2">
+<img alt="Logitech F310 gamepad with the MODE button, located below the D-pad, circled in red." src="../../_images/f310-mode-button.png" />
+<figcaption>
+<p><span class="caption-text">There is a button marked “MODE” on the F310 gamepad controller.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If a team is experiencing unexpected gamepad behavior, verify that the MODE
+button is not enabled. If it is enabled (green LED lit), push the MODE
+button again to disable it.</p>
+</section>
+<section id="gamepad-disconnects-while-joysticks-are-in-a-non-neutral-position-during-an-opmode-run">
+<h3>Gamepad Disconnects While Joysticks are in a Non-Neutral Position During an OpMode Run<a class="headerlink" href="#gamepad-disconnects-while-joysticks-are-in-a-non-neutral-position-during-an-opmode-run" title="Link to this heading"></a></h3>
+<p>If a team is running a driver-controlled OpMode and a gamepad gets
+disconnected from the Driver Station while its joystick was in a
+non-neutral position, the control system might remember the last driver
+command. If the team then stops the OpMode with the STOP button,
+reconnects the gamepad, and runs the OpMode again, it might receive the
+remembered, non-neutral input and cause the robot to move. To correct this,
+have the user move the joysticks on the gamepad around briefly and then let
+them return to their neutral positions.</p>
+</section>
+<section id="driver-station-goes-to-sleep-while-opmode-is-running">
+<h3>Driver Station Goes to Sleep While OpMode is Running<a class="headerlink" href="#driver-station-goes-to-sleep-while-opmode-is-running" title="Link to this heading"></a></h3>
+<p>This problem typically occurs when the sleep timer is set too low and the
+Driver Station goes to sleep while an OpMode is running. To fix it, go to
+the phone’s Settings -&gt; Display -&gt; Sleep, and set it to sleep after 10 or
+30 minutes of inactivity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not necessary on the Driver Hub.</p>
+</div>
+</section>
+<section id="driver-station-powers-off-unexpectedly">
+<h3>Driver Station Powers Off Unexpectedly<a class="headerlink" href="#driver-station-powers-off-unexpectedly" title="Link to this heading"></a></h3>
+<p>This problem occurs when an Android device has a low battery. If a device
+is unexpectedly shutting off, check that it has an adequate charge.</p>
+</section>
+<section id="unable-to-find-a-specific-opmode-in-the-driver-station-s-list-of-available-opmodes">
+<h3>Unable to Find a Specific OpMode in the Driver Station’s List of Available OpModes<a class="headerlink" href="#unable-to-find-a-specific-opmode-in-the-driver-station-s-list-of-available-opmodes" title="Link to this heading"></a></h3>
+<p>If a team used <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a> and the <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> to create
+an OpMode but cannot find it in the Driver Station’s list of available
+OpModes, ask the team if they remembered to register their OpMode in the
+<code class="docutils literal notranslate"><span class="pre">FtcOpModeRegister</span></code> class. If they created the OpMode but did not register
+it, it will not be visible on the Driver Station.</p>
+</section>
+<section id="gamepad-left-joystick-is-not-working">
+<h3>Gamepad Left Joystick is Not Working<a class="headerlink" href="#gamepad-left-joystick-is-not-working" title="Link to this heading"></a></h3>
+<p>If a gamepad’s left joystick is not working but the right joystick is, the
+probable cause is that the MODE button adjacent to the left joystick was
+activated. When the green light next to the MODE button is lit, the gamepad
+swaps the functionality of the D-pad with the left joystick. Press and
+release the MODE button to turn the light off and restore the left
+joystick’s functionality.</p>
+</section>
+</section>
+<section id="robot-controller">
+<h2>Robot Controller<a class="headerlink" href="#robot-controller" title="Link to this heading"></a></h2>
+<section id="user-code-threw-an-uncaught-exception-null">
+<h3>User Code Threw an Uncaught Exception: null<a class="headerlink" href="#user-code-threw-an-uncaught-exception-null" title="Link to this heading"></a></h3>
+<p>This error occurs when a method is called on an object that is null at the
+time of the call. To address it, first look at the robot log file to find
+where to search for the problem. To access the log files, open the settings
+in the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Robot-Controller"><span class="xref std std-term">Robot Controller</span></a> app and select <strong>View Logs</strong>, then scroll up until a
+block of red text appears and look for a line resembling:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>com.qualcomm.ftcRobotcontroller.opmodes.YourOpmodeName.loop(YourOpmodeName.java:XX)
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the line number where the null error occurred, and is a good
+starting point for addressing the issue. For example, if this line is
+accessing a method of an <code class="docutils literal notranslate"><span class="pre">ElapsedTimer</span></code> object, make sure the object was
+instantiated with <code class="docutils literal notranslate"><span class="pre">objectname</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">ElapsedTimer();</span></code> somewhere in the code
+before that line.</p>
+</section>
+<section id="user-code-threw-an-uncaught-exception-number-xxx-is-invalid">
+<h3>User Code Threw an Uncaught Exception: number XXX is invalid<a class="headerlink" href="#user-code-threw-an-uncaught-exception-number-xxx-is-invalid" title="Link to this heading"></a></h3>
+<p>This exception is typically thrown when a motor or <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Servo"><span class="xref std std-term">servo</span></a> is set to a value
+less than -1 or greater than 1. To find which line of code threw the
+exception, check the robot logs the same way as above — open the settings in
+the Robot Controller app, select <strong>View Logs</strong>, scroll up to the first block
+of red text, and find a line resembling:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>com.qualcomm.ftcRobotcontroller.opmodes.YourOpModeName.loop(YourOpModeName.java:XX)
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the line number where the exception was thrown. Remember: the
+<code class="docutils literal notranslate"><span class="pre">setPower()</span></code> method for <code class="docutils literal notranslate"><span class="pre">DcMotor</span></code> can only be passed a value from -1 to
+1, and the <code class="docutils literal notranslate"><span class="pre">setPosition()</span></code> method for <code class="docutils literal notranslate"><span class="pre">Servo</span></code> can only be passed a value
+from 0 to 1. If a value is likely to fall outside of the allowed range, the
+<code class="docutils literal notranslate"><span class="pre">Range.clip()</span></code> method can be used to constrain it.</p>
+</section>
+<section id="unable-to-find-a-hardware-device-with-the-name">
+<h3>Unable to Find a Hardware Device with the Name “…”<a class="headerlink" href="#unable-to-find-a-hardware-device-with-the-name" title="Link to this heading"></a></h3>
+<p>A very commonly encountered error occurs when a user tries to run a
+specific OpMode and the Robot Controller app reports “User code threw an
+uncaught exception: Unable to find a hardware device with the name ‘…’”,
+where “…” is the name of the hardware device the OpMode is trying to
+access. This happens when the OpMode specifies a device name that does not
+match the corresponding name in the <em>FIRST</em> Tech Challenge SDK’s hardware
+map, and it applies to apps created using Android Studio.</p>
+<figure class="align-default" id="id3">
+<img alt="Driver Station error screen reading unable to find a hardware device with the name motor_1, shown in red text below the Op Mode status." src="../../_images/hardware-not-found.png" />
+<figcaption>
+<p><span class="caption-text">The name used by the OpMode must match the name used in the
+configuration file for the device exactly.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>If you are at an event and encounter this error, ask the team to verify that
+the name they use in their OpMode to reference a hardware device matches
+the name specified for that device in their Robot Controller’s
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Configuration-File"><span class="xref std std-term">configuration file</span></a>. The spelling is case sensitive, so the names must match
+exactly.</p>
+</section>
+<section id="common-programming-errors">
+<h3>Common Programming Errors<a class="headerlink" href="#common-programming-errors" title="Link to this heading"></a></h3>
+<p>It can be difficult and frustrating to debug problems with a team’s OpMode.
+However, there are some commonly encountered programming errors that can
+cause problems, described in the sections below.</p>
+</section>
+</section>
+<section id="neglecting-to-insert-waitforstart-statement">
+<h2>Neglecting to Insert waitForStart() Statement<a class="headerlink" href="#neglecting-to-insert-waitforstart-statement" title="Link to this heading"></a></h2>
+<p>For a <code class="docutils literal notranslate"><span class="pre">LinearOpMode</span></code>, it is important that the programmer included a
+<code class="docutils literal notranslate"><span class="pre">waitForStart()</span></code> statement in the OpMode. Any statement that occurs after
+<code class="docutils literal notranslate"><span class="pre">waitForStart()</span></code> is executed only after the user touches the START arrow
+on the Driver Station. If the programmer forgot to include a
+<code class="docutils literal notranslate"><span class="pre">waitForStart()</span></code> statement, the robot might behave unpredictably — for
+example, it might start moving instantly as soon as the OpMode is selected.</p>
+</section>
+<section id="uninterruptible-threads">
+<h2>Uninterruptible Threads<a class="headerlink" href="#uninterruptible-threads" title="Link to this heading"></a></h2>
+<p>Teams often incorporate loops in their robots’ OpModes. Advanced
+programmers might also spawn threads within their OpModes to execute
+commands in parallel with the main OpMode process. If an OpMode contains a
+loop or spawns a separate thread, it is important that the loop or thread
+is written so that it can be interrupted by the Java application when
+necessary.</p>
+<p>This can be illustrated with an example. Suppose a team writes the
+following OpMode:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// turn on motors.</span>
+<span class="n">motorL</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
+<span class="n">motorR</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
+
+<span class="c1">// use while loop to run the cycle indefinitely.</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// stop if touch sensor is pressed.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sensorTouch</span><span class="p">.</span><span class="na">isPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// stop OpMode.</span>
+<span class="w">        </span><span class="n">motorL</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">motorR</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example, the motors turn on and the OpMode loops indefinitely until
+the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Touch-Sensor"><span class="xref std std-term">touch sensor</span></a> is pressed. This OpMode is uninterruptible: if the user
+presses the STOP button on the Driver Station before the touch <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sensor"><span class="xref std std-term">sensor</span></a> is
+pressed, the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop keeps running and the OpMode is not properly
+stopped. This can cause the robot to behave erratically and become
+unresponsive — the robot continues to run, and the Driver Station continues
+to display the STOP button, even after the user has pressed it.</p>
+<p>The Robot Controller app can detect potential “runaway” OpModes. If the app
+detects what it thinks is a runaway or unresponsive OpMode, as a safety
+measure it will record an error message in the log file and then crash
+itself — unfortunately, this is the only way to stop an unresponsive
+thread.</p>
+<figure class="align-default" id="id4">
+<img alt="Robot Controller log excerpt in red showing a user linear Op Mode took too long to exit and the app killing itself." src="../../_images/runaway-opmode-log.png" />
+<figcaption>
+<p><span class="caption-text">If the app detects a potential unresponsive OpMode, it logs an error and
+then aborts itself.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The correct way to prevent a runaway or unresponsive OpMode is to use an
+interruptible method as the loop condition, such as <code class="docutils literal notranslate"><span class="pre">opModeIsActive()</span></code>, or
+to put a sleep statement somewhere in the loop. The following code exits
+properly if the user presses the STOP button on the Driver Station before
+the touch sensor is pressed:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// turn on motors.</span>
+<span class="n">motorL</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
+<span class="n">motorR</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
+
+<span class="c1">// use while loop to run the cycle indefinitely.</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// stop if touch sensor is pressed.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sensorTouch</span><span class="p">.</span><span class="na">isPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// stop OpMode.</span>
+<span class="w">        </span><span class="n">motorL</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">motorR</span><span class="p">.</span><span class="na">setPower</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="rev-robotics-control-and-expansion-hubs">
+<h2>REV Robotics Control and Expansion Hubs<a class="headerlink" href="#rev-robotics-control-and-expansion-hubs" title="Link to this heading"></a></h2>
+<p>The REV <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Expansion-Hub"><span class="xref std std-term">Expansion Hub</span></a> is a compact hardware controller with 4 <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-DC-Motor"><span class="xref std std-term">DC motor</span></a>
+ports, 6 servo ports, and multiple digital, <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-I2C"><span class="xref std std-term">I2C</span></a>, and analog ports. The REV
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Control-Hub"><span class="xref std std-term">Control Hub</span></a> is a REV Expansion Hub with an integrated Android device.</p>
+<p>Detailed information and specifications on the Control and Expansion Hubs
+are available in the REV Robotics Control Hub and Expansion Hub Getting
+Started Guides, published on the
+<a class="reference external" href="https://docs.revrobotics.com/duo-control/">REV Robotics Control System documentation site</a>.</p>
+<p>This section contains important tips for troubleshooting a robot that uses
+a REV Robotics Control and/or Expansion Hub.</p>
+<section id="resetting-a-rev-control-hub-wi-fi-password">
+<h3>Resetting a REV Control Hub Wi-Fi Password<a class="headerlink" href="#resetting-a-rev-control-hub-wi-fi-password" title="Link to this heading"></a></h3>
+<p>A common issue for teams is resetting the REV Control Hub’s Wi-Fi password
+to a new value, which is required as part of field <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Inspection"><span class="xref std std-term">inspection</span></a>.</p>
+<p>On the Driver Station app, tap the three dots (⋮) and select <strong>Program and
+Manage</strong>. This may take up to about 30 seconds to load. Then follow these
+steps, adapted from REV’s
+<a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/control-hub/updating-control-hub">Updating a Control Hub</a>
+guide, to update the password:</p>
+<ol class="arabic simple">
+<li><p>Select the three lines in the upper right-hand corner.</p></li>
+<li><p>Select <strong>Manage</strong> from the menu that pops up.</p></li>
+<li><p>Scroll down to Wi-Fi Settings and enter the new password twice in the
+input fields.</p></li>
+<li><p>Select <strong>Apply Wi-Fi Settings</strong>.</p></li>
+<li><p>Unpair and re-pair the Robot Controller and Driver Station.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure to write down the new password somewhere safe.</p>
+</div>
+</section>
+<section id="power-cycle-time">
+<h3>Power Cycle Time<a class="headerlink" href="#power-cycle-time" title="Link to this heading"></a></h3>
+<p><em>FIRST</em> recommends that teams power down the device for a minimum of 5
+seconds before powering their Control or Expansion Hub back on again.</p>
+</section>
+<section id="logic-level-converters">
+<h3>Logic Level Converters<a class="headerlink" href="#logic-level-converters" title="Link to this heading"></a></h3>
+<p>The REV Robotics Control and Expansion Hubs operate using 3.3V digital
+logic levels. Older Modern Robotics-compatible sensors and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Encoder"><span class="xref std std-term">encoders</span></a> operate
+using 5V digital logic levels. If a team would like to use a 5V device that
+was compatible with Modern Robotics hardware controllers, the team will
+need a Logic Level Converter (available from REV Robotics) to connect the
+5V device to the 3.3V Control or Expansion Hub ports.</p>
+</section>
+<section id="v-modern-robotics-compatible-encoders">
+<h3>5V Modern Robotics-Compatible Encoders<a class="headerlink" href="#v-modern-robotics-compatible-encoders" title="Link to this heading"></a></h3>
+<p>If a team has a 12V DC motor with a 5V encoder designed to connect to a
+Modern Robotics DC motor controller, the team will need one REV Robotics
+Logic Level Converter per 5V encoder to connect the encoder to the Control
+or Expansion Hub.</p>
+</section>
+<section id="v-modern-robotics-compatible-i2c-sensors">
+<h3>5V Modern Robotics-Compatible I2C Sensors<a class="headerlink" href="#v-modern-robotics-compatible-i2c-sensors" title="Link to this heading"></a></h3>
+<p>If a team has a 5V, Modern Robotics-compatible I2C sensor, the team will
+need a REV Robotics Logic Level Converter plus a REV Robotics Sensor Cable
+Adapter to properly connect the 5V device to a Control or Expansion Hub.</p>
+</section>
+<section id="led-blink-codes">
+<h3>LED Blink Codes<a class="headerlink" href="#led-blink-codes" title="Link to this heading"></a></h3>
+<p>The REV Control and Expansion Hub have the following blink codes.</p>
+<figure class="align-default" id="id5">
+<img alt="Table of REV Control and Expansion Hub LED blink codes for firmware 1.07.00 and higher, listing LED color patterns and their meaning." src="../../_images/rev-hub-blink-codes.png" />
+<figcaption>
+<p><span class="caption-text">REV Control and Expansion Hub blink codes.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The REV Robotics website maintains an up-to-date version of this chart; see
+the <a class="reference external" href="https://docs.revrobotics.com/duo-control/troubleshooting-the-control-system/led-blink-codes">REV Hub LED blink codes</a>
+page for the current list.</p>
+</section>
+<section id="troubleshooting-dual-expansion-hubs">
+<h3>Troubleshooting Dual Expansion Hubs<a class="headerlink" href="#troubleshooting-dual-expansion-hubs" title="Link to this heading"></a></h3>
+<p>Teams can daisy-chain two REV Robotics Expansion Hubs together to provide
+additional I/O ports for their robot. Details on how to configure and
+troubleshoot a dual Expansion Hub robot are included in the REV Robotics
+Expansion Hub Getting Started Guide, and in
+<a class="reference internal" href="../../hardware_and_software_configuration/configuring/configuring_dual_hubs/configuring-dual-hubs.html"><span class="doc">Adding an Expansion Hub</span></a>.</p>
+<p>If a team is having a problem with a dual Expansion Hub configuration, it
+is important that the FTA or CSA verify that each of the daisy-chained
+Expansion Hubs has a non-conflicting serial address. By default, all
+Expansion Hubs are assigned an address of 2 at the factory, so a team that
+wants to connect two <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Hub"><span class="xref std std-term">Hubs</span></a> together must first change the serial address of
+one of them to prevent it from conflicting with the other Hub’s address.</p>
+<p>An FTA or CSA can connect each Expansion Hub individually (not
+daisy-chained) to a Robot Controller and check its blink pattern to
+determine the Hub’s address. Details on how to change the address of an
+Expansion Hub are included in
+<a class="reference internal" href="../../hardware_and_software_configuration/configuring/configuring_dual_hubs/configuring-dual-hubs.html"><span class="doc">Adding an Expansion Hub</span></a>.</p>
+</section>
+</section>
+<section id="use-a-pair-of-android-devices-to-monitor-wi-fi-channel">
+<h2>Use a Pair of Android Devices to Monitor Wi-Fi Channel<a class="headerlink" href="#use-a-pair-of-android-devices-to-monitor-wi-fi-channel" title="Link to this heading"></a></h2>
+<p>It is useful to have a set of Android devices that you can use to monitor
+activity on a wireless network. You can configure a <em>FIRST</em> Tech Challenge
+Robot Controller to have an empty configuration file (no devices attached),
+then connect to it with the Driver Station app on a second Android device.
+Use the ping time shown on the Driver Station as an indicator of network
+quality on the devices’ current operating channel.</p>
+</section>
+<section id="use-the-log-files-to-help-troubleshoot-problems">
+<h2>Use the Log Files to Help Troubleshoot Problems<a class="headerlink" href="#use-the-log-files-to-help-troubleshoot-problems" title="Link to this heading"></a></h2>
+<p>Both the Robot Controller and Driver Station apps log information that can
+be useful for diagnosing problems with the system. On the Robot Controller
+app, tap the three vertical dots in the upper right-hand corner of the main
+screen and select <strong>View Logs</strong> to display its log file.</p>
+<figure class="align-default" id="id6">
+<img alt="Windows File Explorer window browsing an Android phone's storage, listing log files including com.qualcomm.ftcrobotcontroller.logcat." src="../../_images/explorer-log-file.png" />
+<figcaption>
+<p><span class="caption-text">Windows users can use File Explorer to locate and copy the log file.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>For a full walkthrough of using log files to diagnose problems, see
+<a class="reference internal" href="../using_log_files/using-log-files.html"><span class="doc">Using Log Files to Troubleshoot Problems</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wifi_channel_planning/wifi-channel-planning.html" class="btn btn-neutral float-left" title="Planning Wi-Fi Channels for Large Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../wireshark_packet_capture/wireshark-packet-capture.html" class="btn btn-neutral float-right" title="Using Wireshark for Packet Capture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

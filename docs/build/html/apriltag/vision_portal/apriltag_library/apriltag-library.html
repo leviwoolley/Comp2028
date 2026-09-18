@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AprilTag Library &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/js/hoverxref.js"></script>
+      <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../../_static/js/micromodal.min.js"></script>
+      <script src="../../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AprilTag Localization" href="../apriltag_localization/apriltag-localization.html" />
+    <link rel="prev" title="AprilTag Pose" href="../apriltag_pose/apriltag-pose.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_processor_init/vision-processor-init.html">Vision Processor Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_init/visionportal-init.html">VisionPortal Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_previews/visionportal-previews.html">VisionPortal Previews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_id_code/apriltag-id-code.html">AprilTag ID Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_metadata/apriltag-metadata.html">AprilTag Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_reference_frame/apriltag-reference-frame.html">AprilTag Reference Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_pose/apriltag-pose.html">AprilTag Pose</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AprilTag Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-easy-way">The Easy Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-libraries">Default Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apriltag-processor">AprilTag Processor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#library-variable">Library Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#library-builder-with-defaults">Library Builder, with Defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-tag-direct">Custom Tag - Direct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-tag-variable">Custom Tag - Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#libraries-and-clusters">Libraries and Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overwriting">Overwriting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html">VisionPortal CPU and Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_multiportal/vision-multiportal.html">Vision Multiportal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_advanced_use/apriltag-advanced-use.html">AprilTag Advanced Use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../color_processing/index.html">Color Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+      <li class="breadcrumb-item active">AprilTag Library</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/apriltag/vision_portal/apriltag_library/apriltag-library.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apriltag-library">
+<h1>AprilTag Library<a class="headerlink" href="#apriltag-library" title="Link to this heading"></a></h1>
+<p>For a <em>FIRST</em> Tech Challenge <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Match"><span class="xref std std-term">match</span></a>, your <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a> has a known set of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-AprilTag"><span class="xref std std-term">AprilTags</span></a> to
+detect.  They are preloaded by default or specified by you, with or without
+custom tags.</p>
+<p>These tags form an <strong>AprilTag Library</strong>. Each Library tag has a set of 4
+to 6 properties, described at the <strong>Metadata</strong> page.</p>
+<p>Starting with <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-SDK"><span class="xref std std-term">SDK</span></a> 12.0, a Library holds two separate collections: single tags
+and AprilTag Clusters, which are groups of tags detected together as one
+target. The difference matters when you build a custom Library. See
+<strong>Libraries and Clusters</strong> below.</p>
+<p>This page shows many ways to create an AprilTag Library. The
+<strong>Initialization</strong> page explained this is the optional <strong>Step 1</strong> of
+preparing to use AprilTags in an OpMode.</p>
+<p><strong>Try these examples in order</strong>, to master the use of AprilTag
+Libraries.</p>
+<section id="the-easy-way">
+<h2>The Easy Way<a class="headerlink" href="#the-easy-way" title="Link to this heading"></a></h2>
+<p>Let’s start with… no Library! If your OpMode will use only the current
+season defaults, no Library action is needed.</p>
+<p>Simply create the AprilTagProcessor as follows:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/010-Blocks-ATprocessor-Easy.png"><img alt="Simple AprilTag Processor" src="../../../_images/010-Blocks-ATprocessor-Easy.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Simple AprilTag Processor</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+
+<span class="c1">// Create the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">easyCreateWithDefaults</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Specifying a Library is needed for creating an AprilTag Processor. Even
+this “Easy Way” does specify the default Library, behind the scenes.</p>
+</section>
+<section id="default-libraries">
+<h2>Default Libraries<a class="headerlink" href="#default-libraries" title="Link to this heading"></a></h2>
+<p>The SDK uses two core Libraries of predefined AprilTags:</p>
+<ul class="simple">
+<li><p>tags used only in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpModes</span></a></p></li>
+<li><p>tags used only in the Robot Game (competition)</p></li>
+</ul>
+<p>The first Library, called <code class="docutils literal notranslate"><span class="pre">SampleTagLibrary</span></code>, is available now with
+SDK 8.2. Its basic Metadata values are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">583,</span> <span class="pre">Nemo,</span> <span class="pre">4,</span> <span class="pre">DistanceUnit.INCH</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">584,</span> <span class="pre">Jonah,</span> <span class="pre">4,</span> <span class="pre">DistanceUnit.INCH</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">585,</span> <span class="pre">Cousteau,</span> <span class="pre">6,</span> <span class="pre">DistanceUnit.INCH</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">586,</span> <span class="pre">Ariel,</span> <span class="pre">6,</span> <span class="pre">DistanceUnit.INCH</span></code></p></li>
+</ul>
+<p>The second Library, called <code class="docutils literal notranslate"><span class="pre">CenterStageTagLibrary</span></code>, is planned for
+future competition only. It’s available now in SDK 8.2, but currently
+holding three “placeholder” tags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">MEOW,</span> <span class="pre">0.166,</span> <span class="pre">DistanceUnit.METER</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">WOOF,</span> <span class="pre">0.166,</span> <span class="pre">DistanceUnit.METER</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2,</span> <span class="pre">OINK,</span> <span class="pre">0.166,</span> <span class="pre">DistanceUnit.METER</span></code></p></li>
+</ul>
+<p>After Kickoff in September 2023, these will be replaced (in SDK 9.0)
+by the <strong>real tags</strong> for CENTERSTAGE.</p>
+<p>For convenience, a third Library contains <strong>both</strong> of these core
+Libraries, and nothing else. This is the default, called
+<code class="docutils literal notranslate"><span class="pre">CurrentGameTagLibrary</span></code>.</p>
+</section>
+<section id="apriltag-processor">
+<h2>AprilTag Processor<a class="headerlink" href="#apriltag-processor" title="Link to this heading"></a></h2>
+<p>Specifying <strong>any aspect</strong> of a Processor is done with a <strong>Processor
+Builder</strong>, requiring at least 2 commands:</p>
+<ul class="simple">
+<li><p>create the Builder, using the Java keyword <code class="docutils literal notranslate"><span class="pre">new</span></code></p></li>
+<li><p>after specifying/adding features, finalize with a call to the
+<code class="docutils literal notranslate"><span class="pre">.build()</span></code> method</p></li>
+</ul>
+<p>In between these actions, your OpMode will add one of the three
+Libraries directly to the Processor Builder. It’s easiest to use the
+default <code class="docutils literal notranslate"><span class="pre">CurrentGameTagLibrary</span></code>, containing all of the predefined
+tags.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<p>First create this expression, drawing the first component from the
+<code class="docutils literal notranslate"><span class="pre">AprilTagProcessor.Builder</span></code> toolbox (or palette), and drawing the
+second component from the <code class="docutils literal notranslate"><span class="pre">AprilTagLibrary</span></code> toolbox.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/020-Blocks-setTagLibrary-CurrentGame.png"><img alt="Set Current Game Tag Library" src="../../../_images/020-Blocks-setTagLibrary-CurrentGame.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting Current Game Tag Library</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Around this</strong> (before and after), place one Block to <strong>create</strong> the
+Processor Builder, and another Block to <strong>finalize</strong> the process with
+<code class="docutils literal notranslate"><span class="pre">.build()</span></code>.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/030-Blocks-ATprocessor-CurrentGame.png"><img alt="Completing Builder" src="../../../_images/030-Blocks-ATprocessor-CurrentGame.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Completing Builder</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These are the first and last <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> in the <code class="docutils literal notranslate"><span class="pre">AprilTagProcessor.Builder</span></code>
+toolbox. The remaining Blocks are used to set optional features of the
+Processor. Here we are setting only the Library.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+
+<span class="c1">// Create a new AprilTagProcessor.Builder object and assign it to a variable.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Set the tag library.</span>
+<span class="c1">// Get the AprilTagLibrary for the current season.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">setTagLibrary</span><span class="p">(</span><span class="n">AprilTagGameDatabase</span><span class="p">.</span><span class="na">getCurrentGameTagLibrary</span><span class="p">());</span>
+
+<span class="c1">// Build the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="library-variable">
+<h2>Library Variable<a class="headerlink" href="#library-variable" title="Link to this heading"></a></h2>
+<p>As an alternate, you could first store the Library in your own Variable
+name. Then specify that name for the AprilTag Processor. Here we use
+<code class="docutils literal notranslate"><span class="pre">myAprilTagLibrary</span></code> (any other name is fine).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<p>First create this expression, drawing the first component from the
+<code class="docutils literal notranslate"><span class="pre">AprilTagLibrary</span></code> toolbox, and drawing the second component from
+the <code class="docutils literal notranslate"><span class="pre">AprilTagProcessor.Builder</span></code> toolbox.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/040-Blocks-ATProcessor-Variable.png"><img alt="Set Tag Library" src="../../../_images/040-Blocks-ATProcessor-Variable.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Set the Tag Library</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>As before, <strong>around this</strong> (before and after), place one Block to
+<strong>create</strong> the Processor Builder, and another Block to <strong>finalize</strong> the
+process with <code class="docutils literal notranslate"><span class="pre">.build()</span></code>.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/050-Blocks-ATprocessor-CurrentGame-Variable.png"><img alt="Build the AprilTag Processor" src="../../../_images/050-Blocks-ATprocessor-CurrentGame-Variable.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Build the AprilTag Processor</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+<span class="n">AprilTagLibrary</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">;</span>
+
+<span class="c1">// Create a new AprilTagProcessor.Builder object and assign it to a variable.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Get the AprilTagLibrary for the current season.</span>
+<span class="n">myAprilTagLibrary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AprilTagGameDatabase</span><span class="p">.</span><span class="na">getCurrentGameTagLibrary</span><span class="p">();</span>
+
+<span class="c1">// Set the tag library.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">setTagLibrary</span><span class="p">(</span><span class="n">myAprilTagLibrary</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="library-builder-with-defaults">
+<h2>Library Builder, with Defaults<a class="headerlink" href="#library-builder-with-defaults" title="Link to this heading"></a></h2>
+<p>Next we try the Builder pattern, to create a Library containing only
+predefined AprilTags. It’s not needed (nothing new to Build!), but it’s
+an easy introduction.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-6">
+Blocks</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Create a Library Builder, not the same as a Processor Builder.</p></li>
+<li><p>Then use the <code class="docutils literal notranslate"><span class="pre">addLibrary</span></code> Block. It brings in both the single tags
+and the AprilTag Clusters of the season Library. Do not use the
+<code class="docutils literal notranslate"><span class="pre">addTags</span></code> Block here. It brings in the single tags only and skips
+every Cluster.</p></li>
+<li><p>Finalize the process with the <code class="docutils literal notranslate"><span class="pre">.build</span></code> command.</p></li>
+</ul>
+<p>The built Library is assigned or saved to your Variable, here called
+<code class="docutils literal notranslate"><span class="pre">myAprilTagLibrary</span></code>.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/060-Blocks-LibraryBuilder-CurrentGame.png"><img alt="Build the Tag Library" src="../../../_images/060-Blocks-LibraryBuilder-CurrentGame.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Build the Tag Library</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Next comes the familiar steps:</p>
+<ul class="simple">
+<li><p>Create a Processor Builder.</p></li>
+<li><p>Then set, or add, the Library built and saved in the previous
+sequence.</p></li>
+<li><p>Finalize the process with the <code class="docutils literal notranslate"><span class="pre">.build</span></code> command.</p></li>
+</ul>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/070-Blocks-Processor-Variable.png"><img alt="Build the Tag Processor" src="../../../_images/070-Blocks-Processor-Variable.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Build the Tag Processor</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The final result is the same as the previous examples, but now you see
+how to use a Library Builder.</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-7">
+Java</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">;</span>
+<span class="n">AprilTagLibrary</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+
+<span class="c1">// Create a new AprilTagLibrary.Builder object and assigns it to a variable.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Add all the tags and all the clusters from the given AprilTagLibrary</span>
+<span class="c1">// to the AprilTagLibrary.Builder. Use addLibrary(), not addTags().</span>
+<span class="c1">// addTags() copies the single tags only and drops the clusters.</span>
+<span class="c1">// Get the AprilTagLibrary for the current season.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">addLibrary</span><span class="p">(</span><span class="n">AprilTagGameDatabase</span><span class="p">.</span><span class="na">getCurrentGameTagLibrary</span><span class="p">());</span>
+
+<span class="c1">// Build the AprilTag library and assign it to a variable.</span>
+<span class="n">myAprilTagLibrary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="c1">// Create a new AprilTagProcessor.Builder object and assign it to a variable.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Set the tag library.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">setTagLibrary</span><span class="p">(</span><span class="n">myAprilTagLibrary</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="custom-tag-direct">
+<h2>Custom Tag - Direct<a class="headerlink" href="#custom-tag-direct" title="Link to this heading"></a></h2>
+<p>Finally, we are ready to add custom tags to a Library.</p>
+<p>Each tag needs Metadata. You can enter Metadata values directly to a new
+tag, as follows.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-8">
+Blocks</label><div class="sd-tab-content docutils">
+<p>The third Block adds the custom tag to the Library. All other Blocks are
+the same as the previous example.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/080-Blocks-addTag.png"><img alt="Custom Tag Library" src="../../../_images/080-Blocks-addTag.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Add custom tags to Tag Library</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-9">
+Java</label><div class="sd-tab-content docutils">
+<p>The custom tag is added with <strong>one new line</strong> of code, otherwise the
+same as the previous example.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">;</span>
+<span class="n">AprilTagLibrary</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+
+<span class="c1">// Create a new AprilTagLibrary.Builder object and assigns it to a variable.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Add all the tags and all the clusters from the given AprilTagLibrary</span>
+<span class="c1">// to the AprilTagLibrary.Builder. Use addLibrary(), not addTags().</span>
+<span class="c1">// addTags() copies the single tags only and drops the clusters.</span>
+<span class="c1">// Get the AprilTagLibrary for the current season.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">addLibrary</span><span class="p">(</span><span class="n">AprilTagGameDatabase</span><span class="p">.</span><span class="na">getCurrentGameTagLibrary</span><span class="p">());</span>
+
+<span class="c1">// Add a tag, without pose information, to the AprilTagLibrary.Builder.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">addTag</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Our Awesome Team Tag&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">DistanceUnit</span><span class="p">.</span><span class="na">INCH</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag library and assign it to a variable.</span>
+<span class="n">myAprilTagLibrary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="c1">// Create a new AprilTagProcessor.Builder object and assign it to a variable.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Set the tag library.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">setTagLibrary</span><span class="p">(</span><span class="n">myAprilTagLibrary</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="custom-tag-variable">
+<h2>Custom Tag - Variable<a class="headerlink" href="#custom-tag-variable" title="Link to this heading"></a></h2>
+<p>As an alternate, you can assign Metadata to a Variable, then use that
+Variable to create a new AprilTag.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-10">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These two Blocks could replace the single new Block in the previous
+example.</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/090-Blocks-add-Metadata.png"><img alt="Variable Metadata" src="../../../_images/090-Blocks-add-Metadata.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting Metadata with Variable</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These Blocks are separated, to illustrate that the Metadata Variable can
+be initialized/assigned anywhere before being added with the Library
+Builder. It doesn’t have to appear immediately before use.</p>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-11">
+Java</label><div class="sd-tab-content docutils">
+<p>The custom tag is added with <strong>two lines</strong> of code, replacing the <strong>one
+new line</strong> in the previous example.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagMetadata</span><span class="w"> </span><span class="n">myAprilTagMetadata</span><span class="p">;</span>
+<span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">;</span>
+<span class="n">AprilTagLibrary</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">;</span>
+<span class="n">AprilTagProcessor</span><span class="w"> </span><span class="n">myAprilTagProcessor</span><span class="p">;</span>
+
+<span class="c1">// Create a new AprilTagLibrary.Builder object and assigns it to a variable.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagLibrary</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Add all the tags and all the clusters from the given AprilTagLibrary</span>
+<span class="c1">// to the AprilTagLibrary.Builder. Use addLibrary(), not addTags().</span>
+<span class="c1">// addTags() copies the single tags only and drops the clusters.</span>
+<span class="c1">// Get the AprilTagLibrary for the current season.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">addLibrary</span><span class="p">(</span><span class="n">AprilTagGameDatabase</span><span class="p">.</span><span class="na">getCurrentGameTagLibrary</span><span class="p">());</span>
+
+<span class="c1">// Create a new AprilTagMetadata object and assign it to a variable.</span>
+<span class="n">myAprilTagMetadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagMetadata</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Our Awesome Team Tag&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="n">DistanceUnit</span><span class="p">.</span><span class="na">INCH</span><span class="p">);</span>
+
+<span class="c1">// Add a tag to the AprilTagLibrary.Builder.</span>
+<span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">addTag</span><span class="p">(</span><span class="n">myAprilTagMetadata</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag library and assign it to a variable.</span>
+<span class="n">myAprilTagLibrary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagLibraryBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="c1">// Create a new AprilTagProcessor.Builder object and assign it to a variable.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AprilTagProcessor</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Set the tag library.</span>
+<span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">setTagLibrary</span><span class="p">(</span><span class="n">myAprilTagLibrary</span><span class="p">);</span>
+
+<span class="c1">// Build the AprilTag processor and assign it to a variable.</span>
+<span class="n">myAprilTagProcessor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagProcessorBuilder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For Blocks or Java, multiple tags could be added with multiple
+(shorter!) Variable names, such as <code class="docutils literal notranslate"><span class="pre">myTag1</span></code>, <code class="docutils literal notranslate"><span class="pre">myTag2</span></code>, etc.</p>
+</section>
+<section id="libraries-and-clusters">
+<h2>Libraries and Clusters<a class="headerlink" href="#libraries-and-clusters" title="Link to this heading"></a></h2>
+<p>Starting with SDK 12.0, an <code class="docutils literal notranslate"><span class="pre">AprilTagLibrary</span></code> stores single tags and AprilTag
+Clusters in two separate collections. Most Library methods act on one
+collection or the other. Pick the wrong one and the Library still builds, the
+OpMode still runs, and nothing is detected.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Acts on</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">addTag()</span></code>, <code class="docutils literal notranslate"><span class="pre">addTags()</span></code></p></td>
+<td><p>single tags only</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">addCluster()</span></code>, <code class="docutils literal notranslate"><span class="pre">addClusters()</span></code></p></td>
+<td><p>clusters only</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">addLibrary()</span></code></p></td>
+<td><p>both</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">getAllTags()</span></code></p></td>
+<td><p>single tags only</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">getAllClusters()</span></code></p></td>
+<td><p>clusters only</p></td>
+</tr>
+</tbody>
+</table>
+<p>When copying a season Library into your own Library Builder, use
+<code class="docutils literal notranslate"><span class="pre">addLibrary()</span></code>. The examples above do this. <code class="docutils literal notranslate"><span class="pre">addTags()</span></code> leaves every
+Cluster behind, and your OpMode then never receives an
+<code class="docutils literal notranslate"><span class="pre">AprilTagClusterDetection</span></code>.</p>
+<p>Lookups have the same split. <code class="docutils literal notranslate"><span class="pre">lookupTag(id)</span></code> searches the single tags only,
+and returns <code class="docutils literal notranslate"><span class="pre">null</span></code> for a tag that belongs to a Cluster. To find the Cluster
+a tag ID belongs to, call <code class="docutils literal notranslate"><span class="pre">lookupCluster(id)</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagLibrary</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">;</span>
+
+<span class="c1">// Returns null if tag 24 is a cluster member rather than a standalone tag.</span>
+<span class="n">AprilTagMetadata</span><span class="w"> </span><span class="n">singleTag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">.</span><span class="na">lookupTag</span><span class="p">(</span><span class="mi">24</span><span class="p">);</span>
+
+<span class="c1">// Returns the cluster that tag 24 belongs to, or null if it is not in one.</span>
+<span class="n">AprilTagClusterMetadata</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagLibrary</span><span class="p">.</span><span class="na">lookupCluster</span><span class="p">(</span><span class="mi">24</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Cluster Metadata is a different type from single-tag Metadata, with different
+fields. See the <strong>Metadata</strong> page for both.</p>
+<p>For telling the two detection types apart, and for deciding which Cluster to
+target, see <a class="reference internal" href="../../../tech_tips/tech-tips/tech-tip-apriltag-clusters/tech-tip-apriltag-clusters.html#apriltagclusters"><span class="std std-ref">AprilTag Clusters</span></a>.</p>
+</section>
+<section id="overwriting">
+<h2>Overwriting<a class="headerlink" href="#overwriting" title="Link to this heading"></a></h2>
+<p>You might create a custom AprilTag with the <strong>same ID code</strong> as a tag
+already in the Library. This is <strong>overwriting</strong>, which you can allow or
+not allow.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">setAllowOverwrite()</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default) and
+overwrite is attempted, the OpMode will crash with a suitable error
+message.</p>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the custom tag will replace the existing tag.</p>
+<p>Why might you do this? Suppose a tag size is not quite correct. You
+could enter a new tag with the same Metadata, but with a corrected tag
+size.</p>
+<p>Or you might prefer to use your own tag names, or distance units.</p>
+<p>Advanced users might want to specify the <strong>location</strong> of a predefined
+tag <strong>on the game field</strong>. This can be done with the optional Vector
+and Quaternion fields.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../apriltag_pose/apriltag-pose.html" class="btn btn-neutral float-left" title="AprilTag Pose" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../apriltag_localization/apriltag-localization.html" class="btn btn-neutral float-right" title="AprilTag Localization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

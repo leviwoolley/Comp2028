@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Locator (Challenge) &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=4a4ea868" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=c4216195" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/ftc-rtd.css?v=d9bc089d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/FIRSTicon_RGB_withTM.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=b489f392"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/external-links-new-tab.js?v=e040d832"></script>
+      <script src="../../_static/js/adjust-css-vars.js?v=372143e2"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=0f17bab3"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Color Locator (Round Blobs)" href="../color-locator-round-blobs/color-locator-round-blobs.html" />
+    <link rel="prev" title="Color Locator (Explore)" href="../color-locator-explore/color-locator-explore.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>
+                  <li id="ftc-page-link"><a href="https://ftc-resources.firstinspires.org/ftc/game" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                  <li id="first-home-link"><a href="https://www.firstinspires.org/" target="_blank">firstinspires.org</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <a href="../../index.html" class="icon icon-home">
+    FIRST Tech Challenge Docs
+      <img src="../../_static/ftc-logo-horz-onlight.png" class="logo logo-on-light" alt=""/>
+    <img src="../../_static/ftc-logo-horz-ondark.png" class="logo logo-on-dark" alt=""/>
+  </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/index.html">Programming Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Vision Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/visionportal_camera_controls/index.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming_resources/vision/camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Color Processing</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../color-sensor/color-sensor.html">Color Processing Color Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-blob-concepts/color-blob-concepts.html">Color Blob Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-discover/color-locator-discover.html">Color Locator (Discover)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-explore/color-locator-explore.html">Color Locator (Explore)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Color Locator (Challenge)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pre-filter-intro">Pre-Filter Intro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pre-filter-programming">Pre-Filter Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pre-sort">Pre-sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preview-colors">Preview Colors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boxfit-corners">boxFit Corners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contour-vertices">Contour Vertices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boxfit-size-and-angle">boxFit Size and Angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#horizontal-rectangle">Horizontal Rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-development">Advanced Development</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html">Color Locator (Round Blobs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color-spaces/color-spaces.html">Color Spaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#compatibility">Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#two-processors">Two Processors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../control_system_troubleshooting/index.html">Control System Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/wiring_guide/wiring-guide.html">Robot Wiring Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robot_building/best_practices/robot-best-practices.html">Robot Best Practices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../team_resources/team_resources.html">Team Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Color Processing Introduction</a></li>
+      <li class="breadcrumb-item active">Color Locator (Challenge)</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/color_processing/color-locator-challenge/color-locator-challenge.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="color-locator-challenge">
+<h1>Color Locator (Challenge)<a class="headerlink" href="#color-locator-challenge" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This <strong>Challenge</strong> page introduces Color Locator settings that were <strong>not mentioned in the Sample OpMode</strong>.  It assumes you have already followed this tutorial’s previous pages:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../color-locator-discover/color-locator-discover.html"><span class="doc">Discover</span></a> page, to open and test the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Sample-OpMode"><span class="xref std std-term">Sample OpMode</span></a></p></li>
+<li><p><a class="reference internal" href="../color-locator-explore/color-locator-explore.html"><span class="doc">Explore</span></a> page, to edit settings mentioned in the Sample <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpMode"><span class="xref std std-term">OpMode</span></a></p></li>
+</ul>
+<p>Here are the additional ColorLocator settings covered in this page:</p>
+<ul class="simple">
+<li><p>pre-filtering, affecting Blob results and previews</p></li>
+<li><p>pre-sorting</p></li>
+<li><p>custom outline colors in the previews: ROI, contour, boxFit</p></li>
+<li><p>access a boxFit’s corner points</p></li>
+<li><p>access all vertices of a contour</p></li>
+<li><p>access a boxFit’s size and tilt angle</p></li>
+<li><p>create a horizontal rectangle around a tilted boxFit</p></li>
+<li><p>access the horizontal rectangle’s size and location</p></li>
+</ul>
+</section>
+<section id="pre-filter-intro">
+<h2>Pre-Filter Intro<a class="headerlink" href="#pre-filter-intro" title="Link to this heading"></a></h2>
+<p>Here the term “pre-” means the filter criteria are implemented <strong>before</strong> the
+Blob formation results are passed further.  Thus the DS and RC previews will
+<strong>not display</strong> any filtered-out contour or its boxFit.  This can save CPU
+resources used to draw the outlines.</p>
+<p>Likewise the resulting list of results will not include any filtered-out Blobs.
+A shorter list can help OpMode cycle time.</p>
+<p>This contrasts with the post-filtering present in the Sample OpMode and
+discussed at this tutorial’s Explore page.  Pre-filtering is a setting that
+persists, while post-filtering is a one-time action performed on a single set
+of processing results.</p>
+<p>Teams may wish to use both.  Use a pre-filter to “clean up” the preview, which
+can appear chaotic with potentially dozens of Blobs.   Then use a post-filter
+to focus on the particular boxFit results of interest.</p>
+<p>Caution: changing the ROI size and/or changing the camera resolution may
+require an adjustment to filtering by Area.</p>
+</section>
+<section id="pre-filter-programming">
+<h2>Pre-Filter Programming<a class="headerlink" href="#pre-filter-programming" title="Link to this heading"></a></h2>
+<p>To apply a filter setting, use two steps:</p>
+<ul class="simple">
+<li><p><strong>set</strong> the filter name and criteria</p></li>
+<li><p><strong>add</strong> that filter to the existing Processor</p></li>
+</ul>
+<p>The “Color Blob Locator” Processor must already be created; adding a filter is
+<strong>not</strong> part of the Builder pattern here.  A pre-filter can be added before or
+after the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-VisionPortal"><span class="xref std std-term">VisionPortal</span></a> is built.</p>
+<p>In general, a pre-filter setting remains in place and cannot be edited.  To
+“change” a pre-filter, it must be <strong>removed</strong> from the Processor, then
+<strong>added</strong> again.</p>
+<p>Recall from this tutorial’s <a class="reference internal" href="../color-locator-explore/color-locator-explore.html"><span class="doc">Explore</span></a> page, to edit settings
+mentioned in the Sample OpMode that filtering can be done by Contour Area, Blob
+Density and boxFit Aspect Ratio.</p>
+<p>Multiple pre-filters can operate at the same time.  A single common filter name
+<strong>could</strong> be used, if its criteria are defined, then added – then redefined,
+and added again, etc.</p>
+<p>You might find it more versatile and convenient to create unique filter names,
+each separately managed (i.e. set criteria, add, remove, add again).</p>
+<p>Select and read the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Blocks"><span class="xref std std-term">Blocks</span></a> <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-0">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These pre-filter Blocks are in the Vision/ColorBlobLocator/Pre-processing toolbox:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/10-set-pre-filter.png"><img alt="Setting a pre-filter" src="../../_images/10-set-pre-filter.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting a pre-filter</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Blocks in the toolbox use the same variable name <code class="docutils literal notranslate"><span class="pre">myFilter</span></code> (green
+arrow) for the three available criteria (orange ovals).  As noted above,
+be careful about using a single name for different pre-filters.</p>
+<p>For multiple pre-filters, you might prefer unique names; see the orange arrows:</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/12-set-3-filters.png"><img alt="Setting 3 filters" src="../../_images/12-set-3-filters.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting 3 filters</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>These Blocks for adding and removing filters are in the
+Vision/ColorBlobLocator/Processor toolbox:</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/15-add-filter.png"><img alt="Adding and Removing a filter" src="../../_images/15-add-filter.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Adding and Removing a filter</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Be careful to designate the correct filter to be added or removed; see
+the green arrows.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-1">
+Java</label><div class="sd-tab-content docutils">
+<p>For multiple pre-filters, you might prefer unique names:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">myAreaFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobFilter</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_CONTOUR_AREA</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">20000</span><span class="p">);</span>
+<span class="n">myDensityFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobFilter</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_DENSITY</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+<span class="n">myRatioFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobFilter</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_ASPECT_RATIO</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>After defining a filter’s criteria, add the filter to an already-existing
+Processor:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">colorLocator</span><span class="p">.</span><span class="na">addFilter</span><span class="p">(</span><span class="n">myAreaFilter</span><span class="p">);</span>
+<span class="n">colorLocator</span><span class="p">.</span><span class="na">addFilter</span><span class="p">(</span><span class="n">myDensityFilter</span><span class="p">);</span>
+<span class="n">colorLocator</span><span class="p">.</span><span class="na">addFilter</span><span class="p">(</span><span class="n">myRatioFilter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>These methods can remove one or all filters from a Processor:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">colorLocator</span><span class="p">.</span><span class="na">removeFilter</span><span class="p">(</span><span class="n">myAreaFilter</span><span class="p">);</span>
+<span class="n">colorLocator</span><span class="p">.</span><span class="na">removeFilter</span><span class="p">(</span><span class="n">myDensityFilter</span><span class="p">);</span>
+<span class="n">colorLocator</span><span class="p">.</span><span class="na">removeFilter</span><span class="p">(</span><span class="n">myRatioFilter</span><span class="p">);</span>
+<span class="n">colorLocator</span><span class="p">.</span><span class="na">removeAllFilters</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>After removal, a filter can be re-added to the Processor.</p>
+</div>
+</div>
+</section>
+<section id="pre-sort">
+<h2>Pre-sort<a class="headerlink" href="#pre-sort" title="Link to this heading"></a></h2>
+<p>Here the term “pre-” also means the sort criteria are already established, and
+applied to the results of the Blob formation process.</p>
+<p>This works the same as the post-sorting mentioned in the Sample OpMode and
+discussed at this tutorial’s Explore page.  Pre-sorting is a setting that
+persists, while post-sorting is a one-time action performed on a single set of
+processing results.</p>
+<p>Only one sort (the last one applied) affects the final list of results provided
+for the OpMode to evaluate.  Thus there is no benefit to using both pre-sort
+and post-sort.</p>
+<p>To apply a sort, use two steps:</p>
+<ul class="simple">
+<li><p>define the sort name and criteria</p></li>
+<li><p>apply that sort to the existing Processor</p></li>
+</ul>
+<p>The “Color Blob Locator” Processor must already be created; adding a sort is
+<strong>not</strong> part of the Builder pattern here.  A pre-sort can be added before or
+after the VisionPortal is built.</p>
+<p>In general, a pre-sort setting remains in place and cannot be removed or
+edited.  To “change” a sort, simply define and apply another one, with the same
+or a unique name.  The later <code class="docutils literal notranslate"><span class="pre">setSort()</span></code> will be in effect.</p>
+<p>Reminder from this tutorial’s <a class="reference internal" href="../color-locator-explore/color-locator-explore.html"><span class="doc">Explore</span></a> page: by default, the Sample
+OpMode sorts by <strong>Contour Area</strong> in descending order (largest is first).  This
+is an internally programmed sort, not appearing in the Sample OpMode.  This
+default is overridden or replaced by any pre-sort or post-sort specified in the
+OpMode.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-2">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These pre-sort Blocks are in the Vision/ColorBlobLocator/Pre-processing
+toolbox:</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/20-sort-criteria.png"><img alt="Selecting the Sort Criteria" src="../../_images/20-sort-criteria.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Selecting the Sort Criteria</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This Block for applying the named pre-sort is in the
+Vision/ColorBlobLocator/Processor toolbox:</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/23-set-sort.png"><img alt="Setting the Sort Criteria" src="../../_images/23-set-sort.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting the Sort Criteria</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-3">
+Java</label><div class="sd-tab-content docutils">
+<p>A generic pre-sort name works well, since only one sort can be in effect
+at a time:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">mySort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobSort</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_CONTOUR_AREA</span><span class="p">,</span><span class="w"> </span><span class="n">SortOrder</span><span class="p">.</span><span class="na">ASCENDING</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you are experimenting with different pre-sort criteria, you might
+consider unique names:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">myAreaSort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobSort</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_CONTOUR_AREA</span><span class="p">,</span><span class="w"> </span><span class="n">SortOrder</span><span class="p">.</span><span class="na">ASCENDING</span><span class="p">);</span>
+<span class="n">myDensitySort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobSort</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_DENSITY</span><span class="p">,</span><span class="w"> </span><span class="n">SortOrder</span><span class="p">.</span><span class="na">ASCENDING</span><span class="p">);</span>
+<span class="n">myRatioSort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BlobSort</span><span class="p">(</span><span class="n">BlobCriteria</span><span class="p">.</span><span class="na">BY_ASPECT_RATIO</span><span class="p">,</span><span class="w"> </span><span class="n">SortOrder</span><span class="p">.</span><span class="na">ASCENDING</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>After defining a sort’s criteria, apply the pre-sort to an
+already-existing Processor:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">colorLocator</span><span class="p">.</span><span class="na">setSort</span><span class="p">(</span><span class="n">mySort</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preview-colors">
+<h2>Preview Colors<a class="headerlink" href="#preview-colors" title="Link to this heading"></a></h2>
+<p>You can specify custom colors for the preview outlines of:</p>
+<ul class="simple">
+<li><p>Region of Interest (ROI)</p></li>
+<li><p>Blob contour</p></li>
+<li><p>boxFit rectangle</p></li>
+</ul>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-4">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/30-outline-colors.png"><img alt="Setting Custom outline colors" src="../../_images/30-outline-colors.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Setting custom outline colors</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-5">
+Java</label><div class="sd-tab-content docutils">
+<p>Import the <code class="docutils literal notranslate"><span class="pre">Color</span></code> class if needed, then add any of the <code class="docutils literal notranslate"><span class="pre">.set...</span></code>
+methods to the Processor Builder pattern:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.graphics.Color</span><span class="p">;</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="p">.</span><span class="na">setBoxFitColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">))</span>
+<span class="p">.</span><span class="na">setRoiColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">))</span>
+<span class="p">.</span><span class="na">setContourColor</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">rgb</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">227</span><span class="p">,</span><span class="w"> </span><span class="mi">252</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Use your own custom values, only from the RGB Color Space.  See the
+separate tutorial page called <strong>Color Spaces</strong>.</p>
+</div>
+</div>
+</section>
+<section id="boxfit-corners">
+<h2>boxFit Corners<a class="headerlink" href="#boxfit-corners" title="Link to this heading"></a></h2>
+<p>An OpMode can access the four corner points of a boxFit rectangle.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-6">
+Blocks</label><div class="sd-tab-content docutils">
+<p>This Blocks Function retrieves, stores and displays the 4 corner points
+of the instant boxFit being processed by the OpMode:</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/40-corners.png"><img alt="Displaying Corner Points via Telemetry" src="../../_images/40-corners.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Displaying Corner Points via Telemetry</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">.points</span></code> and <code class="docutils literal notranslate"><span class="pre">Point.x</span></code> and <code class="docutils literal notranslate"><span class="pre">Point.y</span></code> Blocks are in the
+“Vision/ColorBlobLocator/Blob data” toolbox.</p>
+<p>The Function uses its own <strong>For Loop</strong> to cycle through the <code class="docutils literal notranslate"><span class="pre">myPoints</span></code>
+List of 4 points, clockwise from top left corner.</p>
+<p>This Function operates inside the Sample OpMode’s <strong>For Loop</strong> of all
+Blob results.  The instant <code class="docutils literal notranslate"><span class="pre">myBoxFit</span></code> is the one being processed,
+returned from the preceding <code class="docutils literal notranslate"><span class="pre">.BoxFit</span></code> Block.</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-7">
+Java</label><div class="sd-tab-content docutils">
+<p>This Java code retrieves, stores and displays the 4 corner points of the
+instant boxFit being processed by the OpMode:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Display boxFit.points(), an array of the box&#39;s four (X, Y) corner points,</span>
+<span class="c1">// clockwise from top left corner.</span>
+<span class="n">Point</span><span class="o">[]</span><span class="w"> </span><span class="n">myBoxCorners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+<span class="n">boxFit</span><span class="p">.</span><span class="na">points</span><span class="p">(</span><span class="n">myBoxCorners</span><span class="p">);</span>
+<span class="c1">// this points() method does not return values, it populates the argument</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;boxFit corner %d (%d,%d)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">myBoxCorners</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">myBoxCorners</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">y</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code operates inside the Sample OpMode’s <strong>For Loop</strong> of all Blob
+results.  The instant <code class="docutils literal notranslate"><span class="pre">boxFit</span></code> is the one being processed, returned
+from the preceding <code class="docutils literal notranslate"><span class="pre">getBoxFit()</span></code> method.</p>
+</div>
+</div>
+</section>
+<section id="contour-vertices">
+<h2>Contour Vertices<a class="headerlink" href="#contour-vertices" title="Link to this heading"></a></h2>
+<p>Blob contours are irregular and hard to process in code; it’s easier to work
+with boxFit rectangles.</p>
+<p>But the contour’s outer points can be accessed by an OpMode.  The result is a
+list of (X, Y) coordinates, with origin at the top left corner of the camera’s
+image. X increases to the right, Y increases downward.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-8">
+Blocks</label><div class="sd-tab-content docutils">
+<p>The following Blocks Function retrieves, stores and displays a List of
+all the vertex Points of the contour of the instant Blob being processed
+by the OpMode.</p>
+<p>The List can be as short as 4 values, or dozens of values for jagged
+contours.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">.points</span></code> Block (used above for boxFit corners) retrieves
+and stores the List within the same Block. This <code class="docutils literal notranslate"><span class="pre">.ContourPoints</span></code> Block
+only retrieves the List, to be assigned to a separate variable Block.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/50-contour.png"><img alt="Getting list of contour points" src="../../_images/50-contour.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Getting the list of contour points</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">.ContourPoints</span></code> and <code class="docutils literal notranslate"><span class="pre">Point.x</span></code> and <code class="docutils literal notranslate"><span class="pre">Point.y</span></code> Blocks are in the
+“Vision/ColorBlobLocator/Blob data” toolbox.</p>
+<p>The Function uses its own <strong>For Loop</strong> to cycle through the
+<code class="docutils literal notranslate"><span class="pre">myContourPoints</span></code> List, of undetermined length (could be very long).</p>
+<p>This Function operates inside the Sample OpMode’s <strong>For Loop</strong> of all
+Blob results.  The instant <code class="docutils literal notranslate"><span class="pre">myBlob</span></code> is the one being processed by that
+outer For Loop.</p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-9">
+Java</label><div class="sd-tab-content docutils">
+<p>This Java code retrieves, stores and displays a List of all the vertex
+Points of the contour of the instant Blob being processed by the OpMode.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.opencv.core.Point</span><span class="p">;</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="c1">// Display getContourPoints(), an array of the contour&#39;s many (X, Y) vertices</span>
+<span class="n">Point</span><span class="o">[]</span><span class="w"> </span><span class="n">myContourPoints</span><span class="p">;</span>
+<span class="n">myContourPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getContourPoints</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Point</span><span class="w"> </span><span class="n">thisContourPoint</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">myContourPoints</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;contour vertex %d (%d,%d)&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">thisContourPoint</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">thisContourPoint</span><span class="p">.</span><span class="na">y</span><span class="p">));</span>
+<span class="w">          </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This Function operates inside the Sample OpMode’s <strong>For Loop</strong> of all
+Blob results.  The instant Blob <code class="docutils literal notranslate"><span class="pre">b</span></code> is the one being processed by that
+outer For Loop.</p>
+<p>Not covered here is one feature available in Java only:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MatOfPoint</span><span class="w"> </span><span class="n">myContour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getContour</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This method returns a matrix unique to the <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OpenCV"><span class="xref std std-term">OpenCV</span></a> library.  The matrix
+object can convert itself to an array, as follows:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MatOfPoint</span><span class="w"> </span><span class="n">myContour</span><span class="p">;</span>
+<span class="n">Point</span><span class="o">[]</span><span class="w"> </span><span class="n">myContourPoints</span><span class="p">;</span>
+<span class="n">myContour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getContour</span><span class="p">();</span>
+<span class="n">myContourPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myContour</span><span class="p">.</span><span class="na">toArray</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>This code seems to give the same set of points as <code class="docutils literal notranslate"><span class="pre">getContourPoints()</span></code>
+shown above.</p>
+</div>
+</div>
+</section>
+<section id="boxfit-size-and-angle">
+<h2>boxFit Size and Angle<a class="headerlink" href="#boxfit-size-and-angle" title="Link to this heading"></a></h2>
+<p>These simple fields were not demonstrated in the Sample OpMode.</p>
+<p>The boxFit size variable contains two fields which must be accessed
+individually, as shown below.</p>
+<p>If the boxFit is horizontal (parallel to the ROI), its angle might be 0 or 90
+degrees, often jumping between the two values.  At 90 degrees, height and width
+become switched.  Your OpMode code needs to account for this scenario.</p>
+<p>Likewise, the boxFit angle is sometimes reported as clockwise from vertical,
+rather than counterclockwise from horizontal.  More discussion is <a class="reference external" href="https://namkeenman.wordpress.com/2015/12/18/open-cv-determine-angle-of-rotatedrect-minarearect/">here</a>.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-10">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These Blocks are in the “Vision/ColorBlobLocator/Blob data” toolbox.</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/60-box-size.png"><img alt="boxFit properties" src="../../_images/60-box-size.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">boxFit properties</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-11">
+Java</label><div class="sd-tab-content docutils">
+<p>Here’s a modified version of the Sample OpMode’s <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Telemetry"><span class="xref std std-term">telemetry</span></a> code, to
+display only the size and angle of the instant boxFit being processed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">org</span><span class="p">.</span><span class="na">opencv</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">Size</span><span class="w"> </span><span class="n">myBoxFitSize</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Blob</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">blobs</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">             </span><span class="n">RotatedRect</span><span class="w"> </span><span class="n">boxFit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getBoxFit</span><span class="p">();</span>
+<span class="w">             </span><span class="n">myBoxFitSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">boxFit</span><span class="p">.</span><span class="na">size</span><span class="p">;</span>
+<span class="w">             </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myBoxFitSize</span><span class="p">.</span><span class="na">width</span><span class="p">);</span>
+<span class="w">             </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myBoxFitSize</span><span class="p">.</span><span class="na">height</span><span class="p">);</span>
+<span class="w">             </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;angle&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">boxfit</span><span class="p">.</span><span class="na">angle</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The Java class <code class="docutils literal notranslate"><span class="pre">Size</span></code> here is different than another class of the same
+simple name.  <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-OnBot-Java"><span class="xref std std-term">OnBot Java</span></a> and <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../glossary/glossary.html#term-Android-Studio"><span class="xref std std-term">Android Studio</span></a> do not allow imports of
+identical simple classnames.</p>
+<p>In fact OnBot Java will not allow the import of this version, even if the
+other version (<cite>android.util.Size</cite>) is not used in the OpMode.
+Instead, declare the variable with the full classname, as shown in the
+first line above.</p>
+</div>
+</div>
+</section>
+<section id="horizontal-rectangle">
+<h2>Horizontal Rectangle<a class="headerlink" href="#horizontal-rectangle" title="Link to this heading"></a></h2>
+<p>You might prefer to process only <strong>horizontal</strong> best-fit rectangles, parallel
+to the ROI, not tilted.</p>
+<p>OpenCV can generate a best-fit rectangle for a boxFit, whether tilted or not.
+This is <strong>not</strong> a “forced horizontal” boxFit, rotated in place.  The new
+horizontal rectangle simply touches and encloses the outer corners of the
+boxFit.</p>
+<p>If the boxFit is tilted, the new horizontal rectangle will be larger.  If the
+boxFit already had an angle of 0 (or 90) degrees, the new rectangle will be
+identical.</p>
+<p>In Blocks and Java, the command <code class="docutils literal notranslate"><span class="pre">boundingRect()</span></code> accepts a boxFit of type
+<code class="docutils literal notranslate"><span class="pre">RotatedRect</span></code> and returns a horizontal rectangle of type <code class="docutils literal notranslate"><span class="pre">Rect</span></code>.  The new
+rectangle is not drawn or depicted in the preview.</p>
+<p>Select and read the Blocks <strong>or</strong> Java section below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="blocks" for="sd-tab-item-12">
+Blocks</label><div class="sd-tab-content docutils">
+<p>These Blocks are in the “Vision/ColorBlobLocator/Blob data” toolbox.</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../_images/70-horizontal-box.png"><img alt="Defining the horizontal box" src="../../_images/70-horizontal-box.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Defining the horizontal box</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The (X, Y) values are the top left corner of the new horizontal
+rectangle, in the full image reference frame.</p>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="java" for="sd-tab-item-13">
+Java</label><div class="sd-tab-content docutils">
+<p>Here’s a modified version of the Sample OpMode’s telemetry code, to
+display only the <strong>top left corner</strong> and <strong>size</strong> of the horizontal
+rectangle around the boxFit being processed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.opencv.core.Rect</span><span class="p">;</span>
+<span class="p">.</span>
+<span class="p">.</span>
+<span class="k">for</span><span class="p">(</span><span class="n">ColorBlobLocatorProcessor</span><span class="p">.</span><span class="na">Blob</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">blobs</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">                </span><span class="n">RotatedRect</span><span class="w"> </span><span class="n">boxFit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">getBoxFit</span><span class="p">();</span>
+<span class="w">                </span><span class="n">Rect</span><span class="w"> </span><span class="n">myHorizontalBoxFit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">boxFit</span><span class="p">.</span><span class="na">boundingRect</span><span class="p">();</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;top left X&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myHorizontalBoxFit</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;top left Y&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myHorizontalBoxFit</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myHorizontalBoxFit</span><span class="p">.</span><span class="na">width</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myHorizontalBoxFit</span><span class="p">.</span><span class="na">height</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this case, OnBot Java and Android Studio found no conflicts with the
+import of class <code class="docutils literal notranslate"><span class="pre">Rect</span></code>.</p>
+<p>Pay attention to classes and fields:</p>
+<ul class="simple">
+<li><p>boxFit is of Java type <code class="docutils literal notranslate"><span class="pre">RotatedRect</span></code>, even though it’s not usually rotated</p></li>
+<li><p>the new method <code class="docutils literal notranslate"><span class="pre">boundingRect()</span></code> returns an object of type <code class="docutils literal notranslate"><span class="pre">Rect</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">Size</span></code> and <code class="docutils literal notranslate"><span class="pre">Rect</span></code> classes both have fields named <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="advanced-development">
+<h2>Advanced Development<a class="headerlink" href="#advanced-development" title="Link to this heading"></a></h2>
+<p>Searching for multiple colors is possible by building <strong>multiple processors</strong>
+and adding them to the same VisionPortal. This allows different ROIs, for
+example, that can overlap if desired.</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../_images/80-two-process.png"><img alt="Using two processors" src="../../_images/80-two-process.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Using two processors</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The next ColorLocator page called <a class="reference internal" href="../color-locator-round-blobs/color-locator-round-blobs.html"><span class="doc">Color Locator (Round Blobs)</span></a>
+covers detection of round objects.</p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../color-locator-explore/color-locator-explore.html" class="btn btn-neutral float-left" title="Color Locator (Explore)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../color-locator-round-blobs/color-locator-round-blobs.html" class="btn btn-neutral float-right" title="Color Locator (Round Blobs)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/website-terms-of-use">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>
