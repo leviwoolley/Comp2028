@@ -1,0 +1,63 @@
+# Minimal makefile for Sphinx documentation
+#
+
+# You can set these variables from the command line, and also
+# from the environment for the first two.
+SPHINXOPTS    ?=
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = source
+BUILDDIR      = build
+
+SIZECHECKER   = python3 -m scripts.imagesizechecker
+CONFEXCLUDE   = --exclude-file source/conf.py
+SIZEMAX       = 500
+
+GLOSSARYCHECKER = python3 -m scripts.glossarychecker
+
+AUTOBUILD = sphinx-autobuild
+HTMLBUILDDIR = build/html
+LATEXBUILDDIR = build/latex/
+BOOKLETSBUILDDIR = build/booklets
+
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+.PHONY: help Makefile
+
+setup:
+	@echo "Dependencies for local development are now managed by the Nix flake"
+	@echo "at the repository root. Run 'nix develop' from the repository root"
+	@echo "(or use direnv) to enter a shell with Python, Sphinx, and the LaTeX"
+	@echo "toolchain already installed."
+	@echo "(requirements.txt is kept only for the Read the Docs build.)"
+
+autobuild:
+	@$(AUTOBUILD) $(SOURCEDIR) $(HTMLBUILDDIR) --port=7350
+
+--move-booklets:
+	mkdir -p $(BOOKLETSBUILDDIR)
+	cp $(addsuffix .pdf, $(basename $(wildcard $(LATEXBUILDDIR)*.tex))) $(BOOKLETSBUILDDIR)
+
+--generate-booklets:
+	BOOKLETS_BUILD="true" $(SPHINXBUILD) -M latexpdf $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS) $(O)
+
+booklets: --generate-booklets --move-booklets
+	
+local-full:
+	DOCS_BUILD="true" $(SPHINXBUILD) -b html $(SOURCEDIR) $(HTMLBUILDDIR) $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M latexpdf $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS) $(O)
+	cp $(LATEXBUILDDIR)*.pdf $(HTMLBUILDDIR)
+
+imagecheck:
+	@$(SIZECHECKER) $(SOURCEDIR) $(SIZEMAX) $(CONFEXCLUDE) $(O)
+
+glossarycheck:
+	@$(GLOSSARYCHECKER) $(SOURCEDIR) $(O)
+
+.PHONY: help autobuild imagecheck glossarycheck Makefile
+
+# Catch-all target: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
