@@ -23,7 +23,9 @@ public class MechanumDrive extends LinearOpMode {
     private double turn;
     private double theta;
     private double power;
-
+    private double sin; 
+    private double cos; 
+    private double cos; 
     private double frontLeftP;
     private double backLeftP;
     private double frontRightP;
