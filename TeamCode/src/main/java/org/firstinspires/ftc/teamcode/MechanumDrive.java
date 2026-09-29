@@ -72,7 +72,36 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             // Returns the larger the two
             max = Math.max(Math.abs(sin), Math.abs(cos));
 
-            /* 
+            rotationTesting();
+
+            calculateMotorPower();
+
+            setDriveChainPower();
+
+            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/DcMotor.html
+
+
+            checkIntakeForward();
+
+            checkIntakeBackward();
+
+            
+            lastState = false;
+
+            servoControl();
+
+            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
+
+			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	fLPower,	fRPower);
+			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	bLPower,	bRPower);
+			telemetry.update();
+
+		}
+
+	}
+
+    public void calculateMotorPower() {
+         /* 
                 Power * cos | Power * sin
                 Multiple the magnitude of the stick direction (power) by the sine/cosine of its angle to return a decimal. 
                 
@@ -109,15 +138,21 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 bRPower /= power + turn;
             }
 
-            fL.setPower(fLPower);
-            fR.setPower(fRPower);
-            bL.setPower(bLPower);
-            bR.setPower(bRPower);
+    }
 
-            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/DcMotor.html
+    public void setDriveChainPower(double fLP, double fRP, double bLP, double bRP) {
+        fL.setPower(fLP);
+        fR.setPower(fRP);
+        bL.setPower(bLP);
+        bR.setPower(bRP);
+    }
 
+    public void setDriveChainPower() {
+        setDriveChainPower(fLPower, fRPower, bLPower, bRPower);
+    }
 
-            if (rbPressed && !lastState && !(rLaunch.isBusy())) {
+    public void checkIntakeForward() {
+        if (rbPressed && !lastState && !(rLaunch.isBusy())) {
 
                 if (rLaunch.getPower() != 0) {
                     rLaunch.setPower(0);
@@ -129,8 +164,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
 
                 lastState = rbPressed;
             }
+    }
 
-            if (lbPressed && !lastState && !(rLaunch.isBusy())) {
+    public void checkIntakeBackward() {
+        if (lbPressed && !lastState && !(rLaunch.isBusy())) {
 
                 if (rLaunch.getPower() != 0) {
                     rLaunch.setPower(0);
@@ -142,11 +179,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
 
                 lastState = lbPressed;
             }
+    }
 
-            lastState = false;
-
-            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
-
+    public void servoControl() {
             if (gamepad1.right_trigger_pressed) {
                 rStopper.setPosition(0.7);
                 lStopper.setPosition(0.7);
@@ -156,11 +191,28 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 rStopper.setPosition(0.5);
                 lStopper.setPosition(0.5);
             }
+    }
 
-			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	fLPower,	fRPower);
-			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	bLPower,	bRPower);
-			telemetry.update();
-
-		}
-	}
+    public void rotationTesting() {
+        if (gamepad1.a) {
+            fL.setPower(1);
+            wait(500);
+            fL.setPower(0);
+        }
+        if (gamepad1.b) {
+            bL.setPower(1);
+            wait(500);
+            bL.setPower(0);
+        }
+        if (gamepad1.x) {
+            bR.setPower(1);
+            wait(500);
+            bR.setPower(0);
+        }
+        if (gamepad1.y) {
+            fR.setPower(1);
+            wait(500);
+            fR.setPower(0);
+        }
+    }
 }
