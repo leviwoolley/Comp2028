@@ -1,37 +1,60 @@
-package	org.firstinspires.ftc.robotcontroller.external.samples;
+package	org.firstinspires.ftc.teamcode;
 
 import	com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import	com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import	com.qualcomm.robotcore.hardware.DcMotor;
 import	com.qualcomm.robotcore.util.ElapsedTime;
+import  com.qualcomm.robotcore.hardware.Servo;
+
+import  com.qualcomm.robotcore.hardware.HardwareDevice;
+
+import  com.qualcomm.robotcore.hardware.HardwareMap;
+import  com.qualcomm.robotcore.hardware.Gamepad;
 
 
 @TeleOp(name="Mechanum	Drive",	group="Linear	OpMode")
 
 public	class	MechanumDrive	extends	LinearOpMode	{
-
-    // Declare OpMode members for each of the 4 motors.
     
     private DcMotor fL, bL, fR, bR;
 
-    private double x, y, turn, theta, sin, cos, max;
+    private DcMotor rLaunch, lLaunch, transfer;
+
+    private Servo rStopper, lStopper;
+
+    private boolean rbPressed, lbPressed, lastState;
+
+    private double x, y, turn, theta, power, sin, cos, max;
 
     private double fLPower, bLPower, fRPower, bRPower;
 
 	@Override
-	public	void	runOpMode()	{
+	public void	runOpMode()	{
 
 	fL	=	hardwareMap.get(DcMotor.class,	"fL");
 	fR	=	hardwareMap.get(DcMotor.class,	"fR");
 	bL	=	hardwareMap.get(DcMotor.class,	"bL");
 	bR	=	hardwareMap.get(DcMotor.class,	"bR");
 
+    rLaunch = hardwareMap.get(DcMotor.class, "rLauncher");
+    lLaunch = hardwareMap.get(DcMotor.class, "lLauncher");
+    transfer = hardwareMap.get(DcMotor.class, "transfer");
+
+    rStopper = hardwareMap.get(Servo.class, "rStopper");
+    lStopper = hardwareMap.get(Servo.class, "lStopper");
+
+    lastState = false;
+
+    rLaunch.setDirection(DcMotor.Direction.REVERSE);
+
 	telemetry.addData("Status",	"Initialized");
 	telemetry.update();
 
-
-								//	run	until	the	end	of	the	match	(driver	presses	STOP)
 		while	(opModeIsActive())	{
+
+            // Get status of right and left bumpers
+            rbPressed = gamepad1.right_bumper;
+            lbPressed = gamepad1.left_bumper;
 
             // Get position of sticks as a decimal 
             x = gamepad1.left_stick_x;
@@ -90,8 +113,51 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             bL.setPower(bLPower);
             bR.setPower(bRPower);
 
-			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	frontLeftP,	frontRightP);
-			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	backLeftP,	backRightP);
+            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/DcMotor.html
+
+
+            if (rbPressed && !lastState && !(rLaunch.isBusy())) {
+
+                if (rLaunch.getPower() != 0) {
+                    rLaunch.setPower(0);
+                    lLaunch.setPower(0);
+                } else {
+                    rLaunch.setPower(0.6);
+                    lLaunch.setPower(0.6);
+                }
+
+                lastState = rbPressed;
+            }
+
+            if (lbPressed && !lastState && !(rLaunch.isBusy())) {
+
+                if (rLaunch.getPower() != 0) {
+                    rLaunch.setPower(0);
+                    lLaunch.setPower(0);
+                } else {
+                    rLaunch.setPower(-0.6);
+                    lLaunch.setPower(-0.6);
+                }
+
+                lastState = lbPressed;
+            }
+
+            lastState = false;
+
+            // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
+
+            if (gamepad1.right_trigger_pressed) {
+                rStopper.setPosition(0.7);
+                lStopper.setPosition(0.7);
+            }
+
+            if (gamepad1.left_trigger_press) {
+                rStopper.setPosition(0.5);
+                lStopper.setPosition(0.5);
+            }
+
+			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	fLPower,	fRPower);
+			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	bLPower,	bRPower);
 			telemetry.update();
 
 		}
