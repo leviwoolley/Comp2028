@@ -8,7 +8,7 @@ TeamCode/lib/src/main/java/org/firstinspires/ftc/teamcode
     - `0` - `"fR"` 
     - `1` - `"fL"`
     - `2` - `"bR"` 
-    - `3` - `"fL"` 
+    - `3` - `"bL"` 
 - **Servo Ports**: 
     - `0` - `"rStopper"`
     - `1` - `"lStopper"`
