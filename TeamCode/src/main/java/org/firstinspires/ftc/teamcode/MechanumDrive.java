@@ -85,10 +85,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 bRPower /= power + turn;
             }
 
-            fL.setPower(frontLeftP);
-            fR.setPower(frontRightP);
-            bL.setPower(backLeftP);
-            bR.setPower(backRightP);
+            fL.setPower(fLPower);
+            fR.setPower(fRPower);
+            bL.setPower(bLPower);
+            bR.setPower(bRPower);
 
 			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	frontLeftP,	frontRightP);
 			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	backLeftP,	backRightP);
