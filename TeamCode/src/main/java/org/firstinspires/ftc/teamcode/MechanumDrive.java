@@ -76,9 +76,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 Power * cos | Power * sin
                 Multiple the magnitude of the stick direction (power) by the sine/cosine of its angle to return a decimal. 
                 
-                cos/max | sin/max
-                Sets the larger of the two to 1 and scales down the other proportionally. The goal is to not burn out/disconnect the motors.
-                The reasoning for this is that the y-value of any given controller actually exceeds 1.0, sometimes up to 1.28.
+                (Power * cos)/max | (Power * sin)/max
+               	Scales the values down proportionally by the larger of the sin/cosine values.
+                The reasoning for this is that the y-value of any given controller can actually exceed 1.0, sometimes up to 1.28.
+				This leads to the control hub disconnecting the offending motor.
 
                 + turn | - turn
                 Adds the x-value of the right stick to the total. Allows for strafing.
