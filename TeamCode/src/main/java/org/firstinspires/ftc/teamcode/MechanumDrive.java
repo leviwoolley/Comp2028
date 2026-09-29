@@ -151,7 +151,7 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 lStopper.setPosition(0.7);
             }
 
-            if (gamepad1.left_trigger_press) {
+            if (gamepad1.left_trigger_pressed) {
                 rStopper.setPosition(0.5);
                 lStopper.setPosition(0.5);
             }
