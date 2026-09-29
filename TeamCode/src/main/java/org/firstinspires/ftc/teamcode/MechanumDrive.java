@@ -1,15 +1,14 @@
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package	org.firstinspires.ftc.robotcontroller.external.samples;
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.util.ElapsedTime;
+import	com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import	com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import	com.qualcomm.robotcore.hardware.DcMotor;
+import	com.qualcomm.robotcore.util.ElapsedTime;
 
 
-@TeleOp(name="Mechanum Drive", group="Linear OpMode")
+@TeleOp(name="Mechanum	Drive",	group="Linear	OpMode")
 
-public class MechanumDrive extends LinearOpMode {
+public	class	MechanumDrive	extends	LinearOpMode	{
 
     // Declare OpMode members for each of the 4 motors.
     
@@ -19,20 +18,20 @@ public class MechanumDrive extends LinearOpMode {
 
     private double fLPower, bLPower, fRPower, bRPower;
 
-    @Override
-    public void runOpMode() {
+	@Override
+	public	void	runOpMode()	{
 
-        fL = hardwareMap.get(DcMotor.class, "fL");
-        fR = hardwareMap.get(DcMotor.class, "fR");
-        bL = hardwareMap.get(DcMotor.class, "bL");
-        bR = hardwareMap.get(DcMotor.class, "bR");
+	fL	=	hardwareMap.get(DcMotor.class,	"fL");
+	fR	=	hardwareMap.get(DcMotor.class,	"fR");
+	bL	=	hardwareMap.get(DcMotor.class,	"bL");
+	bR	=	hardwareMap.get(DcMotor.class,	"bR");
 
-        telemetry.addData("Status", "Initialized");
-        telemetry.update();
+	telemetry.addData("Status",	"Initialized");
+	telemetry.update();
 
 
-        // run until the end of the match (driver presses STOP)
-        while (opModeIsActive()) {
+								//	run	until	the	end	of	the	match	(driver	presses	STOP)
+		while	(opModeIsActive())	{
 
             // Get position of sticks as a decimal 
             x = gamepad1.left_stick_x;
@@ -86,29 +85,15 @@ public class MechanumDrive extends LinearOpMode {
                 bRPower /= power + turn;
             }
 
-            // Intital rotation testing
+            fL.setPower(frontLeftP);
+            fR.setPower(frontRightP);
+            bL.setPower(backLeftP);
+            bR.setPower(backRightP);
 
-            if (gamepad1.a) {
-				fL.setPower(1.0);
-			}
-			if (gamepad1.b) {
-				fR.setPower(1.0);
-			}
-			if (gamepad1.x) {
-				bL.setPower(1.0);
-			}
-			if (gamepad1.y) {
-				fR.setPower(1.0);
-			}
+			telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	frontLeftP,	frontRightP);
+			telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	backLeftP,	backRightP);
+			telemetry.update();
 
-            fL.setPower(fLPower);
-            fR.setPower(fRPower);
-            bL.setPower(bLPower);
-            bR.setPower(bRPower);
-
-            telemetry.addData("Front left/Right", "%4.2f, %4.2f", frontLeftP, frontRightP);
-            telemetry.addData("Back  left/Right", "%4.2f, %4.2f", backLeftP, backRightP);
-            telemetry.update();
-
-        }
-    }}
+		}
+	}
+}
