@@ -17,5 +17,5 @@ TeamCode/lib/src/main/java/org/firstinspires/ftc/teamcode
     - `0` - `"rLauncher"`
     - `1` - `"lLauncher"`
     - `2` - `"transfer"`
-
+## Wiring Diagram
 ![wiring diagram](TeamCode/src/main/java/org/firstinspires/ftc/teamcode/a015db0a80239ee67cfc2c83.png)
