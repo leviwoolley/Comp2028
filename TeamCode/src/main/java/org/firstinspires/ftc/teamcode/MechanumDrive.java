@@ -117,10 +117,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 This achieves strafing with mechanum wheels.
             */
 
-            fLPower = power * cos/max + turn;
-            fRPower = power * sin/max - turn;
-            bLPower = power * sin/max + turn;
-            bRPower = power * cos/max - turn;
+            this.fLPower = power * cos/max + turn;
+            this.fRPower = power * sin/max - turn;
+            this.bLPower = power * sin/max + turn;
+            this.bRPower = power * cos/max - turn;
 
             
             /*
@@ -132,87 +132,87 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             */
 
             if ((power + Math.abs(turn)) > 1) {
-                fLPower /= power + turn;
-                fRPower /= power + turn;
-                bLPower /= power + turn;
-                bRPower /= power + turn;
+                this.fLPower /= power + turn;
+                this.fRPower /= power + turn;
+                this.bLPower /= power + turn;
+                this.bRPower /= power + turn;
             }
 
     }
 
     public void setDriveChainPower(double fLP, double fRP, double bLP, double bRP) {
-        fL.setPower(fLP);
-        fR.setPower(fRP);
-        bL.setPower(bLP);
-        bR.setPower(bRP);
+        this.fL.setPower(fLP);
+        this.fR.setPower(fRP);
+        this.bL.setPower(bLP);
+        this.bR.setPower(bRP);
     }
 
     public void setDriveChainPower() {
-        setDriveChainPower(fLPower, fRPower, bLPower, bRPower);
+        setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
     }
 
     public void checkIntakeForward() {
-        if (rbPressed && !lastState && !(rLaunch.isBusy())) {
+        if (rbPressed && !lastState && !(this.rLaunch.isBusy())) {
 
-                if (rLaunch.getPower() != 0) {
-                    rLaunch.setPower(0);
-                    lLaunch.setPower(0);
+                if (this.rLaunch.getPower() != 0) {
+                    this.rLaunch.setPower(0);
+                    this.lLaunch.setPower(0);
                 } else {
-                    rLaunch.setPower(0.6);
-                    lLaunch.setPower(0.6);
+                    this.rLaunch.setPower(0.6);
+                    this.lLaunch.setPower(0.6);
                 }
 
-                lastState = rbPressed;
+                this.lastState = rbPressed;
             }
     }
 
     public void checkIntakeBackward() {
-        if (lbPressed && !lastState && !(rLaunch.isBusy())) {
+        if (lbPressed && !lastState && !(this.rLaunch.isBusy())) {
 
-                if (rLaunch.getPower() != 0) {
-                    rLaunch.setPower(0);
-                    lLaunch.setPower(0);
+                if (this.rLaunch.getPower() != 0) {
+                    this.rLaunch.setPower(0);
+                    this.rLaunch.setPower(0);
                 } else {
-                    rLaunch.setPower(-0.6);
-                    lLaunch.setPower(-0.6);
+                    this.rLaunch.setPower(-0.6);
+                    this.rLaunch.setPower(-0.6);
                 }
 
-                lastState = lbPressed;
+                this.lastState = lbPressed;
             }
     }
 
     public void servoControl() {
             if (gamepad1.right_trigger_pressed) {
-                rStopper.setPosition(0.7);
-                lStopper.setPosition(0.7);
+                this.rStopper.setPosition(0.7);
+                this.lStopper.setPosition(0.7);
             }
 
             if (gamepad1.left_trigger_pressed) {
-                rStopper.setPosition(0.5);
-                lStopper.setPosition(0.5);
+                this.rStopper.setPosition(0.5);
+                this.lStopper.setPosition(0.5);
             }
     }
 
     public void rotationTesting() {
         if (gamepad1.a) {
-            fL.setPower(1);
+            this.fL.setPower(1);
             wait(500);
-            fL.setPower(0);
+            this.fL.setPower(0);
         }
         if (gamepad1.b) {
-            bL.setPower(1);
+            this.bL.setPower(1);
             wait(500);
-            bL.setPower(0);
+            this.bL.setPower(0);
         }
         if (gamepad1.x) {
-            bR.setPower(1);
+            this.bR.setPower(1);
             wait(500);
-            bR.setPower(0);
+            this.bR.setPower(0);
         }
         if (gamepad1.y) {
-            fR.setPower(1);
+            this.fR.setPower(1);
             wait(500);
-            fR.setPower(0);
+            this.fR.setPower(0);
         }
     }
 }
