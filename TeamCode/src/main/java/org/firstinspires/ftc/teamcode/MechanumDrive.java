@@ -88,7 +88,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             
             lastState = false;
 
-            servoControl();
+            if (gamepad1.right_trigger_pressed()) {
+                shootToggle()
+            }
+
 
             // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
 
@@ -179,6 +182,13 @@ public	class	MechanumDrive	extends	LinearOpMode	{
 
                 this.lastState = lbPressed;
             }
+    }
+
+    public void shootToggle() {
+      this.transfer.setPower(1.0);
+      if (this.transfer.getPower() != 0) {
+        this.transfer.setPower(0);
+      }
     }
 
     public void servoControl() {
