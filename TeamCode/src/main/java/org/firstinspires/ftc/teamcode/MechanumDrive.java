@@ -50,6 +50,8 @@ public	class	MechanumDrive	extends	LinearOpMode	{
 	telemetry.addData("Status",	"Initialized");
 	telemetry.update();
 
+    waitForStart();
+
 		while	(opModeIsActive())	{
 
             // Get status of right and left bumpers
@@ -185,9 +187,11 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     }
 
     public void shootToggle() {
-      this.transfer.setPower(1.0);
+      
       if (this.transfer.getPower() != 0) {
         this.transfer.setPower(0);
+      } else {
+        this.transfer.setPower(1.0);
       }
     }
 
@@ -206,22 +210,22 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     public void rotationTesting() {
         if (gamepad1.a) {
             this.fL.setPower(1);
-            wait(500);
+            sleep(500);
             this.fL.setPower(0);
         }
         if (gamepad1.b) {
             this.bL.setPower(1);
-            wait(500);
+            sleep(500);
             this.bL.setPower(0);
         }
         if (gamepad1.x) {
             this.bR.setPower(1);
-            wait(500);
+            sleep(500);
             this.bR.setPower(0);
         }
         if (gamepad1.y) {
             this.fR.setPower(1);
-            wait(500);
+            sleep(500);
             this.fR.setPower(0);
         }
     }
