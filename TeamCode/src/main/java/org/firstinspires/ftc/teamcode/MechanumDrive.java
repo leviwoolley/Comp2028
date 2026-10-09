@@ -187,7 +187,6 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     }
 
     public void shootToggle() {
-      
       if (this.transfer.getPower() != 0) {
         this.transfer.setPower(0);
       } else {
