@@ -40,12 +40,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     lLaunch = hardwareMap.get(DcMotor.class, "lLauncher");
     transfer = hardwareMap.get(DcMotor.class, "transfer");
 
-    rStopper = hardwareMap.get(Servo.class, "rStopper");
-    lStopper = hardwareMap.get(Servo.class, "lStopper");
-
     lastState = false;
+    
 
-    rLaunch.setDirection(DcMotor.Direction.REVERSE);
 
 	telemetry.addData("Status",	"Initialized");
 	telemetry.update();
@@ -59,9 +56,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             lbPressed = gamepad1.left_bumper;
 
             // Get position of sticks as a decimal 
-            x = gamepad1.left_stick_x;
+            x = -gamepad1.right_stick_x;
             y = -gamepad1.left_stick_y;
-            turn = gamepad1.right_stick_x;
+            turn = gamepad1.left_stick_x;
 
             // Determine tilt of the left stick in radians
             theta = Math.atan2(y, x);
@@ -74,26 +71,18 @@ public	class	MechanumDrive	extends	LinearOpMode	{
             // Returns the larger the two
             max = Math.max(Math.abs(sin), Math.abs(cos));
 
-            rotationTesting();
-
             calculateMotorPower();
 
             setDriveChainPower();
 
             // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/DcMotor.html
 
-
-            checkIntakeForward();
-
-            checkIntakeBackward();
-
-            
-            lastState = false;
-
-            if (gamepad1.right_trigger_pressed()) {
-                shootToggle()
+            if (rbPressed){
+                setIntakeToggle();
             }
-
+            if (gamepad1.dpad_up) {
+                shootToggle();
+            }
 
             // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
 
@@ -122,10 +111,10 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 This achieves strafing with mechanum wheels.
             */
 
-            this.fLPower = power * cos/max + turn;
-            this.fRPower = power * sin/max - turn;
-            this.bLPower = power * sin/max + turn;
-            this.bRPower = power * cos/max - turn;
+            this.fLPower = power * cos/max - turn;
+            this.fRPower = power * sin/max + turn;
+            this.bLPower = power * sin/max - turn;
+            this.bRPower = power * cos/max + turn;
 
             
             /*
@@ -156,44 +145,32 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
     }
 
-    public void checkIntakeForward() {
-        if (rbPressed && !lastState && !(this.rLaunch.isBusy())) {
-
-                if (this.rLaunch.getPower() != 0) {
+    public void setIntakeToggle() {
+            switch (this.rLaunch.getPower()) {
+                case 1:
                     this.rLaunch.setPower(0);
                     this.lLaunch.setPower(0);
-                } else {
-                    this.rLaunch.setPower(0.6);
-                    this.lLaunch.setPower(0.6);
-                }
-
-                this.lastState = rbPressed;
-            }
-    }
-
-    public void checkIntakeBackward() {
-        if (lbPressed && !lastState && !(this.rLaunch.isBusy())) {
-
-                if (this.rLaunch.getPower() != 0) {
-                    this.rLaunch.setPower(0);
-                    this.rLaunch.setPower(0);
-                } else {
-                    this.rLaunch.setPower(-0.6);
-                    this.rLaunch.setPower(-0.6);
-                }
-
-                this.lastState = lbPressed;
+                    break;
+            
+                default:
+                    this.rLaunch.setPower(1);
+                    this.lLaunch.setPower(-1);
+                    break;
             }
     }
 
     public void shootToggle() {
-      if (this.transfer.getPower() != 0) {
-        this.transfer.setPower(0);
-      } else {
-        this.transfer.setPower(1.0);
+      switch (this.transfer.getPower) {
+        case 1:
+            this.transfer.setPower(0);
+            break;
+      
+        default:
+            this.transfer.setPower(1);
+            break;
       }
     }
-
+ 
     public void servoControl() {
             if (gamepad1.right_trigger_pressed) {
                 this.rStopper.setPosition(0.7);
