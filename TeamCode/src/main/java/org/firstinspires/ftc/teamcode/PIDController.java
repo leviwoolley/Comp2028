@@ -1,7 +1,5 @@
 // https://www.ctrlaltftc.com/introduction-to-open-loop-control
-// Future Auto 
-
-package org.firstinspires.ftc.robotcontroller.external.samples;
+// Future Auto
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -22,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
-public class RobotAutoDriveToAprilTagOmni extends LinearOpMode
+public class PIDController extends LinearOpMode
 {
 
     private double kP, kI, kD;
@@ -32,7 +30,7 @@ public class RobotAutoDriveToAprilTagOmni extends LinearOpMode
     private int integralSum;
     private int lastError;
 
-    private ElapsedTime timer = new ElapsedTime;
+
     
     @Override 
     public void runOpMode() {
@@ -40,12 +38,6 @@ public class RobotAutoDriveToAprilTagOmni extends LinearOpMode
         while (opModeIsActive()) {
 
             float encoder;
-
-            derivative = (error-lastError) / timer.seconds();
-
-            integralSum += (error * timer.seconds());
-
-
 
         }
 
