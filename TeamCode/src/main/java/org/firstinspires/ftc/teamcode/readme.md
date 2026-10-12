@@ -2,10 +2,13 @@
 List of actions that need doing for Competition
 
 ### MechanumDrive.java
-- Encapsulate sections into method calls for clear control flow
-    - Work/Determine Java Scope issues
+- Add Hybrid Drive
+- Have Connor Determine Layout of Driving
  
 ### Auto/PID.java
-- Complete basic outline and Control Theory
-- Have basic AprilTag recongnition
-- Have Auto flow planned out
+- Have AprilTag Recognition
+- Integrate Pedro
+- Integrate Ivy
+- Track Status of Ball Possession
+- Track Field Position
+
