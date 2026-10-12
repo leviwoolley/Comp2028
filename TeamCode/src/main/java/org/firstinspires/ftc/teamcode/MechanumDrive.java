@@ -57,6 +57,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
 
             while	(opModeIsActive())	{
 
+                y = -gamepad1.left_stick_y;
+                x = gamepad1.left_stick_x;
+
                 // Select Driving
                 if (gamepad1.dpadLeftWasPressed()) {
                     drivingSelected = DrivingMode.BRUTE;
@@ -202,7 +205,11 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     }
 
     public void hybridDriving() {
-
+        if (Math.abs(x) < 0.5 || Math.abs(y) < 0.5) {
+            bruteDriving();
+        } else {
+            mathDriving();
+        }
     }
 
     public void intakeToggle() {

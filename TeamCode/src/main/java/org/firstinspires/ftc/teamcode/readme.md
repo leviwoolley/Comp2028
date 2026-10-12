@@ -2,7 +2,7 @@
 List of actions that need doing for Competition
 
 ### MechanumDrive.java
-- Add Hybrid Drive
+- ~~Add Hybrid Drive~~
 - Have Connor Determine Layout of Driving
  
 ### Auto/PID.java
