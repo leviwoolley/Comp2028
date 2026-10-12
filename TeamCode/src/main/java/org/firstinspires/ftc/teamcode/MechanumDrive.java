@@ -3,6 +3,7 @@ package	org.firstinspires.ftc.teamcode;
 import	com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import	com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import	com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 
 @TeleOp(name="Mechanum	Drive",	group="Linear	OpMode")
@@ -45,6 +46,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         transfer = MotorStatus.OFF;
 
         drivingSelected = DrivingMode.BRUTE;
+
+        fL.setDirection(DcMotorSimple.Direction.REVERSE);
+        fR.setDirection(DcMotorSimple.Direction.REVERSE);
 
         telemetry.addData("Status",	"Initialized");
         telemetry.update();
