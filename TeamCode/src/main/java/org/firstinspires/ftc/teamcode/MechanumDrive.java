@@ -18,7 +18,8 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     private enum DrivingMode {
         BRUTE,
         HYBRID,
-        MATH
+        MATH,
+        OLD
     }
     
     private DcMotor fL, bL, fR, bR;
@@ -70,6 +71,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 if (gamepad1.dpadRightWasPressed()) {
                     drivingSelected = DrivingMode.MATH;
                 }
+                if (gamepad1.dpadDownWasPressed()) {
+                    drivingSelected = DrivingMode.OLD;
+                }
 
                 switch (drivingSelected) {
                     case BRUTE -> {
@@ -85,6 +89,9 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                     }
                     case MATH -> {
                         mathDriving();
+                    }
+                    case OLD -> {
+                        oldDriving();
                     }
                 }
                 try {
@@ -210,6 +217,30 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         } else {
             mathDriving();
         }
+    }
+
+    public void oldDriving() {
+        if (gamepad1.left_stick_y >= 0.1) {
+        fL.setPower(gamepad1.left_stick_y);
+        fR.setPower(gamepad1.left_stick_y);
+        bL.setPower(gamepad1.left_stick_y);
+        bR.setPower(gamepad1.left_stick_y);
+      } else if (gamepad1.left_stick_y <= -0.1) {
+        fL.setPower(gamepad1.left_stick_y);
+        fR.setPower(gamepad1.left_stick_y);
+        bL.setPower(gamepad1.left_stick_y);
+        bR.setPower(gamepad1.left_stick_y);
+      } else if (gamepad1.left_stick_x <= -0.1) {
+        fL.setPower(Math.abs(gamepad1.left_stick_x));
+        fR.setPower(gamepad1.left_stick_x);
+        bL.setPower(gamepad1.left_stick_x);
+        bR.setPower(Math.abs(gamepad1.left_stick_x));
+      } else if (gamepad1.left_stick_x >= 0.1) {
+        fL.setPower(-gamepad1.left_stick_x);
+        fR.setPower(gamepad1.left_stick_x);
+        bL.setPower(gamepad1.left_stick_x);
+        bR.setPower(-gamepad1.left_stick_x);
+      }
     }
 
     public void intakeToggle() {
