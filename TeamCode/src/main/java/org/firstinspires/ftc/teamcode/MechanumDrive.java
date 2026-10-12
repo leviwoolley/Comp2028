@@ -241,8 +241,29 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         bL.setPower(gamepad1.left_stick_x);
         bR.setPower(-gamepad1.left_stick_x);
       }
+     if	(gamepad1.right_stick_y	>=	0.1)	{
+								fL.setPower(0.5	*	gamepad1.right_stick_y);
+								fR.setPower(0.5	*	gamepad1.right_stick_y);
+								bL.setPower(0.5	*	gamepad1.right_stick_y);
+								bR.setPower(0.5	*	gamepad1.right_stick_y);
+						}	else	if	(gamepad1.right_stick_y	<=	-0.1)	{
+								fL.setPower(0.5	*	gamepad1.right_stick_y);
+								fR.setPower(0.5	*	gamepad1.right_stick_y);
+								bL.setPower(0.5	*	gamepad1.right_stick_y);
+								bR.setPower(0.5	*	gamepad1.right_stick_y);
+						}	else	if	(gamepad1.right_stick_x	<=	-0.1)	{
+								fL.setPower(0.5	*	Math.abs(gamepad1.right_stick_x));
+								fR.setPower(0.5	*	gamepad1.right_stick_x);
+								bL.setPower(0.5	*	gamepad1.right_stick_x);
+								bR.setPower(0.5	*	Math.abs(gamepad1.right_stick_x));
+						}	else	if	(gamepad1.right_stick_x	>=	0.1)	{
+								fL.setPower(0.5	*	-gamepad1.right_stick_x);
+								fR.setPower(0.5	*	gamepad1.right_stick_x);
+								bL.setPower(0.5	*	gamepad1.right_stick_x);
+								bR.setPower(0.5	*	-gamepad1.right_stick_x);
+						}
     }
-
+    
     public void intakeToggle() {
         if (intake == MotorStatus.OFF) {
             intake = MotorStatus.FORWARD;
