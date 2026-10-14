@@ -1,124 +1,102 @@
-package	org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode;
 
-import	com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import	com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import	com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Gamepad;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 
-@TeleOp(name="Mechanum	Drive",	group="Linear	OpMode")
-
-public	class	MechanumDrive	extends	LinearOpMode	{
-    private enum MotorStatus {
+public class MechanumDrive {
+    public enum MotorStatus {
         FORWARD,
         BACKWARD,
         OFF
     }
 
-    private enum DrivingMode {
+    public enum DrivingMode {
         BRUTE,
         HYBRID,
         MATH,
         OLD
     }
-    
-    private DcMotor fL, bL, fR, bR;
-    private DcMotor rLaunch, lLaunch, transferMotor;
 
-    private MotorStatus intake,transfer;
+    private final LinearOpMode robotOpMode;
+    private final HardwareMap hardwareMap;
+    private final Telemetry telemetry;
+    private final Gamepad gamepad1;
+
+    private DcMotor fL, bL, fR, bR;
     private DrivingMode drivingSelected;
 
-    private double x, y, turn, theta, power, sin, cos, max;
+    private double x, y, turn, max;
     private double fLPower, bLPower, fRPower, bRPower;
 
-	@Override
-	public void	runOpMode()	{
+    public MechanumDrive(LinearOpMode lOM) {
+        this.robotOpMode = lOM;
+        this.hardwareMap = this.robotOpMode.hardwareMap;
+        this.telemetry = this.robotOpMode.telemetry;
+        this.gamepad1 = this.robotOpMode.gamepad1;
+    }
 
-        fL	=	hardwareMap.get(DcMotor.class,	"fL");
-        fR	=	hardwareMap.get(DcMotor.class,	"fR");
-        bL	=	hardwareMap.get(DcMotor.class,	"bL");
-        bR	=	hardwareMap.get(DcMotor.class,	"bR");
 
-        rLaunch = hardwareMap.get(DcMotor.class, "rLauncher");
-        lLaunch = hardwareMap.get(DcMotor.class, "lLauncher");
-        transferMotor = hardwareMap.get(DcMotor.class, "transfer");
+    public void drivingLoop() {
 
-        intake = MotorStatus.OFF;
-        transfer = MotorStatus.OFF;
+        this.y = -gamepad1.left_stick_y;
+        this.x = gamepad1.left_stick_x;
 
-        drivingSelected = DrivingMode.BRUTE;
+        // Select Driving
+        if (this.gamepad1.dpadLeftWasPressed()) {
+            this.drivingSelected = DrivingMode.BRUTE;
+        }
+        if (this.gamepad1.dpadUpWasPressed()) {
+            this.drivingSelected = DrivingMode.HYBRID;
+        }
+        if (this.gamepad1.dpadRightWasPressed()) {
+            this.drivingSelected = DrivingMode.MATH;
+        }
+        if (this.gamepad1.dpadDownWasPressed()) {
+            this.drivingSelected = DrivingMode.OLD;
+        }
 
-        fL.setDirection(DcMotorSimple.Direction.REVERSE);
-        fR.setDirection(DcMotorSimple.Direction.REVERSE);
-
-        telemetry.addData("Status",	"Initialized");
-        telemetry.update();
-
-        waitForStart();
-
-            while	(opModeIsActive())	{
-
-                y = -gamepad1.left_stick_y;
-                x = gamepad1.left_stick_x;
-
-                // Select Driving
-                if (gamepad1.dpadLeftWasPressed()) {
-                    drivingSelected = DrivingMode.BRUTE;
-                }
-                if (gamepad1.dpadUpWasPressed()) {
-                    drivingSelected = DrivingMode.HYBRID;
-                }
-                if (gamepad1.dpadRightWasPressed()) {
-                    drivingSelected = DrivingMode.MATH;
-                }
-                if (gamepad1.dpadDownWasPressed()) {
-                    drivingSelected = DrivingMode.OLD;
-                }
-
-                switch (drivingSelected) {
-                    case BRUTE -> {
-                        try {
-                            bruteDriving();
-                        } catch (Exception e) {
-                            telemetry.addData("Unknown Exception for Brute", e);
-                        }
-
-                    }
-                    case HYBRID -> {
-                        hybridDriving();
-                    }
-                    case MATH -> {
-                        mathDriving();
-                    }
-                    case OLD -> {
-                        oldDriving();
-                    }
-                }
+        switch (this.drivingSelected) {
+            case BRUTE -> {
                 try {
-                    if (gamepad1.rightBumperWasPressed()) {
-                        intakeToggle();
-                    }
-                    if (gamepad1.leftBumperWasPressed()) {
-                        transferToggle();
-                    }
+                    bruteDriving();
                 } catch (Exception e) {
-                    telemetry.addData("Unkown Exception for Intake&Transfer", e);
+                    telemetry.addData("Unknown Exception for Brute", e);
                 }
-
-                // https://javadoc.io/doc/org.firstinspires.ftc/RobotCore/latest/com/qualcomm/robotcore/hardware/Gamepad.html
-
-                telemetry.addData("Driving Mode", "enumf", drivingSelected);
-
-                telemetry.addData("Front	left/Right",	"%4.2f,	%4.2f",	fLPower,	fRPower);
-                telemetry.addData("Back		left/Right",	"%4.2f,	%4.2f",	bLPower,	bRPower);
-
-                telemetry.addData("Intake Direction", "enumf", intake);
-                telemetry.addData("Tranfer Direction", "enumf", transfer);
-                telemetry.update();
 
             }
+            case HYBRID -> hybridDriving();
+            case MATH -> mathDriving();
+            case OLD -> oldDriving();
+            case null -> this.drivingSelected = DrivingMode.BRUTE;
 
-	}
+        }
+    }
+
+    public void drivingTelemetry() {
+        this.telemetry.addData("Driving Mode", "enumf", drivingSelected);
+
+        this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", fLPower, fRPower);
+        this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", bLPower, bRPower);
+    }
+    public void initMotors(DcMotorSimple.Direction fLDirection, DcMotorSimple.Direction fRDirection, DcMotorSimple.Direction bLDirection, DcMotorSimple.Direction bRDirection) {
+        this.fL = this.hardwareMap.get(DcMotor.class, "fL");
+        this.fR = this.hardwareMap.get(DcMotor.class, "fR");
+        this.bL = this.hardwareMap.get(DcMotor.class, "bL");
+        this.bR = this.hardwareMap.get(DcMotor.class, "bR");
+
+        this.drivingSelected = DrivingMode.BRUTE;
+
+        this.fL.setDirection(fLDirection);
+        this.fR.setDirection(fRDirection);
+        this.bL.setDirection(bLDirection);
+        this.bR.setDirection(bRDirection);
+    }
 
     public void setDriveChainPower(double fLP, double fRP, double bLP, double bRP) {
         this.fL.setPower(fLP);
@@ -128,30 +106,30 @@ public	class	MechanumDrive	extends	LinearOpMode	{
     }
 
     public void setDriveChainPower() {
-        setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
+        this.setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
     }
 
-    public void mathDriving() {
+    private void mathDriving() {
         // Get position of sticks as a decimal
-        x = -gamepad1.right_stick_x;
-        y = -gamepad1.left_stick_y;
+        this.x = -this.gamepad1.right_stick_x;
+        this.y = -this.gamepad1.left_stick_y;
 
-        turn = gamepad1.left_stick_x;
+        this.turn = this.gamepad1.left_stick_x;
 
         // Determine tilt of the left stick in radians
-        theta = Math.atan2(y, x);
+        double theta = Math.atan2(y, x);
         // Determine magnitude/distance of the left stick as a decimal
-        power = Math.hypot(x, y);
+        double power = Math.hypot(x, y);
 
         // Get the sine/cosine of the given angle, offset by 45 degrees. Returns a decimal between -1 and 1, depending on the stick orientation.
-        sin = Math.sin(theta - Math.PI/4);
-        cos = Math.cos(theta - Math.PI/4);
+        double sin = Math.sin(theta - Math.PI / 4);
+        double cos = Math.cos(theta - Math.PI / 4);
         // Returns the larger the two
-        max = Math.max(Math.abs(sin), Math.abs(cos));
+        this.max = Math.max(Math.abs(sin), Math.abs(cos));
 
                  /*
                 Power * cos | Power * sin
-                Multiple the magnitude of the stick direction (power) by the sine/cosine of its angle to return a decimal.
+                Multiply the magnitude of the stick direction (power) by the sine/cosine of its angle to return a decimal.
 
                 (Power * cos)/max | (Power * sin)/max
                	Scales the values down proportionally by the larger of the sin/cosine values.
@@ -162,13 +140,13 @@ public	class	MechanumDrive	extends	LinearOpMode	{
                 Adds the x-value of the right stick to the total. Allows for strafing.
                 Easy to visualize if the left sick is neutral.
                 Push the right stick to the <---, and the left wheels need to spin the same direction, and the right the opposite.
-                This achieves strafing with mechanum wheels.
+                This achieves strafing with mecanum wheels.
             */
 
-        this.fLPower = power * cos/max - turn;
-        this.fRPower = power * sin/max + turn;
-        this.bLPower = power * sin/max - turn;
-        this.bRPower = power * cos/max + turn;
+        this.fLPower = power * cos / max - turn;
+        this.fRPower = power * sin / max + turn;
+        this.bLPower = power * sin / max - turn;
+        this.bRPower = power * cos / max + turn;
 
             /*
                 If wheel power exceeds 1, then scale them down proportionately.
@@ -188,20 +166,20 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         setDriveChainPower();
     }
 
-    public void bruteDriving() {
-        y = -gamepad1.left_stick_y;
-        x = gamepad1.left_stick_x;
+    private void bruteDriving() {
+        this.y = -this.gamepad1.left_stick_y;
+        this.x = this.gamepad1.left_stick_x;
 
-        turn = gamepad1.right_stick_x;
+        this.turn = this.gamepad1.right_stick_x;
 
-        max = Math.max((y+x+turn), 1.0);
+        this.max = Math.max((y + x + turn), 1.0);
 
         this.fLPower = y + x + turn;
         this.fRPower = y - x - turn;
         this.bLPower = y - x + turn;
         this.bRPower = y + x - turn;
 
-        if ( (y+x+turn) > 1.0) {
+        if ((y + x + turn) > 1.0) {
             this.fLPower /= max;
             this.fRPower /= max;
             this.bLPower /= max;
@@ -211,7 +189,7 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         setDriveChainPower();
     }
 
-    public void hybridDriving() {
+    private void hybridDriving() {
         if (Math.abs(x) < 0.5 || Math.abs(y) < 0.5) {
             bruteDriving();
         } else {
@@ -219,111 +197,72 @@ public	class	MechanumDrive	extends	LinearOpMode	{
         }
     }
 
-    public void oldDriving() {
+    private void oldDriving() {
         if (gamepad1.left_stick_y >= 0.1) {
-        fL.setPower(gamepad1.left_stick_y);
-        fR.setPower(gamepad1.left_stick_y);
-        bL.setPower(gamepad1.left_stick_y);
-        bR.setPower(gamepad1.left_stick_y);
-      } else if (gamepad1.left_stick_y <= -0.1) {
-        fL.setPower(gamepad1.left_stick_y);
-        fR.setPower(gamepad1.left_stick_y);
-        bL.setPower(gamepad1.left_stick_y);
-        bR.setPower(gamepad1.left_stick_y);
-      } else if (gamepad1.left_stick_x <= -0.1) {
-        fL.setPower(Math.abs(gamepad1.left_stick_x));
-        fR.setPower(gamepad1.left_stick_x);
-        bL.setPower(gamepad1.left_stick_x);
-        bR.setPower(Math.abs(gamepad1.left_stick_x));
-      } else if (gamepad1.left_stick_x >= 0.1) {
-        fL.setPower(-gamepad1.left_stick_x);
-        fR.setPower(gamepad1.left_stick_x);
-        bL.setPower(gamepad1.left_stick_x);
-        bR.setPower(-gamepad1.left_stick_x);
-      }
-     if	(gamepad1.right_stick_y	>=	0.1)	{
-								fL.setPower(0.5	*	gamepad1.right_stick_y);
-								fR.setPower(0.5	*	gamepad1.right_stick_y);
-								bL.setPower(0.5	*	gamepad1.right_stick_y);
-								bR.setPower(0.5	*	gamepad1.right_stick_y);
-						}	else	if	(gamepad1.right_stick_y	<=	-0.1)	{
-								fL.setPower(0.5	*	gamepad1.right_stick_y);
-								fR.setPower(0.5	*	gamepad1.right_stick_y);
-								bL.setPower(0.5	*	gamepad1.right_stick_y);
-								bR.setPower(0.5	*	gamepad1.right_stick_y);
-						}	else	if	(gamepad1.right_stick_x	<=	-0.1)	{
-								fL.setPower(0.5	*	Math.abs(gamepad1.right_stick_x));
-								fR.setPower(0.5	*	gamepad1.right_stick_x);
-								bL.setPower(0.5	*	gamepad1.right_stick_x);
-								bR.setPower(0.5	*	Math.abs(gamepad1.right_stick_x));
-						}	else	if	(gamepad1.right_stick_x	>=	0.1)	{
-								fL.setPower(0.5	*	-gamepad1.right_stick_x);
-								fR.setPower(0.5	*	gamepad1.right_stick_x);
-								bL.setPower(0.5	*	gamepad1.right_stick_x);
-								bR.setPower(0.5	*	-gamepad1.right_stick_x);
-						}
-    }
-    
-    public void intakeToggle() {
-        if (intake == MotorStatus.OFF) {
-            intake = MotorStatus.FORWARD;
+            fL.setPower(gamepad1.left_stick_y);
+            fR.setPower(gamepad1.left_stick_y);
+            bL.setPower(gamepad1.left_stick_y);
+            bR.setPower(gamepad1.left_stick_y);
+        } else if (gamepad1.left_stick_y <= -0.1) {
+            fL.setPower(gamepad1.left_stick_y);
+            fR.setPower(gamepad1.left_stick_y);
+            bL.setPower(gamepad1.left_stick_y);
+            bR.setPower(gamepad1.left_stick_y);
+        } else if (gamepad1.left_stick_x <= -0.1) {
+            fL.setPower(Math.abs(gamepad1.left_stick_x));
+            fR.setPower(gamepad1.left_stick_x);
+            bL.setPower(gamepad1.left_stick_x);
+            bR.setPower(Math.abs(gamepad1.left_stick_x));
+        } else if (gamepad1.left_stick_x >= 0.1) {
+            fL.setPower(-gamepad1.left_stick_x);
+            fR.setPower(gamepad1.left_stick_x);
+            bL.setPower(gamepad1.left_stick_x);
+            bR.setPower(-gamepad1.left_stick_x);
         }
-
-        if (intake == MotorStatus.FORWARD) {
-            intake = MotorStatus.OFF;
-        }
-
-        switch (intake) {
-            case FORWARD -> {
-                this.rLaunch.setPower(1);
-                this.lLaunch.setPower(-1);
-            }
-            case OFF -> {
-                this.rLaunch.setPower(0);
-                this.lLaunch.setPower(0);
-            }
-        }
-    }
-
-    public void transferToggle() {
-        if (transfer == MotorStatus.OFF) {
-            transfer = MotorStatus.FORWARD;
-        }
-
-        if (transfer == MotorStatus.FORWARD) {
-            transfer = MotorStatus.OFF;
-        }
-
-        switch (transfer) {
-            case FORWARD -> {
-                this.transferMotor.setPower(1);
-            }
-            case OFF -> {
-                this.transferMotor.setPower(0);
-            }
+        if (gamepad1.right_stick_y >= 0.1) {
+            fL.setPower(0.5 * gamepad1.right_stick_y);
+            fR.setPower(0.5 * gamepad1.right_stick_y);
+            bL.setPower(0.5 * gamepad1.right_stick_y);
+            bR.setPower(0.5 * gamepad1.right_stick_y);
+        } else if (gamepad1.right_stick_y <= -0.1) {
+            fL.setPower(0.5 * gamepad1.right_stick_y);
+            fR.setPower(0.5 * gamepad1.right_stick_y);
+            bL.setPower(0.5 * gamepad1.right_stick_y);
+            bR.setPower(0.5 * gamepad1.right_stick_y);
+        } else if (gamepad1.right_stick_x <= -0.1) {
+            fL.setPower(0.5 * Math.abs(gamepad1.right_stick_x));
+            fR.setPower(0.5 * gamepad1.right_stick_x);
+            bL.setPower(0.5 * gamepad1.right_stick_x);
+            bR.setPower(0.5 * Math.abs(gamepad1.right_stick_x));
+        } else if (gamepad1.right_stick_x >= 0.1) {
+            fL.setPower(0.5 * -gamepad1.right_stick_x);
+            fR.setPower(0.5 * gamepad1.right_stick_x);
+            bL.setPower(0.5 * gamepad1.right_stick_x);
+            bR.setPower(0.5 * -gamepad1.right_stick_x);
         }
     }
 
     public void rotationTesting() {
-        if (gamepad1.a) {
+        if (this.gamepad1.a) {
             this.fL.setPower(1);
-            sleep(500);
+            this.robotOpMode.sleep(500);
             this.fL.setPower(0);
         }
-        if (gamepad1.b) {
+        if (this.gamepad1.b) {
             this.bL.setPower(1);
-            sleep(500);
+            this.robotOpMode.sleep(500);
             this.bL.setPower(0);
         }
-        if (gamepad1.x) {
+        if (this.gamepad1.x) {
             this.bR.setPower(1);
-            sleep(500);
+            this.robotOpMode.sleep(500);
             this.bR.setPower(0);
         }
-        if (gamepad1.y) {
+        if (this.gamepad1.y) {
             this.fR.setPower(1);
-            sleep(500);
+            this.robotOpMode.sleep(500);
             this.fR.setPower(0);
         }
     }
+
 }
