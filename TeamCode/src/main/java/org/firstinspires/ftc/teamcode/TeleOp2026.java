@@ -1,9 +1,11 @@
 package org.firstinspires.ftc.teamcode;
 
 import	com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import	com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import	com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
+@TeleOp(name="2026Teleop")
 public class TeleOp2026 extends LinearOpMode {
 
     private MechanumDrive mechanumDrive;
@@ -51,53 +53,43 @@ public class TeleOp2026 extends LinearOpMode {
                     transferToggle();
                 }
             } catch (Exception e) {
-                telemetry.addData("Unkown Exception for Intake&Transfer", e);
+                telemetry.addData("Unknown Exception for Intake&Transfer", e);
             }
 
             mechanumDrive.drivingTelemetry();
 
-            telemetry.addData("Intake Direction", "enumf", intake);
-            telemetry.addData("Tranfer Direction", "enumf", transfer);
+            telemetry.addData("Intake Direction", intake);
+            telemetry.addData("Transfer Direction",  transfer);
+            telemetry.update();
         }
     }
 
     public void intakeToggle() {
-        if (intake == MechanumDrive.MotorStatus.OFF) {
-            intake = MechanumDrive.MotorStatus.FORWARD;
-        }
-
-        if (intake == MechanumDrive.MotorStatus.FORWARD) {
-            intake = MechanumDrive.MotorStatus.OFF;
-        }
-
         switch (intake) {
             case FORWARD -> {
-                this.rLaunch.setPower(1);
-                this.lLaunch.setPower(-1);
+                intake = MechanumDrive.MotorStatus.OFF;
+                this.rLaunch.setPower(0);
+                this.rLaunch.setPower(0);
             }
             case OFF -> {
-                this.rLaunch.setPower(0);
-                this.lLaunch.setPower(0);
+                intake = MechanumDrive.MotorStatus.FORWARD;
+                this.rLaunch.setPower(-0.9);
+                this.lLaunch.setPower(0.9);
             }
         }
     }
 
     public void transferToggle() {
-        if (transfer == MechanumDrive.MotorStatus.OFF) {
-            transfer = MechanumDrive.MotorStatus.FORWARD;
-        }
-
-        if (transfer == MechanumDrive.MotorStatus.FORWARD) {
-            transfer = MechanumDrive.MotorStatus.OFF;
-        }
-
         switch (transfer) {
             case FORWARD -> {
+                transfer = MechanumDrive.MotorStatus.OFF;
                 this.transferMotor.setPower(1);
             }
             case OFF -> {
+                transfer = MechanumDrive.MotorStatus.FORWARD;
                 this.transferMotor.setPower(0);
             }
+            default -> {}
         }
     }
 }

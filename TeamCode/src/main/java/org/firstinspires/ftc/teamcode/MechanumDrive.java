@@ -44,20 +44,19 @@ public class MechanumDrive {
 
     public void drivingLoop() {
 
-        this.y = -gamepad1.left_stick_y;
-        this.x = gamepad1.left_stick_x;
+        this.x = -this.gamepad1.right_stick_x;
+        this.y = -this.gamepad1.left_stick_y;
+
+        this.turn = this.gamepad1.left_stick_x;
 
         // Select Driving
-        if (this.gamepad1.dpadLeftWasPressed()) {
+        if (this.gamepad1.dpad_left) {
             this.drivingSelected = DrivingMode.BRUTE;
-        }
-        if (this.gamepad1.dpadUpWasPressed()) {
+        }else if (this.gamepad1.dpad_up) {
             this.drivingSelected = DrivingMode.HYBRID;
-        }
-        if (this.gamepad1.dpadRightWasPressed()) {
+        }else if (this.gamepad1.dpad_right) {
             this.drivingSelected = DrivingMode.MATH;
-        }
-        if (this.gamepad1.dpadDownWasPressed()) {
+        }else if (this.gamepad1.dpad_down) {
             this.drivingSelected = DrivingMode.OLD;
         }
 
@@ -73,13 +72,15 @@ public class MechanumDrive {
             case HYBRID -> hybridDriving();
             case MATH -> mathDriving();
             case OLD -> oldDriving();
-            case null -> this.drivingSelected = DrivingMode.BRUTE;
+            default -> {
+                break;
+            }
 
         }
     }
 
     public void drivingTelemetry() {
-        this.telemetry.addData("Driving Mode", "enumf", drivingSelected);
+        this.telemetry.addData("Driving Mode", drivingSelected);
 
         this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", fLPower, fRPower);
         this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", bLPower, bRPower);
@@ -90,7 +91,7 @@ public class MechanumDrive {
         this.bL = this.hardwareMap.get(DcMotor.class, "bL");
         this.bR = this.hardwareMap.get(DcMotor.class, "bR");
 
-        this.drivingSelected = DrivingMode.BRUTE;
+        this.drivingSelected = DrivingMode.MATH;
 
         this.fL.setDirection(fLDirection);
         this.fR.setDirection(fRDirection);
@@ -111,10 +112,7 @@ public class MechanumDrive {
 
     private void mathDriving() {
         // Get position of sticks as a decimal
-        this.x = -this.gamepad1.right_stick_x;
-        this.y = -this.gamepad1.left_stick_y;
 
-        this.turn = this.gamepad1.left_stick_x;
 
         // Determine tilt of the left stick in radians
         double theta = Math.atan2(y, x);
@@ -167,11 +165,6 @@ public class MechanumDrive {
     }
 
     private void bruteDriving() {
-        this.y = -this.gamepad1.left_stick_y;
-        this.x = this.gamepad1.left_stick_x;
-
-        this.turn = this.gamepad1.right_stick_x;
-
         this.max = Math.max((y + x + turn), 1.0);
 
         this.fLPower = y + x + turn;
@@ -186,7 +179,7 @@ public class MechanumDrive {
             this.bRPower /= max;
         }
 
-        setDriveChainPower();
+        setDriveChainPower(fLPower,fRPower,bLPower,bRPower);
     }
 
     private void hybridDriving() {
