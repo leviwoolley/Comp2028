@@ -44,10 +44,10 @@ public class MechanumDrive {
 
     public void drivingLoop() {
 
-        this.x = -this.gamepad1.right_stick_x;
+        this.x = -this.gamepad1.left_stick_x;
         this.y = -this.gamepad1.left_stick_y;
 
-        this.turn = this.gamepad1.left_stick_x;
+        this.turn = this.gamepad1.right_stick_x;
 
         // Select Driving
         if (this.gamepad1.dpad_left) {
