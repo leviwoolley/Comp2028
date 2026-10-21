@@ -26,12 +26,12 @@ public class MechanumDrive {
     private final LinearOpMode robotOpMode;
     private final HardwareMap hardwareMap;
     private final Telemetry telemetry;
-    private final Gamepad gamepad1;
+    private Gamepad gamepad1;
 
     private DcMotor fL, bL, fR, bR;
     private DrivingMode drivingSelected;
 
-    private double x, y, turn, max;
+    private double turn, max;
     private double fLPower, bLPower, fRPower, bRPower;
 
     public MechanumDrive(LinearOpMode lOM) {
@@ -44,8 +44,8 @@ public class MechanumDrive {
 
     public void drivingLoop() {
 
-        this.x = -this.gamepad1.left_stick_x;
-        this.y = -this.gamepad1.left_stick_y;
+        double x = -this.gamepad1.left_stick_y;
+        double y = -this.gamepad1.left_stick_x;
 
         this.turn = this.gamepad1.right_stick_x;
 
@@ -63,14 +63,14 @@ public class MechanumDrive {
         switch (this.drivingSelected) {
             case BRUTE -> {
                 try {
-                    bruteDriving();
+                    bruteDriving(x, y);
                 } catch (Exception e) {
                     telemetry.addData("Unknown Exception for Brute", e);
                 }
 
             }
-            case HYBRID -> hybridDriving();
-            case MATH -> mathDriving();
+            case HYBRID -> hybridDriving(x, y);
+            case MATH -> mathDriving(x, y);
             case OLD -> oldDriving();
             default -> {
                 break;
@@ -110,12 +110,12 @@ public class MechanumDrive {
         this.setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
     }
 
-    private void mathDriving() {
+    private void mathDriving(double x, double y) {
         // Get position of sticks as a decimal
 
 
         // Determine tilt of the left stick in radians
-        double theta = Math.atan2(y, x);
+        double theta = Math.atan2(x,y);
         // Determine magnitude/distance of the left stick as a decimal
         double power = Math.hypot(x, y);
 
@@ -164,7 +164,7 @@ public class MechanumDrive {
         setDriveChainPower();
     }
 
-    private void bruteDriving() {
+    private void bruteDriving(double x, double y) {
         this.max = Math.max((y + x + turn), 1.0);
 
         this.fLPower = y + x + turn;
@@ -179,14 +179,14 @@ public class MechanumDrive {
             this.bRPower /= max;
         }
 
-        setDriveChainPower(fLPower,fRPower,bLPower,bRPower);
+        setDriveChainPower(this.fLPower,this.fRPower,this.bLPower,this.bRPower);
     }
 
-    private void hybridDriving() {
+    private void hybridDriving(double x, double y) {
         if (Math.abs(x) < 0.5 || Math.abs(y) < 0.5) {
-            bruteDriving();
+            bruteDriving(x, y);
         } else {
-            mathDriving();
+            mathDriving(x, y);
         }
     }
 
@@ -232,6 +232,18 @@ public class MechanumDrive {
             fR.setPower(0.5 * gamepad1.right_stick_x);
             bL.setPower(0.5 * gamepad1.right_stick_x);
             bR.setPower(0.5 * -gamepad1.right_stick_x);
+        }
+
+        if (gamepad1.left_stick_y < 0.1) {
+            fL.setPower(0);
+            fR.setPower(0);
+            bL.setPower(0);
+            bR.setPower(0);
+        } else if (gamepad1.left_stick_y > -0.1) {
+            fL.setPower(0);
+            fR.setPower(0);
+            bL.setPower(0);
+            bR.setPower(0);
         }
     }
 
