@@ -45,13 +45,14 @@ public class TeleOp2026 extends LinearOpMode {
 
             mechanumDrive.drivingLoop();
 
-
             if (gamepad1.rightBumperWasPressed()) {
                 intakeToggleForward();
             }
+
             if (gamepad1.leftBumperWasPressed()) {
                 transferToggle();
             }
+
             if (gamepad1.rightTriggerWasPressed()) {
                 intakeToggleBackward();
             }

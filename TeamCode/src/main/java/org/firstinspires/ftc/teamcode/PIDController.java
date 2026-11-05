@@ -10,10 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.IMU;
 
-import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.controls.GainControl;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
@@ -23,17 +20,13 @@ import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 import org.firstinspires.ftc.robotcore.external.navigation.Position;
 import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 import org.firstinspires.ftc.vision.VisionPortal;
-
-import org.firstinspires.ftc.vision.apriltag.AprilTagClusterDetection;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
-import org.firstinspires.ftc.vision.apriltag.AprilTagPoseFtc;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 import org.firstinspires.ftc.vision.apriltag.AprilTagSingleDetection;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-@Autonomous(name="Autonomous for 2028")
+@Autonomous(name="Autonomous for 2026")
 public class PIDController extends OpMode
 {
     private final Position CAMERA_POSITION = new Position(DistanceUnit.INCH,0,0,0,0);
@@ -112,7 +105,7 @@ public class PIDController extends OpMode
 
         VisionPortal.Builder builder = new VisionPortal.Builder();
 
-        builder.setCamera((hardwareMap.get(WebcamName.class,"goBuildaLens")));
+        builder.setCamera((hardwareMap.get(WebcamName.class,"UC852")));
         builder.setCameraResolution(new Size(1280,800));
         builder.enableLiveView(true);
         builder.setStreamFormat(VisionPortal.StreamFormat.MJPEG);
