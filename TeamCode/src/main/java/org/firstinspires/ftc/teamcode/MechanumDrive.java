@@ -134,6 +134,10 @@ public class MechanumDrive {
         this.fR.setDirection(fRDirection);
         this.bL.setDirection(bLDirection);
         this.bR.setDirection(bRDirection);
+
+        xReverse = false;
+        yReverse = false;
+        xFlip = false;
     }
 
     public void setDriveChainPower(double fLP, double fRP, double bLP, double bRP) {
