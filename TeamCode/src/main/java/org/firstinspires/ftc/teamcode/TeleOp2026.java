@@ -57,6 +57,9 @@ public class TeleOp2026 extends LinearOpMode {
                 intakeToggleBackward();
             }
 
+            mechanumDrive.drivingModeSelection();
+
+            // mechanumDrive.drivingSelected = MechanumDrive.DrivingMode.BRUTE;
 
             mechanumDrive.drivingTelemetry();
 
@@ -80,7 +83,9 @@ public class TeleOp2026 extends LinearOpMode {
         }
 
     }
-
+// this is some shit ass code god  help
+    // I am very racist and hate black and white people
+    // levi is a cum slut
     public void intakeToggleBackward() {
         switch (intake) {
             case BACKWARD -> {
@@ -110,3 +115,4 @@ public class TeleOp2026 extends LinearOpMode {
         }
     }
 }
+// PlEASE HELP GOD PLEASE, C IS BETTER

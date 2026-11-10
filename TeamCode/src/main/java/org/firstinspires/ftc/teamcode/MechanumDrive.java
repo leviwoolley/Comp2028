@@ -29,8 +29,9 @@ public class MechanumDrive {
     private Gamepad gamepad1;
 
     private DcMotor fL, bL, fR, bR;
-    private DrivingMode drivingSelected;
+    public DrivingMode drivingSelected;
 
+    //System.out.println("fuck");
     private double turn, max;
     private double fLPower, bLPower, fRPower, bRPower;
 
@@ -50,23 +51,6 @@ public class MechanumDrive {
         double y = -this.gamepad1.left_stick_y;
 
         this.turn = this.gamepad1.right_stick_x;
-
-        // Select Driving Mode through enum using DPAD | left = BRUTE | up = HYBRID | right = MATH | down = OLD
-        if (this.gamepad1.dpad_left) {
-            this.drivingSelected = DrivingMode.BRUTE;
-        }
-
-        else if (this.gamepad1.dpad_up) {
-            this.drivingSelected = DrivingMode.HYBRID;
-        }
-
-        else if (this.gamepad1.dpad_right) {
-            this.drivingSelected = DrivingMode.MATH;
-        }
-
-        else if (this.gamepad1.dpad_down) {
-            this.drivingSelected = DrivingMode.OLD;
-        }
 
         // Reversing values for testing purposes. Probably encapsulate later.
 
@@ -149,6 +133,25 @@ public class MechanumDrive {
     // Overloaded version, to use default variables.
     public void setDriveChainPower() {
         this.setDriveChainPower(this.fLPower, this.fRPower, this.bLPower, this.bRPower);
+    }
+
+    public void drivingModeSelection() {
+
+        if (this.gamepad1.dpad_left) {
+            this.drivingSelected = DrivingMode.BRUTE;
+        }
+
+        else if (this.gamepad1.dpad_up) {
+            this.drivingSelected = DrivingMode.HYBRID;
+        }
+
+        else if (this.gamepad1.dpad_right) {
+            this.drivingSelected = DrivingMode.MATH;
+        }
+
+        else if (this.gamepad1.dpad_down) {
+            this.drivingSelected = DrivingMode.OLD;
+        }
     }
 
     private void mathDriving(double x, double y, double turn) {
