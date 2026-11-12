@@ -53,11 +53,14 @@ public class TeleOp2026 extends LinearOpMode {
                 transferToggle();
             }
 
-            if (gamepad1.rightTriggerWasPressed()) {
+            if (gamepad1.rightTriggerWasReleased()) {
                 intakeToggleBackward();
             }
 
             mechanumDrive.drivingModeSelection();
+
+            telemetry.addData("Status: ",yes());
+
 
             // mechanumDrive.drivingSelected = MechanumDrive.DrivingMode.BRUTE;
 
@@ -73,29 +76,28 @@ public class TeleOp2026 extends LinearOpMode {
         switch (intake) {
             case FORWARD -> {
                 intake = MechanumDrive.MotorStatus.OFF;
-                this.rLaunch.setPower(0);
                 this.lLaunch.setPower(0);
             }
             case OFF,BACKWARD -> {
                 intake = MechanumDrive.MotorStatus.FORWARD;
-                this.rLaunch.setPower(-0.5);
+                this.lLaunch.setPower(1);
             }
         }
 
     }
-// this is some shit ass code god  help
-    // I am very racist and hate black and white people
-    // levi is a cum slut
+
+    public String yes(){
+        return "GOD HELP";
+    }
     public void intakeToggleBackward() {
         switch (intake) {
             case BACKWARD -> {
                 intake = MechanumDrive.MotorStatus.OFF;
                 this.rLaunch.setPower(0);
-                this.lLaunch.setPower(0);
             }
             case OFF,FORWARD -> {
                 intake = MechanumDrive.MotorStatus.BACKWARD;
-                this.rLaunch.setPower(0.5);
+                this.rLaunch.setPower(1);
             }
         }
 
@@ -105,11 +107,11 @@ public class TeleOp2026 extends LinearOpMode {
         switch (transfer) {
             case FORWARD -> {
                 transfer = MechanumDrive.MotorStatus.OFF;
-                this.transferMotor.setPower(-1);
+                this.transferMotor.setPower(0);
             }
             case OFF -> {
                 transfer = MechanumDrive.MotorStatus.FORWARD;
-                this.transferMotor.setPower(0);
+                this.transferMotor.setPower(-1);
             }
             default -> {}
         }

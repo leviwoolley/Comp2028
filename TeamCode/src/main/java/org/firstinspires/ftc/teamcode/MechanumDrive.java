@@ -26,16 +26,16 @@ public class MechanumDrive {
     private final LinearOpMode robotOpMode;
     private final HardwareMap hardwareMap;
     private final Telemetry telemetry;
-    private Gamepad gamepad1;
+    Gamepad gamepad1;
 
     private DcMotor fL, bL, fR, bR;
     public DrivingMode drivingSelected;
 
     //System.out.println("fuck");
-    private double turn, max;
-    private double fLPower, bLPower, fRPower, bRPower;
+    double turn, max;
+    double fLPower, bLPower, fRPower, bRPower;
 
-    private boolean xReverse, yReverse, xFlip;
+    boolean xReverse, yReverse, xFlip;
 
     public MechanumDrive(LinearOpMode lOM) {
         this.robotOpMode = lOM;
@@ -99,10 +99,10 @@ public class MechanumDrive {
         // FTC's way to convey data to the user through the driving station. Adds to buffer but does not flush, so it can be used and then added upon in actual teleop.
         this.telemetry.addData("Driving Mode", drivingSelected);
 
-        this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", fLPower, fRPower);
-        this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", bLPower, bRPower);
+        this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", this.fLPower, this.fRPower);
+        this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", this.bLPower, this.bRPower);
 
-        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "f, f, f", xReverse, yReverse, xFlip);
+        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "f, f, f", this.xReverse, this.yReverse, this.xFlip);
     }
 
     public void initMotors(DcMotorSimple.Direction fLDirection, DcMotorSimple.Direction fRDirection, DcMotorSimple.Direction bLDirection, DcMotorSimple.Direction bRDirection) {
