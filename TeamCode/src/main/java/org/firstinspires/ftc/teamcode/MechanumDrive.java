@@ -1,11 +1,13 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.IMU;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
@@ -22,6 +24,11 @@ public class MechanumDrive {
         MATH,
         OLD
     }
+
+    private IMU imu;
+    private final RevHubOrientationOnRobot.LogoFacingDirection LOGO_DIRECTION = RevHubOrientationOnRobot.LogoFacingDirection.UP;
+    private final RevHubOrientationOnRobot.UsbFacingDirection USB_DIRECTION = RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
+    private final RevHubOrientationOnRobot ORIENTATION_ON_ROBOT = new RevHubOrientationOnRobot(LOGO_DIRECTION, USB_DIRECTION);
 
     private final LinearOpMode robotOpMode;
     private final HardwareMap hardwareMap;
@@ -48,7 +55,7 @@ public class MechanumDrive {
     public void drivingLoop() {
 
         double x = this.gamepad1.left_stick_x;
-        double y = -this.gamepad1.left_stick_y;
+        double y = this.gamepad1.left_stick_y;
 
         this.turn = this.gamepad1.right_stick_x;
 
@@ -84,9 +91,9 @@ public class MechanumDrive {
         // Using mode selection by above if statement, then direct to function for it.
 
         switch (this.drivingSelected) {
-            case BRUTE -> bruteDriving(x, -y, turn);
+            case BRUTE -> bruteDriving(x, y, turn);
             case HYBRID -> hybridDriving(x, y, turn);
-            case MATH -> mathDriving(-x, -y, turn);
+            case MATH -> mathDriving(x, y, turn);
             case OLD -> oldDriving(); // Calls x and y internally. Grabbed from Alex's last year, with minimal modification.
             default -> {
                 break; // Redundant, but please leave for clarity. Needed for Java to consider the Switch exhaustive.
@@ -118,6 +125,8 @@ public class MechanumDrive {
         this.fR.setDirection(fRDirection);
         this.bL.setDirection(bLDirection);
         this.bR.setDirection(bRDirection);
+
+        imu.initialize(new IMU.Parameters(ORIENTATION_ON_ROBOT));
 
         xReverse = false;
         yReverse = false;
@@ -183,10 +192,10 @@ public class MechanumDrive {
                 This achieves strafing with mecanum wheels.
          */
 
-        this.fLPower = power * cos / max + turn;
-        this.fRPower = power * sin / max - turn;
-        this.bLPower = power * sin / max + turn;
-        this.bRPower = power * cos / max - turn;
+        this.fLPower = ((power * cos) / max) + turn;
+        this.fRPower = ((power * cos) / max) - turn;
+        this.bLPower = ((power * cos) / max) + turn;
+        this.bRPower = ((power * cos) / max) - turn;
 
         /*
             If wheel power exceeds 1, then scale them down proportionately.
@@ -293,6 +302,9 @@ public class MechanumDrive {
         }
     }
 
+    private void fieldCentricDriving(double x, double y, double turn, double imu) {
+        
+    }
     public void rotationTesting() {
         if (this.gamepad1.a) {
             this.fL.setPower(1);

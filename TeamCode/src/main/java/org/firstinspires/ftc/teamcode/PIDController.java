@@ -29,6 +29,13 @@ import java.util.List;
 @Autonomous(name="Autonomous for 2026")
 public class PIDController extends OpMode
 {
+    @interface Purpose {
+        String name();
+        String desc();
+        String notes();
+        int date();
+        Class<?> relevantClass();
+    }
     private final Position CAMERA_POSITION = new Position(DistanceUnit.INCH,0,0,0,0);
     private final YawPitchRollAngles CAMERA_ORIENTATION = new YawPitchRollAngles(AngleUnit.DEGREES, 0, -90, 0,0);
 
@@ -41,7 +48,7 @@ public class PIDController extends OpMode
     private IMU imu;
     
     private final RevHubOrientationOnRobot.LogoFacingDirection LOGO_DIRECTION = RevHubOrientationOnRobot.LogoFacingDirection.UP;
-    private final RevHubOrientationOnRobot.UsbFacingDirection USB_DIRECTION = RevHubOrientationOnRobot.UsbFacingDirection.BACKWARD;
+    private final RevHubOrientationOnRobot.UsbFacingDirection USB_DIRECTION = RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
     private final RevHubOrientationOnRobot ORIENTATION_ON_ROBOT = new RevHubOrientationOnRobot(LOGO_DIRECTION, USB_DIRECTION);
 
     private double kP, kI, kD;
