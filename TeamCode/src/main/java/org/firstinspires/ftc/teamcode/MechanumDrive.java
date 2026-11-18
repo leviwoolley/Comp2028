@@ -25,9 +25,6 @@ public class MechanumDrive {
         OLD
     }
 
-    public record motorDirections(DcMotorSimple.Direction frontLeft, DcMotorSimple.Direction frontRight, DcMotorSimple.Direction backLeft, DcMotorSimple.Direction backRight) {}
-    public record gamepadValues(double x, double y, double turn) {}
-
     private IMU imu;
     private final RevHubOrientationOnRobot.LogoFacingDirection LOGO_DIRECTION = RevHubOrientationOnRobot.LogoFacingDirection.UP;
     private final RevHubOrientationOnRobot.UsbFacingDirection USB_DIRECTION = RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
@@ -42,7 +39,7 @@ public class MechanumDrive {
     public DrivingMode drivingSelected;
 
     //System.out.println("fuck");
-    double max;
+    double turn, max;
     double fLPower, bLPower, fRPower, bRPower;
 
     boolean xReverse, yReverse, xFlip;
@@ -57,17 +54,46 @@ public class MechanumDrive {
 
     public void drivingLoop() {
 
-        gamepadValues inputs = new gamepadValues(this.gamepad1.left_stick_x, this.gamepad1.left_stick_y, this.gamepad1.right_stick_x);
+        double x = this.gamepad1.left_stick_x;
+        double y = this.gamepad1.left_stick_y;
+
+        this.turn = this.gamepad1.right_stick_x;
 
         // Reversing values for testing purposes. Probably encapsulate later.
-        inputFlipping();
+
+        if (this.gamepad1.xWasPressed()) {
+            xReverse = !xReverse;
+        }
+
+        if (this.gamepad1.yWasPressed()) {
+            yReverse = !yReverse;
+        }
+
+        if (this.gamepad1.aWasPressed()) {
+            xFlip = !xFlip;
+
+        }
+
+        if (xReverse) {
+            x = -x;
+        }
+
+        if (yReverse) {
+            y = -y;
+        }
+
+        if (xFlip) {
+            double temp = x;
+            x = turn;
+            turn = temp;
+        }
 
         // Using mode selection by above if statement, then direct to function for it.
 
         switch (this.drivingSelected) {
-            case BRUTE -> bruteDriving(xyturn.x(), xyturn.y(), xyturn.turn());
-            case HYBRID -> hybridDriving(xyturn.x(), xyturn.y(), xyturn.turn());
-            case MATH -> mathDriving(xyturn.x(), xyturn.y(), xyturn.turn());
+            case BRUTE -> bruteDriving(x, y, turn);
+            case HYBRID -> hybridDriving(x, y, turn);
+            case MATH -> mathDriving(x, y, turn);
             case OLD -> oldDriving(); // Calls x and y internally. Grabbed from Alex's last year, with minimal modification.
             default -> {
                 break; // Redundant, but please leave for clarity. Needed for Java to consider the Switch exhaustive.
@@ -86,7 +112,7 @@ public class MechanumDrive {
         this.telemetry.addData("xReverse, yReverse, xFLip values: ", "f, f, f", this.xReverse, this.yReverse, this.xFlip);
     }
 
-    public void initMotors(motorDirections mD) {
+    public void initMotors(DcMotorSimple.Direction fLDirection, DcMotorSimple.Direction fRDirection, DcMotorSimple.Direction bLDirection, DcMotorSimple.Direction bRDirection) {
         // Overload later for additional option to change motor names, or default.
         this.fL = this.hardwareMap.get(DcMotor.class, "fL");
         this.fR = this.hardwareMap.get(DcMotor.class, "fR");
@@ -95,10 +121,10 @@ public class MechanumDrive {
 
         this.drivingSelected = DrivingMode.MATH;
 
-        this.fL.setDirection(mD.frontLeft());
-        this.fR.setDirection(mD.frontRight());
-        this.bL.setDirection(mD.backLeft());
-        this.bR.setDirection(mD.backRight());
+        this.fL.setDirection(fLDirection);
+        this.fR.setDirection(fRDirection);
+        this.bL.setDirection(bLDirection);
+        this.bR.setDirection(bRDirection);
 
         imu.initialize(new IMU.Parameters(ORIENTATION_ON_ROBOT));
 
@@ -137,17 +163,17 @@ public class MechanumDrive {
         }
     }
 
-    private void mathDriving(gamepadValues xyturn) {
+    private void mathDriving(double x, double y, double turn) {
         // Determine magnitude/distance of the left stick as a decimal
-        double power = Math.hypot(xyturn.x(), xyturn.y());
+        double power = Math.hypot(x, y);
         // Determine tilt of the left stick in radians | Above/power gives us a magnitude, but not a direction.
-        double theta = Math.atan2(xyturn.x(),xyturn.y()) - Math.PI/4;
+        double theta = Math.atan2(x,y) - Math.PI/4;
 
         // Get the sine/cosine of the given angle, offset by 45 degrees. Used to effectively "rotate" the magnitude by reducing it by sin/cosine through multiplication.
         double sin = Math.sin(theta);
         double cos = Math.cos(theta);
         // Returns the larger the two, which is later used to scale everything down proportionally, should it exceed 1/-1.
-        double max = Math.max(Math.abs(sin), Math.abs(cos));
+        this.max = Math.max(Math.abs(sin), Math.abs(cos));
 
         /*
                 Power * cos | Power * sin
@@ -166,13 +192,10 @@ public class MechanumDrive {
                 This achieves strafing with mecanum wheels.
          */
 
-        double v1 = ((power * cos) / max) + xyturn.turn();
-        double v2 = ((power * cos) / max) - xyturn.turn();
-
-        this.fLPower = v1;
-        this.fRPower = v2;
-        this.bLPower = v1;
-        this.bRPower = v2;
+        this.fLPower = ((power * cos) / max) + turn;
+        this.fRPower = ((power * cos) / max) - turn;
+        this.bLPower = ((power * cos) / max) + turn;
+        this.bRPower = ((power * cos) / max) - turn;
 
         /*
             If wheel power exceeds 1, then scale them down proportionately.
@@ -182,27 +205,27 @@ public class MechanumDrive {
             Don't need to add/subtract opposite wheel positions because it is already accounted for in the original calculation.
          */
 
-        if (Math.abs(power + Math.abs(xyturn.turn)) > 1) {
-            this.fLPower = (fLPower/power) + xyturn.turn();
-            this.fRPower = (fRPower/power) + xyturn.turn;
-            this.bLPower = (bLPower/power) + xyturn.turn;
-            this.bRPower = (bRPower/power) + xyturn.turn;
+        if (Math.abs(power + Math.abs(turn)) > 1) {
+            this.fLPower = (fLPower/power) + turn;
+            this.fRPower = (fRPower/power) + turn;
+            this.bLPower = (bLPower/power) + turn;
+            this.bRPower = (bRPower/power) + turn;
         }
 
         setDriveChainPower();
     }
 
-    private void bruteDriving(gamepadValues xyturn) {
-        this.max = Math.max((xyturn.y() + xyturn.x() + xyturn.turn()), 1.0);
+    private void bruteDriving(double x, double y, double turn) {
+        this.max = Math.max((y + x + turn), 1.0);
         // Imperfect strafing due to just how motors works, this correctional value can make it feel more natural, apparently.
-        double x = xyturn.x() * 1.1;
+        x *= 1.1;
 
-        this.fLPower = xyturn.y() + x + xyturn.turn();
-        this.fRPower = xyturn.y() - x - xyturn.turn();
-        this.bLPower = xyturn.y() - x + xyturn.turn();
-        this.bRPower = xyturn.y() + x - xyturn.turn();
+        this.fLPower = y + x + turn;
+        this.fRPower = y - x - turn;
+        this.bLPower = y - x + turn;
+        this.bRPower = y + x - turn;
 
-        if (xyturn.y() + x + xyturn.turn() > 1.0) {
+        if ((y + x + turn) > 1.0) {
             this.fLPower /= max;
             this.fRPower /= max;
             this.bLPower /= max;
@@ -212,15 +235,13 @@ public class MechanumDrive {
         setDriveChainPower(this.fLPower,this.fRPower,this.bLPower,this.bRPower);
     }
 
-    private void hybridDriving(gamepadValues xyturn) {
+    private void hybridDriving(double x, double y, double turn) {
         // Effectively maintains efficiency of the Math driving mode, but the "feel" of brute.
-        // Just switches between the two based on if x/xyturn.y() exceed 0.5
-        if (Math.abs(xyturn.x()) < 0.5 || Math.abs(xyturn.y()) < 0.5) {
-            gamepadValues newInputs = new gamepadValues(xyturn.x(), -xyturn.y(), xyturn.turn());
-            bruteDriving(newInputs);
+        // Just switches between the two based on if x/y exceed 0.5
+        if (Math.abs(x) < 0.5 || Math.abs(y) < 0.5) {
+            bruteDriving(x, -y, turn);
         } else {
-            gamepadValues newInputs = new gamepadValues(-xyturn.x(), -xyturn.y(), xyturn.turn());
-            mathDriving(newInputs);
+            mathDriving(-x, -y, turn);
         }
     }
 
@@ -283,32 +304,6 @@ public class MechanumDrive {
 
     private void fieldCentricDriving(double x, double y, double turn, double imu) {
         
-    }
-
-    public double inputFlipping(double x, double y, double turn) {
-        if (this.gamepad1.xWasPressed()) {
-            this.xReverse = !this.xReverse;
-        }
-        if (this.gamepad1.yWasPressed()) {
-            this.yReverse = !this.yReverse;
-        }
-        if (this.gamepad1.aWasPressed()) {
-            this.xFlip = !this.xFlip;
-
-        }
-        if (this.xReverse) {
-            xyturn.x() = -xyturn.x();
-        }
-        if (this.yReverse) {
-            xyturn.y() = -xyturn.y();
-        }
-        if (this.xFlip) {
-            double temp = xyturn.x();
-            xyturn.x() = xyturn.turn();
-            xyturn.turn() = temp;
-        }
-        return xyturn.x();
-
     }
     public void rotationTesting() {
         if (this.gamepad1.a) {

@@ -5,7 +5,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-
 @TeleOp(name = "2026Teleop")
 public class TeleOp2026 extends LinearOpMode {
 
@@ -13,15 +12,6 @@ public class TeleOp2026 extends LinearOpMode {
     private DcMotor rLaunch, lLaunch, transferMotor;
 
     private MechanumDrive.MotorStatus intake, transfer;
-    private MechanumDrive.motorDirections motorDirections = new MechanumDrive.motorDirections(
-            DcMotorSimple.Direction.REVERSE,
-
-            DcMotorSimple.Direction.REVERSE,
-
-            DcMotorSimple.Direction.FORWARD,
-
-            DcMotorSimple.Direction.FORWARD
-    );
 
     @Override
     public void runOpMode() {
@@ -35,7 +25,16 @@ public class TeleOp2026 extends LinearOpMode {
 
         mechanumDrive = new MechanumDrive(this);
 
-        mechanumDrive.initMotors(motorDirections);
+        mechanumDrive.initMotors(
+                // Front left
+                DcMotorSimple.Direction.REVERSE,
+                // Front right
+                DcMotorSimple.Direction.FORWARD,
+                // Back left
+                DcMotorSimple.Direction.REVERSE,
+                // Back right
+                DcMotorSimple.Direction.FORWARD
+        );
 
         telemetry.addData("Status", "Initialized");
         telemetry.update();
