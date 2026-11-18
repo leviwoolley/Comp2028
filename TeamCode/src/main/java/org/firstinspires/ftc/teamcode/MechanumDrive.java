@@ -34,7 +34,7 @@ public class MechanumDrive {
     Gamepad gamepad1;
 
     private DcMotor fL, bL, fR, bR;
-    public DrivingMode drivingSelected;
+    public DrivingMode drivingSelected = DrivingMode.MATH;
 
     //System.out.println("fuck");
     double turn, max;
@@ -104,10 +104,10 @@ public class MechanumDrive {
         // FTC's way to convey data to the user through the driving station. Adds to buffer but does not flush, so it can be used and then added upon in actual teleop.
         this.telemetry.addData("Driving Mode", drivingSelected);
 
-        this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", this.fLPower, this.fRPower);
+        this.telemetry.addData("Front left/Right", "%4.2f,	%4.2f", this.fLPower, this.fRPower);
         this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", this.bLPower, this.bRPower);
 
-        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "bool,bool,bool", this.xReverse, this.yReverse, this.xFlip);
+        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "%b, %b, %b", this.xReverse, this.yReverse, this.xFlip);
     }
 
     public void initMotors(DcMotorSimple.Direction fLDirection, DcMotorSimple.Direction fRDirection, DcMotorSimple.Direction bLDirection, DcMotorSimple.Direction bRDirection) {
@@ -165,7 +165,7 @@ public class MechanumDrive {
         // Determine magnitude/distance of the left stick as a decimal
         double power = Math.hypot(x, y);
         // Determine tilt of the left stick in radians | Above/power gives us a magnitude, but not a direction.
-        double theta = Math.atan2(x,y) - Math.PI/4;
+        double theta = Math.atan2(y,x) - Math.PI/4;
 
         // Get the sine/cosine of the given angle, offset by 45 degrees. Used to effectively "rotate" the magnitude by reducing it by sin/cosine through multiplication.
         double sin = Math.sin(theta);
@@ -202,20 +202,18 @@ public class MechanumDrive {
 
             Don't need to add/subtract opposite wheel positions because it is already accounted for in the original calculation.
          */
-
-        if (Math.abs(power + Math.abs(turn)) > 1) {
-            this.fLPower = (fLPower/power) + turn;
-            this.fRPower = (fRPower/power) + turn;
-            this.bLPower = (bLPower/power) + turn;
-            this.bRPower = (bRPower/power) + turn;
+        double scale = power + Math.abs(turn);
+        if (scale > 1) {
+            this.fLPower /= scale;
+            this.fRPower /= scale;
+            this.bLPower /= scale;
+            this.bRPower /= scale;
         }
 
         setDriveChainPower();
     }
 
     private void bruteDriving(double x, double y, double turn) {
-        this.max = Math.max((y + x + turn), 1.0);
-        // Imperfect strafing due to just how motors works, this correctional value can make it feel more natural, apparently.
         x *= 1.1;
 
         this.fLPower = y + x + turn;
@@ -223,23 +221,18 @@ public class MechanumDrive {
         this.bLPower = y - x + turn;
         this.bRPower = y + x - turn;
 
-        if ((y + x + turn) > 1.0) {
-            this.fLPower /= max;
-            this.fRPower /= max;
-            this.bLPower /= max;
-            this.bRPower /= max;
-        }
+        double scale = Math.max(1.0, Math.max(Math.max(Math.abs(fLPower), Math.abs(fRPower)), Math.max(Math.abs(bLPower), Math.abs(bRPower))));
 
-        setDriveChainPower(this.fLPower,this.fRPower,this.bLPower,this.bRPower);
+        setDriveChainPower((this.fLPower / scale),(this.fRPower / scale),(this.bLPower / scale),(this.bRPower / scale));
     }
 
     private void hybridDriving(double x, double y, double turn) {
         // Effectively maintains efficiency of the Math driving mode, but the "feel" of brute.
         // Just switches between the two based on if x/y exceed 0.5
         if (Math.abs(x) < 0.5 || Math.abs(y) < 0.5) {
-            bruteDriving(x, -y, turn);
+            bruteDriving(x, y, turn);
         } else {
-            mathDriving(-x, -y, turn);
+            mathDriving(x, y, turn);
         }
     }
 

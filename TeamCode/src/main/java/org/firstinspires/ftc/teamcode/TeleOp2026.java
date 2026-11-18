@@ -29,9 +29,9 @@ public class TeleOp2026 extends LinearOpMode {
                 // Front left
                 DcMotorSimple.Direction.REVERSE,
                 // Front right
-                DcMotorSimple.Direction.FORWARD,
-                // Back left
                 DcMotorSimple.Direction.REVERSE,
+                // Back left
+                DcMotorSimple.Direction.FORWARD,
                 // Back right
                 DcMotorSimple.Direction.FORWARD
         );
