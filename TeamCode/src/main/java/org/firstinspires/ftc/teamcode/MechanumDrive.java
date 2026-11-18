@@ -1,13 +1,11 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
-import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.Gamepad;
-
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.IMU;
+import com.qualcomm.robotcore.hardware.Gamepad;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
@@ -25,7 +23,7 @@ public class MechanumDrive {
         OLD
     }
 
-    private IMU imu;
+    //private IMU imu;
     private final RevHubOrientationOnRobot.LogoFacingDirection LOGO_DIRECTION = RevHubOrientationOnRobot.LogoFacingDirection.UP;
     private final RevHubOrientationOnRobot.UsbFacingDirection USB_DIRECTION = RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
     private final RevHubOrientationOnRobot ORIENTATION_ON_ROBOT = new RevHubOrientationOnRobot(LOGO_DIRECTION, USB_DIRECTION);
@@ -55,7 +53,7 @@ public class MechanumDrive {
     public void drivingLoop() {
 
         double x = this.gamepad1.left_stick_x;
-        double y = this.gamepad1.left_stick_y;
+        double y = -this.gamepad1.left_stick_y;
 
         this.turn = this.gamepad1.right_stick_x;
 
@@ -109,7 +107,7 @@ public class MechanumDrive {
         this.telemetry.addData("Front	left/Right", "%4.2f,	%4.2f", this.fLPower, this.fRPower);
         this.telemetry.addData("Back	left/Right", "%4.2f,	%4.2f", this.bLPower, this.bRPower);
 
-        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "f, f, f", this.xReverse, this.yReverse, this.xFlip);
+        this.telemetry.addData("xReverse, yReverse, xFLip values: ", "bool,bool,bool", this.xReverse, this.yReverse, this.xFlip);
     }
 
     public void initMotors(DcMotorSimple.Direction fLDirection, DcMotorSimple.Direction fRDirection, DcMotorSimple.Direction bLDirection, DcMotorSimple.Direction bRDirection) {
@@ -126,7 +124,7 @@ public class MechanumDrive {
         this.bL.setDirection(bLDirection);
         this.bR.setDirection(bRDirection);
 
-        imu.initialize(new IMU.Parameters(ORIENTATION_ON_ROBOT));
+        // imu.initialize(new IMU.Parameters(ORIENTATION_ON_ROBOT));
 
         xReverse = false;
         yReverse = false;
@@ -193,8 +191,8 @@ public class MechanumDrive {
          */
 
         this.fLPower = ((power * cos) / max) + turn;
-        this.fRPower = ((power * cos) / max) - turn;
-        this.bLPower = ((power * cos) / max) + turn;
+        this.fRPower = ((power * sin) / max) - turn;
+        this.bLPower = ((power * sin) / max) + turn;
         this.bRPower = ((power * cos) / max) - turn;
 
         /*
